@@ -1,0 +1,29 @@
+html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei,STHeiti,WenQuanYi Micro Hei,Helvetica,Arial,sans-serif;color:#676767}
+.leftBar{width: 176px;position:fixed;left:0;bottom:0;background:url(../images/left.png) #d9e7ef center top;top:0;background-size:100% 100%;transition: all 0.5s;-webkit-transition: all 0.5s}
+.rightBar{position:absolute;left:176px;top:0;right:0;bottom: 0;}
+
+.lgIcon{}
+
+/*leftbar*/
+.logo{height:130px;text-align: center;padding-top: 10px;box-sizing: border-box;}
+.menu::-webkit-scrollbar {width:6px;height:4px;}
+.menu::-webkit-scrollbar-track-piece {background-color:#ddecf5;margin:-spx;}
+.menu::-webkit-scrollbar-thumb{background:#b9d0e0;border-radius:2px;}
+.menu::-webkit-scrollbar-thumb:vertical:hover{background:#8cb2ca;}
+.menu::-webkit-scrollbar-thumb:horizontal:hover{background:#8cb2ca}
+.menu{overflow-y:auto;box-sizing: border-box;margin-top:20px;}
+.menulist{margin:0 13px;box-sizing: border-box;height: 40px;line-height: 40px;color:#fff;display:block;margin-bottom: 10px;font-size: 16px;text-indent: 28px;color: #676767;display: block}
+.menulist:hover{background: rgba(255,255,255,0.50);border-radius: 6px;}
+.menulist.on{background: #1365E8;box-shadow: 0 10px 15px -5px rgba(69,146,251,0.40);-webkit-box-shadow: 0 10px 15px -5px rgba(69,146,251,0.40);border-radius: 6px;color:#fff;}
+.menuline{background: #ccc;height:1px;margin-bottom: 30px}
+.smlist{height: 35px;line-height: 35px;color:#676767;display:block;margin-bottom: 5px;font-size: 14px;text-indent: 48px}
+.mulfolder > .smenu{display: none}
+.open > .smenu{display: block}
+
+
+/*rightbar*/
+.topBar{position:absolute;left:0;top:0;right:0;height:76px;border-bottom: 1px rgba(128,128,128,0.2) solid;box-sizing: border-box;z-index:9;}
+
+
+
+
