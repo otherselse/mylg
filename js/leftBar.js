@@ -8,8 +8,8 @@
 	//卖家
 	var supply='<a class="menulist on" href=""><i class="lgIcon imenu-index vm mr5"></i>首页</a>'
 		+'	<a class="menulist" href=""><i class="lgIcon imenu-order vm mr5"></i>我的订单</a>'
-		+'	<a class="menulist" href=""><i class="lgIcon imenu-car vm mr5"></i>上传资源</a>'
-		+'	<a class="menulist" href=""><i class="lgIcon imenu-car vm mr5"></i>仓库信息</a>'
+		+'	<a class="menulist" href=""><i class="lgIcon imenu-stock vm mr5"></i>上传资源</a>'
+		+'	<a class="menulist" href=""><i class="lgIcon imenu-warehouse vm mr5"></i>仓库信息</a>'
 	
 	var b=document.getElementsByTagName("body")[0]
 
@@ -37,7 +37,18 @@
 		+'			<a class="smlist" href="">订单售后</a>'
 		+'		</div>'
 		+'	</div>'
-		+'	<a class="menulist" href=""><i class="lgIcon imenu-review vm mr5"></i>评审中心</a>'
+		+'	<div class="mulfolder trans" onclick="showsMenu(this)">'
+		+'	<a class="menulist" href="javascript:void(0)"><i class="lgIcon imenu-review vm mr5"></i>评审中心<i class="imenu-up lgIcon vm ml5"></i></a>'
+		+'		<div class="smenu">'
+		+'			<a class="smlist" href="">实名认证</a>'
+		+'			<a class="smlist" href="">VIP评审</a>'
+		+'			<a class="smlist" href="">供应商评审</a>'
+		+'			<a class="smlist" href="">企业信息变更</a>'
+		+'			<a class="smlist" href="">仓库评审</a>'
+		+'			<a class="smlist" href="">加工商评审</a>'
+		+'			<a class="smlist" href="">承运商评审</a>'
+		+'		</div>'
+		+'	</div>'
 		+'	<a class="menulist" href=""><i class="lgIcon imenu-info vm mr5"></i>账户信息</a>';
 
 

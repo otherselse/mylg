@@ -21,6 +21,8 @@ function setHeight(){
 //左侧菜单展开收起
 function showsMenu(obj){
 	var myobj=$(obj).find(".smenu");
+	$(obj).siblings().removeClass("open");
+	$(obj).siblings().find(".smenu").hide()
 	myobj.slideToggle();
 	$(obj).toggleClass("open")
 }

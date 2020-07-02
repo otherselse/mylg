@@ -10,7 +10,7 @@
 		+'		</div>'
 		+'		<div class="r pct20 tr">'
 		+'			<a class="lgIcon topcart vm mr20" href="##"><i class="topcartDot">3</i></a>'
-		+'			<img src="../images/exp.png" class="topImg vm mr5"><a href="javascript:void(0)" class="tipclick" title="<a href=\'exit\' class=\'pr10 pl10 g67\'>退出</a>">hi,钢铁大王</a>'
+		+'			<img src="../images/exp.png" class="topImg vm mr5"><a href="javascript:void(0)" class="tipclick" title="<a href=\'exit\' class=\' f14 pr10 pl10 g67\'>退出</a>">hi,钢铁大王</a>'
 		+'		</div>'
 		+'	</div>'
 		'</div>'
