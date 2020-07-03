@@ -51,8 +51,22 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 
 /*rightbar*/
-.topBar{position:absolute;left:0;top:0;right:0;height:76px;border-bottom: 1px rgba(128,128,128,0.2) solid;box-sizing: border-box;z-index:9;}
+.topBar{height:76px;border-bottom: 1px rgba(128,128,128,0.2) solid;box-sizing: border-box;}
+.mainCont{padding:20px 30px;}
+
+.slideBox{height:248px;border-radius: 6px;margin-right: 10px}
+.slideBoxlist{float: left;border-radius: 6px;height: 248px;width: 100%;display: none}
+.slideBoxblock {height: 15px;overflow: hidden;position: absolute;right: 5px;bottom: 15px;z-index: 1;width: 100%;text-align: center;}
+.slideB{width:8px;height:8px;margin-right: 6px;border:1px #fff solid;border-radius:50%;cursor: pointer;}
+.slideB.on{background-color: #fff;}
+
+.index-account-cont{height:199px;}
+.index-top-title{font-size: 16px;line-height: 45px;display: inline-block;margin-left: 20px;color:#676767;}
+.index-top-title.on{border-bottom: 3px #1365E8 solid;color: #282828;}
 
 
-
-
+/*pageWrap*/
+.pageWrap{margin: 20px auto 0;text-align: center;}
+.pagegray,.arrowL,.arrowR{width: 30px;color: #676767;height:30px;line-height: 30px;margin: 0 3px; border-radius: 2px;display: inline-block;cursor: pointer;background-color: #F1F3F7; }
+.pagegray:hover,.arrowL:hover,.arrowR:hover{background-color: #F0F6FF; color: #1365E8;}
+.pagegray.active{color: #fff;background-color: #1365E8;}

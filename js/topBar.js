@@ -13,7 +13,7 @@
 		+'			<img src="../images/exp.png" class="topImg vm mr5"><a href="javascript:void(0)" class="tipclick" title="<a href=\'exit\' class=\' f14 pr10 pl10 g67\'>退出</a>">hi,钢铁大王</a>'
 		+'		</div>'
 		+'	</div>'
-		'</div>'
+		+'</div>'
 
 	document.write(str1)
 })();

@@ -21,17 +21,108 @@
 		<script type="text/javascript" src="../js/topBar.js"></script> 
 		<!-- topBar end -->
 
+		<div class="mainCont ">
+			<div class="cl ovh">
+				<div class="pct50 l">
+					<div class="slideBox rel ">
+						<div class="hd slideBoxblock">
+							<ul>
+								<li class="dib slideB"></li>
+								<li class="dib slideB"></li>
+								<li class="dib slideB"></li>
+							</ul>
+						</div>
+						<div class="bd ovh">
+								<ul>
+									<li class="slideBoxlist" style="background: url(http://resource.lgsteel.cn/gold2020/images/adv02.png?v=1) center;"><a href="##" class="db h250"></a></li>
+									<li class="slideBoxlist" style="background: url(http://resource.lgsteel.cn/gold2020/images/adv01.png?v=1) center;"><a href="##" class="db h250"></a></li>
+									<li class="slideBoxlist" style="background: url(http://resource.lgsteel.cn/gold2020/images/adv02.png?v=1) center;"><a href="##" class="db h250"></a></li>
+								</ul>
+						</div>
+					</div>
+				</div>
+				<div class="pct50 l">
+					<div class="ml10">
+						<div class="ui-content">
+							<div class="bbe  ovh">
+								<span class="l index-top-titleBar">
+									<input type="hidden">
+									<a class="index-top-title on" href="javascript:void(0)">账户余额</a>
+									<a class="index-top-title" href="javascript:void(0)">优惠券</a>
+								</span>
+								<span class="r">
+									<a class="goldIcon icon-hidden vm mr20 on" onclick="indexGetShow(this,0)" href="javascript:void(0)"></a>
+								</span>
+							</div>
+							<div class="index-account-cont">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- index top end -->
+
+			<div class="ui-content autoHeight cl mt20">
+				<div class="bbe"><span class="ui-content-t f16"><span class="n">代办事项</span></span> </div>
+				<div class="p20">
+					<div class="b f14 g28 mb10">加工订单</div>
+					<table class="ui-table tc f12" width="100%">
+						<thead>
+							<tr>
+								<th width="15%">订单号</th>
+								<th width="15%">加工仓库</th>
+								<th width="15%">业务日期</th>
+								<th width="55%">状态</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>11</td>
+								<td>11</td>
+								<td>11</td>
+								<td>11</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="b f14 g28 mb10 mt30">贸易订单</div>
+					<table class="ui-table tc f12" width="100%">
+						<thead>
+							<tr>
+								<th width="15%">订单号</th>
+								<th width="15%">仓库</th>
+								<th width="15%">业务日期</th>
+								<th width="55%">状态</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>11</td>
+								<td>11</td>
+								<td>11</td>
+								<td>11</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+		</div>
+		<!-- mainCont end -->
+
 	</div>
+	<!-- rightBar end-->
 
 
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-	
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/scroll/jquery.SuperSlide.2.1.1.js"></script>
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
 			$(".menu").find(".menulist").eq(0).addClass("on").siblings().removeClass("on")  //首页选中;
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
+			//滚动图片
+			jQuery(".slideBox").slide({ mainCell: ".bd ul", effect: "fade", autoPlay: true, trigger: "mouseover", easing: "swing", delayTime: "500", mouseOverStop: true, pnLoop: true }); 
 		})
 
 	</script>
