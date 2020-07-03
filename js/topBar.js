@@ -5,7 +5,7 @@
 		+'		<span class="l pct20 mt5"><i class="id_mylg lgIcon vm mr5"></i><span class="g28 dib f20 vm">我的乐刚</span></span>'
 		+'		<div class="l pct60 tc">'
 		+'			<span class="ui-switchCont">'
-		+'				<a href="../index/index.html" class="ui-switchBut">我是买家</a><a href="supply.html" class="ui-switchBut">我是卖家</a>'
+		+'				<a href="../index/index.html" class="ui-switchBut">我是买家</a><a href="../supplier/index.html" class="ui-switchBut">我是卖家</a>'
 		+'			</span>'
 		+'		</div>'
 		+'		<div class="r pct20 tr">'
