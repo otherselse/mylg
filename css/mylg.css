@@ -4,6 +4,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 .lgIcon{background: url(../images/lgIcon.png);display: inline-block;}
 .ui-content{min-height: calc(100vh - 180px)}
+.g9a{color:  #9A9A9A}
 
 /*leftbar*/
 .logo{height:133px;text-align: center;padding-top: 10px;}
@@ -69,11 +70,29 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .flex-direction-nav li a{ display:block; width:50px; height:50px; overflow:hidden; cursor:pointer; position:absolute;}
 .flexslider .set-a { display: inline-block; width: 100%; height: 100%;}
 
-
+.icon-hidden.show{background-position:-365px -116px;}
+.icon-hidden{height: 20px;width: 20px;background-position:-415px -116px;}
 .index-account-cont{height:199px;}
 .index-top-title{font-size: 16px;line-height: 45px;display: inline-block;margin-left: 20px;color:#676767;}
 .index-top-title.on{border-bottom: 3px #1365E8 solid;color: #282828;}
+.index-top-right{padding:15px 20px 0 0;}
+.index-top-hide{}
+.index-account-detail{padding:40px 40px 0;}
+.icon-index-account{height: 100px;width: 200px;background-position:-150px -100px;}
+.icon-index-myCoupon{height: 100px;width:150px;background-position:0px -100px;}
 
+.znstepcont{height: 30px;}
+.znstepcircle{left:0;background: #D8D8D8;;line-height:8px;width:8px;height: 8px;text-align:center;border-radius: 50%;}
+.znstepcircle.selected{background-color:#10C861;}
+.znstepline{line-height: 1px;padding:0;top:8px;left:7px;height: 1px;border-top: 1px #CCCCCC dashed ;}
+.znstepline.selected{border-color: #10C861}
+.znstepcircleorange{left:0;background:#FF6B6B;line-height:8px;width:8px;height: 8px;text-align:center;border-radius: 50%;}
+.ml-10{margin-left:-10px;}
+.left-0{left:0;}
+.z-index9{z-index:9;}
+.znstepclock{width: 8px;height:8px;left:0;box-sizing: border-box;border:1px #10C861 dashed;border-radius: 50%;background:#fff;}
+.pct22 {width: 22.5%;}
+.pct18{width: 18%}
 
 /*pageWrap*/
 .pageWrap{margin: 20px auto 0;text-align: center;}

@@ -11,9 +11,8 @@
 		+'	<a class="menulist" href=""><i class="lgIcon imenu-stock vm mr5"></i>上传资源</a>'
 		+'	<a class="menulist" href=""><i class="lgIcon imenu-warehouse vm mr5"></i>仓库信息</a>'
 	
-	var b=document.getElementsByTagName("body")[0]
 
-	if(b.className=='buyer'){
+	if($("body").hasClass("buyer")){
 		var _m=buy;
 	}else{
 		var _m=supply;

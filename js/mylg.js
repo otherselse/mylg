@@ -7,6 +7,30 @@ $(function(){
 	$("body").on("mousewheel",function() {
 		setHeight();
 	});
+
+
+		//showTip 可以放到body上 默认显示提示框
+		if($(".showTip").length>0){
+			$(".showTip").find('[title]').qtip({
+				position: {
+					viewport: $(window)
+				},
+				style: {
+					classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+				}
+			});
+
+		}
+
+		$('.tipmouse').qtip({
+			hide: 'unfocus',
+			position: {
+				viewport: $(window)
+			},
+			style: {
+				classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+			}
+		});
 })
 
 
