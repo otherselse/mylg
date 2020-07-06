@@ -6,9 +6,9 @@
 		+'	<a class="menulist" href="../logistics/index.html"><i class="lgIcon imenu-car vm mr5"></i>找物流</a>'
 
 	//卖家
-	var supply='<a class="menulist on" href="../supplier/index.html"><i class="lgIcon imenu-index vm mr5"></i>首页</a>'
+	var supply='<a class="menulist " href="../supplier/index.html"><i class="lgIcon imenu-index vm mr5"></i>首页</a>'
 		+'	<a class="menulist" href="../supplier/order.html"><i class="lgIcon imenu-order vm mr5"></i>我的订单</a>'
-		+'	<a class="menulist" href=""><i class="lgIcon imenu-stock vm mr5"></i>上传资源</a>'
+		+'	<a class="menulist" href="../supplier/supplierAgreement.html"><i class="lgIcon imenu-stock vm mr5"></i>上传资源</a>'
 		+'	<a class="menulist" href=""><i class="lgIcon imenu-warehouse vm mr5"></i>仓库信息</a>'
 	
 
