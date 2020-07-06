@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+	<title>申请提货-我的乐刚</title>
+</head>
+<body class="buyer showTip">
+	<script type="text/javascript" src="../js/leftBar.js"></script> 
+	<!-- leftbar end -->
+
+
+	<div class="rightBar">
+		<script type="text/javascript" src="../js/topBar.js"></script> 
+		<!-- topBar end -->
+		<span class="ui-tip pct100 mt-1" data-type="blue">温馨提示：当前订单：60298已支付货款金额45000元，提货明细总金额为0元，还需继续支付 0元。 当支付金额大于可提货金额时，提货完成后剩余款项会自动结算进账户。</span>
+		<div class="mainCont ">
+			<div class="ui-tab3">
+				<a href="../purchaser/order.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">我的订单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="../logistics/transDemand.html" class="ui-tab3-list rel"><span class="ui-tab3-text">帮找车</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content unradius ">
+				<div class="pt20 pr20 pl20 pb30">
+					<div class="g28 dib b">基本信息</div>
+					<div class="ovh f12 mt20"> 
+                        <div class="mb10">请选择操作类型：
+                            <span class="single billtype">
+                                 <input type="hidden" name="picksinceMain.billType" id="billType" value="1">
+                                <input type="hidden" name="picksinceMain.billTypeName" id="billTypeName" value="提货">
+                                <button type="button" class="ui-option mr5 on" dvalue="1">提货</button>
+                                <button type="button" class="ui-option" dvalue="2">转货权</button>
+                            </span>
+                        </div>                              
+                        <div class="pct50 l">
+                        	<div class="mb10 type_z dn lh30" >&emsp;&emsp;&emsp;客原货主：
+                                上海乐刚供应链股份有限公司
+                            </div>                                        
+                            <div class="mb10 type_t" >&emsp;&emsp;&emsp;提货车号：
+                                <input type="text" class="ui-input   pct40" placeholder="请输入">
+                            </div>
+                            <div class="mb10 type_t" >&emsp;&emsp;&emsp;&emsp;提货人：
+                                <input type="text" class="ui-input   pct40" placeholder="请输入">
+                            </div>
+                            <div class="mb10">&emsp;&emsp;联系人电话：
+                                <input type="text" class="ui-input   pct40" placeholder="请输入">
+                            </div>
+                            <div class="mb10">&emsp;&emsp;&emsp;&emsp;验证码：
+                                <input type="text" class="ui-input   pct40" placeholder="请输入" /><button class="ui-button ml10 " id="codee">发送验证码</button>
+                            </div> 
+                            
+                            
+                            
+                        </div>
+                        <div class="l pct50">
+                        	<div class="mb10 type_z dn lh30" >接收货主：&emsp;
+                                阿里巴巴钢铁投资集团
+                            </div>
+                            <div class="mb10 type_t" >身份证号码：
+                                <input type="text" class="ui-input   pct40" placeholder="请输入">
+                            </div>
+                            <div class="mb10 type_t">提货人电话：
+                                <input type="text" class="ui-input   pct40" placeholder="请输入">
+                            </div>
+                            <div class="mb10">客户联系人：
+                                <input type="text" class="ui-input   pct40" placeholder="请输入">
+                            </div>
+                            
+                                                                                               
+                        </div>
+                    </div>
+                    <!-- 基本信息 end-->
+
+                    <div class="g28 f14 mt30 b cl mb10">货物信息</div>
+                    <table class="ui-table tc f12 checkbox" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="8%"><i class="ui-checkbox goldIcon mr10"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</th>
+                                <th width="12%">品名</th>
+                                <th width="20%">规格</th>
+                                <th width="10%">牌号</th>
+                                <th width="10%">钢厂</th>
+                                <th width="10%">捆包号</th>
+                                <th width="10%">数量</th>
+                                <th width="10%">重量</th>
+                                <th width="10%">签收单重量</th>                                            
+                            </tr>
+                        </thead>
+                        <tbody class="ui-thover">
+                            <tr>
+                                <td><i class="ui-checkbox goldIcon vm mr10"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>1</td>
+                                <td>热轧卷板</td>
+                                <td>10.000*800*C</td>
+                                <td>SECDPC5</td>
+                                <td>20</td>
+                                <td>1</td>
+                                <td>12.000</td>
+                                <td>抄码</td>
+                                <td>宝钢</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr height="40">
+                                <td colspan="9">
+                                    合计数量：<span class="red dib mr20">20.00</span>合计重量：<span class="red">12.000</span>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div class=" tc mb20 mt20">
+                        <div class="ui-button" onclick="submitShow()" id="tj" data-type="big" type="button">生成自提委托书</div>
+                    </div>					
+				</div>
+			</div><!-- ui-content end -->
+
+			<div class="ui-content autoHeight mt20">
+                <div class="p20">
+                     <div class="clearfix mb10">
+                        <div class="g28 f14  b">申请记录</div>
+                    </div>
+                    <table class="ui-table tc f12 " width="100%">
+                        <thead>
+                            <tr>
+                              <th width="10%">申请日期</th>
+                              <th width="10%">单据类型</th>
+                              <th width="10%">单据号</th>
+                              <th width="10%">审核结果</th>
+                              <th width="10%">状态</th>
+                              <th width="10%">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="ui-thover">                             
+                            <tr>
+                                <td>2020-06-20 15:10:20</td>
+                                <td>自提委托书</td>
+                                <td>SPB(22)-20000295</td>
+                                <td>确认</td>
+                                <td>正常</td>
+                                <td><a href="">查看</a><span class="ml5 mr5 dib gd9">|</span><a href="##">开提单</a></td> 
+                            </tr>                                        
+                            
+                        </tbody>
+                </table>
+
+                </div>                            
+            </div>
+            <!-- 申请记录 end -->
+
+		</div>
+		<!-- mainCont end -->
+
+	</div>
+	<!-- rightBar end-->
+
+
+	
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/scroll/jquery.SuperSlide.2.1.1.js"></script>	
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script>
+		 var wait = 120;
+		$(function(){
+			$(".menu").find(".menulist").eq(1).addClass("on").siblings().removeClass("on")  //左侧菜单选中静态页面采用;
+			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
+
+
+			$(".billtype").find(".ui-option").on("click",function(){
+                    $("#billTypeName").val($(this).text());
+                    $("#billType").val($(this).attr("dValue"));
+                    
+                    if($(this).text()=="提货"){
+                        $(".type_t").show();
+                        $(".type_z").hide();
+                    }else{
+                        $(".type_t").hide();
+                        $(".type_z").show();
+                    }
+               }) 
+
+			$("#codee").on("click",function(){
+				timeSet(this)
+			})
+			
+
+			
+		})
+
+		function timeSet(btn) {
+	        if (wait == 0) {
+	        	$(btn).prop("disabled",false);
+	        	$(btn).text("获取登录验证码")
+	            wait = 120;
+	        } else {
+	        	$(btn).prop("disabled",true);
+	        	$(btn).text("重新发送(" + wait + "s)")
+	            wait--;
+	            setTimeout(function () {
+	                    timeSet(btn);
+	                },
+	                1000)
+	                }
+	    }
+
+	</script>
+</body>
+</html>
