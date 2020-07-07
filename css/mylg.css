@@ -139,3 +139,5 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .fixedbar {position: fixed;bottom: 0;height: 60px;background-color: #fff;width: 100%;box-sizing: border-box;padding: 15px 0;}
 .warehouse-btn button {min-width: 65px;}
 .bte {border-top: 1px solid #eee;}
+.stockTable {border: 1px solid #e5e5e5;}
+.bte6 {border-top: 1px solid #e6e6e6;}
