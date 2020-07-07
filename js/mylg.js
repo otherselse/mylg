@@ -100,3 +100,16 @@ function setAll(obj) {
 		myobj.find(":checkbox").prop("checked", false);
 	}
 }
+
+//新增仓库
+ function addWareHouse(){
+	layer.open({
+		type: 2,
+		title: '添加仓库',
+		shadeClose: true,
+		shade: 0.4,
+		resize: false,
+		area: ['610px', '429px'],
+		content:'../supplier/wareHouse.html'
+	});
+ }

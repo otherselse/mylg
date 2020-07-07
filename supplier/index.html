@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
 	<title>我的乐刚</title>
 </head>
-<body>
+<body class="showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
 	<!-- leftbar end -->
 
@@ -32,18 +32,50 @@
 				</div>
 				<div class="pct50 l">
 					<div class="ml10">
-						<div class="ui-content autoHeight">
+						<div class="ui-content autoHeight index-account">
 							<div class="bbe  ovh">
 								<span class="l index-top-titleBar">
-									<input type="hidden">
 									<a class="index-top-title on" href="javascript:void(0)">账户余额</a>
 									<a class="index-top-title" href="javascript:void(0)">优惠券</a>
 								</span>
-								<span class="r">
-									<a class="goldIcon icon-hidden vm mr20 on" onclick="indexGetShow(this,0)" href="javascript:void(0)"></a>
+								<span class="r index-top-right">
+									<span class="index-top-hide"><a class="lgIcon icon-hidden vm" onclick="indexGetShow(this,0)" href="javascript:void(0)"></a></span>
+									<span class="index-top-hide dn"><a class="lgIcon icon-hidden vm" onclick="indexGetShow(this,1)" href="javascript:void(0)"></a></span>
 								</span>
 							</div>
 							<div class="index-account-cont">
+								<div class="index-account-detail">
+									<span class="dib pct60 vt">
+										<div class="g28 f24 lg_eye-line" eye-line="324040">324040</div>
+										<div class="f12 g9a">账户余额(元)<a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title='提现须知：<br/>1、每个<span class="lred">工作日15:00之前申请，将在48小时内（周末、节假日除外）</span>进行付款操作。<br>
+			2、15:00之后的申请，将<span class="lred">同下个工作日</span>的申请一起处理。<br>
+			3、非工作日期间提交的提现申请，将在<span class="lred">下一个工作日</span>一并处理。<br>
+			4、您提现的银行账号应为销售合同上确定的银行账号，否则将导致提现失败。<br>
+			5、为了确保您的资金尽快到账，请您尽量<span class="lred">选择全国性银行</span>申请提现。<br>
+			提现过程遇到任何问题，请拨乐刚网全国服务热线：<span class="lred">4008-200-666</span>'></a></div>
+										<div class="mt20">
+											<button class="ui-button mr5" type="button">申请提现</button>
+											<button class="ui-button " data-type="normal"  type="button">交易明细</button>
+										</div>
+									</span>
+									<span class="dib pct33 tc vt"><i class="lgIcon icon-index-account"></i></span>
+								</div>
+								<div class="index-account-detail dn">
+									<span class="dib pct60 vt">
+										<div class="g28 f24 lg_eye-line"  eye-line="324040">1233</div>
+										<div class="f12 g9a">优惠券余额(元)<a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title='使用说明：<br>
+			1.该优惠券仅用于用户支付通过乐刚网产生的<span class="lred">出入库及加工相关费用</span>；<br>
+			2.用户可叠加使用优惠券，乐刚网<span class="lred">按用户实际支付的费用开具发票</span>；<br>
+			3.该优惠券<span class="lred">不适用于先开票后付款</span>的订单，用户结算时将无法使用优惠券；<br>
+			4.请在优惠券的有效期限内使用完毕，逾期未使用将自动作废；<br>
+			5.该优惠券的最终解释权归乐刚网所有。'></a></div>
+										<div class="mt20">
+											<button class="ui-button mr5" type="button">优惠券明细</button>
+											<button class="ui-button " data-type="normal"  type="button">使用记录</button>
+										</div>
+									</span>
+									<span class="dib pct33 tc vt"><i class="lgIcon icon-index-myCoupon"></i></span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -59,17 +91,58 @@
 						<thead>
 							<tr>
 								<th width="15%">订单号</th>
-								<th width="15%">加工仓库</th>
-								<th width="15%">业务日期</th>
+								<th width="18%">加工仓库</th>
+								<th width="12%">业务日期</th>
 								<th width="55%">状态</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>11</td>
-								<td>11</td>
-								<td>11</td>
-								<td>11</td>
+								<td>PRO20200519283012</td>
+								<td>阿里巴巴钢铁贸易有限公司1</td>
+								<td>2020-05-23</td>
+								<td>									
+									<span class="znstepcont rel dib pct90">
+										<a href="##"><span class="dib abs left-0 f12 tl"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">已审核</span></span></a><!-- one step -->
+										<div class="abs pct30 znstepline selected"></div>
+										<span class="dib abs left-0 f12 tl z-index9" style="left:30%"><i class="dib znstepcircleorange"></i><br><span class="dib ml-10 mt2">待确认</span></span><!-- two step -->
+										<div class="abs pct30 znstepline" style="left:30%"></div>					
+										<span class="dib abs left-0 f12 tl z-index9" style="left:60%"><i class="dib znstepcircle" ></i><br><span class="dib ml-10 mt2">已完成</span></span><!-- three step -->					
+									</span>
+
+								</td>
+							</tr>
+							<tr>
+								<td>PRO20200519283012</td>
+								<td>阿里巴巴钢铁贸易有限公司2</td>
+								<td>2020-05-23</td>
+								<td>
+									<span class="znstepcont rel dib pct90">
+										<span class="dib abs left-0 f12 tl"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">已审核</span></span> <!-- one step -->
+										<div class="abs pct30 znstepline selected"></div>					
+										<span class="dib abs left-0 f12 tl z-index9" style="left:30%"><i class="dib znstepcircleorange"></i><br><span class="dib ml-10 mt2">待确认</span></span><!-- two step -->
+										<div class="abs pct30 znstepline" style="left:30%"></div>					
+										<span class="dib abs left-0 f12 tl z-index9" style="left:60%"><i class="dib znstepcircle"></i><br><span class="dib ml-10 mt2">提货中</span></span><!-- three step -->
+										<div class="abs pct30 znstepline" style="left:60%"></div>
+										<span class="dib abs left-0 f12 tl z-index9" style="left:90%"><i class="dib znstepcircle"></i><br><span class="dib ml-10 mt2">已完成</span></span><!-- four step -->
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>PRO20200519283012</td>
+								<td>阿里巴巴钢铁贸易有限公司2</td>
+								<td>2020-05-23</td>
+								<td>
+									<span class="znstepcont rel dib pct90">
+									<span class="dib abs left-0 f12 tl"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">已审核</span></span><!-- one step -->
+									<div class="abs pct30 znstepline selected"></div> 					
+									<span class="dib abs left-0 f12 tl z-index9" style="left:30%"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">已确认</span></span><!-- two step -->
+									<div class="abs pct30 znstepline selected" style="left:30%"></div>					
+									<a href="##"  ><span class="dib abs left-0 f12 tl z-index9" style="left:60%"><i class="dib znstepclock poi"></i><br><span class="dib ml-10 mt2"  title="等候时间0.5小时">加工中</span></span></a><!-- three step -->
+									<div class="abs pct30 znstepline" style="left:60%"></div>
+									<span class="dib abs left-0 f12 tl z-index9" style="left:90%"><i class="dib znstepcircle"></i><br><span class="dib ml-10 mt2">已完成</span></span><!-- four step -->
+								</span>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -78,17 +151,65 @@
 						<thead>
 							<tr>
 								<th width="15%">订单号</th>
-								<th width="15%">仓库</th>
-								<th width="15%">业务日期</th>
+								<th width="18%">仓库</th>
+								<th width="12%">业务日期</th>
 								<th width="55%">状态</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>11</td>
-								<td>11</td>
-								<td>11</td>
-								<td>11</td>
+								<td>60326</td>
+								<td>货物所在仓库</td>
+								<td>2020-07-01</td>
+								<td>
+									<span class="znstepcont rel dib pct90">
+										<span class="dib abs left-0 f12 tl"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">已确认合同</span></span><!-- one step -->
+										<div class="abs pct22 znstepline selected"></div> 					
+										<span class="dib abs left-0 f12 tl z-index9" style="left:22.5%"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">待付款</span></span><!-- two step -->
+										<div class="abs pct22 znstepline" style="left:22.5%"></div>					
+										<span class="dib abs left-0 f12 tl z-index9" style="left:45%"><i class="dib znstepcircle"></i><br><span class="dib ml-10 mt2">待提货</span></span><!-- three step -->
+										<div class="abs pct22 znstepline" style="left:45%"></div>
+										<span class="dib abs left-0 f12 tl z-index9" style="left:67.5%"><i class="dib znstepcircle"></i><br><span class="dib ml-10 mt2">待收货确认</span></span><!-- four step -->
+										<div class="abs pct22 znstepline" style="left:67.5%"></div>
+										<span class="dib abs left-0 f12 tl z-index9" style="left:90%"><i class="dib znstepcircle"></i><br><span class="dib ml-10 mt2">待开票</span></span><!-- five step -->
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>60326</td>
+								<td>货物所在仓库</td>
+								<td>2020-07-01</td>
+								<td>
+									<span class="znstepcont rel dib pct90">
+										<span class="dib abs left-0 f12 tl"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">待确认合同</span></span><!-- one step -->
+										<div class="abs pct22 znstepline"></div> 					
+										<span class="dib abs left-0 f12 tl z-index9" style="left:22.5%"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">待付款</span></span><!-- two step -->
+										<div class="abs pct22 znstepline" style="left:22.5%"></div>					
+										<span class="dib abs left-0 f12 tl z-index9" style="left:45%"><i class="dib znstepcircle"></i><br><span class="dib ml-10 mt2">加工中</span></span><!-- three step -->
+										<div class="abs pct22 znstepline" style="left:45%"></div>
+										<span class="dib abs left-0 f12 tl z-index9" style="left:67.5%"><i class="dib znstepcircle"></i><br><span class="dib ml-10 mt2">已完成</span></span><!-- four step -->
+										<div class="abs pct22 znstepline" style="left:67.5%"></div>
+										<span class="dib abs left-0 f12 tl z-index9" style="left:90%"><i class="dib znstepcircle"></i><br><span class="dib ml-10 mt2">已完成</span></span><!-- five step -->
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>60326</td>
+								<td>货物所在仓库</td>
+								<td>2020-07-01</td>
+								<td>
+									<span class="znstepcont rel dib pct90">
+										<span class="dib abs left-0 f12 tl"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">已确认合同</span></span><!-- one step -->
+										<div class="abs pct22 znstepline selected"></div> 					
+										<span class="dib abs left-0 f12 tl z-index9" style="left:22.5%"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">待付款</span></span><!-- two step -->
+										<div class="abs pct22 znstepline selected" style="left:22.5%"></div>					
+										<span class="dib abs left-0 f12 tl z-index9" style="left:45%"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">待提货</span></span><!-- three step -->
+										<div class="abs pct22 znstepline selected" style="left:45%"></div>
+										<span class="dib abs left-0 f12 tl z-index9" style="left:67.5%"><i class="dib znstepcircle selected"></i><br><span class="dib ml-10 mt2">待收货确认</span></span><!-- four step -->
+										<div class="abs pct22 znstepline" style="left:67.5%"></div>
+										<span class="dib abs left-0 f12 tl z-index9" style="left:90%"><i class="dib znstepcircle"></i><br><span class="dib ml-10 mt2">待开票</span></span><!-- five step -->
+									</span>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -103,14 +224,35 @@
 
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-	
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
 			$(".menu").find(".menulist").eq(0).addClass("on").siblings().removeClass("on")  //首页选中;
 			$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
-		})
+			$(".index-top-title").on("click",function(){
+				var index=$(this).parent(".index-top-titleBar").find(".index-top-title").index($(this));
+				$(this).parents(".index-account").find(".index-top-hide").hide().eq(index).show();
+				$(this).parents(".index-account").find(".index-account-detail").hide().eq(index).show();
 
+			})
+		})
+	//账户数值的显示隐藏
+	function indexGetShow(obj,i){
+			var myobj=$(obj).parents(".index-account");			
+			if($(obj).hasClass("show")){
+				$(".index-account-detail").eq(i).find(".lg_eye-line").each(function(){
+					$(this).text($(this).attr("eye-line"))
+				})
+				$(obj).removeClass("show");
+			}else{
+				$(".index-account-detail").eq(i).find(".lg_eye-line").each(function(){
+					$(this).text("***")
+				})
+				$(obj).addClass("show");
+			}
+		}
 	</script>
 </body>
 </html>
