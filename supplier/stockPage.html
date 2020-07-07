@@ -306,7 +306,9 @@
 
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/scroll/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/scroll/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
@@ -339,7 +341,6 @@
         })
              // 全选子项
              function selectAll(obj){
-            $(obj).parent().toggleClass("on")
             var myobj = $(obj).parents(".stockMain").find(".stockTable").find(".ui-checkbox");
 			if (obj.checked) {
 				myobj.addClass("on");
@@ -352,7 +353,6 @@
         }
         // 全选所有库存
         function checkAll(obj){
-                $(obj).parent().toggleClass("on")
                 var myobj = $(obj).parents(".stockFoot").siblings(".stockMain").find(".ui-checkbox");
 			if (obj.checked) {
 				myobj.addClass("on");
