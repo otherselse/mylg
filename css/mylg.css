@@ -109,10 +109,15 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 
 /* width */
+.w80{width: 80px;}
 .pct16{width:16%}
 
 /* margin */
 .mt25{margin-top:25px}
+
+/* padding */
+.pl25{padding-left: 25px;}
+.pr25{padding-right: 25px;}
 
 /* 清除浮动 */
 .clearfix:after{content: "020"; display: block; height: 0; clear: both; visibility: hidden; }
@@ -131,3 +136,6 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .router .startAddr::before, .router .endAddr::before {content: "";width: 8px;height: 8px;background: #FFFFFF;border: 2px solid #10C861;border-radius: 50%;display: inline-block;vertical-align: -2px;margin-right: 5px;}
 .router .endAddr::before {border: 2px solid #FB2020;}
 .router .tran {background: url(../images/customer/allow-down.png) no-repeat;min-height: 60px;background-position: 2px 0;}
+.fixedbar {position: fixed;bottom: 0;height: 60px;background-color: #fff;width: 100%;box-sizing: border-box;padding: 15px 0;}
+.warehouse-btn button {min-width: 65px;}
+.bte {border-top: 1px solid #eee;}
