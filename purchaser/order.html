@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
 	<title>我的订单-我的乐刚</title>
 </head>
-<body class="buyer">
+<body class="buyer showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
 	<!-- leftbar end -->
 
@@ -24,16 +24,133 @@
 		<div class="mainCont ">
 			<div class="ui-tab3">
 				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">我的订单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="../logistics/transDemand.html" class="ui-tab3-list rel"><span class="ui-tab3-text">帮找车</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius f12">
 				<div class="pt20 pr20 pl20 pb30">
 					<div class="mt20">
-						订单号：<input type="text" class="ui-input pct12 mr20">
-						下单日期：<input type="text" class="ui-input pct18 mr20">
-						订单类型：<input type="text" class="ui-input pct12 mr20">
-						开票状态：<input type="text" class="ui-input pct12 mr20">
+						订单号：<input type="text" class="ui-input pct12 mr20" placeholder="请输入">
+						下单日期：<span class="ui-input tc f0 pct18 mr20" data-type="time">
+					<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" ><span class="dib pct5 tc">-</span><input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
+				</span>
+						订单类型：
+						<span class="input-selSearch mr20">
+							<input type="text" class="ui-input searchUp" readonly="" placeholder="请选择" autocomplete="off">
+							<div class="search-cont">
+								<a href="javascript:void(0)" class="search-list db ell">全部订单</a>
+								<a href="javascript:void(0)" class="search-list db ell">待确认订单</a>
+								<a href="javascript:void(0)" class="search-list db ell">待付款订单</a>
+								<a href="javascript:void(0)" class="search-list db ell">待收货订单</a>
+								<a href="javascript:void(0)" class="search-list db ell">已完成订单</a>
+							</div>
+						</span>
+						开票状态：
+						<span class="input-selSearch mr20">
+							<input type="text" class="ui-input searchUp" readonly="" placeholder="请选择" autocomplete="off">
+							<div class="search-cont">
+								<a href="javascript:void(0)" class="search-list db ell">全部</a>
+								<a href="javascript:void(0)" class="search-list db ell">未开票</a>
+								<a href="javascript:void(0)" class="search-list db ell">开票中</a>
+								<a href="javascript:void(0)" class="search-list db ell">已开票</a>
+							</div>
+						</span>
 						<button type="button" class="ui-button " type="button">查询</button>
 					</div><!-- search end -->
+
+					<table class="ui-table tc f12 checkbox mt20 g28" width="100%" data-type="noLine">
+						<thead>
+							<tr>
+								<th width="4%"><i class="ui-checkbox goldIcon "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i></th>
+								<th width="11%" class="tl">订单号/下单时间</th>
+								<th width="10%" class="tl">交货地点/交货时间</th>
+								<th width="6%">订单重量</th>
+								<th width="10%">支付/结算/提货方式</th>
+								<th width="7%">订单金额</th>
+								<th width="7%">应付款时间</th>
+								<th width="8%">已付款</th>
+								<th width="18%">交易操作</th>
+							</tr>
+						</thead>
+						<tbody class="ui-thover">
+							<tr>
+								<td>
+									<i class="ui-checkbox goldIcon vm "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+								</td>
+								<td class="tl">58672<br/><span class="g9a">2020-03-10 16:48:43</span></td>
+								<td class="tl">聚方库<br/><span class="g9a">2020-03-10</span></td>
+								<td>1.000T</td>
+								<td>定金/电汇/自提</td>
+								<td class="red">￥5050.00</td>
+								<td>2020-01-23</td>
+								<td>￥5050.00</td>
+								<td class="tl">
+									<button class="ui-button pl15 pr15 mr5" data-type="smallbbr" type="button">支付货款</button>
+									<button class="ui-button pl15 pr15 mr5" data-type="smallbbr" type="button">申请提货</button>
+									<a href="#">合同查看</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<i class="ui-checkbox goldIcon vm "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+								</td>
+								<td class="tl">58672<a class="ui-label ml5 f12" data-type="red" title="系统将在60分钟内为您匹配货权，
+请稍后…" href="javascript:void(0)">等待报价</a><br/><span class="g9a">2020-03-10 16:48:43</span></td>
+								<td class="tl">聚方库<br/><span class="g9a">2020-03-10</span></td>
+								<td>1.000T</td>
+								<td>定金/电汇/自提</td>
+								<td class="red">￥5050.00</td>
+								<td>2020-01-23</td>
+								<td>￥5050.00</td>
+								<td  class="tl">
+									<button class="ui-button pl15 pr15 mr5" data-type="smallbbr" type="button">取消订单</button>
+									<a href="#">查看询价单</a>
+								</td>
+							</tr>
+							<tr class="inoperable">
+								<td>
+									<i class="ui-checkbox goldIcon vm "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+								</td>
+								<td class="tl">58672<a class="ui-label ml5 f12" data-type="grey" title="您的订单系统未匹配到合适的货权，
+请另行询价！" href="javascript:void(0)">匹配失败</a><br/><span class="g9a">2020-03-10 16:48:43</span></td>
+								<td class="tl">聚方库<br/><span class="g9a">2020-03-10</span></td>
+								<td>1.000T</td>
+								<td>定金/电汇/自提</td>
+								<td class="red">￥5050.00</td>
+								<td>2020-01-23</td>
+								<td>￥5050.00</td>
+								<td  class="tl">
+									<a href="#">查看询价单</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<i class="ui-checkbox goldIcon vm "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+								</td>
+								<td class="tl">58672<br/><span class="g9a">2020-03-10 16:48:43</span></td>
+								<td class="tl">聚方库<br/><span class="g9a">2020-03-10</span></td>
+								<td>1.000T</td>
+								<td>定金/电汇/自提</td>
+								<td class="red">￥5050.00</td>
+								<td>2020-01-23</td>
+								<td>￥5050.00</td>
+								<td  class="tl">
+									<button class="ui-button pl15 pr15 mr5" data-type="smallbbr" type="button" onclick="javascript:window.location.href='../logistics/checkPickSince.html'">申请提货</button>
+									<a href="#">合同查看</a>
+								</td>
+							</tr>
+							<tfoot>
+								<tr  class="bgfa" height="60">
+									<td>
+										<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>
+									</td>
+									<td colspan="7" class="tl">
+										总计：已选订单<span class="red">10</span>个&emsp;&emsp;已选商品总重量：<span class="red">10</span>吨&emsp;&emsp;合计金额：￥<span class="red">13340</span>元
+									</td>
+									<td class="tr"><button type="button" class="ui-button mr20" onclick="onlinePayMore()">合并付款</button></td>
+								</tr>
+							</tfoot>
+						</tbody>
+					</table>
 					<script type="text/javascript" src="../js/pagelist.js"></script>
 				</div>
 			</div>
@@ -46,7 +163,8 @@
 
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/scroll/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/scroll/jquery.SuperSlide.2.1.1.js"></script>	
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
@@ -54,6 +172,9 @@
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
 			//滚动图片
 			jQuery(".slideBox").slide({ mainCell: ".bd ul", effect: "fade", autoPlay: true, trigger: "mouseover", easing: "swing", delayTime: "500", mouseOverStop: true, pnLoop: true }); 
+
+
+			
 		})
 
 	</script>
