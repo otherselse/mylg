@@ -138,11 +138,11 @@
                                     </span>
                                 </div>
                                 <div class="stockBody g28 f0">
-                                    <div class="pt15 pb15 bte6">
+                                    <div class="pt15 pb15 bte6 mxdiv">
                                         <span class="dib f12 pct25 tl">
                                             <i class="ui-checkbox goldIcon vm mr15 ml10"><input
-                                                    type="checkbox" class="checkbox-opacity"
-                                                    name="checkbox"></i>
+                                                    type="checkbox" class="checkbox-opacity" data="da"
+                                                    name="ids"></i>
                                             1000.000*340*1400 <span class="ui-label ml10"
                                                 data-type="red">现货</span>
                                         </span>
@@ -168,11 +168,11 @@
                                             <a href="javascript:void(0)">寄售</a>
                                         </span>
                                     </div>
-                                    <div class="pt15 pb15 bte6">
+                                    <div class="pt15 pb15 bte6 mxdiv">
                                         <span class="dib f12 pct25 tl">
                                             <i class="ui-checkbox goldIcon vm mr15 ml10"><input
                                                     type="checkbox" class="checkbox-opacity"
-                                                    name="checkbox"></i>
+                                                    name="ids" data="da"></i>
                                             1000.000*340*1400 <span class="ui-label ml10"
                                                 data-type="red">现货</span>
                                         </span>
@@ -228,9 +228,9 @@
                                     <span class="dib f12 pct15">寄售操作</span>
                                 </div>
                                 <div class="stockBody g28 f0">
-                                    <div class="pt15 pb15 bte6">
+                                    <div class="pt15 pb15 bte6 mxdiv">
                                         <span class="dib f12 pct25 tl">
-                                            <i class="ui-checkbox goldIcon vm mr15 ml10"><input type="checkbox" class="checkbox-opacity" name="checkbox"> </i> 1000.000*340*1400 
+                                            <i class="ui-checkbox goldIcon vm mr15 ml10"><input type="checkbox" class="checkbox-opacity" name="ids" data="da"> </i> 1000.000*340*1400 
                                             <span class="ui-label ml10"  data-type="red">现货</span>
                                         </span>
                                         <span class="dib f12 pct10">1</span>
@@ -240,9 +240,9 @@
                                         <span class="dib f12 pct10">4500<a href="javascript:void(0)" class="ui-icon-edit vm tipclick ml5" qtip-dom="editPrice"></a></span>
                                         <span class="dib f12 pct15"> <a href="javascript:void(0)">寄售</a></span>
                                     </div>
-                                    <div class="pt15 pb15 bte6">
+                                    <div class="pt15 pb15 bte6 mxdiv">
                                         <span class="dib f12 pct25 tl">
-                                            <i class="ui-checkbox goldIcon vm mr15 ml10"><input type="checkbox" class="checkbox-opacity" name="checkbox"> </i> 1000.000*340*1400 
+                                            <i class="ui-checkbox goldIcon vm mr15 ml10"><input type="checkbox" class="checkbox-opacity" name="ids" data="da"> </i> 1000.000*340*1400 
                                             <span class="ui-label ml10"  data-type="red">现货</span>
                                         </span>
                                         <span class="dib f12 pct10">1</span>
@@ -264,8 +264,8 @@
                                         class="red">3.000</span>吨</span>
                             </div>
                             <div class="r g28">
-                                <span class="mr30">删除</span>
-                                <span class="mr30">下架</span>
+                                <span class="mr30 f12 poi" onclick="deleteSupplierStockByIds()">删除</span>
+                                <span class="mr30 f12 poi">下架</span>
                                 <a href="javascript:void(0)" class="mr30 f14 link-up tipclick"
                                     qtip-dom="editAllPrice">批量调价</a>
                                     <button class="ui-button mr20">寄售</button>
@@ -363,7 +363,24 @@
 			}
         }
 
-
+        // 删除
+        function deleteSupplierStockByIds(){
+            var checkbox=$("input[data=da]:checked");
+     		if(checkbox.length==0){
+     			alert("请选择要删除的明细!");
+     			return ;
+             }
+            //  $("input[name='ids']:checked").each(function() {
+     		// 	if($(this).attr("supIsIn")!="1" && $(this).attr("supIsIn")!="3"){
+     		// 		isCanDel=false;
+     		// 		return;
+     		// 	}
+     		// 	i++;
+             // });
+             checkbox.each(function(){
+                    $(this).parents(".mxdiv").remove()
+             })
+        }
 	</script>
 </body>
 </html>
