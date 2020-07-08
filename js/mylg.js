@@ -57,7 +57,7 @@ $(function(){
 		    ,trigger: 'click'
 		    , theme: 'lgblue'
 		  });
-		}); 
+		});
 
 
 		//checkbox
