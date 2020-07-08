@@ -3,7 +3,7 @@
 	//买家
 	var buy='<a class="menulist" href="../index/index.html"><i class="lgIcon imenu-index vm mr5"></i>首页</a>'
 		+'	<a class="menulist" href="../purchaser/order.html"><i class="lgIcon imenu-order vm mr5"></i>我的订单</a>'
-		+'	<a class="menulist" href="../logistics/index.html"><i class="lgIcon imenu-car vm mr5"></i>找物流</a>'
+		+'	<a class="menulist" href="../logistics/transDemand.html"><i class="lgIcon imenu-car vm mr5"></i>找物流</a>'
 
 	//卖家
 	var supply='<a class="menulist " href="../supplier/index.html"><i class="lgIcon imenu-index vm mr5"></i>首页</a>'
