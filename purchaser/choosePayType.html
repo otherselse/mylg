@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+	<title>在线支付-我的乐刚</title>
+</head>
+<body class="buyer showTip">
+	<script type="text/javascript" src="../js/leftBar.js"></script> 
+	<!-- leftbar end -->
+
+
+	<div class="rightBar">
+		<script type="text/javascript" src="../js/topBar.js"></script> 
+		<!-- topBar end -->
+		<span class="ui-tip pct100 mt-1" data-type="blue">温馨提示：当前订单：60298已支付货款金额45000元，提货明细总金额为0元，还需继续支付 0元。 当支付金额大于可提货金额时，提货完成后剩余款项会自动结算进账户。</span>
+		<div class="mainCont ">
+			<div class="ui-tab3">
+				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">在线支付</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content unradius ">
+				<div class="pt20 pr20 pl20 pb30">
+					<div class="g28 dib b">付款信息</div>
+					<div class="whbgshadow p20 mt20 g80 lh30 g80">
+						需支付(元)：<span class="red f18">6000.00</span><br/>
+						<span class="pct25 dib">订单号：<span class="g28">56784</span></span>
+						<span class="pct25 dib">合同金额(元)：<span class="g28">6000.00</span></span>
+						<span class="pct25 dib">合同重量(吨)：<span class="g28">6000.000</span></span>
+					</div>
+			
+                    <!-- 基本信息 end-->
+
+                    <div class="g28 f14 mt30 b cl mb10">付款方式</div>
+                    <div class="cl mb10">
+                          
+                        <span class="dib  single pct100 ">
+                            <div class="l pct35">
+                            	支付方式：
+	                            <input type="hidden" value="">
+	                            <button class="ui-option mr5 switchDotBut rel on" type="button" value="1">扫码支付</button>
+	                            <button class="ui-option mr5 switchDotBut rel" type="button" value="2">网银支付</button>
+	                        </div>
+                            <div class="pay_bank r pct65 vt dn"><span class="ui-tip  linetwo" data-type="normal" style="margin-top:-6px">1、请按以下打款资料将本次付款金额支付到对应账户，本订单约定的供方账户信息为需方付款的唯一账户，请在付款前仔细核对。<br/>2、在交易过程中涉及的账户均为公司账户，禁止通过个人账户进行业务往来。</span></div>
+                        </span>
+                    </div>
+                    <div class="cl">
+                        <div class="cl mt15" style="border: 1px solid #ececec;"></div>
+                        <div class="mt15 pay_scan mr76 f12">
+							<div class="scanbg tc g80  mb10">
+								<div class="scanwbg ">
+									<img src="../images/exp.png" id="qcode" />
+								</div>
+								<div class="mt20">手机扫码支付</div>
+							</div>
+							推荐支付应用：<i class="payIcon-zfb mr5 vm"></i><i class="payIcon-wx mr5 vm"></i><i class="payIcon-wy vm"></i>
+                        </div>
+                        <div class="mt15 pay_bank dn mr76 g80 lh30">
+                        	账户名称：<span class="g28">上海乐刚供应链股份有限公司</span><br/>
+                        	&emsp;开户行：<span class="g28">工商银行上海宝山支行</span><br/>
+                        	&emsp;&emsp;账号：<span class="g28">1001 2333 1900 5667 868</span>
+                        	<div class="mt20 mb20">
+								<span class="payBank-ny dib mr20"></span>
+								<span class="payBank-js dib mr20"></span>
+								<span class="payBank-gs dib mr20"></span>
+								<span class="payBank-zg dib mr20"></span>
+								<span class="payBank-zs dib"></span>
+                        	</div>
+							<div class="ui-button" onclick="submitShow()" id="tj" data-type="big" type="button">生成自提委托书</div>
+                        </div>
+                    </div>
+
+                   				
+				</div>
+			</div><!-- ui-content end -->
+
+
+
+		</div>
+		<!-- mainCont end -->
+
+	</div>
+	<!-- rightBar end-->
+
+
+	
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script>
+		 var wait = 120;
+		$(function(){
+			$(".menu").find(".menulist").eq(1).addClass("on").siblings().removeClass("on")  //左侧菜单选中静态页面采用;
+			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
+
+			  $(".switchDotBut").on("click",function(){
+                if($(this).attr("value")=="1"){
+                    $(".pay_scan").show();
+                    $(".pay_bank").hide();
+                }else if($(this).attr("value")=="2"){
+                    $(".pay_scan").hide();
+                    $(".pay_bank").show();
+
+                }
+            })
+			
+			
+
+			
+		})
+
+
+
+
+
+
+	</script>
+</body>
+	
+</html>
