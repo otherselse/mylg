@@ -246,7 +246,7 @@
 				var index=$(this).parent(".index-top-titleBar").find(".index-top-title").index($(this));
 				$(this).parents(".index-account").find(".index-top-hide").hide().eq(index).show();
 				$(this).parents(".index-account").find(".index-account-detail").hide().eq(index).show();
-
+				$(this).addClass("on").siblings().removeClass("on");
 			})
 		})
 
