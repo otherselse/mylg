@@ -69,6 +69,8 @@ $(function(){
 		$("body").on("click", ".ui-option", function () {
 			$(this).addClass("on").siblings("button").removeClass("on");
 		})
+
+		
 })
 
 

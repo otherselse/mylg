@@ -65,13 +65,14 @@
                         	&emsp;开户行：<span class="g28">工商银行上海宝山支行</span><br/>
                         	&emsp;&emsp;账号：<span class="g28">1001 2333 1900 5667 868</span>
                         	<div class="mt20 mb20">
-								<span class="payBank-ny dib mr20"></span>
-								<span class="payBank-js dib mr20"></span>
-								<span class="payBank-gs dib mr20"></span>
-								<span class="payBank-zg dib mr20"></span>
-								<span class="payBank-zs dib"></span>
+								<span class="payBankItem payBank-ny dib mr20"></span>
+								<span class="payBankItem payBank-js dib mr20"></span>
+								<span class="payBankItem payBank-gs dib mr20"></span>
+								<span class="payBankItem payBank-zg dib mr20"></span>
+								<span class="payBankItem payBank-zs dib"></span>
                         	</div>
-							<div class="ui-button" onclick="submitShow()" id="tj" data-type="big" type="button">生成自提委托书</div>
+							<div class="ui-button w180"  data-type="big" type="button">下一步</div>
+							<button class="ui-button ml10" data-type="bb" small-type="grey" type="button">返回</button>
                         </div>
                     </div>
 
@@ -93,21 +94,27 @@
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
-		 var wait = 120;
 		$(function(){
 			$(".menu").find(".menulist").eq(1).addClass("on").siblings().removeClass("on")  //左侧菜单选中静态页面采用;
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
 
-			  $(".switchDotBut").on("click",function(){
-                if($(this).attr("value")=="1"){
-                    $(".pay_scan").show();
-                    $(".pay_bank").hide();
-                }else if($(this).attr("value")=="2"){
-                    $(".pay_scan").hide();
-                    $(".pay_bank").show();
+			$(".switchDotBut").on("click",function(){
+	            if($(this).attr("value")=="1"){
+	                $(".pay_scan").show();
+	                $(".pay_bank").hide();
+	            }else if($(this).attr("value")=="2"){
+	                $(".pay_scan").hide();
+	                $(".pay_bank").show();
 
-                }
-            })
+	            }
+             })
+
+			$(".payBankItem").on("click",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			})
+
+
+			
 			
 			
 

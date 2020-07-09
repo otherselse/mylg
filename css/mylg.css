@@ -8,12 +8,19 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-label[data-type='grey']{background-color:#ccc ;color:#fff ;}
 .ui-table[data-type='noLine'] tbody td,.ui-table[data-type='noLine'] tfoot td{border-right:0;}
 .ui-button.w80{width: 80px;min-width: 80px !important}
+.ui-button.w180{width: 180px;min-width: 180px}
+.ui-button.w155{width: 155px;min-width: 155px}
 .gd9{color:#D9D9D9}
 .g80{color:#808080}
-
+.edit-icon{width: 14px;height: 14px;background-position: -518px -118px;}
+.lh28{line-height: 28px}
 .leftArrow{background: url(../images/leftArrow.png) no-repeat; width: 16px; height: 14px;display: inline-block;vertical-align: middle;} 
 .showShadow{ box-shadow: 0 3px 8px 0 #e6e9ef;-webkit-box-shadow: 0 3px 8px 0 #e6e9ef;}
-
+.nav{font-size: 12px;padding:10px 0;color: #282828}
+.pct28{width: 28%}
+.pct35{width: 35%}
+.ui-input.h34{height: 34px;line-height: 34px;}
+.gae{color:#AEAEAE;}
 
 /*leftbar*/
 .logo{height:133px;text-align: center;padding-top: 10px;}
@@ -64,6 +71,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 /*rightbar*/
 .topBar{height:76px;border-bottom: 1px rgba(128,128,128,0.2) solid;box-sizing: border-box;}
 .mainCont{padding:20px 30px;}
+.mainContnot{padding:0px 30px;}
 
 
 
@@ -115,15 +123,17 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .payIcon-wx{display: inline-block;width: 92px;height: 32px;background:url(../images/payIcon.png) -155px 0;}
 .payIcon-zfb{display: inline-block;width: 69px;height: 32px;background:url(../images/payIcon.png) 0 0;}
 .ui-tip[data-type='normal'].linetwo { background-position: 0px 10px;padding: 0 10px 0 20px;}
-.payBank-zs{background:url(../images/payIcon.png) -180px -32px #fff;border: 1px solid #E6E6E6;border-radius: 3px;width: 180px;height:68px;}
-.payBank-zg{background:url(../images/payIcon.png) 0px -32px #fff;border: 1px solid #E6E6E6;border-radius: 3px;width: 180px;height:68px;}
-.payBank-gs{background:url(../images/payIcon.png) 0px -100px #fff;border: 1px solid #E6E6E6;border-radius: 3px;width: 180px;height:68px;}
-.payBank-js{background:url(../images/payIcon.png) -360px -32px #fff;border: 1px solid #E6E6E6;border-radius: 3px;width: 180px;height:68px;}
-.payBank-ny{background:url(../images/payIcon.png) -180px -100px #fff;border: 1px solid #E6E6E6;border-radius: 3px;width: 180px;height:68px;}
-.payBank-ny:hover,.payBank-ny:hover{border-color:#2172F5;}
+.payBankItem{border: 1px solid #E6E6E6;border-radius: 3px;width: 180px;height:68px;cursor: pointer;}
+.payBank-zs{background:url(../images/payIcon.png) -180px -32px #fff;}
+.payBank-zg{background:url(../images/payIcon.png) 0px -32px #fff;}
+.payBank-gs{background:url(../images/payIcon.png) 0px -100px #fff;}
+.payBank-js{background:url(../images/payIcon.png) -360px -32px #fff;}
+.payBank-ny{background:url(../images/payIcon.png) -180px -100px #fff;}
+.payBankItem:hover,.payBankItem.on{border-color:#2172F5;}
 
 /*address*/
 .orderaddr.w270{width: 270px}
+.orderaddr.adr-binfo{width: 100%;margin:20px 0 0  0;height:138px;}
 .orderaddr{padding:10px;position:relative;margin-bottom:10px;display:inline-block;margin-right: 10px;width:282px;height:113px;box-sizing: border-box;border:1px #D9D9D9 dashed;border-radius: 3px;}
 .orderaddr:hover{border-color:#1365E8 }
 .addrInfo{max-height: 36px;margin-bottom: 2px;overflow: hidden}
@@ -138,6 +148,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .addressBook{height: 123px;overflow: hidden;display: none}
 .addressBookBut{display: none}
 .addressDBook{padding-top: 5px;}
+.defautTip{color:#FB2020;background-color: #FFE3E3;display: inline-block;padding:1px 5px; }
 
 
 /*pageWrap*/
@@ -180,3 +191,26 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .bte {border-top: 1px solid #eee;}
 .stockTable {border: 1px solid #e5e5e5;}
 .bte6 {border-top: 1px solid #e6e6e6;}
+
+/*baseinfo*/
+.base-info-left{display: inline-block;width: 60%;font-size: 14px;box-sizing: border-box;padding:32px 6.5%;}
+.base-info-right{display: inline-block;width: 40%;font-size: 14px;box-sizing: border-box;padding:32px 6.5%;border-left:1px #EEEEEE solid;min-height: 700px;vertical-align: top}
+.base-comp-bg{background:url(../images/base/compbg.png) center no-repeat;box-shadow: 0 18px 15px -10px #EDEFF3;-webkit-box-shadow: 0 18px 15px -10px #EDEFF3;border-radius: 6px;height:208px;}
+.base-comp-title{color:#fff;height:50px;line-height: 50px;padding-left:34px;font-size: 16px;}
+.base-comp-band{background: #FFFFFF;border: 1px solid #FFFFFF;border-radius: 11px;color: #CC924D;height:22px;line-height: 22px;font-size: 12px;padding:0 5px;}
+.base-brand-ic{width: 16px;height: 16px;background-position: -467px -117px;}
+.base-comp-cont{color:#fff;padding:20px 0 0 34px;line-height: 25px;}
+.base-finan-add{background: #FAFAFA;border: 1px dashed #D9D9D9;border-radius: 3px;box-sizing: border-box;height: 138px;padding-top:30px;}
+.base-finan-addbut{line-height:30px;text-align:center;font-size:24px;border-radius:50%;background: #FFFFFF;box-shadow: 0 3px 10px 0 rgba(0,0,0,0.08);-webkit-box-shadow: 0 3px 10px 0 rgba(0,0,0,0.08);height:32px;width: 32px;}
+.base-finan-add:hover{border-color: #1365E8}
+.base-finan-tip{margin:50px -10% 0; }
+.sms-content {box-sizing: border-box;display: inline-block;width: 800px;vertical-align: top;}
+.sms-content-item {box-sizing: border-box;width: 44%;height: 70px; margin: -1px 4% 0px 0;float: left;padding: 16px 19px;border: 1px solid #E6E6E6;background: #F9F9F9;
+    text-align: left;cursor: pointer;}
+.sms-content-item:nth-of-type(2n){margin-right:0;}
+.sms-content-item.on{background: #fff}
+ .sms-content-item-panel {box-sizing: border-box;display: inline-block;width: calc(100% - 40px);font-size: 12px;line-height: 17px;vertical-align: top;}
+ .sms-content-item-switch {box-sizing: border-box;display: inline-block;width: 40px;height: 100%;vertical-align: top;}
+@media (min-width: 1600px) {
+	.base-comp-bg{background-size:100% 100%;}
+}

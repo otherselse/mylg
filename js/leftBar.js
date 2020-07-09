@@ -49,7 +49,7 @@
 		+'			<a class="smlist" href="">承运商评审</a>'
 		+'		</div>'
 		+'	</div>'
-		+'	<a class="menulist" href=""><i class="lgIcon imenu-info vm mr5"></i>账户信息</a>';
+		+'	<a class="menulist myaccount" href="../base/base.html"><i class="lgIcon imenu-info vm mr5"></i>账户信息</a>';
 
 
 	var str1='<div class="leftBar">'
