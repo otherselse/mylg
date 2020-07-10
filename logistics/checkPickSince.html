@@ -25,7 +25,7 @@
 			<div class="ui-tab3">
 				<a href="../purchaser/order.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">我的订单</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
-			<div class="ui-content unradius ">
+			<div class="ui-content unradius autoHeight">
 				<div class="pt20 pr20 pl20 pb30">
 					<div class="g28 dib b"><a class="leftArrow mr10" href="../purchaser/order.html"></a>基本信息</div>
 					<div class="ovh f12 mt20"> 
@@ -51,7 +51,7 @@
                                 <input type="text" class="ui-input   pct40" placeholder="请输入">
                             </div>
                             <div class="mb10">&emsp;&emsp;&emsp;&emsp;验证码：
-                                <input type="text" class="ui-input   pct40" placeholder="请输入" /><button class="ui-button ml10 " id="codee">发送验证码</button>
+                                <input type="text" class="ui-input   pct20" placeholder="请输入" /><button class="blue ml10 nbut" id="codee">发送验证码</button>
                             </div> 
                             
                             
@@ -193,9 +193,11 @@
 		function timeSet(btn) {
 	        if (wait == 0) {
 	        	$(btn).prop("disabled",false);
-	        	$(btn).text("获取登录验证码")
+	        	$(btn).text("获取登录验证码");
+                $(btn).addClass("blue");
 	            wait = 120;
 	        } else {
+                $(btn).removeClass("blue");
 	        	$(btn).prop("disabled",true);
 	        	$(btn).text("重新发送(" + wait + "s)")
 	            wait--;

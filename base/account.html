@@ -29,14 +29,17 @@
 				<a href="account.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">账户管理</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius rel">				
-				<div class="pt20"><span class="ui-content-t">申请主账号</span><span class="ui-tip ml10" data-type="blue">提示：申请主账号需要上传授权委托书<a href="##" class="dib ml30">查看并打印 ></a></span></div>
+				<div class="pt20">
+					<div class="l"><span class="ui-content-t">申请主账号</span><span class="ui-tip ml10" data-type="blue">提示：申请主账号需要上传授权委托书<a href="##" class="dib ml30" title="原有授权委托书打印">查看并打印 ></a></span></div>
+					<div class="r pr20"><button class="ui-button" type="button" onclick="addSon()">+创建公司子账号</button></div>
+				</div>
 
 				<div class="pl20 pr20 pt30 pb30" style="min-height: calc(100% - 400px)">
 					<table class="ui-table tc f14" width="100%">
 						<thead>
 							<tr>
 								<th width="12%">账号</th>
-								<th width="15%" class="tl"><div class="pl10">姓名</div></th>
+								<th width="12%" class="tl"><div class="pl10">姓名</div></th>
 								<th width="12%" class="tl"><div class="pl10">联系电话</div></th>
 								<th width="15%" class="tl"><div class="pl10">注册时间</div></th>
 								<th width="12%">状态</th>
@@ -45,26 +48,38 @@
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
-								<td><span class="ui-label mr5 f12" data-type="red">子</span>4449393939</td>
+								<td><span class="ui-label mr5 f12" data-type="red">主</span>4449393939</td>
 								<td class="tl"><div class="pl10">杨白劳</div></td>
 								<td class="tl"><div class="pl10">145788884556</div></td>
 								<td class="tl"><div class="pl10">2020-03-14 09:23:22</div></td>
 								<td>正常</td>
-								<td><a href="" class="">申请主账号</a></td>
+								<td>
+									<a href="javascript:void(0)" onclick="accountPermissionChange('17542');">权限解除</a>
+									<span class="ml5 mr5 dib gd9">|</span>
+									<a href="javascript:void(0)" onclick="toPermissionTransfer('17542','15869724444','0');">权限移交</a>
+								</td>
 							</tr>
 							<tr>
-								<td><span class="ui-label mr5 f12" data-type="red">子</span>4449393939</td>
+								<td><span class="ui-label mr5 f12" >子</span>4449393939</td>
 								<td class="tl"><div class="pl10">杨白劳</div></td>
 								<td class="tl"><div class="pl10">145788884556</div></td>
 								<td class="tl"><div class="pl10">2020-03-14 09:23:22</div></td>
 								<td>正常</td>
-								<td><a href="" class="">申请主账号</a></td>
+								<td><a href="javascript:void(0)"  onclick="closeAccount(22292);">注销</a></td>
+							</tr>
+							<tr>
+								<td><span class="ui-label mr5 f12" >子</span>4449393939</td>
+								<td class="tl"><div class="pl10">杨白劳</div></td>
+								<td class="tl"><div class="pl10">145788884556</div></td>
+								<td class="tl"><div class="pl10">2020-03-14 09:23:22</div></td>
+								<td>正常</td>
+								<td><a href="javascript:void(0)" onclick="uploadFunction(19414,'1')">申请主账号</a></td>
 							</tr>
 
 						</tbody>
 					</table>
 				</div>
-				<div class="tc"><button class="ui-button" type="button">注销账号</button></div>
+				<div class="tc"><button class="ui-button" type="button" id="logOff">注销账号</button></div>
 				<div class="tc g80 mt10 pb30">提示：原账号注销后将不能直接再登录使用乐刚网（可重新注册后使用），操作记录将会清空，请谨慎操作</div>
 
 			</div><!-- ui-content end -->
@@ -77,6 +92,42 @@
 	</div>
 	<!-- rightBar end-->
 
+	<div class="p20 dn" id="idenWrap">
+		<div class="cl"><span class="ui-tip pct100" data-type="blue">1、申请主账号需要上传授权委托书<a href="##" class="dib ml30" title="原有授权委托书打印">查看并打印 ></a><br/>2、单个文件大小不能超过3MB</span></div>
+		<div class="mt20">
+			权限委托书：<button class="ui-button mr20" data-type="upfile" type="button">附件上传</button>
+			<span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件11111.jpg</a><i class="icon-sdel goldIcon vm ml5" ></i></span>
+		</div>	
+		<div class="tc mt20 pb30">
+			<button class="ui-button mr10 w80" type="button">提交</button>
+			<button class="ui-button w80 btnCancel" data-type="normal" type="button">取消</button>
+		</div>
+	</div>
+
+	<div id="addSon" class="p20 dn">
+		<div class="mb20" ><span class="ui-tip pct100">提示：只允许以手机号方式创建子账号；子账号不支持修改，请仔细考虑。</span></div>
+	<form id="addSonForm">
+		<div class="clearfix">
+			<span class="dib pct30 tr">创建一个新的公司子账号：</span>
+			<input id="sonAccount" type="text" name="custMap.mobile" onblur="checkMobileIsReady(this)" class="pct50 ui-input h34 " placeholder="请输入子账号对应的手机号码">
+			
+			
+		</div>
+		<div class="mt20">
+			<span class="dib pct30 tr">联系人：</span>
+			<input id="sonContact" type="text" name="custMap.contact" class="pct50 ui-input h34 "  placeholder="请输入子账号对应的联系人姓名"/>
+		</div>
+		<div class="mt20">
+			<span class="dib pct30 tr">验证码：</span>
+			<input id="checkCode" type="text" name="checkCode" class="pct20 ui-input h34 "  placeholder="请输入子账号手机验证码"/>
+			<button class="blue ml10 nbut" id="codee">获取验证码</button>
+		</div>
+		<div class="mt40 tc">
+			<button class="ui-button mr10 w180" type="button" data-type="big" onclick="toAddSon()">确定创建</button>
+			<button class="ui-button w80" data-type="bb" small-type="grey" type="button" onclick="layer.closeAll()" >取消</button>
+		</div>
+	</form>
+</div>
 
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
@@ -87,12 +138,78 @@
 			$(".menu").find(".myaccount").addClass("on").siblings().removeClass("on")  //左侧菜单选中静态页面采用;
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
 
+			// 注销弹框
+		    $("#logOff").click(function() {
+		        layer.open({
+		            type: 1, 
+		            skin: 'dialog-cont-pd',
+		            title: "账号注销",
+		            area: ['540px'],
+		            content: $("#logOffWrap"),
+		            resize:false,
+		            shadeClose : true,
+		            move: false
+		        });	
+		    })
+
+		    $("#codee").on("click",function(){
+				timeSet(this)
+			})
+
 
 			
 			
 
 			
 		})
+
+		function timeSet(btn) {
+	        if (wait == 0) {
+	        	$(btn).prop("disabled",false);
+	        	$(btn).text("获取登录验证码");
+                $(btn).addClass("blue");
+	            wait = 120;
+	        } else {
+                $(btn).removeClass("blue");
+	        	$(btn).prop("disabled",true);
+	        	$(btn).text("重新发送(" + wait + "s)")
+	            wait--;
+	            setTimeout(function () {
+	                    timeSet(btn);
+	                },
+	                1000)
+	                }
+	    }
+
+		function uploadFunction(id, isRealName) {
+			var inforModify=layer.open({
+				type: 1, 
+		        title: "实名认证",
+		        area: ['500px'],
+		        content: $("#idenWrap"),
+		        shadeClose : true
+			});
+			$('#idenWrap .btnCancel').on('click', function(){
+				layer.close(inforModify); 
+			});
+		}
+
+		function accountPermissionChange(){
+			layer.confirm('提交权限解除后，该主账号就自动成为子账号，请知悉。', function(){})
+		}
+
+		function closeAccount(){
+			layer.confirm('该账号注销后，将不能登录乐刚网，您确定要注销吗？', function(){})
+		}
+
+		function addSon(){
+			layer.open({
+				type: 1,
+				title: '创建公司子账号',
+				area: ['600px', '400px'],
+				content: $("#addSon")		
+			});
+		}
 
 
 
