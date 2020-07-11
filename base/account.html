@@ -106,34 +106,80 @@
 
 	<div id="addSon" class="p20 dn">
 		<div class="mb20" ><span class="ui-tip pct100">提示：只允许以手机号方式创建子账号；子账号不支持修改，请仔细考虑。</span></div>
-	<form id="addSonForm">
-		<div class="clearfix">
-			<span class="dib pct30 tr">创建一个新的公司子账号：</span>
-			<input id="sonAccount" type="text" name="custMap.mobile" onblur="checkMobileIsReady(this)" class="pct50 ui-input h34 " placeholder="请输入子账号对应的手机号码">
-			
-			
+		<form id="addSonForm">
+			<div class="clearfix">
+				<span class="dib pct30 tr">创建一个新的公司子账号：</span>
+				<input id="sonAccount" type="text" name="custMap.mobile" onblur="checkMobileIsReady(this)" class="pct50 ui-input h34 " placeholder="请输入子账号对应的手机号码">
+				
+				
+			</div>
+			<div class="mt20">
+				<span class="dib pct30 tr">联系人：</span>
+				<input id="sonContact" type="text" name="custMap.contact" class="pct50 ui-input h34 "  placeholder="请输入子账号对应的联系人姓名"/>
+			</div>
+			<div class="mt20">
+				<span class="dib pct30 tr">验证码：</span>
+				<input id="checkCode" type="text" name="checkCode" class="pct20 ui-input h34 "  placeholder="请输入子账号手机验证码"/>
+				<button class="blue ml10 nbut" id="codee" type="button">获取验证码</button>
+			</div>
+			<div class="mt40 tc">
+				<button class="ui-button mr10 w180" type="button" data-type="big" onclick="toAddSon()">确定创建</button>
+				<button class="ui-button w80" data-type="bb" small-type="grey" type="button" onclick="layer.closeAll()" >取消</button>
+			</div>
+		</form>
+	</div>
+	<div id="permissionTransfer" class="p20 dn">
+		<div class="mb20" ><span class="ui-tip pct100">提示：提交主账号权限移交申请后，须新主账号确认同意后方可移交成功，在此期间，你仍可行使主账号权限。</span></div>
+		<div class="mt20">
+			<span class="dib pct30 tr">原主账号：</span>
+			<input name="custMap.contact" type="text"  class="pct50 ui-input h34 "  readonly="" value="15869724444" />
 		</div>
 		<div class="mt20">
-			<span class="dib pct30 tr">联系人：</span>
-			<input id="sonContact" type="text" name="custMap.contact" class="pct50 ui-input h34 "  placeholder="请输入子账号对应的联系人姓名"/>
+			<span class="dib pct30 tr">新主账号：</span>
+			<span class="input-selSearch pct50">
+				<input type="text" class="ui-input searchUp h34 pct100" readonly=""  autocomplete="off">
+				<div class="search-cont">
+					<a href="javascript:void(0)" class="search-list db ell">12355556666---ii</a>
+					<a href="javascript:void(0)" class="search-list db ell">13611112222---qq</a>
+					<a href="javascript:void(0)" class="search-list db ell">13677418555---yy</a>
+					<a href="javascript:void(0)" class="search-list db ell">15000264444---贝壳</a>
+				</div>
+			</span>
+		</div>
+		<div class="mt10">
+			<span class="dib pct30 tr">&emsp;</span>
+			<a href="javascript:void(0)"  onclick="lookBook()" title="打开变更授权委托书页面">查看变更授权委托书</a>
+		</div>
+		<div class="mt30 tc">
+			<button class="ui-button mr10 w180" type="button" data-type="big" onclick="toTransfer()">确定移交</button>
+			<button class="ui-button w80" data-type="bb" small-type="grey" type="button" onclick="layer.closeAll()">取消</button>
+		</div>
+
+	</div>
+
+
+	<div id="logOffWrap" class="dn">
+		<div class="mt20">
+			<span class="dib pct30 tr">账号：</span>
+			15869724444
 		</div>
 		<div class="mt20">
 			<span class="dib pct30 tr">验证码：</span>
-			<input id="checkCode" type="text" name="checkCode" class="pct20 ui-input h34 "  placeholder="请输入子账号手机验证码"/>
-			<button class="blue ml10 nbut" id="codee">获取验证码</button>
+			<input type="text"name="custMap.validateCode" id="yzmCode" class="pct30 ui-input h34 " >
+			<button class="blue ml10 nbut" id="codeec">发送验证码</button>
 		</div>
-		<div class="mt40 tc">
-			<button class="ui-button mr10 w180" type="button" data-type="big" onclick="toAddSon()">确定创建</button>
-			<button class="ui-button w80" data-type="bb" small-type="grey" type="button" onclick="layer.closeAll()" >取消</button>
+		<div class="mt30 tc mb30">
+			<button class="ui-button mr10 w180" type="button" data-type="big" onclick="doSubmit()">确定</button>
+			<button class="ui-button w80" data-type="bb" small-type="grey" type="button" onclick="layer.closeAll()">取消</button>
 		</div>
-	</form>
-</div>
+	</div>
 
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
+		var wait=120;
 		$(function(){
 			$(".menu").find(".myaccount").addClass("on").siblings().removeClass("on")  //左侧菜单选中静态页面采用;
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
@@ -142,13 +188,10 @@
 		    $("#logOff").click(function() {
 		        layer.open({
 		            type: 1, 
-		            skin: 'dialog-cont-pd',
 		            title: "账号注销",
 		            area: ['540px'],
 		            content: $("#logOffWrap"),
-		            resize:false,
 		            shadeClose : true,
-		            move: false
 		        });	
 		    })
 
@@ -156,8 +199,9 @@
 				timeSet(this)
 			})
 
-
-			
+			$("#codeec").on("click",function(){
+				timeSet(this)
+			})		
 			
 
 			
@@ -211,6 +255,16 @@
 			});
 		}
 
+		function toPermissionTransfer(id,mobile,isTransfer){
+			layer.open({
+				type: 1,
+				title: '主账号权限移交',
+				area: ['500px', '380px'],
+				content: $("#permissionTransfer")	
+			});
+		}
+
+	
 
 
 
