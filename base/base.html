@@ -32,7 +32,7 @@
 				<div class="base-info-left">
 					<div class="ovh">
 						<span class="f16 b g28">基础信息</span>
-						<a class="r">企业信息变更</a>
+						<a class="r" title="跳转企业信息变更评审页面" href="javascript:void(0)">企业信息变更</a>
 					</div>
 					<div class="base-comp-bg mt10">
 						<div class="base-comp-title">瓜子二手钢买卖有限公司<span class="dib base-comp-band vm ml5"><i class="lgIcon base-brand-ic vm mr2"></i><span class="vm dib">已认证</span></span></div>
@@ -75,13 +75,13 @@
 						</tr>
 					</table>
 					<div class="mt20">
-						<button class="ui-button mr10 w155" data-type="big" type="button"><i class="lgIcon vm edit-icon mr5"></i>信息修改</button>
-						<button class="ui-button w155" data-type="bb"  type="button">修改密码</button>
+						<button class="ui-button mr10 w155" data-type="big" type="button" onclick="window.location='editInfo.html'"><i class="lgIcon vm edit-icon mr5"></i>信息修改</button>
+						<button class="ui-button w155" data-type="bb"  type="button" onclick="window.location='editPas.html'">修改密码</button>
 					</div>
 				</div>
 				<div class="base-info-right">
 					<div class="f16 b g28">财务信息</div>
-					<a class="mt20 base-finan-add db tc" href="javascript:void(0)">
+					<a class="mt20 base-finan-add db tc" href="javascript:void(0)" onclick="addAccount()">
 						<span class="base-finan-addbut dib">+</span><br/><span class="g80 f12 mt15 dib">新增银行信息</span>
 					</a>
 					<div class="base-info-account">
@@ -96,7 +96,7 @@
 							 	</span>
 							 </span>
 							 <span class="dib pct28 vt tr pt5 f12">
-							 	<span class="dib mb5 defautTip">默认</span><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">修改</a>
+							 	<span class="dib mb5 defautTip">默认</span><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAccount()">修改</a>
 							 </span>
 						</div><!-- orderaddr end -->
 						<div class="orderaddr vt adr-binfo">
@@ -110,7 +110,35 @@
 							 	</span>
 							 </span>
 							 <span class="dib pct28 vt tr pt5 f12">
-							 	<a class="dib addrbut mb5" href="javascript:void(0)">设为默认</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">修改</a>
+							 	<a class="dib addrbut mb5" href="javascript:void(0)">设为默认</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAccount()">修改</a>
+							 </span>
+						</div><!-- orderaddr end -->
+						<div class="orderaddr vt adr-binfo">
+							<a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
+							 <span class="dib pct70">
+							 	<span class="dib ell pct100 pt5 pl10 lh28">
+							 		<span class="g9a">账户名称：</span>张三张三张三张三张三张三张三张三张三张三张三张三<br>
+							 		<span class="g9a">开户银行：</span>瑞士银行<br>
+							 		<span class="g9a">银行账号：</span>56869694949440404<br>
+							 		<span class="g9a">开户地区：</span>上海市-宝山区
+							 	</span>
+							 </span>
+							 <span class="dib pct28 vt tr pt5 f12">
+							 	<a class="dib addrbut mb5" href="javascript:void(0)">设为默认</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAccount()">修改</a>
+							 </span>
+						</div><!-- orderaddr end -->
+						<div class="orderaddr vt adr-binfo">
+							<a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
+							 <span class="dib pct70">
+							 	<span class="dib ell pct100 pt5 pl10 lh28">
+							 		<span class="g9a">账户名称：</span>张三张三张三张三张三张三张三张三张三张三张三张三<br>
+							 		<span class="g9a">开户银行：</span>瑞士银行<br>
+							 		<span class="g9a">银行账号：</span>56869694949440404<br>
+							 		<span class="g9a">开户地区：</span>上海市-宝山区
+							 	</span>
+							 </span>
+							 <span class="dib pct28 vt tr pt5 f12">
+							 	<a class="dib addrbut mb5" href="javascript:void(0)">设为默认</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAccount()">修改</a>
 							 </span>
 						</div><!-- orderaddr end -->
 					</div><!-- base-info-right end-->
@@ -130,7 +158,20 @@
 	</div>
 	<!-- rightBar end-->
 
-
+	
+	<div class="dn" id="modifyWrap1">
+		<div class="pt20 pl50 ">
+			<div class="mb20"><span class="ui-tip">*修改后的银行账户需为公司账户，禁止通过个人账户进行业务往来</span></div>
+			账户名称：上海海洋大学<br/>
+			开户银行：<input type="text" class="ui-input h34 pct40 mb10 mt10" value="中国建设" /><br/>
+			银行账号：<input type="text"  class="ui-input h34 pct40 mb10" value="7592893358"  /><br/>
+			开户地区：<input type="text" class="ui-input h34 pct40 mb10" value="北京-北京市-密云市" /><br/>
+		</div>
+		<div class="tc mt20 pb30">
+			<button class="ui-button w180 mr10" data-type="big" type="button">确定修改</button>
+			<button class="ui-button w80 btnCancel" data-type="bb" small-type="grey" type="button">取消</button>
+		</div>
+	</div>
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -139,14 +180,39 @@
 		$(function(){
 			$(".menu").find(".myaccount").addClass("on").siblings().removeClass("on")  //左侧菜单选中静态页面采用;
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
-
-
-			
-			
-
 			
 		})
 
+		function addAccount(){
+			var inforModify = layer.open({
+		        type: 1, 
+		        title: "增加银行信息",
+		        area: ['600px'],
+		        content: $("#modifyWrap1"),
+		        resize:false,
+		        shadeClose : true,
+		        move: false
+		    });
+			 $('#modifyWrap1 .btnCancel').on('click', function(){
+				layer.close(inforModify); 
+			});
+		}
+
+		function editAccount(){
+			var inforModify = layer.open({
+		        type: 1, 
+		        skin: 'dialog-cont-pd',
+		        title: "修改银行信息",
+		        area: ['600px'],
+		        content: $("#modifyWrap1"),
+		        resize:false,
+		        shadeClose : true,
+		        move: false
+		    });
+			 $('#modifyWrap1 .btnCancel').on('click', function(){
+				layer.close(inforModify); 
+			});
+		}
 
 
 

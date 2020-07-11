@@ -32,16 +32,25 @@
 				<div class="bbe"><span class="ui-content-t">新增收件地址</span><span class="ui-tip ml10" data-type="blue">已保存0条地址，还能保存8条地址</span></div>
 				<div class="tc pt20">
 					<span class="pct40 dib tc vt">
-						收件地址：<input type="text" placeholder="请输入" class="ui-input h34 pct70 mb10"/><br/>
-						详细地址：<textarea class="ui-textarea pct70 f14" rows="3"></textarea>
+						收件地址：<input type="text" placeholder="请选择省市区" id="getAddrStock" autocomplete="off" class="ui-input h34 pct70 mb10"/><br/>
+						详细地址：<div class="ui-textarea-x pct70 dib f12">
+							<textarea  placeholder="详细地址：如道路、门牌号、小区、楼栋号、单元室等" maxlength="50" rows="1"  id="recAddr"></textarea>
+							<div class="ui-textarea"></div>
+							<label for="someId" class="ui-textarea-count">
+								<span id="leftTextSum">0</span>/<span>50</span>
+							</label>
+						</div>
 					</span>
 					<span class="pct40 dib tc vt">
-						收件人：&emsp;<input type="text" placeholder="请输入" class="ui-input h34 pct70 mb10"/><br/>
-						收件单位：<input type="text" placeholder="请输入" class="ui-input h34 pct70 mb10"/><br/>
-						手机号码：<input type="text" placeholder="请输入" class="ui-input h34 pct70"/><br/>
+						收件人：&emsp;<input type="text" placeholder="请输入" class="ui-input h34 pct70 mb10" id="recName" maxlength="20"/><br/>
+						收件单位：<input type="text" placeholder="请输入" class="ui-input h34 pct70 mb10" id="recCorp" maxlength="25"/><br/>
+						<input name="express.recPhone" id="recPhone" type="hidden" value="">
+						手机号码：<input type="text" placeholder="请输入" class="ui-input h34 pct70" maxlength="13" placeholder="请输入手机号便于接收开票信息"  id="RerecPhone"/><br/>
 					</span>
 				</div>
 				<div  class="tc mt20 checkbox"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>设为默认收件地址</div>
+				<div class="tc mt20"><span class="ui-tip" data-type="normal">请您输入正确的手机号！</span></div>
+
 				<div class="tc mt20"><button class="ui-button " type="button">保存</button></div>
 				<div class="pl20 pr20 pt30 pb30">
 					<table class="ui-table tc f12" width="100%">
@@ -57,12 +66,25 @@
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
-								<td>李胜男</td>
+								<td>
+								李胜男
+								 	<input id="id_0" type="hidden" value="A9FDA201751545B2E05371001FAC8F6A">
+							        <input id="reczip_0" type="hidden" value="">
+							        <input id="recName_0" type="hidden" value="3435">
+							        <input id="recAddr_0" type="hidden" value="安徽-合肥市-市辖区*4543543">
+							        <input id="recSsq_0" type="hidden" value="安徽-合肥市-市辖区">
+							        <input id="recXxdz_0" type="hidden" value="4543543">
+							        <input id="recCorp_0" type="hidden" value="默认收件地址默认收件地址默认收件地址">
+							        <input id="recPhone_0" type="hidden" value="13711112222">
+							        <input id="recR2Phone_0" type="hidden" class="phoneSeparated" value="13711112222">
+							        <input id="recCorpID_0" type="hidden" value="71799">
+							        <input id="isFirst_0" type="hidden" value="1">
+							</td>
 								<td class="tl"><div class="pl10">阿里巴巴钢铁投资有限公司</div></td>
 								<td class="tl"><div class="pl10">上海市宝山区</div></td>
 								<td class="tl"><div class="pl10">上海市宝山区锦乐路2999号</div></td>
-								<td class="tl"><div class="pl10">13567889900</div></td>
-								<td><a href="" class="">修改</a><span class="ml5 mr5 dib gd9">|</span><a href="" class="">删除</a></td>
+								<td class="tl"><div class="pl10 phoneSeparated">13567889900</div></td>
+								<td><a href="javascript:void(0)"  onclick="editAddr('0',this)">修改</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)">删除</a></td>
 								<td><span class="dib defautTip">默认</span></td>
 							</tr>
 							<tr>
@@ -70,8 +92,8 @@
 								<td class="tl"><div class="pl10">阿里巴巴钢铁投资有限公司</div></td>
 								<td class="tl"><div class="pl10">上海市宝山区</div></td>
 								<td class="tl"><div class="pl10">上海市宝山区锦乐路2999号</div></td>
-								<td class="tl"><div class="pl10">13567889900</div></td>
-								<td><a href="" class="">修改</a><span class="ml5 mr5 dib gd9">|</span><a href="" class="">删除</a></td>
+								<td class="tl"><div class="pl10 phoneSeparated">13567889900</div></td>
+								<td><a  href="javascript:void(0)"  onclick="editAddr('0',this)">修改</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)">删除</a></td>
 								<td><a href="" class="g80">设为默认</a></td>
 							</tr>			
 						</tbody>
@@ -106,6 +128,33 @@
 			
 		})
 
+
+	function editAddr(index,obj){
+	    $("#uncheck_but").removeClass("disabled")
+	    var id=$("#id_"+index).val();
+	    var name=$("#recName_"+index).val();
+	    var company=$("#recCorp_"+index).val();
+	    var ssq=$("#recSsq_"+index).val();
+	    var addr=$("#recXxdz_"+index).val();
+	    var tel=$("#recPhone_"+index).val();
+	    var isFirst=$("#isFirst_"+index).val();
+	    var recR2Phone=$(obj).parents("tr ").find(".phoneSeparated").text();
+
+	    $("#recID").val(id)
+	    $("#getAddrStock").val(ssq);
+	    $("#recAddr").val(addr);
+	    $("#recName").val(name);
+	    $("#recCorp").val(company);
+	    $("#recPhone").val(tel);
+	    $("#RerecPhone").val(recR2Phone);
+	    if(isFirst==1){
+	        $("#selAddrCheck").prop("checked",true);
+	        $("input[name$='isFirst']").val('1');
+	    }else{
+	        $("#selAddrCheck").prop("checked",false);
+	        $("input[name$='isFirst']").val('0');
+	    }
+	}
 
 
 
