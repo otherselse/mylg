@@ -214,3 +214,14 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 @media (min-width: 1600px) {
 	.base-comp-bg{background-size:100% 100%;}
 }
+
+/* applysale */
+.order-step {position: relative;width: 70%;}
+.order-step:before {content: '';position: absolute;top: 12px;border-top: 1px #D9D9D9 dashed;width: 100%;height: 1px;left: 0;}
+.order-step1.on, .order-step2.on, .order-step3.on {color: #1365E8;font-weight: bold;background: #fff;}
+.order-step1 {position: absolute;left: -26px;}
+.order-step2 { left: 25%; transform: translateX(-50%); background: #fff; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); }
+.order-step3 { left: 50%; transform: translateX(-50%); background: #fff; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); }
+.order-step4 { left: 100%; transform: translateX(-180%); -webkit-transform: translateX(-180%); background: #fff; -moz-transform: translateX(-180%); -ms-transform: translateX(-180%); -o-transform: translateX(-180%); }
+.circle24 {display: inline-block;font-style: normal;width: 24px;height: 24px;border-radius: 50%;box-sizing: border-box;border: 1px #D9D9D9 solid;text-align: center;line-height: 24px;color: #9A9A9A;background: #fff;}
+.on > .circle24 {color: #fff;background: #1365E8;border: 0;}
