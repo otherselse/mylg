@@ -215,6 +215,9 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .sms-content-item.on{background: #fff}
  .sms-content-item-panel {box-sizing: border-box;display: inline-block;width: calc(100% - 40px);font-size: 12px;line-height: 17px;vertical-align: top;}
  .sms-content-item-switch {box-sizing: border-box;display: inline-block;width: 40px;height: 100%;vertical-align: top;}
+
+ .accountbg > .orderaddr{height: 138px;}
+
 @media (min-width: 1600px) {
 	.base-comp-bg{background-size:100% 100%;}
 }
