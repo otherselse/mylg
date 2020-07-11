@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>评审中心-VIP客户评审</title>
+	<title>评审中心-企业信息变更评审</title>
 </head>
 <body>
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -22,27 +22,12 @@
 		<!-- topBar end -->
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">VIP客户评审</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">企业信息变更评审</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius">
-				<div class="pt30 pr20 pl20 pb30">
-                    <div class="tc auto">
-                        <span class="order-step dib tl">
-                            <a class="dib order-step1 tc rel g67 on pr5" href="procIndex.html">
-                                <i class="circle24 mr5">1</i>提交申请
-                            </a>
-                            <a class="dib order-step2 tc rel g67  pr5" href="jgqr.html">
-                                <i class="circle24  mr5">2</i>金牌商家上传现场资料
-                            </a>
-                             <a class="dib order-step3 tc rel g67 pr5" href="checkProduct.html">
-                                <i class="circle24 mr5">3</i>平台审核
-                            </a>
-                            <a class="dib order-step4 tc rel g67 pr5" href="checkProduct.html">
-                                <i class="circle24 mr5">4</i>完成
-                            </a>
-                        </span>
-                    </div>
+				<div class="pt20 pr20 pl20 pb30">
                     <div class="pl40 pr40">
+                    <div><span class="ui-tip" data-type="blue">提示： 对于企业工商信息进行变更的,包括公司名称、税号、注册地址需上传公司营业执照和工商信息变更通知</span> </div>
                     <div class="apply-comp-bg mt30 f0 auto pct100">
                         <div class="dib pct45 f14 wh apply-comp-left">
                             <div class="base-comp-title mt15">瓜子二手钢买卖有限公司<span class="dib base-comp-band vm ml5"><i class="lgIcon base-brand-ic vm mr2"></i><span class="vm dib">已认证</span></span></div>
@@ -53,15 +38,8 @@
                                 手机号码：56869694949440404<br>
                             </div>
                         </div>
-                        <div class="apply-comp-right pct55 dib tr">
-                            <div>
-                                <button class="ui-button mr10" data-type="middle" data-color="white">评审中</button>
-                                <button class="ui-button" data-type="middle">重新认证</button>
-                            </div>
-                            <div class="mt10">
-                                <button class="ui-button" data-type="middle">提交评审</button>
-                            </div>
-                         
+                        <div class="apply-comp-right pct55 dib tr vt">
+                                <button class="ui-button" data-type="middle">重新评审</button>
                         </div>
                     </div>
                 </div>
@@ -69,40 +47,30 @@
                     <table class="ui-table tc f12 mt40" width="100%">
                         <thead>
                             <tr>
-                              <th width="17%">申请时间</th>
-                              <th width="16%">申请人</th>
-                              <th width="17%">类型</th>
-                              <th width="16%"><div class="ptl40 tl">账期</div> </th>
-                              <th width="17%">额度</th>
-                              <th width="17%">状态</th>
-                             
+                              <th width="20%">申请时间</th>
+                              <th width="20%">申请人</th>
+                              <th width="20%">评审完成时间</th>
+                              <th width="20%">到期时间</th>
+                              <th width="20%">状态</th>
                             </tr>
                         </thead>
                         <tbody class="ui-thover">                             
                             <tr>
                                 <td>2020-05-28 10:49:23</td>
                                 <td>唐宇捷</td>
-                                <td>欠款业务</td>
-                                <td ><div class="ptl40 tl">60天</div> </td>
-                                <td>1000万元</td>
+                                <td>2020-05-28 10:49:23</td>
+                                <td>2020-05-28 10:49:23</td>
                                 <td><span class="blue">通过</span></td>
                             </tr>
                             <tr>
                                 <td>2020-05-28 10:49:23</td>
                                 <td>唐宇捷</td>
-                                <td>欠款业务</td>
-                                <td><div class="ptl40 tl">60天<span class="ui-label ml10 f12 vm" data-type="red">到期</span></div> </td>
-                                <td>1000万元</td>
-                                <td><span class="blue">通过</span></td>
-                            </tr>
-                            <tr>
                                 <td>2020-05-28 10:49:23</td>
-                                <td>唐宇捷</td>
-                                <td>欠款业务</td>
-                                <td><div class="ptl40 tl">60天</div> </td>
-                                <td>1000万元</td>
+                                <td>2020-05-28 10:49:23</td>
                                 <td><span class="red">不通过</span></td>
                             </tr>
+                       
+                         
 
                         </tbody>
                 </table>
@@ -122,7 +90,7 @@
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
-			$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(1).addClass("on")  //首页选中;
+			$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(3).addClass("on")  //首页选中;
 			$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
 		})
 

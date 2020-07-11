@@ -70,7 +70,6 @@ $(function(){
 			$(this).addClass("on").siblings("button").removeClass("on");
 		})
 
-		
 })
 
 
@@ -117,7 +116,6 @@ function setAll(obj) {
  }
 
 
- 
 //阻止冒泡
 function stopPro(e){
 	if(navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i)=="7."|| navigator.appVersion.match(/8./i)=="8.")) 

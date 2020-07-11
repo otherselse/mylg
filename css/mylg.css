@@ -161,6 +161,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 /* width */
 .w80{width: 80px;}
 .pct16{width:16%}
+.pct45{width: 45%;}
+.pct55{width: 55%;}
 
 /* margin */
 .mt25{margin-top:25px}
@@ -168,6 +170,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 /* padding */
 .pl25{padding-left: 25px;}
 .pr25{padding-right: 25px;}
+
 
 /* 清除浮动 */
 .clearfix:after{content: "020"; display: block; height: 0; clear: both; visibility: hidden; }
@@ -216,7 +219,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
  .sms-content-item-panel {box-sizing: border-box;display: inline-block;width: calc(100% - 40px);font-size: 12px;line-height: 17px;vertical-align: top;}
  .sms-content-item-switch {box-sizing: border-box;display: inline-block;width: 40px;height: 100%;vertical-align: top;}
 @media (min-width: 1600px) {
-	.base-comp-bg{background-size:100% 100%;}
+	.base-comp-bg,.apply-comp-bg{background-size:100% 100%;}
 }
 
 /* applysale */
@@ -229,3 +232,12 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .order-step4 { left: 100%; transform: translateX(-180%); -webkit-transform: translateX(-180%); background: #fff; -moz-transform: translateX(-180%); -ms-transform: translateX(-180%); -o-transform: translateX(-180%); }
 .circle24 {display: inline-block;font-style: normal;width: 24px;height: 24px;border-radius: 50%;box-sizing: border-box;border: 1px #D9D9D9 solid;text-align: center;line-height: 24px;color: #9A9A9A;background: #fff;}
 .on > .circle24 {color: #fff;background: #1365E8;border: 0;}
+.apply-comp-bg{background: #91AADA;border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;-ms-border-radius: 6px;-o-border-radius: 6px;height: 200px;}
+.apply-comp-cont{padding: 5px 0 0 34px;font-size: 14px;line-height: 25px;}
+.apply-comp-right{padding:82px 35px  0 0;box-sizing: border-box;}
+.ptl40{padding-left: 40%;}
+
+/* button */
+.ui-button[data-type="middle"]{min-width: 220px;height: 44px;line-height: 44px;font-size: 14px;}
+.ui-button[data-type="middle"][data-color="white"]{background: #fff;color: #1365e8;}
+.ui-button[data-type="middle"][data-color="white"]:hover {color: #2172F5;background-color: #F0F6FF;}
