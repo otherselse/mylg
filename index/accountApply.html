@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>账户明细-我的乐刚</title>
+	<title>优惠券-我的乐刚</title>
 </head>
 <body class="buyer showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -27,7 +27,6 @@
 			</div>
 			<div class="ui-content unradius ">
 				<div class="pt20 pr20 pl20 pb30">
-                    <div class="g28 dib b"><a class="leftArrow mr10" href="../index/index.html"></a>银行账号</div>
                     <div class="whbgshadow p30 mt20 g80 ">
                         <div class="accountbg ">
                             <div class="cl">
@@ -104,7 +103,7 @@
                         <!-- accountbg end -->
                     </div>
 
-                    <div class="g28 dib b mt30 ">输入提现金额以及短信验证码</div>
+                    <div class="g28 dib b mt30 ">提现信息</div>
                     <div class="cl mb10 pl40 pt20">
                         <div class="mb20 radio">
                             提现账户：
@@ -114,21 +113,28 @@
                         </div>
                         <div class="mb20">
                             提现金额：
-                            <input type="text"name="custMap.validateCode" id="yzmCode" class="pct25 ui-input h34 " >
+                            <input type="text" class="pct25 ui-input h34 " >
                         </div>
                         <div class="mb20">
                             手机号码：
-                            15869724444 
+                            
+                            <input type="text" readonly="" value="15869724444" class="pct25 ui-input h34 " > 
                         </div>
                         <div class="mb20">
                             短信验证：
-                            <input type="text"  class="pct25 ui-input h34 " ><button class="blue ml10 nbut" id="codee">发送验证码</button>
-                        </div>  
+                            <span class="ui-input-x pct25 h34">
+                                <input type="text" class="pct60 tc f12">
+                                 <span class="pct40 ui-inputbut bld9 tc bgwh"><button class="blue  nbut" id="codee">发送验证码</button></span>
+
+                            </span>
+                        </div> 
+                        <div class="mt30  mb30">
+                            &emsp;&emsp;&emsp;&emsp;&emsp;
+                            <button class="ui-button mr10 w180" type="button" data-type="big" onclick="doSubmit()">申请提现</button>
+                            <button class="ui-button w80" data-type="bb" small-type="grey" type="button" onclick="window.location='../index/index.html'">取消</button>
+                        </div> 
                     </div>
-                    <div class="mt30 tc mb30">
-                        <button class="ui-button mr10 w180" type="button" data-type="big" onclick="doSubmit()">确定</button>
-                        <button class="ui-button w80" data-type="bb" small-type="grey" type="button" onclick="layer.closeAll()">取消</button>
-                    </div>
+
 
 
 				

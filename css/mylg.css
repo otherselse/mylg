@@ -134,6 +134,13 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .payBank-js{background:url(../images/payIcon.png) -360px -32px #fff;}
 .payBank-ny{background:url(../images/payIcon.png) -180px -100px #fff;}
 .payBankItem:hover,.payBankItem.on{border-color:#2172F5;}
+.baseinfo-bot{min-height: calc(100% - 400px)}
+.coupon-top-box{box-sizing:border-box;padding:10px 4%;background: #F0F6FF;border: 1px solid #D5E0F0;;box-sizing: border-box;}
+.tip-icon{width: 166px;height: 97px;background: url(../images/base/tip.png) no-repeat;display: inline-block;}
+.coupon-item{margin-right:40px;width: 290px;height: 172px;background: url(../images/base/couponbg.png) no-repeat;display: inline-block;box-sizing: border-box;padding:20px 0px 5px 20px;}
+.gda{color:#DA6A0A}
+.f36{font-size: 36px;}
+.coupon-item-num{}
 
 /*address*/
 .orderaddr.w270{width: 270px}
@@ -253,7 +260,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-button[data-color="white"]:hover {color: #2172F5;background-color: #F0F6FF;}
 
 .ui-input-x.h34{height: 34px;line-height: 34px;} 
-.ui-input-x.h34 .ui-inputbut{height: 32px;line-height: 32px;} 
+.ui-input-x.h34 .ui-inputbut{height: 32px;line-height: 34px;} 
 .input-selSearch{box-sizing: border-box;}
 .ui-input-x.h34 .ui-inputlink {border: 0;outline: none;line-height: 30px;text-indent: 30%;width: 100%;vertical-align: top;}
 .ui-input-x.h34 .ui-inputlink + .search-cont {top: 38px;}
+.ui-input-x .ui-inputbut.bgwh{background: #fff}
