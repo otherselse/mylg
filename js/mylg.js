@@ -70,6 +70,14 @@ $(function(){
 			$(this).addClass("on").siblings("button").removeClass("on");
 		})
 
+
+		//radio点选
+		$("body").on("click", ".ui-radio", function () {
+			$(this).parents(".radio").find(".ui-radio").removeClass("on");
+			$(this).addClass("on")
+		})
+
+		
 })
 
 
