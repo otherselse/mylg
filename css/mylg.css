@@ -10,6 +10,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-button.w80{width: 80px;min-width: 80px !important}
 .ui-button.w180{width: 180px;min-width: 180px}
 .ui-button.w155{width: 155px;min-width: 155px}
+.ui-button.w220{width: 220px;min-width: 220px;}
+.ui-button.h44{height: 44px;line-height: 44px;}
 .gd9{color:#D9D9D9}
 .g80{color:#808080}
 .edit-icon{width: 14px;height: 14px;background-position: -518px -118px;}
@@ -20,6 +22,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .pct28{width: 28%}
 .pct35{width: 35%}
 .ui-input.h34{height: 34px;line-height: 34px;}
+.ui-button.w280{width: 280px;min-width: 280px;}
+.ui-option.h34{height: 34px;line-height: 34px;font-size: 14px;}
 .gae{color:#AEAEAE;}
 
 /*leftbar*/
@@ -161,11 +165,15 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 /* width */
 .w80{width: 80px;}
 .pct16{width:16%}
+.pct12{width:12%}
+.pct24{width: 24%;}
 .pct45{width: 45%;}
 .pct55{width: 55%;}
 
 /* margin */
 .mt25{margin-top:25px}
+.mt45{margin-top:45px}
+.mt35{margin-top: 35px;}
 
 /* padding */
 .pl25{padding-left: 25px;}
@@ -230,9 +238,9 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .order-step:before {content: '';position: absolute;top: 12px;border-top: 1px #D9D9D9 dashed;width: 100%;height: 1px;left: 0;}
 .order-step1.on, .order-step2.on, .order-step3.on {color: #1365E8;font-weight: bold;background: #fff;}
 .order-step1 {position: absolute;left: -26px;}
-.order-step2 { left: 25%; transform: translateX(-50%); background: #fff; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); }
-.order-step3 { left: 50%; transform: translateX(-50%); background: #fff; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); }
-.order-step4 { left: 100%; transform: translateX(-180%); -webkit-transform: translateX(-180%); background: #fff; -moz-transform: translateX(-180%); -ms-transform: translateX(-180%); -o-transform: translateX(-180%); }
+.order-step2 { left: 33%; background: #fff; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); }
+.order-step3 { left: 66%; transform: translateX(-150%); background: #fff; -webkit-transform: translateX(-150%); -moz-transform: translateX(-150%); -ms-transform: translateX(-150%); -o-transform: translateX(-150%); }
+.order-step4 { left: 100%; transform: translateX(-433%); -webkit-transform: translateX(-433%); background: #fff; -moz-transform: translateX(-433%); -ms-transform: translateX(-433%); -o-transform: translateX(-433%); }
 .circle24 {display: inline-block;font-style: normal;width: 24px;height: 24px;border-radius: 50%;box-sizing: border-box;border: 1px #D9D9D9 solid;text-align: center;line-height: 24px;color: #9A9A9A;background: #fff;}
 .on > .circle24 {color: #fff;background: #1365E8;border: 0;}
 .apply-comp-bg{background: #91AADA;border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;-ms-border-radius: 6px;-o-border-radius: 6px;height: 200px;}
@@ -241,6 +249,11 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ptl40{padding-left: 40%;}
 
 /* button */
-.ui-button[data-type="middle"]{min-width: 220px;height: 44px;line-height: 44px;font-size: 14px;}
-.ui-button[data-type="middle"][data-color="white"]{background: #fff;color: #1365e8;}
-.ui-button[data-type="middle"][data-color="white"]:hover {color: #2172F5;background-color: #F0F6FF;}
+.ui-button[data-color="white"]{background: #fff;color: #1365e8;}
+.ui-button[data-color="white"]:hover {color: #2172F5;background-color: #F0F6FF;}
+
+.ui-input-x.h34{height: 34px;line-height: 34px;} 
+.ui-input-x.h34 .ui-inputbut{height: 32px;line-height: 32px;} 
+.input-selSearch{box-sizing: border-box;}
+.ui-input-x.h34 .ui-inputlink {border: 0;outline: none;line-height: 30px;text-indent: 30%;width: 100%;vertical-align: top;}
+.ui-input-x.h34 .ui-inputlink + .search-cont {top: 38px;}
