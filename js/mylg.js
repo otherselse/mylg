@@ -49,6 +49,10 @@ $(function(){
 			$(this).parents(".input-selSearch").find(".search-cont").hide();
 		})
 
+		$("input[type='text']").on("click",function(){
+			$(this).attr("autocomplete","off");
+		})
+
 
 		//同时绑定多个
 		lay('.render-time').each(function(){

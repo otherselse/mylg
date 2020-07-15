@@ -34,7 +34,7 @@
 					<div class="r pr20"><button class="ui-button" type="button" onclick="addSon()">+创建公司子账号</button></div>
 				</div>
 
-				<div class="pl20 pr20 pt30 pb30" style="min-height: calc(100% - 400px)">
+				<div class="pl20 pr20 pt30 pb30 baseinfo-bot" >
 					<table class="ui-table tc f14" width="100%">
 						<thead>
 							<tr>
@@ -119,8 +119,11 @@
 			</div>
 			<div class="mt20">
 				<span class="dib pct30 tr">验证码：</span>
-				<input id="checkCode" type="text" name="checkCode" class="pct20 ui-input h34 "  placeholder="请输入子账号手机验证码"/>
-				<button class="blue ml10 nbut" id="codee" type="button">获取验证码</button>
+				<span class="ui-input-x pct50 h34">
+                    <input type="text" class="pct60 tc f12">
+                     <span class="pct40 ui-inputbut bld9 tc bgwh"><button class="blue nbut lh34" id="codee" type="button">发送验证码</button></span>
+                </span>
+
 			</div>
 			<div class="mt40 tc">
 				<button class="ui-button mr10 w180" type="button" data-type="big" onclick="toAddSon()">确定创建</button>
@@ -165,8 +168,11 @@
 		</div>
 		<div class="mt20">
 			<span class="dib pct30 tr">验证码：</span>
-			<input type="text"name="custMap.validateCode" id="yzmCode" class="pct30 ui-input h34 " >
-			<button class="blue ml10 nbut" id="codeec">发送验证码</button>
+			<span class="ui-input-x pct40 h34">
+                <input type="text" class="pct50 tc f12">
+                 <span class="pct50 ui-inputbut bld9 tc bgwh"><button class="blue nbut lh34" id="codeec" type="button">发送验证码</button></span>
+            </span>
+
 		</div>
 		<div class="mt30 tc mb30">
 			<button class="ui-button mr10 w180" type="button" data-type="big" onclick="doSubmit()">确定</button>

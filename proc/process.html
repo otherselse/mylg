@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>修改密码-我的乐刚</title>
+	<title>发布加工单-我的乐刚</title>
 </head>
 <body class="buyer showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -22,25 +22,14 @@
 
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">修改密码</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="createProc.html" class="ui-tab3-list rel "><span class="ui-tab3-text">发布加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="process.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">待确认</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">加工中</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">已完成</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">全部加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius ">				
-				<div class="pt50 plpct30 ">
-						&emsp;&emsp;&emsp;账号：<input type="text" class="ui-input h34 pct40 mb10" readonly="" value="13262980553" /><br/>
-						&emsp;&emsp;验证码：<span class="ui-input-x pct40 h34 mb10">
-                                <input type="text" class="pct60 tc f12">
-                                 <span class="pct40 ui-inputbut bld9 tc bgwh"><button class="blue  nbut lh34" id="codee">发送验证码</button></span>
-
-                            </span><br/>
-						&emsp;&emsp;新密码：<input type="password"  class="ui-input h34 pct40 mb10"   /><br/>
-						确认新密码：<input type="password" class="ui-input h34 pct40 mb10" /><br/>
-				</div>
-
-				<div class="tc mt20 pb30">
-					<button class="ui-button w180" data-type="big" type="button">保存</button>
-					<button class="ui-button ml10 w80" data-type="bb" small-type="grey" type="button" onclick="window.location='base.html'">返回</button>
-
-				</div>
+				
 
 
 			</div><!-- ui-content end -->
@@ -64,29 +53,10 @@
 			$(".menu").find(".myaccount").addClass("on").siblings().removeClass("on")  //左侧菜单选中静态页面采用;
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
 
-			$("#codee").on("click",function(){
-				timeSet(this)
-			})
+
 			
 		})
 
-		function timeSet(btn) {
-	        if (wait == 0) {
-	        	$(btn).prop("disabled",false);
-	        	$(btn).text("获取登录验证码");
-                $(btn).addClass("blue");
-	            wait = 120;
-	        } else {
-                $(btn).removeClass("blue");
-	        	$(btn).prop("disabled",true);
-	        	$(btn).text("重新发送(" + wait + "s)")
-	            wait--;
-	            setTimeout(function () {
-	                    timeSet(btn);
-	                },
-	                1000)
-	                }
-	    }
 
 
 
