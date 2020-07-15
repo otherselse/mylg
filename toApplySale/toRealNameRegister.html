@@ -12,10 +12,9 @@
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
 	<title>评审中心-实名认证评审</title>
 </head>
-<body>
+<body class="showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
 	<!-- leftbar end -->
-
 
 	<div class="rightBar">
 		<script type="text/javascript" src="../js/topBar.js"></script> 
@@ -25,18 +24,187 @@
 				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">实名认证评审</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius">
-				<div class="pt30 pr20 pl20 pb30">
-				
-					
-				
+				<div class="pt25 pr30 pl30 pb30">
+					<div class="tip-box pct100   pr20">
+						<i class="tip-icon mt20 mb10"></i>
+						<div class="tip-text dib vt lh20 mt20 mb10" >
+							温馨提示：<br>
+							<ul>
+								<li>1、实名认证开通后,该用户账号下所有操作均视为企业行为,由该企业承担相应的权益和责任。</li>
+								<li>2、输入公司名称时请认真核实营业执照上的公司名称，务必保持一致，公司名称一旦提交后将不可随意更改。</li>
+								<li>3、公司名称如有误可到 “账户信息——账户管理” 界面注销账号，重新注册填写。</li>
+							</ul>
+						</div>
+						<a href="javscript:void(0)" class="ui-button h44 w220 r">重新认证</a>
+					</div>
+					<div class="mt30">
+						<span class="b g28">企业信息</span><span class="ui-label ml10" data-type="red">账号：13645869495</span>
+					</div>
+					<div class="mt20 f0">
+						<div class="dib f14 pct50 mb10">
+							<span class="applyTitle dib tr"><span class="red">*</span>公司名称：</span>
+							<input type="text" class="ui-input h34 pct50" placeholder="请输入">
+						</div>
+						<div class="dib f14 pct50 mb10">
+							<span class="applyTitle dib tr"><span class="red">*</span>企业性质：</span>
+							<span class="single f0">
+								<input type="hidden">
+								<button type="button" class="ui-option mr5" disabled>外资</button>
+								<button type="button" class="ui-option mr5 on">民营</button>
+								<button type="button" class="ui-option mr5" disabled>国企</button>
+								<button type="button" class="ui-option" disabled>合资</button>
+							</span>
+						</div>
+						<div class="dib f14 pct50 mb10">
+							<span class="applyTitle dib tr"><span class="red">*</span>公司税号：</span>
+							<input type="text" class="ui-input h34 pct50" placeholder="请输入18位税号">
+						</div>
+						<div class="dib f14 pct50 mb10">
+							<span class="applyTitle dib tr"><span class="red">*</span>注册地址：</span>
+							<input type="text" class="ui-input h34 pct50" placeholder="请选择所在区域">
+						</div>
+						<div class="dib f14 pct50 mb10 ">
+							<span class="applyTitle dib tr"><span class="red">*</span>开户银行：</span>
+							<input type="text" class="ui-input h34 pct50" placeholder="请输入">
+						</div>
+						<div class="dib f14 pct50 mb10">
+							<span class="applyTitle dib tr"></span>
+							<input type="text" class="ui-input h34 pct50" placeholder="详细地址">
+						</div>
+						<div class="dib f14 pct50 mb10 ">
+							<span class="applyTitle dib tr"><span class="red">*</span>银行账号：</span>
+							<input type="text" class="ui-input h34 pct50" placeholder="请输入">
+						</div>
+						<div class="dib f14 pct50 mb10 ">
+							<span class="applyTitle dib tr"><span class="red">*</span>联系地址：</span>
+							<input type="text" class="ui-input h34 pct50" placeholder="请选择所在区域">
+						</div>
+						<div class="dib f14 pct50 mb10 ">
+							<span class="applyTitle dib tr">固定电话：</span>
+							<input type="text" class="ui-input h34 pct50" value="13955338383" readonly>
+						</div>
+						<div class="dib f14 pct50 mb10">
+							<span class="applyTitle dib tr"></span>
+							<input type="text" class="ui-input h34 pct50" placeholder="详细地址">
+						</div>
+						<div class="dib f14 pct50 mb10 ">
+							<span class="applyTitle dib tr">公司传真：</span>
+							<input type="text" class="ui-input h34 pct50" placeholder="请输入">
+						</div>
+
+					</div>
+					<div class="mt50">
+						<span class="b g28">个人信息</span>
+					</div>
+					<div class="mt20 f0">
+						<div class="dib f14 pct50 mb10">
+							<span class="applyTitle dib tr">联系人：</span>
+							<input type="text" class="ui-input h34 pct50" value="马云云" disabled><a href="javascript:void(0)" class="goldIcon icon-info vm  ml5"  title="联系人请与身份证上名字保持一致"></a>
+						</div>
+						<div class="dib f14 pct50 mb10">
+							<span class="applyTitle dib tr">手机号码：</span>
+							<input type="text" class="ui-input h34 pct50" value="13955338383" disabled>
+						</div>
+						<div class="dib f14 pct50 mb10">
+							<span class="applyTitle dib tr"><span class="red">*</span>身份证号：</span>
+							<input type="text" class="ui-input h34 pct50" placeholder="请输入" >
+						</div>
+						<div class="dib f14 pct50 mb10">
+							<span class="applyTitle dib tr"><span class="red">*</span>推荐金牌商家：</span>
+							<input type="text" class="ui-input h34 pct50 searchUp" placeholder="请选择"  readonly>
+						</div>
+					</div>
+					<div class="mt50">
+						<span class="b g28">附件信息</span>
+					</div>
+					<span class="ui-tip mt10 pct100" data-type="blue">温馨提示：大侠，您好! 营业执照和实名认证授权书（具体可查看示例）上传的附件必需加盖公司公章鲜章，并将加盖公章的实名认证授权书，寄至乐刚合规部，请您按要求操作，否则将审批不通过，请知悉。
+							邮寄地址：上海乐刚供应链股份有限公司合规部，4008-200-666转8168，上海市宝山区锦乐路288号。
+					</span>
+					<div  class="cl mt30">
+					<div >
+						<span class="applyTitle tr dib"><span class="red">*</span>评审附件：</span>
+						 <i class="switchDotArrow"></i>
+						 <span class="single f0">
+							 <input type="hidden" id="annexType" name="applySupplier.annexType" value="1">
+							 <a class="ui-option h34 mr10 on switchDotBut tc rel" href="javascript:void(0)" onclick="showDivNew(this)">新版营业执照</a>
+							 <a class="ui-option h34 tc  rel" href="javascript:void(0)" onclick="showDivOld(this)">旧版三证</a>
+						  </span>
+					</div>
+					 <div>
+						<div class="cl mt10" style="border: 1px solid #ececec;"></div>
+						<div id="fileUploadDiv1" class="mt15">
+							<div class="mb10">
+								<span class="dib applyTitle tr"><span class="red">*</span>营业执照：</span>
+								<button class="ui-button " data-type="upfile">附件上传</button>
+								<span class="ui-tip ml5" data-type="normal">加盖鲜章</span>
+								<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除" ></i></span>
+							</div>
+						</div>
+						<div id="fileUploadDiv2" class="mt15 dn">
+							<div class="mb10">
+								<span class="dib applyTitle tr"><span class="red">*</span>营业执照：</span>
+								<button class="ui-button " data-type="upfile">附件上传</button>
+								<span class="ui-tip ml5" data-type="normal">加盖鲜章</span>
+								<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除" ></i></span>
+							</div>
+							<div class="mb10">
+								<span class="dib applyTitle tr"><span class="red">*</span>税务登记证：</span>
+								<button class="ui-button " data-type="upfile">附件上传</button>
+								<span class="ui-tip ml5" data-type="normal">加盖鲜章</span>
+								<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除" ></i></span>
+							</div>
+							<div class="mb10">
+								<span class="dib applyTitle tr"><span class="red">*</span>企业组织机构代码证：</span>
+								<button class="ui-button " data-type="upfile">附件上传</button>
+								<span class="ui-tip ml5" data-type="normal">加盖鲜章</span>
+								<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除" ></i></span>
+							</div>
+						</div>
+					</div>
+						<div class="mb10">
+							<span class="dib applyTitle tr"><span class="red">*</span>代理人身份证正面：</span>
+							<button class="ui-button " data-type="upfile">附件上传</button>
+						</div>
+						<div class="mb10">
+							<span class="dib applyTitle tr"><span class="red">*</span>代理人身份证反面：</span>
+							<button class="ui-button " data-type="upfile">附件上传</button>
+						</div>
+						<div class="mb10">
+							<span class="dib applyTitle tr"><span class="red">*</span>实名认证授权书：<a href="javascript:void(0)" class="goldIcon icon-info vm"  title=" 如果您实名认证审批通过后还需继续评审成为乐刚网的供应商 / VIP客户/ 加工商/ 承运商等，请在此上传开票资料或开户证明；否则后续提交评审流程仍需要再次操作，请知悉."></a></span>
+							<div class="dib pct60 vt">
+								<button class="ui-button vt" data-type="upfile">附件上传</button>
+								<span class="ui-tip ml5" data-type="normal">加盖鲜章</span>
+								<div class="r f12">
+									<button class="ui-button mr15" data-type="download">模板下载</button>
+									<a href="javascript:void(0)">查看示例</a>
+								</div>
+							</div>
+						</div>
+						<div class="mb10">
+							<span class="dib applyTitle tr"></span>
+							<div class="dib pct60">
+								<textarea class="ui-textarea pct100" rows="4"></textarea>
+							</div>
+						</div>
+						<div class="mb10">
+							<span class="dib applyTitle tr">开票资料或者开户证明：</span>
+							<button class="ui-button " data-type="upfile">附件上传</button>
+						</div>
+						<div class="mb10 ">
+							<span class="dib applyTitle tr ">电子章示例：</span>
+							<span class="g9a dib vt pct60">系统将根据您输入的公司名称生成电子章，用于贵司在乐刚网操作的合同、协议、指令单、委托书等所有电子单据。<br> 如图为‘上海宇翔金属制品有限公司’的电子章样式。</span> 
+						</div>
+						<div class="mb10 ">
+							<span class="dib applyTitle tr "></span>
+							<img src="../images/applySale/dzz_explog1901.jpg" alt="">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- mainCont end -->
 
 	</div>
-
-
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -48,7 +216,16 @@
 			$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(0).addClass("on")  //首页选中;
 			$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
 		})
-
+		function showDivNew(obj){
+			$(obj).addClass("on switchDotBut ").siblings("a").removeClass("on switchDotBut ");
+               $("#fileUploadDiv2").hide()
+               $("#fileUploadDiv1").show()
+            }
+            function showDivOld(obj){
+			    $(obj).addClass("on switchDotBut ").siblings("a").removeClass("on switchDotBut ");
+                $("#fileUploadDiv1").hide()
+                $("#fileUploadDiv2").show()
+           }
 	</script>
 </body>
 </html>

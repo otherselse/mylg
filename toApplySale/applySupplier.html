@@ -437,6 +437,7 @@
 
 
             function changeUpType(obj,annexType){
+                $(obj).addClass("on switchDotBut ").siblings("a").removeClass("on switchDotBut ");
 			if(annexType==1){
 				$("#annexType").val(1);
 				// $("#spsc").hide();
@@ -448,8 +449,7 @@
 				$(".upPhoto").hide();
 				$(".upVideo").show();
 			}
-			$(obj).parent().find("a").removeClass("on");
-			$(obj).addClass("on");
+		
 		}
 	</script>
 </body>
