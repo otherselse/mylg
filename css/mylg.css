@@ -172,18 +172,23 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 /* width */
 .w80{width: 80px;}
+.pct5{width: 5%;}
 .pct16{width:16%}
 .pct12{width:12%}
 .pct24{width: 24%;}
 .pct45{width: 45%;}
 .pct55{width: 55%;}
+.pct88{width: 88%;}
+.pct95{width: 95%;}
 
 /* margin */
 .mt25{margin-top:25px}
 .mt45{margin-top:45px}
 .mt35{margin-top: 35px;}
+.ml25{margin-left: 25px;}
 
 /* padding */
+.pt25{padding-top: 25px;}
 .pl25{padding-left: 25px;}
 .pr25{padding-right: 25px;}
 
@@ -238,7 +243,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
  .accountbg .orderaddr{height: 138px;width: 32%;color:#282828;}
 
 @media (min-width: 1600px) {
-	.base-comp-bg,.apply-comp-bg{background-size:100% 100%;}
+	.base-comp-bg{background-size:100% 100%;}
 }
 
 
@@ -318,14 +323,29 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .order-step4 { left: 100%; transform: translateX(-433%); -webkit-transform: translateX(-433%); background: #fff; -moz-transform: translateX(-433%); -ms-transform: translateX(-433%); -o-transform: translateX(-433%); }
 .circle24 {display: inline-block;font-style: normal;width: 24px;height: 24px;border-radius: 50%;box-sizing: border-box;border: 1px #D9D9D9 solid;text-align: center;line-height: 24px;color: #9A9A9A;background: #fff;}
 .on > .circle24 {color: #fff;background: #1365E8;border: 0;}
-.apply-comp-bg{background: #91AADA;border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;-ms-border-radius: 6px;-o-border-radius: 6px;height: 200px;}
+
+.banner-vip{background: url(../images/applySale/banner-vip.png) no-repeat;background-size: 100% 100%;}
+.banner-stock{background: url('../images/applySale/banner-stock.png') no-repeat;background-size: 100% 100%;}
+.banner-corp{background: url('../images/applySale/banner-corp.png') no-repeat;background-size: 100% 100%;}
+.banner-supplier{background: url('../images/applySale/banner-supplier.png') no-repeat;background-size: 100% 100%;}
+
+.apply-comp-bg{border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;-ms-border-radius: 6px;-o-border-radius: 6px;height: 200px;}
 .apply-comp-cont{padding: 5px 0 0 34px;font-size: 14px;line-height: 25px;}
 .apply-comp-right{padding:82px 35px  0 0;box-sizing: border-box;}
 .ptl40{padding-left: 40%;}
-
+.stockInfo{height: 462px;background: #FFFFFF;border: 1px solid #EEEEEE;box-shadow: 0 5px 8px 0 rgba(0,0,0,0.05);}
+.stockInfo-left{height: inherit;display: flex;flex-direction: column;justify-content: center;align-items: center;background: #fafafa;border-right: 1px solid #EEEEEE;box-sizing: border-box;}
+.stockInfo-right{box-sizing: border-box;}
+.tip-box{background: #E8F6FE;border: 1px solid #B9D5E6;box-sizing: border-box;display: flex;}
+.tip-box .ui-button{align-self: center;}
+.tip-icon{display: inline-block;background: url(http://resource.lgsteel.cn/gold2020/images/tip.png) no-repeat ;width: 150px;height: 90px;background-position: center 0;}
+.tip-text{flex: 1;}
+.stamp{width: 125px;height: 122px;border: 1px solid #F4F4F4;}
 /* button */
 .ui-button[data-color="white"]{background: #fff;color: #1365e8;}
 .ui-button[data-color="white"]:hover {color: #2172F5;background-color: #F0F6FF;}
+.apply-btn{border: 1px solid #fff;box-shadow: 0 3px 8px 0 rgba(255,255,255,0.50);}
+.applyTitle{width: 180px;}
 
 .ui-input-x.h34{height: 34px;line-height: 34px;} 
 .ui-input-x.h34 .ui-inputbut{height: 32px;line-height: 34px;} 
