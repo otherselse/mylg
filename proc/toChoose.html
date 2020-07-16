@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择人员</title>
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css"  />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css"  />
+	<style>
+		.choose_bg{background: #F1F3F7;border: 1px solid #E6E6E6;margin:20px;padding:5px 15px;box-sizing: border-box;height: 384px}
+		.choose_list{padding: 10px 0 5px;}
+		.choose_item{height: 25px;box-sizing: border-box;line-height: 25px;margin-right:0px;display: inline-block;color: #676767;padding: 0 8px;}
+		.choose_item.on{background: #FFFFFF;border: 1px solid #E6E6E6;box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11);-webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11);border-radius: 12.5px;color: #1365E8}
+		.choose_item > .icon-sdel{display: none}
+		.choose_item.on > .icon-sdel{display:inline-block;}
+		.botborder{border-bottom:1px  rgba(0,0,0,0.06) solid;}
+		.choose_bgname{background: #FFFFFF;border: 1px solid rgba(0,0,0,0.06);padding:5px 8px 15px;max-height: 240px;overflow-y: auto;font-size: 0;box-sizing: border-box;}
+		.choose_mylist{text-align: center;display: inline-block;width: 86px;margin:12px 8px 0;font-size: 14px;line-height: 20px}
+		.choose_pic{width: 86px;height: 120px;overflow:hidden;}
+		.choose_bgname::-webkit-scrollbar {width:6px;height:4px;}
+		.choose_bgname::-webkit-scrollbar-track-piece {background-color:#fff;margin:0px;}
+		.choose_bgname::-webkit-scrollbar-thumb{background:#979797;border-radius:2px;}
+		.choose_bgname::-webkit-scrollbar-thumb:vertical:hover{background:#7d7c7c;}
+		.choose_bgname::-webkit-scrollbar-thumb:horizontal:hover{background:#7d7c7c}
+	</style>
+
+</head>
+<body>
+	<div class="choose_bg">
+		<div class="choose_list botborder">
+			<span class="g28 dib vt mt2">按区域选择：</span>
+			<span class="pct85 f12 dib">
+				<a href="javascript:void(0)" class="choose_item">上海<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">上海加工<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">杭州<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">无锡<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">天津<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">自贸区<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">广州<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">宁波<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">常熟<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">成都<i class="icon-sdel goldIcon ml2 v-3"></i></a>	
+
+			</span>
+		</div>
+		<div class="choose_list">
+			<span class="g28 dib vt mt2">按姓氏选择：</span>
+			<span class="pct85 f12 dib">
+				<a href="javascript:void(0)" class="choose_item">A<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">B<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">C<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">D<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">E<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">F<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">G<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">H<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">I<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">J<i class="icon-sdel goldIcon ml2 v-3"></i></a>	
+				<a href="javascript:void(0)" class="choose_item">K<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">L<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">M<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">N<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">O<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">P<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">Q<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">R<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">S<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">T<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">U<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">V<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">W<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">X<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">Y<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">Z<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+			</span>
+		</div>
+		<div class="choose_list">
+			<span class="g28 dib vt mt2">按名字选择：</span>
+			<span class="pct85 f12 dib">
+				<a href="javascript:void(0)" class="choose_item">A<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">B<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">C<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">D<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">E<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">F<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">G<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">H<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">I<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">J<i class="icon-sdel goldIcon ml2 v-3"></i></a>	
+				<a href="javascript:void(0)" class="choose_item">K<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">L<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">M<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">N<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">O<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">P<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">Q<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">R<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">S<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">T<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">U<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">V<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">W<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">X<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">Y<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+				<a href="javascript:void(0)" class="choose_item">Z<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+			</span>
+		</div>
+		<div class="choose_bgname">
+			<span class="choose_mylist ell">
+				<img src="../images/hwjj.jpg" class="choose_pic" /><br/>戴志豪戴志豪戴志豪戴志豪<div class="f12 tl ell"><span class="g80">区域：</span>重庆市</div><div class="f12 tl ell"><span class="g80">宣传语：</span>钢铁的互联网时代，拼的永远不会是价格，我与乐刚网电商平台的理念是一致的，拼的就是服务！</div>
+			</span>
+			<span class="choose_mylist ell">
+				<img src="../images/hwjj.jpg" class="choose_pic" /><br/>戴志豪戴志豪戴志豪戴志豪<div class="f12 tl ell"><span class="g80">区域：</span>重庆市</div><div class="f12 tl ell"><span class="g80">宣传语：</span>钢铁的互联网时代，拼的永远不会是价格，我与乐刚网电商平台的理念是一致的，拼的就是服务！</div>
+			</span>
+			<span class="choose_mylist ell">
+				<img src="../images/hwjj.jpg" class="choose_pic" /><br/>戴志豪戴志豪戴志豪戴志豪<div class="f12 tl ell"><span class="g80">区域：</span>重庆市</div><div class="f12 tl ell"><span class="g80">宣传语：</span>钢铁的互联网时代，拼的永远不会是价格，我与乐刚网电商平台的理念是一致的，拼的就是服务！</div>
+			</span>
+			<span class="choose_mylist ell">
+				<img src="../images/hwjj.jpg" class="choose_pic" /><br/>戴志豪戴志豪戴志豪戴志豪<div class="f12 tl ell"><span class="g80">区域：</span>重庆市</div><div class="f12 tl ell"><span class="g80">宣传语：</span>钢铁的互联网时代，拼的永远不会是价格，我与乐刚网电商平台的理念是一致的，拼的就是服务！</div>
+			</span>
+			<span class="choose_mylist ell">
+				<img src="../images/hwjj.jpg" class="choose_pic" /><br/>戴志豪戴志豪戴志豪戴志豪<div class="f12 tl ell"><span class="g80">区域：</span>重庆市</div><div class="f12 tl ell"><span class="g80">宣传语：</span>钢铁的互联网时代，拼的永远不会是价格，我与乐刚网电商平台的理念是一致的，拼的就是服务！</div>
+			</span>
+			<span class="choose_mylist ell">
+				<img src="../images/hwjj.jpg" class="choose_pic" /><br/>戴志豪戴志豪戴志豪戴志豪<div class="f12 tl ell"><span class="g80">区域：</span>重庆市</div><div class="f12 tl ell"><span class="g80">宣传语：</span>钢铁的互联网时代，拼的永远不会是价格，我与乐刚网电商平台的理念是一致的，拼的就是服务！</div>
+			</span>
+			<span class="choose_mylist ell">
+				<img src="../images/hwjj.jpg" class="choose_pic" /><br/>戴志豪戴志豪戴志豪戴志豪<div class="f12 tl ell"><span class="g80">区域：</span>重庆市</div><div class="f12 tl ell"><span class="g80">宣传语：</span>钢铁的互联网时代，拼的永远不会是价格，我与乐刚网电商平台的理念是一致的，拼的就是服务！</div>
+			</span>
+			<span class="choose_mylist ell">
+				<img src="../images/hwjj.jpg" class="choose_pic" /><br/>戴志豪戴志豪戴志豪戴志豪<div class="f12 tl ell"><span class="g80">区域：</span>重庆市</div><div class="f12 tl ell"><span class="g80">宣传语：</span>钢铁的互联网时代，拼的永远不会是价格，我与乐刚网电商平台的理念是一致的，拼的就是服务！</div>
+			</span>
+			<span class="choose_mylist ell">
+				<img src="../images/hwjj.jpg" class="choose_pic" /><br/>戴志豪戴志豪戴志豪戴志豪<div class="f12 tl ell"><span class="g80">区域：</span>重庆市</div><div class="f12 tl ell"><span class="g80">宣传语：</span>钢铁的互联网时代，拼的永远不会是价格，我与乐刚网电商平台的理念是一致的，拼的就是服务！</div>
+			</span>
+			<span class="choose_mylist ell">
+				<img src="../images/hwjj.jpg" class="choose_pic" /><br/>戴志豪戴志豪戴志豪戴志豪<div class="f12 tl ell"><span class="g80">区域：</span>重庆市</div><div class="f12 tl ell"><span class="g80">宣传语：</span>钢铁的互联网时代，拼的永远不会是价格，我与乐刚网电商平台的理念是一致的，拼的就是服务！</div>
+			</span>
+		</div>
+	</div>
+	
+
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="../js/mygold.js"></script>
+
+    <script>
+    	$(function(){
+    		$(".choose_item").on("click",function(){
+    			if($(this).hasClass("on")){
+    				$(this).removeClass("on");
+    			}else{
+    				$(this).addClass("on").siblings().removeClass("on");
+    			}    			
+    		})
+    	})
+    </script>
+</body>
+</html>

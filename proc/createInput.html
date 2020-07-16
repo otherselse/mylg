@@ -1,0 +1,281 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+	<title>新增入库-我的乐刚</title>
+</head>
+<body class="buyer showTip">
+	<script type="text/javascript" src="../js/leftBar.js"></script> 
+	<!-- leftbar end -->
+
+
+	<div class="rightBar">
+		<script type="text/javascript" src="../js/topBar.js"></script> 
+		<!-- topBar end -->
+
+		<div class="mainCont ">
+			<div class="ui-tab3">
+				<a href="createInput.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">新增入库</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="queryUnInputInfo.html" class="ui-tab3-list rel "><span class="ui-tab3-text">预入库</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="queryInputInfo.html" class="ui-tab3-list rel"><span class="ui-tab3-text">原料入库</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="queryProcInputInfo.html" class="ui-tab3-list rel"><span class="ui-tab3-text">成品入库</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content unradius ">				
+				<div class="pl20 pr20 pb30 pt30 ">
+					<div class="g28 pb20 b">收货信息</div>
+					<div class="f0">
+						<div class="pct40 dib f12 mb10">
+                			收货仓库：
+                			<span class="input-selSearch pct60">
+                                <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="请输入仓库名称" onkeyup="setValue(this,event,9)" onclick="clickSearchPanel(this,event);" onchange="changeDepot();" id="v_stockname">
+                                <div class="search-cont" >
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+                                    <a href="javascript:void(0)" class="search-list db ell active">选择选择2</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                                </div>
+                            </span>
+                		</div>
+                		<div class="pct25 dib f12 mb10">
+                			服务金牌商家：
+                			<input type="text" class="ui-input  pct50"  placeholder="请选择" onclick="chooseBest(1,1)" readonly/> 
+                		</div>
+                		<div class="pct35 dib f12 mb10">
+                			结算方式：
+                			<span class="dib pct70 single">
+                				<input type="hidden" id="signedID" name="main.signedID">
+            					<input type="hidden" id="balType" name="main.balType" value="现结">
+                  				<button class="ui-optionNo mr5  on" id="balTypeRd1" onclick="selbalType(this)" type="button">现结</button>
+                  				<button class="ui-optionNo mr5" id="balTypeRd2" onclick="selbalType(this)" type="button">有货月结</button>
+							</span>
+
+                		</div>
+
+					</div>
+					<!-- 收货信息end -->
+
+					<div class="g28 pb20 b mt30">入库明细</div>
+					<div class="cl">
+                		<a class="ui-button mr10" data-type="upfile" href="http://resource.lgsteel.cn/download/入库导入模板.xls" target="_blank">下载模板</a>
+                		<button type="button" class="ui-button" data-type="import" onclick="importExcel()">批量导入</button>
+                	</div>
+                	<table class="ui-table tc f12 rklist mt20" width="100%" data-type="edit" id="rkmxtable">
+						<thead>
+                			<tr >
+			                    <th width="9%">品名</th>
+			                    <th width="9%">牌号</th>
+			                    <th width="9%">钢厂</th>
+			                    <th width="7%">计量单位</th>
+			                    <th width="7%">计量方式</th>
+			                    <th width="12%">规格</th>
+			                    <th width="8%">捆包号</th>
+			                    <th width="5%">数量</th>
+			                    <th width="5%">重量</th>
+			                    <th width="7%">车船号</th>
+			                    <th width="9%">销售单价</th>
+			                    <th width="8%" class="tc">操作</th>
+							</tr>
+						</thead>
+						<tbody id="inlineInfo">
+							
+						<tr id="rkyqTemp0" class="indexpline"><input type="hidden" name="inLineList[0].indexSort" value="0"><td><input type="hidden" name="inLineList[0].steNameID" value="1565"><input type="text" autocomplete="off" name="inLineList[0].steName" onclick="setValueOnClick(this,event,1)" onkeyup="setValue(this,event,1)" onchange="changeSteName(this)" class="ctform issearch require"><div class="isalert" style="display: none; width: 144px; top: 251px; min-width: 144px; left: 20px;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button" class="ui-button" data-type="small"  value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="hidden" name="inLineList[0].steQualityID" value="94"><input type="text" autocomplete="off" name="inLineList[0].steQuality" onclick="setValueOnClick(this,event,2)" onkeyup="setValue(this,event,2)" onchange="changeSteQuality(this)" class="ctform issearch require alertinput"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button" class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="hidden" name="inLineList[0].steAreaID"><input type="text" autocomplete="off" name="inLineList[0].steArea" onclick="setValueOnClick(this,event,3)" onkeyup="setValue(this,event,3)" onchange="changeSteArea(this)" class="ctform issearch require alertinput"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button" class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="hidden" name="inLineList[0].unit" value="15007"><input type="text" name="inLineList[0].unitName" value="件" readonly="" onclick="setValue(this,event,4)" onkeyup="setValue(this,event,4)" class="ctform issearch"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button" class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="hidden" name="inLineList[0].measure" value="14003"><input type="text" name="inLineList[0].measureName" value="抄码" readonly="" onclick="setValue(this,event,5)" onkeyup="setValue(this,event,5)" class="ctform issearch"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button" class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="text" name="inLineList[0].steSpec" onchange="changeSteSpec(this)" autocomplete="off" onclick="setValueOnClick(this,event,11)" onkeyup="setValue(this,event,11)" class="ctform issearch require"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button" class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="text" name="inLineList[0].bagCode" onkeyup="this.value=this.value.replace(/\s+/g,'')" class="ctform"></td><td><input type="text" name="inLineList[0].quantity" onkeyup="" value="1" class="ctform" onchange="sumQuantity(this)"></td><td><input type="text" name="inLineList[0].weight" onkeyup="" value="0" class="ctform requires" onchange="sumWeight(this)"></td><td><input type="text" name="inLineList[0].trainShipName" class="ctform"></td><td><input type="text" name="inLineList[0].salePrice" class="ctform requiress" value="0" onkeyup="checkNum(this)"></td><td class="tc"><a onclick="addProcLine(this)" href="javascript:void(0)" class="ui-icon-add vm "></a><span id="bt0" class="isfirst" style="display: none;">&nbsp;&nbsp;&nbsp;<a onclick="delProcLine(this)" href="javascript:void(0)" class="ui-icon-del vm"></a></span></td></tr><tr id="rkyqTemp1" class="indexpline"><input type="hidden" name="inLineList[1].indexSort" value="1"><td><input type="hidden" name="inLineList[1].steNameID" value="1565"><input type="text" autocomplete="off" name="inLineList[1].steName" onclick="setValueOnClick(this,event,1)" onkeyup="setValue(this,event,1)" onchange="changeSteName(this)" class="ctform issearch require"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button" class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="hidden" name="inLineList[1].steQualityID" value="94"><input type="text" autocomplete="off" name="inLineList[1].steQuality" onclick="setValueOnClick(this,event,2)" onkeyup="setValue(this,event,2)" onchange="changeSteQuality(this)" class="ctform issearch require"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button" class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="hidden" name="inLineList[1].steAreaID" value=""><input type="text" autocomplete="off" name="inLineList[1].steArea" onclick="setValueOnClick(this,event,3)" onkeyup="setValue(this,event,3)" onchange="changeSteArea(this)" class="ctform issearch require"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button" class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="hidden" name="inLineList[1].unit" value="15007"><input type="text" name="inLineList[1].unitName" value="件" readonly="" onclick="setValue(this,event,4)" onkeyup="setValue(this,event,4)" class="ctform issearch"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button" class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="hidden" name="inLineList[1].measure" value="14003"><input type="text" name="inLineList[1].measureName" value="抄码" readonly="" onclick="setValue(this,event,5)" onkeyup="setValue(this,event,5)" class="ctform issearch"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button"  class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="text" name="inLineList[1].steSpec" onchange="changeSteSpec(this)" autocomplete="off" onclick="setValueOnClick(this,event,11)" onkeyup="setValue(this,event,11)" class="ctform issearch require"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,1)" title="1565">热轧卷板</li><div class="clear tc mt5 mb5"><input type="button"   class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div></ul></div></div></td><td><input type="text" name="inLineList[1].bagCode" onkeyup="this.value=this.value.replace(/\s+/g,'')" class="ctform"></td><td><input type="text" name="inLineList[1].quantity" onkeyup="" value="1" class="ctform" onchange="sumQuantity(this)"></td><td><input type="text" name="inLineList[1].weight" onkeyup="" value="0" class="ctform requires" onchange="sumWeight(this)"></td><td><input type="text" name="inLineList[1].trainShipName" class="ctform"></td><td><input type="text" name="inLineList[1].salePrice" class="ctform requiress" value="0" onkeyup="checkNum(this)"></td><td class="tc"><a onclick="addProcLine(this)" href="javascript:void(0)" class="ui-icon-add vm "></a><span id="bt1" class="isfirst">&nbsp;&nbsp;&nbsp;<a onclick="delProcLine(this)" href="javascript:void(0)" class="ui-icon-del vm"></a></span></td></tr></tbody>
+						<tfoot>
+							<tr class="bgwh" height="40">
+								<td class="tc" colspan="12">合计：数量<span id="allxlQuantity" class="red mr20">2</span>重量<span id="allxlWeight" class="red">0.000</span>吨</td>
+							</tr>
+						</tfoot>
+				    </table>
+				    <div class="cl  f12 vm mt10 mb30">
+				    	<i class="ui-checkbox goldIcon vm mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"  id="permitPutID" name="wareHouseinMain.permitPut"></i>
+						同意乐刚网免费发布资源
+	                </div>
+
+
+
+
+	                <div class="pb10"><span class="g28 dib f14 b">运输要求</span> </div>
+	                <div class="cl f12 mb10">
+            			提货方式：
+            			<span class="dib pct60 single ">
+            				<i class="switchDotArrow"></i>
+            				<input type="hidden" id="shiprequirement" name="wareHouseinMain.shiprequirement" value="2">
+              				<button class="ui-option mr5 on" type="button" onclick="setOptValue(this)" da="2">自运</button>
+              				<button class="ui-option mr5 switchDotBut rel" type="button" onclick="setOptValue(this)" da="1">代运</button>
+						</span>
+
+						 <div class="trans_dai cl dn" style="display: none;">
+							<div class="cl mt15" style="border: 1px solid #ececec;"></div>
+							<div class="mt15">
+								<i class="startGCircle v-1 mr5"></i>起始仓库：
+								<span class="dib pct16 mr20">
+                                    <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="请选择" id="startDepot" name="wareHouseinMain.startDepot" onkeyup="setValue(this,event,6)" onclick="setValue(this,event,6)">
+                                    <div class="isalert" >
+		                               <div class="isalertlist"><ul>
+		                               		<li onclick="islistValue(this,1)">仓库1</li>
+		                               		<li onclick="islistValue(this,1)">仓库2</li>
+		                               		<li onclick="islistValue(this,1)">仓库2</li>
+		                               </ul></div>
+		                           </div>
+                                </span>
+                                起运日期：
+                                <input type="hidden" id="dateNow" value="2020-04-17">
+                                <span class="ui-input mr20 pct10" data-type="time"><input type="text" class="render-time" placeholder="请选择" id="startDate" name="wareHouseinMain.startDate" readonly="" ></span>
+                                起运地址：
+                                <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct40 " placeholder="请输入">
+							</div>
+							<div class="mt10">
+								<i class="endECircle v-1 mr5"></i>目的仓库：
+								<span class="dib pct16 mr20">
+                                    <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="请选择" id="startDepot" name="wareHouseinMain.startDepot" onkeyup="setValue(this,event,6)" onclick="setValue(this,event,6)">
+                                    <div class="isalert" >
+		                               <div class="isalertlist"><ul>
+		                               		<li onclick="islistValue(this,1)">仓库1</li>
+		                               		<li onclick="islistValue(this,1)">仓库2</li>
+		                               		<li onclick="islistValue(this,1)">仓库2</li>
+		                               </ul></div>
+		                           </div>
+                                </span>
+                                到货日期：
+                                <span class="ui-input mr20 pct10" data-type="time"><input type="text" class="render-time"  placeholder="请选择" id="endDate" name="wareHouseinMain.startDate" readonly="" lay-key="2"></span>
+                                到货地址：
+                                <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct40 " placeholder="请输入">
+							</div>
+							<div class="mt10">
+								<span class="dib" style="width: 17px">&emsp;</span>联系方式：
+								<input class="pct16 ui-input mr20" type="text">
+								出库费用：
+								<span class="dib  pct10 mr20">
+									<input type="hidden" id="unloadingMode" name="wareHouseinMain.unloadingMode" value="21004">
+		              				一票制
+								</span>
+								卸货方式：
+								<span class="dib  single ">
+		            				<input type="hidden" id="outcost" name="wareHouseinMain.outcost" value="1">
+		              				<button class="ui-option mr5 on" type="button" da="1" onclick="setOptValue(this)">直接卸货</button>
+		              				<button class="ui-option mr5 " type="button" da="2" onclick="setOptValue(this)">款到卸货</button>
+								</span>
+								
+
+
+							</div>
+
+
+	                	</div>
+	                </div>
+	                <!-- 提货方式end -->
+
+	                <div class="cl tc mb30 mt30">
+	                	<button type="button" class="ui-button mr20" data-type="big" onclick="sumbitOn()">提交入库</button>
+					</div>
+
+
+				</div>
+
+
+			</div><!-- ui-content end -->
+
+
+
+		</div>
+		<!-- mainCont end -->
+
+	</div>
+	<!-- rightBar end-->
+
+
+	
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script>
+		$(function(){
+			$(".menu").find(".proc").addClass("open").find(".smlist").eq(1).addClass("on")  //左侧菜单选中静态页面采用;
+			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
+
+			$("body").on("click",function(){
+				$(".sel-stockPanel").hide();
+				$(".isalert").hide();
+			})
+
+			
+		})
+
+
+		//结算方式
+		function selbalType(obj){
+			$(obj).addClass("on").siblings().removeClass("on");
+		}
+
+		//下拉显示
+		function setValueOnClick(obj,e,flag){
+			stopPro(e);			
+			$(".isalert").hide();
+			$(obj).next(".isalert").css({"top":$(obj).offset().top+$(obj).outerHeight(true),"min-width":$(obj).outerWidth(true),"left":$(obj).offset().left-$(".mainCont ").offset().left});
+			$(obj).next(".isalert").show();
+		}
+
+		
+		//添加品名等信息
+		function opeAddsteName(){
+			layer.open({
+			    type: 2,
+			    shade: 0.4,
+			    title: '添加信息',
+			    shadeClose: true, //开启点击遮罩关闭层
+			    area : ['530px' , '410px'],
+			    content: 'addProcInfo.html'
+			});
+		}
+
+		// 下拉赋值
+		function islistValue(obj,flag){
+			$(obj).parents(".isalert").hide();
+			$(obj).parents(".isalert").prev("input").val($(obj).text());
+		}
+
+		//点击下拉
+		function setValue(obj,e,flag){
+			stopPro(e);			
+			$(".isalert").hide();
+			$(obj).next(".isalert").css({"top":$(obj).offset().top+$(obj).outerHeight(true),"min-width":$(obj).outerWidth(true),"left":$(obj).offset().left-$(".mainCont ").offset().left});
+			$(obj).next(".isalert").show();
+		}
+
+		//代运自提
+		function setOptValue(obj){
+			$(obj).parents(".single").find("input").val($(obj).attr("da"));
+			if($(obj).text()=="代运"){
+				$(".trans_dai").show();
+			}else if($(obj).text()=="自运"){
+				$(".trans_dai").hide();
+			}
+		}
+
+
+		function chooseBest(){
+                layer.open({
+                    type : 2,
+                    title : '选择职能人员',
+                    shadeClose : true, //开启点击遮罩关闭层
+                    area : [ '916px', '480px' ],        
+                    content : 'toChoose.html'    
+                });         
+           }
+
+
+
+
+
+	</script>
+</body>
+	
+</html>

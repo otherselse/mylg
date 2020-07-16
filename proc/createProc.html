@@ -30,7 +30,7 @@
 				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">待确认</span><i class="goldIcon ui-tab3-dot"></i></a>
 				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">加工中</span><i class="goldIcon ui-tab3-dot"></i></a>
 				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">已完成</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">全部加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="processList.html" class="ui-tab3-list rel"><span class="ui-tab3-text">全部加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
 				 <a href="javascript:void(0)" class="g80 r f12 tipclick" qtip-dom="domCal"><i class="goldIcon inOutdiameter vm"></i>外径计算器</a>
 			</div>
 			<div class="ui-content unradius autoHeight ">				
@@ -188,7 +188,9 @@
 
                     	</div>
                     	
-
+				<div class="tc  pb30">
+				   <button class="ui-button" id="showPagePreview" type="button">尺寸预览</button>
+				</div>
 			</div><!-- ui-content end -->
 
 
@@ -791,6 +793,7 @@ border-radius: 3px;line-height:22px;height:22px;outline:none;vertical-align:midd
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/proc/preview/procPreview.js?verID=1.0.0.1" ></script>
 	<script>
 		$(function(){
 			$(".menu").find(".proc").addClass("open").find(".smlist").eq(0).addClass("on")  //左侧菜单选中静态页面采用;
@@ -871,6 +874,25 @@ border-radius: 3px;line-height:22px;height:22px;outline:none;vertical-align:midd
 					classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-cal'  //
 				}
 			});
+
+
+
+			//尺寸预览
+			 $("#showPagePreview").on("click",function(){
+					mypagePreview.init();
+					var mypage=layer.open({
+					    type: 1,
+					    title: '尺寸预览',
+					    shadeClose: true,
+					    shade: 0.5,
+					    area: ['1200px', '90%'],
+					    content: $(".sizePreview") 
+					});  
+					$("#PagePreviewClose").on("click",function(){
+						layer.close(mypage);
+					});
+				});
+
 
 
 

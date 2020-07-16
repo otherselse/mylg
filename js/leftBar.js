@@ -26,7 +26,7 @@
 		+'		<a class="menulist" href="javascript:void(0)"><i class="lgIcon imenu-proc vm mr5"></i>定制加工<i class="imenu-up lgIcon vm ml5"></i></a>'
 		+'		<div class="smenu">'
 		+'			<a class="smlist" href="../proc/createProc.html">一键下单</a>'
-		+'			<a class="smlist" href="">新增入库</a>'
+		+'			<a class="smlist" href="../proc/createInput.html">新增入库</a>'
 		+'			<a class="smlist" href="">申请提货</a>'
 		+'			<a class="smlist" href="">我的库存</a>'
 		+'			<a class="smlist" href="">自主结算</a>'
