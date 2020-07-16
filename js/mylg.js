@@ -22,15 +22,30 @@ $(function(){
 
 		}
 
-		$('.tipmouse').qtip({
-			hide: 'unfocus',
-			position: {
-				viewport: $(window)
-			},
-			style: {
-				classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
-			}
-		});
+		if($(".tipmouse").length>0){
+			$('.tipmouse').qtip({
+				hide: 'unfocus',
+				position: {
+					viewport: $(window)
+				},
+				style: {
+					classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+				}
+			});
+		}
+
+		if($(".tiptop").length>0){ //提示显示在元素的上方
+			$('.tiptop').qtip({
+				position: {
+					my: 'bottom center', //my:是指三角的位置
+					at: 'top center' //是在提示在组件的相对位置
+				},
+				style: {
+					classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+				}
+			});
+		}
+		
 
 		//搜索下拉
 		$("body").on("click", function () {
@@ -55,13 +70,16 @@ $(function(){
 
 
 		//同时绑定多个
-		lay('.render-time').each(function(){
-		  laydate.render({
-		    elem: this
-		    ,trigger: 'click'
-		    , theme: 'lgblue'
-		  });
-		});
+		if($(".render-time").length>0){
+			lay('.render-time').each(function(){
+			  laydate.render({
+			    elem: this
+			    ,trigger: 'click'
+			    , theme: 'lgblue'
+			  });
+			});
+		}
+		
 
 
 		//checkbox

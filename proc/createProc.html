@@ -12,6 +12,7 @@
 	<title>发布加工单-我的乐刚</title>
 	<style>
 	.ui-input-x{min-width: 250px;}
+	.qtip{max-width: 430px}
 	</style>
 </head>
 <body class="buyer showTip createProc">
@@ -30,6 +31,7 @@
 				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">加工中</span><i class="goldIcon ui-tab3-dot"></i></a>
 				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">已完成</span><i class="goldIcon ui-tab3-dot"></i></a>
 				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">全部加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				 <a href="javascript:void(0)" class="g80 r f12 tipclick" qtip-dom="domCal"><i class="goldIcon inOutdiameter vm"></i>外径计算器</a>
 			</div>
 			<div class="ui-content unradius autoHeight ">				
 				
@@ -40,10 +42,12 @@
 	                    			公司名称：
 	                    			<input type="text" class="ui-input  pct50 "  readonly="" value="易刚钢材销售集团">
 	                    		</div>
+	                    		
 	                    		<div class="pct50 dib  mb10 f12">
-	                    			&emsp;&emsp;&emsp;联系人：
-	                    			<input type="text" class="ui-input  pct50 " placeholder="请输入">	                    			
+	                    			积分金牌商家：
+	                    			<input type="text" class="ui-input  pct50 "  readonly="" value="王丹丹">
 	                    		</div>
+
 
 	                    		<div class="pct50 dib  mb10 f12">
 	                    			所在仓库：
@@ -70,19 +74,22 @@
 	                    			<span class="dib pct60 single">
 	                    				<input type="hidden" id="signedID" name="main.signedID">
 	                					<input type="hidden" id="balType" name="main.balType" value="现结">
-	                      				<button class="ui-option mr5 " id="balTypeRd1" onclick="selbalType(this)" type="button">现结</button>
-	                      				<button class="ui-option mr5 " id="balTypeRd2" onclick="selbalType(this)" type="button">有货月结</button>
+	                      				<button class="ui-optionNo mr5 " id="balTypeRd1" onclick="selbalType(this)" type="button">现结</button>
+	                      				<button class="ui-optionNo mr5 " id="balTypeRd2" onclick="selbalType(this)" type="button">有货月结</button>
 									</span>
 	                    		</div>
 
 	                    		<div class="pct50 dib  mb10 f12">
-	                    			积分金牌商家：
-	                    			<input type="text" class="ui-input  pct50 "  readonly="" value="王丹丹">
+	                    			&emsp;&emsp;&emsp;联系人：
+	                    			<input type="text" class="ui-input  pct50 " placeholder="请输入">	                    			
 	                    		</div>
-
 	                    		<div class="pct50 dib  mb10 f12">
 	                    			交货日期：
 	                    			<span class="ui-input pct50 " data-type="time"><input type="text" id="delIDate" name="main.delIDate" readonly="" class="lh20" ></span>
+	                    		</div>
+	                    		<div class="pct50 dib  mb10 f12" id="operatorMsg">
+	                    			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	                    			<span class="ui-tip pct60 pl5 vm" data-type="normal" >联系人尚未注册金牌商家，将无法获取积分</span>
 	                    		</div>
 
 	                    		<div id="tihuoInfo" class="pct50  mt5 f12">&emsp;&emsp;地址：春和路186号&nbsp;&nbsp;提货时间：01:00至01:00&nbsp;00:00~24:00</div>
@@ -125,13 +132,15 @@
 		                    <input type="hidden" name="inLineList[0].indexSort" value="0">
 		                    <input type="hidden" name="inLineList[0].steNameID" value="1565">
 			                <input name="inLineList[0].steName" type="text" placeholder="品名" autocomplete="off" onkeyup="setValue(this,event,4)" onclick="ClicketValue(this,event,4)" onchange="changeSteName(this)" class="issearch pct30">
-			                <div class="isalert" style="display: none; top: 441px; width: 151px; left: 34.6563px;"><div class="isalertlist" style="width: 151px;"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>
+			                <div class="isalert" ><div class="isalertlist" ><ul><li onclick="islistValue(this,4)" title="1565">热轧卷板</li><li onclick="islistValue(this,4)" title="1596">镀锌卷板</li><li onclick="islistValue(this,4)" title="1584">冷轧卷板</li><li onclick="islistValue(this,4)" title="1579">酸洗卷板</li><li onclick="islistValue(this,4)" title="1524">镀铝锌卷板</li><li onclick="islistValue(this,4)" title="1513">彩涂卷板</li><li onclick="islistValue(this,4)" title="1502">镀铝卷板</li><li onclick="islistValue(this,4)" title="1501">丁字钢</li><li onclick="islistValue(this,4)" title="1555">冷轧盒板</li><li onclick="islistValue(this,4)" title="1519">耐指纹卷板</li></ul></div>
+			                <div class="clear cent " style="margin:5px 0"><input type="button" class="ui-button" data-type="small" value="添加" onclick="opeAddsteName()"></div>
+			            </div>
 			                <input type="hidden" name="inLineList[0].steQualityID" value="216">
 			                <input name="inLineList[0].steQuality" type="text" placeholder="牌号" autocomplete="off" onkeyup="setValue(this,event,5)" onclick="ClicketValue(this,event,5)" onchange="changeSteQuality(this)" class="issearch pct25">
-			                <div class="isalert" style="display: none; top: 441px; width: 252px; left: 193.641px;"><div class="isalertlist" style="width: 252px;"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>
+			                <div class="isalert"><div class="isalertlist" ><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>
 			                <input type="hidden" name="inLineList[0].steAreaID" value="1244">       
 			                <input name="inLineList[0].steArea" type="text" placeholder="钢厂" autocomplete="off" onkeyup="setValue(this,event,6)" onclick="ClicketValue(this,event,6)" onchange="changeSteArea(this)" class="issearch pct30">
-			                <div class="isalert" style="display: none; top: 441px; width: 151px; left: 327.406px;"><div class="isalertlist" style="width: 151px;"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>
+			                <div class="isalert"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>
 		                </span>
 		                <span style="width:10%">
 		                    <input name="inLineList[0].bagCode" type="text" onkeyup="this.value=this.value.replace(/\s+/g,'')" placeholder="捆包号" class="w90">
@@ -139,14 +148,14 @@
 		                <span style="width:15%">
 		                    <input type="hidden" name="inLineList[0].unit" value="15002">
 			                <input name="inLineList[0].unitName" type="text" value="件" placeholder="件" onkeyup="setValue(this,event,7)" onclick="ClicketValue(this,event,7)" class="issearch search pct30">
-			                <div class="isalert" style="display: none; top: 441px; width: 76px; left: 707.047px;"><div class="isalertlist" style="width: 76px;"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>
+			                <div class="isalert"><div class="isalertlist" ><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>
 			                <input type="hidden" name="inLineList[0].measure" value="14002">
 			                <input name="inLineList[0].measureName" type="text" value="抄码" placeholder="抄码" onkeyup="setValue(this,event,8)" onclick="ClicketValue(this,event,8)" class="issearch search pct40">
-			                <div class="isalert" style="display: none; top: 441px; width: 101px; left: 790.391px;"><div class="isalertlist" style="width: 101px;"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>
+			                <div class="isalert" ><div class="isalertlist" ><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>
 		                </span>
 		                <span style="width:13%">
 		                    <input name="inLineList[0].steSpec" type="text" class="pct90" placeholder="规格" onchange="changeSteSpec(this)" onkeyup="setValue(this,event,15)" onclick="ClicketValue(this,event,15)" autocomplete="off">
-		                    <div class="isalert" style="display: none; top: 441px; width: 197px; left: 959.188px;"><div class="isalertlist" style="width: 197px;"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>
+		                    <div class="isalert" ><div class="isalertlist" ><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>
 		                </span>
 		                <span style="width:17%">
 			                <input name="inLineList[0].quantity" type="text" value="1" placeholder="数量" readonly="readonly" class="pct40">
@@ -166,8 +175,8 @@
 		                	<a href="javascript:void(0)" class="f12" onclick="show_jgCol(this,0,1)">尺寸录入</a>
 		                </span>
 	                </div>
-	            <div class="jgs2016_jgddown" style="display: block;"><div class="list_2"><div name="proDatail"><div class="list2_weight"><span name="procTimesName"><span class="ui-label mr10 f12" data-type="red">第1次</span>加工重量</span>：<input type="text" name="procWeight" size="5" onchange="changeProcW(this,0)">吨<span style="float:right;" name="yulInfo"></span><span class="spank" style="width:15px"></span>内径要求：<select onchange="changeinDiameter(this)" name="changeinD"><option value="">请选择</option><option value="508mm" selected="">508mm</option><option value="610mm">610mm</option><option value="760mm">760mm</option></select><span class="iszongjian">中切<input type="text" name="inLineList[0].procProductLineList[0].knifeCount" onchange="changeKnifeCount(this)" size="4">刀后</span><span class="spank" style="width:15px"></span><span class="iszongjian"><input type="hidden" name="inLineList[0].procProductLineList[0].externalDiameter" value="12.61">外径约<input type="text" value="12.61" name="externalDiameter" size="6" readonly="readonly" style="border:none">m</span></div><div class="list2_num" name="product0"><input type="hidden" name="inLineList[0].procProductLineList[0].knifeOrder" value="1"><span class="fl pct90"><div class="jgs2016_hb_tip" style="display: none;">勾选后合包<i></i></div><div class="checksel fl" style="margin-top:5px" onclick="setOptionHb(this)"><input class="checkselbox" name="prod" value="checkbox" type="checkbox"><label></label></div>&nbsp;&nbsp;<input da5="procName" name="inLineList[0].procProductLineList[0].procedureName" type="text" value="纵剪" readonly="readonly" onclick="ClicketValue(this,event,9)" class="issearch jgs2016_cur pct5 jgProcSelect" style="border:none"><div class="isalert" style="display: none;"><div class="isalertlist" style="height:auto"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="hbbg" style="display:none;"></span><input type="hidden" name="inLineList[0].procProductLineList[0].packageName"><input type="hidden" name="inLineList[0].procProductLineList[0].procWeight" value="1222">厚<input type="text" name="thick" class="pct5" readonly="readonly" style="border:none">*宽<input type="text" name="wide" class="pct5" onchange="changeSpec(this,1)">*长<input type="text" name="longed" class="pct5" onchange="changeSpec(this,2)" readonly="readonly" style="border: none;"><input type="hidden" name="inLineList[0].procProductLineList[0].steSpec" value="2.000*1250*C"> <input type="hidden" name="inLineList[0].procProductLineList[0].procPrice"> <span class="jgs_priceshow ell" name="s_price" title="预估单价仅供参考，以实际结算单价为准" style="width:45px;cursor:pointer"></span><span class="spank" style="width:0px"></span><input type="text" da1="cpsl" name="inLineList[0].procProductLineList[0].quantity" onchange="changeSpec(this,3)" class="pct5" placeholder="数量"><span name="unit">条</span>约<input type="text" da="cpzl" name="inLineList[0].procProductLineList[0].weight" onchange="changeSpec(this,4)" class="pct5" placeholder="重量">吨<span class="spank" style="width:4px"></span><a class="jgs2016_jgbut ml5" href="javascript:void(0)" onclick="add_numCols(this,0,0)" title="转横切">转横切</a>&nbsp;&nbsp;<span name="hqsyInfo"></span><span class="ishengqie" style="display: none;">每包<input type="hidden" name="inLineList[0].procProductLineList[0].packetMarking" value="0"><input type="text" da2="bzzs" style="display:none;" name="inLineList[0].procProductLineList[0].bagQuantity" onchange="changeBagS(this)" placeholder="标准张数" class="pct5"><input type="text" da3="bzbz" name="inLineList[0].procProductLineList[0].bagWeight" onchange="changeBagW(this)" placeholder="标准包重" class="pct5"><input type="text" da4="danwei" value="吨" readonly="readonly" onclick="setValue(this,event,14)" class="issearch jgs2016_cur pct5 jgProcSelect" style="border:none"><div class="isalert" style="display: none;"><div class="isalertlist" style="height:auto"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div></span>&nbsp;&nbsp;<span name="bagCount"></span><input type="text" name="inLineList[0].procProductLineList[0].partNo" onchange="changePartNo(this)" placeholder="零件号" class="pct5"></span><span class="delall"><a class="ui-icon-add vm" href="javascript:void(0)" onclick="add_numCols(this,0,0)"></a><a class="ui-icon-del ml5 vm" href="javascript:void(0)" onclick="del_numCols(this)"></a></span></div><div class="jgtip" name="totalInfo" style="margin-left:0px"><span name="totalWeightInfo" style="margin-left:0px">纵剪尺寸：<span class="blue">2.000*(1250*1)*C</span><span class="red ml30">修边时单边边丝需预留2mm</span><br></span><span name="totalWideInfo" style="margin-left:15px;width:350px;display:inline-block"></span></div></div></div></div></div>
-            <div datadiv="checkDivCount" name="inLineInfo1" class="jgs2016_yllist"><div class="jgs2016_jgdlist"><span style="width:30%" class="one"><input type="hidden" name="inLineList[1].processingTimes" value="1"><input type="hidden" name="inLineList[1].indexSort" value="1"><input type="hidden" name="inLineList[1].steNameID" value="1565"><input type="text" name="inLineList[1].steName" value="热轧卷板" placeholder="品名" autocomplete="off" onkeyup="setValue(this,event,4)" onclick="ClicketValue(this,event,4)" onchange="changeSteName(this)" class="issearch pct30"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>&nbsp;<input type="hidden" name="inLineList[1].steQualityID" value="216"><input type="text" name="inLineList[1].steQuality" value="20CR" placeholder="牌号" autocomplete="off" onkeyup="setValue(this,event,5)" onclick="ClicketValue(this,event,5)" onchange="changeSteQuality(this)" class="issearch pct25"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>&nbsp;<input type="hidden" name="inLineList[1].steAreaID" value="1244"><input type="text" name="inLineList[1].steArea" value="长江薄板" placeholder="钢厂" autocomplete="off" onkeyup="setValue(this,event,6)" onclick="ClicketValue(this,event,6)" onchange="changeSteArea(this)" class="issearch pct30"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div></span><span style="width:10%"><input type="text" name="inLineList[1].bagCode" onkeyup="this.value=this.value.replace(/\s+/g,'')" value="111" placeholder="捆包号" class="w90"></span><span style="width:15%"><input type="hidden" name="inLineList[1].unit" value="15002"><input type="text" name="inLineList[1].unitName" value="卷" placeholder="件" onkeyup="setValue(this,event,7)" onclick="ClicketValue(this,event,7)" class="issearch search pct30"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div><input type="hidden" name="inLineList[1].measure" value="14002"> <input type="text" name="inLineList[1].measureName" value="过磅" placeholder="抄码" onkeyup="setValue(this,event,8)" onclick="ClicketValue(this,event,8)" class="issearch search pct40"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div></span><span style="width:13%"><input type="text" name="inLineList[1].steSpec" value="2.000*1250*C" placeholder="规格" onchange="changeSteSpec(this)" onkeyup="setValue(this,event,15)" autocomplete="off" onclick="ClicketValue(this,event,15)" class="pct90"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>&nbsp;</span><span style="width:17%"><input type="text" name="inLineList[1].quantity" value="1" placeholder="数量" class="pct40"> <input type="text" name="inLineList[1].weight" value="1222" onchange="changeWeight(this)" placeholder="重量" class="pct40"></span><span style="width:15%"><a href="javascript:void(0)" onclick="delInLine(this)" class="ui-icon-del mr5 vm"></a><a href="javascript:void(0)" class="f12" onclick="show_jgCol(this,1,1)"> 尺寸录入</a></span></div><div class="jgs2016_jgddown" style="display: block;"><div class="list_2"><div name="proDatail"><div class="list2_weight"><span name="procTimesName"><span class="ui-label mr10 f12" data-type="red">第1次</span>加工重量</span>：<input type="text" name="procWeight" size="5" onchange="changeProcW(this,1)">吨<span style="float:right;" name="yulInfo"></span><span class="spank" style="width:15px"></span>内径要求：<select onchange="changeinDiameter(this)" name="changeinD"><option value="">请选择</option><option value="508mm" selected="">508mm</option><option value="610mm">610mm</option><option value="760mm">760mm</option></select><span class="iszongjian">中切<input type="text" name="inLineList[1].procProductLineList[0].knifeCount" onchange="changeKnifeCount(this)" size="4">刀后</span><span class="spank" style="width:15px"></span><span class="iszongjian"><input type="hidden" name="inLineList[1].procProductLineList[0].externalDiameter" value="7.29">外径约<input type="text" value="12.61" name="externalDiameter" size="6" readonly="readonly" style="border:none">m</span></div><div class="list2_num" name="product0"><input type="hidden" name="inLineList[1].procProductLineList[0].knifeOrder" value="1"><span class="fl pct90"><div class="jgs2016_hb_tip" style="display: none;">勾选后合包<i></i></div><div class="checksel fl" style="margin-top:5px" onclick="setOptionHb(this)"><input class="checkselbox" name="prod" value="checkbox" type="checkbox"><label></label></div>&nbsp;&nbsp;<input da5="procName" name="inLineList[1].procProductLineList[0].procedureName" type="text" value="纵剪" readonly="readonly" onclick="ClicketValue(this,event,9)" class="issearch jgs2016_cur pct5 jgProcSelect" style="border:none"><div class="isalert" style="display: none;"><div class="isalertlist" style="height:auto"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="hbbg" style="display:none;"></span><input type="hidden" name="inLineList[1].procProductLineList[0].packageName"><input type="hidden" name="inLineList[1].procProductLineList[0].procWeight" value="1222">厚<input type="text" name="thick" class="pct5" readonly="readonly" style="border:none">*宽<input type="text" name="wide" class="pct5" onchange="changeSpec(this,1)">*长<input type="text" name="longed" class="pct5" onchange="changeSpec(this,2)" readonly="readonly" style="border: none;"><input type="hidden" name="inLineList[1].procProductLineList[0].steSpec" value="2.000*22*C"> <input type="hidden" name="inLineList[1].procProductLineList[0].procPrice"> <span class="jgs_priceshow ell" name="s_price" title="预估单价仅供参考，以实际结算单价为准" style="width:45px;cursor:pointer"></span><span class="spank" style="width:0px"></span><input type="text" da1="cpsl" name="inLineList[1].procProductLineList[0].quantity" onchange="changeSpec(this,3)" class="pct5" placeholder="数量"><span name="unit">条</span>约<input type="text" da="cpzl" name="inLineList[1].procProductLineList[0].weight" onchange="changeSpec(this,4)" class="pct5" placeholder="重量">吨<span class="spank" style="width:4px"></span><a class="jgs2016_jgbut ml5" href="javascript:void(0)" onclick="add_numCols(this,1,0)" title="转横切">转横切</a>&nbsp;&nbsp;<span name="hqsyInfo"></span><span class="ishengqie" style="display: none;">每包<input type="hidden" name="inLineList[1].procProductLineList[0].packetMarking" value="0"><input type="text" da2="bzzs" style="display:none;" name="inLineList[1].procProductLineList[0].bagQuantity" onchange="changeBagS(this)" placeholder="标准张数" class="pct5"><input type="text" da3="bzbz" name="inLineList[1].procProductLineList[0].bagWeight" onchange="changeBagW(this)" placeholder="标准包重" class="pct5"><input type="text" da4="danwei" value="吨" readonly="readonly" onclick="setValue(this,event,14)" class="issearch jgs2016_cur pct5 jgProcSelect" style="border:none"><div class="isalert" style="display: none;"><div class="isalertlist" style="height:auto"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div></span>&nbsp;&nbsp;<span name="bagCount"></span><input type="text" name="inLineList[1].procProductLineList[0].partNo" onchange="changePartNo(this)" placeholder="零件号" class="pct5"></span><span class="delall"><a class="ui-icon-add vm" href="javascript:void(0)" onclick="add_numCols(this,1,0)"></a><a class="ui-icon-del ml5 vm" href="javascript:void(0)" onclick="del_numCols(this)"></a></span></div><div class="list2_num" name="product0"><span class="fl pct90"><div class="checksel fl" style="margin-top:5px" onclick="setOptionHb(this)"><input class="checkselbox" name="prod" value="checkbox" type="checkbox"><label></label></div>&nbsp;&nbsp;<input name="inLineList[1].procProductLineList[1].procedureName" type="text" size="4" value="横切" readonly="readonly" style="border:none">&nbsp;&nbsp;&nbsp;&nbsp;<span class="hbbg" style="display:none;"></span><input type="hidden" name="inLineList[1].procProductLineList[1].packageName"><input type="hidden" name="inLineList[1].procProductLineList[1].procWeight" value="1222">厚<input type="text" name="thick" class="pct5" value="2.000" readonly="readonly" style="border:none">*宽<input type="text" name="wide" class="pct5" value="22" onchange="changeSpec(this,1)" readonly="readonly" style="border: none;">*长<input type="text" name="longed" class="pct5" value="" onchange="changeSpec(this,2)"><input type="hidden" name="inLineList[1].procProductLineList[1].steSpec" value="2.000*22*C"> <input type="hidden" name="inLineList[1].procProductLineList[1].procPrice"> <span class="jgs_priceshow ell" name="s_price" title="预估单价仅供参考，以实际结算单价为准" style="width:45px;cursor:pointer"></span><span class="spank" style="width:0px"></span><input type="text" name="inLineList[1].procProductLineList[1].quantity" onchange="changeSpec(this,3)" value="1" class="pct5" placeholder="数量"><span name="unit">张</span>约<input type="text" da="cpzl" name="inLineList[1].procProductLineList[1].weight" onchange="changeSpec(this,4)" value="0" class="pct5" placeholder="重量">吨<span class="iszongjian-none" style="display: none"><input type="hidden" name="inLineList[1].procProductLineList[1].knifeOrder" value="1">中切<input type="text" name="inLineList[1].procProductLineList[1].knifeCount" onchange="changeKnifeCount(this)" class="pct5" value="0" placeholder="不中切">刀</span><span class="spank" style="width:4px"></span><a class="jgs2016_jgbut" href="javascript:void(0)" onclick="add_numCols(this,1,1)" title="转横切" style="display: none;">转横切</a>&nbsp;&nbsp;<span name="hqsyInfo" class="hqsyInfo" style="display: none;"></span><span class="ishengqie">每包<input type="hidden" name="inLineList[1].procProductLineList[1].packetMarking" value="0"><input type="text" style="display:none;" name="inLineList[1].procProductLineList[1].bagQuantity" onchange="changeBagS(this)" placeholder="标准张数" class="pct5"><span class="ui-selradio f12 pct10 vm ml5">
+	            <div class="jgs2016_jgddown" style="display: block;"><div class="list_2"><div name="proDatail"><div class="list2_weight"><span name="procTimesName"><span class="ui-label mr10 f12" data-type="red">第1次</span>加工重量</span>：<input type="text" name="procWeight" size="5" onchange="changeProcW(this,0)">吨<span style="float:right;" name="yulInfo"></span><span class="spank" style="width:15px"></span>内径要求：<select onchange="changeinDiameter(this)" name="changeinD"><option value="">请选择</option><option value="508mm" selected="">508mm</option><option value="610mm">610mm</option><option value="760mm">760mm</option></select><span class="iszongjian">中切<input type="text" name="inLineList[0].procProductLineList[0].knifeCount" onchange="changeKnifeCount(this)" size="4">刀后</span><span class="spank" style="width:15px"></span><span class="iszongjian"><input type="hidden" name="inLineList[0].procProductLineList[0].externalDiameter" value="12.61">外径约<input type="text" value="12.61" name="externalDiameter" size="6" readonly="readonly" style="border:none">m</span></div><div class="list2_num" name="product0"><input type="hidden" name="inLineList[0].procProductLineList[0].knifeOrder" value="1"><span class="fl pct90"><div class="jgs2016_hb_tip" style="display: none;">勾选后合包<i></i></div><div class="checksel fl" ><input class="checkselbox" name="prod" value="checkbox" type="checkbox" onclick="setOptionHb(this)"></div>&nbsp;&nbsp;<input da5="procName" name="inLineList[0].procProductLineList[0].procedureName" type="text" value="纵剪" readonly="readonly" onclick="ClicketValue(this,event,9)" class="issearch jgs2016_cur pct5 jgProcSelect" style="border:none"><div class="isalert" style="display: none;"><div class="isalertlist" style="height:auto"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="hbbg" style="display:none;"></span><input type="hidden" name="inLineList[0].procProductLineList[0].packageName"><input type="hidden" name="inLineList[0].procProductLineList[0].procWeight" value="1222">厚<input type="text" name="thick" class="pct5" readonly="readonly" style="border:none">*宽<input type="text" name="wide" class="pct5" onchange="changeSpec(this,1)">*长<input type="text" name="longed" class="pct5" onchange="changeSpec(this,2)" readonly="readonly" style="border: none;"><input type="hidden" name="inLineList[0].procProductLineList[0].steSpec" value="2.000*1250*C"> <input type="hidden" name="inLineList[0].procProductLineList[0].procPrice"> <span class="jgs_priceshow ell" name="s_price" title="预估单价仅供参考，以实际结算单价为准" style="width:45px;cursor:pointer"></span><span class="spank" style="width:0px"></span><input type="text" da1="cpsl" name="inLineList[0].procProductLineList[0].quantity" onchange="changeSpec(this,3)" class="pct5" placeholder="数量"><span name="unit">条</span>约<input type="text" da="cpzl" name="inLineList[0].procProductLineList[0].weight" onchange="changeSpec(this,4)" class="pct5" placeholder="重量">吨<span class="spank" style="width:4px"></span><a class="jgs2016_jgbut ml5" href="javascript:void(0)" onclick="add_numCols(this,0,0)" title="转横切">转横切</a>&nbsp;&nbsp;<span name="hqsyInfo"></span><span class="ishengqie" style="display: none;">每包<input type="hidden" name="inLineList[0].procProductLineList[0].packetMarking" value="0"><input type="text" da2="bzzs" style="display:none;" name="inLineList[0].procProductLineList[0].bagQuantity" onchange="changeBagS(this)" placeholder="标准张数" class="pct5"><input type="text" da3="bzbz" name="inLineList[0].procProductLineList[0].bagWeight" onchange="changeBagW(this)" placeholder="标准包重" class="pct5"><input type="text" da4="danwei" value="吨" readonly="readonly" onclick="setValue(this,event,14)" class="issearch jgs2016_cur pct5 jgProcSelect" style="border:none"><div class="isalert" style="display: none;"><div class="isalertlist" style="height:auto"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div></span>&nbsp;&nbsp;<span name="bagCount"></span><input type="text" name="inLineList[0].procProductLineList[0].partNo" onchange="changePartNo(this)" placeholder="零件号" class="pct5"></span><span class="delall"><a class="ui-icon-add vm" href="javascript:void(0)" onclick="add_numCols(this,0,0)"></a><a class="ui-icon-del ml5 vm" href="javascript:void(0)" onclick="del_numCols(this)"></a></span></div><div class="jgtip" name="totalInfo" style="margin-left:0px"><span name="totalWeightInfo" style="margin-left:0px">纵剪尺寸：<span class="blue">2.000*(1250*1)*C</span><span class="red ml30">修边时单边边丝需预留2mm</span><br></span><span name="totalWideInfo" style="margin-left:15px;width:350px;display:inline-block"></span></div></div></div></div></div>
+            <div datadiv="checkDivCount" name="inLineInfo1" class="jgs2016_yllist"><div class="jgs2016_jgdlist"><span style="width:30%" class="one"><input type="hidden" name="inLineList[1].processingTimes" value="1"><input type="hidden" name="inLineList[1].indexSort" value="1"><input type="hidden" name="inLineList[1].steNameID" value="1565"><input type="text" name="inLineList[1].steName" value="热轧卷板" placeholder="品名" autocomplete="off" onkeyup="setValue(this,event,4)" onclick="ClicketValue(this,event,4)" onchange="changeSteName(this)" class="issearch pct30"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>&nbsp;<input type="hidden" name="inLineList[1].steQualityID" value="216"><input type="text" name="inLineList[1].steQuality" value="20CR" placeholder="牌号" autocomplete="off" onkeyup="setValue(this,event,5)" onclick="ClicketValue(this,event,5)" onchange="changeSteQuality(this)" class="issearch pct25"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>&nbsp;<input type="hidden" name="inLineList[1].steAreaID" value="1244"><input type="text" name="inLineList[1].steArea" value="长江薄板" placeholder="钢厂" autocomplete="off" onkeyup="setValue(this,event,6)" onclick="ClicketValue(this,event,6)" onchange="changeSteArea(this)" class="issearch pct30"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div></span><span style="width:10%"><input type="text" name="inLineList[1].bagCode" onkeyup="this.value=this.value.replace(/\s+/g,'')" value="111" placeholder="捆包号" class="w90"></span><span style="width:15%"><input type="hidden" name="inLineList[1].unit" value="15002"><input type="text" name="inLineList[1].unitName" value="卷" placeholder="件" onkeyup="setValue(this,event,7)" onclick="ClicketValue(this,event,7)" class="issearch search pct30"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div><input type="hidden" name="inLineList[1].measure" value="14002"> <input type="text" name="inLineList[1].measureName" value="过磅" placeholder="抄码" onkeyup="setValue(this,event,8)" onclick="ClicketValue(this,event,8)" class="issearch search pct40"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div></span><span style="width:13%"><input type="text" name="inLineList[1].steSpec" value="2.000*1250*C" placeholder="规格" onchange="changeSteSpec(this)" onkeyup="setValue(this,event,15)" autocomplete="off" onclick="ClicketValue(this,event,15)" class="pct90"><div class="isalert" style="display: none;"><div class="isalertlist"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>&nbsp;</span><span style="width:17%"><input type="text" name="inLineList[1].quantity" value="1" placeholder="数量" class="pct40"> <input type="text" name="inLineList[1].weight" value="1222" onchange="changeWeight(this)" placeholder="重量" class="pct40"></span><span style="width:15%"><a href="javascript:void(0)" onclick="delInLine(this)" class="ui-icon-del mr5 vm"></a><a href="javascript:void(0)" class="f12" onclick="show_jgCol(this,1,1)"> 尺寸录入</a></span></div><div class="jgs2016_jgddown" style="display: block;"><div class="list_2"><div name="proDatail"><div class="list2_weight"><span name="procTimesName"><span class="ui-label mr10 f12" data-type="red">第1次</span>加工重量</span>：<input type="text" name="procWeight" size="5" onchange="changeProcW(this,1)">吨<span style="float:right;" name="yulInfo"></span><span class="spank" style="width:15px"></span>内径要求：<select onchange="changeinDiameter(this)" name="changeinD"><option value="">请选择</option><option value="508mm" selected="">508mm</option><option value="610mm">610mm</option><option value="760mm">760mm</option></select><span class="iszongjian">中切<input type="text" name="inLineList[1].procProductLineList[0].knifeCount" onchange="changeKnifeCount(this)" size="4">刀后</span><span class="spank" style="width:15px"></span><span class="iszongjian"><input type="hidden" name="inLineList[1].procProductLineList[0].externalDiameter" value="7.29">外径约<input type="text" value="12.61" name="externalDiameter" size="6" readonly="readonly" style="border:none">m</span></div><div class="list2_num" name="product0"><input type="hidden" name="inLineList[1].procProductLineList[0].knifeOrder" value="1"><span class="fl pct90"><div class="jgs2016_hb_tip" style="display: none;">勾选后合包<i></i></div><div class="checksel fl" ><input class="checkselbox" name="prod" value="checkbox" type="checkbox" onclick="setOptionHb(this)"></div>&nbsp;&nbsp;<input da5="procName" name="inLineList[1].procProductLineList[0].procedureName" type="text" value="纵剪" readonly="readonly" onclick="ClicketValue(this,event,9)" class="issearch jgs2016_cur pct5 jgProcSelect" style="border:none"><div class="isalert" style="display: none;"><div class="isalertlist" style="height:auto"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="hbbg" style="display:none;"></span><input type="hidden" name="inLineList[1].procProductLineList[0].packageName"><input type="hidden" name="inLineList[1].procProductLineList[0].procWeight" value="1222">厚<input type="text" name="thick" class="pct5" readonly="readonly" style="border:none">*宽<input type="text" name="wide" class="pct5" onchange="changeSpec(this,1)">*长<input type="text" name="longed" class="pct5" onchange="changeSpec(this,2)" readonly="readonly" style="border: none;"><input type="hidden" name="inLineList[1].procProductLineList[0].steSpec" value="2.000*22*C"> <input type="hidden" name="inLineList[1].procProductLineList[0].procPrice"> <span class="jgs_priceshow ell" name="s_price" title="预估单价仅供参考，以实际结算单价为准" style="width:45px;cursor:pointer"></span><span class="spank" style="width:0px"></span><input type="text" da1="cpsl" name="inLineList[1].procProductLineList[0].quantity" onchange="changeSpec(this,3)" class="pct5" placeholder="数量"><span name="unit">条</span>约<input type="text" da="cpzl" name="inLineList[1].procProductLineList[0].weight" onchange="changeSpec(this,4)" class="pct5" placeholder="重量">吨<span class="spank" style="width:4px"></span><a class="jgs2016_jgbut ml5" href="javascript:void(0)" onclick="add_numCols(this,1,0)" title="转横切">转横切</a>&nbsp;&nbsp;<span name="hqsyInfo"></span><span class="ishengqie" style="display: none;">每包<input type="hidden" name="inLineList[1].procProductLineList[0].packetMarking" value="0"><input type="text" da2="bzzs" style="display:none;" name="inLineList[1].procProductLineList[0].bagQuantity" onchange="changeBagS(this)" placeholder="标准张数" class="pct5"><input type="text" da3="bzbz" name="inLineList[1].procProductLineList[0].bagWeight" onchange="changeBagW(this)" placeholder="标准包重" class="pct5"><input type="text" da4="danwei" value="吨" readonly="readonly" onclick="setValue(this,event,14)" class="issearch jgs2016_cur pct5 jgProcSelect" style="border:none"><div class="isalert" style="display: none;"><div class="isalertlist" style="height:auto"><ul><li onclick="islistValue(this,14)">吨</li><li onclick="islistValue(this,14)">张</li></ul></div></div></span>&nbsp;&nbsp;<span name="bagCount"></span><input type="text" name="inLineList[1].procProductLineList[0].partNo" onchange="changePartNo(this)" placeholder="零件号" class="pct5"></span><span class="delall"><a class="ui-icon-add vm" href="javascript:void(0)" onclick="add_numCols(this,1,0)"></a><a class="ui-icon-del ml5 vm" href="javascript:void(0)" onclick="del_numCols(this)"></a></span></div><div class="list2_num" name="product0"><span class="fl pct90"><div class="checksel fl" ><input class="checkselbox" name="prod" value="checkbox" type="checkbox" onclick="setOptionHb(this)"></div>&nbsp;<input name="inLineList[1].procProductLineList[1].procedureName" type="text" size="4" value="横切" readonly="readonly" style="border:none">&nbsp;&nbsp;&nbsp;&nbsp;<span class="hbbg" style="display:none;"></span><input type="hidden" name="inLineList[1].procProductLineList[1].packageName"><input type="hidden" name="inLineList[1].procProductLineList[1].procWeight" value="1222">厚<input type="text" name="thick" class="pct5" value="2.000" readonly="readonly" style="border:none">*宽<input type="text" name="wide" class="pct5" value="22" onchange="changeSpec(this,1)" readonly="readonly" style="border: none;">*长<input type="text" name="longed" class="pct5" value="" onchange="changeSpec(this,2)"><input type="hidden" name="inLineList[1].procProductLineList[1].steSpec" value="2.000*22*C"> <input type="hidden" name="inLineList[1].procProductLineList[1].procPrice"> <span class="jgs_priceshow ell" name="s_price" title="预估单价仅供参考，以实际结算单价为准" style="width:45px;cursor:pointer"></span><span class="spank" style="width:0px"></span><input type="text" name="inLineList[1].procProductLineList[1].quantity" onchange="changeSpec(this,3)" value="1" class="pct5" placeholder="数量"><span name="unit">张</span>约<input type="text" da="cpzl" name="inLineList[1].procProductLineList[1].weight" onchange="changeSpec(this,4)" value="0" class="pct5" placeholder="重量">吨<span class="iszongjian-none" style="display: none"><input type="hidden" name="inLineList[1].procProductLineList[1].knifeOrder" value="1">中切<input type="text" name="inLineList[1].procProductLineList[1].knifeCount" onchange="changeKnifeCount(this)" class="pct5" value="0" placeholder="不中切">刀</span><span class="spank" style="width:4px"></span><a class="jgs2016_jgbut" href="javascript:void(0)" onclick="add_numCols(this,1,1)" title="转横切" style="display: none;">转横切</a>&nbsp;&nbsp;<span name="hqsyInfo" class="hqsyInfo" style="display: none;"></span><span class="ishengqie">每包<input type="hidden" name="inLineList[1].procProductLineList[1].packetMarking" value="0"><input type="text" style="display:none;" name="inLineList[1].procProductLineList[1].bagQuantity" onchange="changeBagS(this)" placeholder="标准张数" class="pct5"><span class="ui-selradio f12 pct10 vm ml5">
 					<input type="text" value="" class="pct60 bd_none tc" placeholder="标准包重">
 					<span class="r pct40"><a class="ui-selradioItem" href="javascript:void(0)">吨</a><a class="ui-selradioItem" href="javascript:void(0)">张</a></span>
 				</span></span>&nbsp;&nbsp;<span name="bagCount"></span><input type="text" name="inLineList[1].procProductLineList[1].partNo" onchange="changePartNo(this)" placeholder="零件号" class="pct5"></span><span class="delall"><a class="but_del ui-icon-del  vm" style="display:inline-block;" href="javascript:void(0)" onclick="del_numCols(this)"></a></span></div><div class="jgtip" name="totalInfo" style="margin-left:0px"><span name="totalWeightInfo" style="margin-left:0px">纵剪尺寸：<span class="blue">2.000*(22*1)*C</span><span class="red ml30">修边时单边边丝需预留2mm</span><br>纵剪重量：<span class="blue">21.507</span>吨，余<span class="blue">1200.493</span>吨   可供加工</span><span name="totalWideInfo" style="margin-left:15px;width:350px;display:inline-block">剩余边宽：<span class="blue">1228.0</span>mm</span></div></div></div></div></div></div>
@@ -191,7 +200,7 @@
 							<div class="cl">								
 								<span class="vt dib mt5">出库要求：</span>
 								<span class="pct90 dib">
-									<span class="ui-input-x pct17 mr15 input-selSearch mb10" title="点击对应选项可选择其他要求">
+									<span class="ui-input-x pct17 mr15 input-selSearch mb10 tiptop" title="点击对应选项可选择其他要求">
 										<span class="pct45 ui-inputbut  brd9 tc">原标签处理</span>
 										<input type="text" class="pct55 f12 searchUp indent10 blue">
 										<div class="search-cont" style="min-width: 120px; display: none;">
@@ -201,7 +210,7 @@
 	                                            <a href="javascript:void(0)" class="search-list db ell">剪下留库</a>
 	                                        </div>
 									</span>
-									<span class="ui-input-x pct17 mr15 input-selSearch mb10" title="点击对应选项可选择其他要求">
+									<span class="ui-input-x pct17 mr15 input-selSearch mb10 tiptop" title="点击对应选项可选择其他要求">
 										<span class="pct45 ui-inputbut  brd9 tc">出库机打标签</span>
 										<input type="text" class="pct55 f12 searchUp indent10 blue">
 										<div class="search-cont" style="min-width: 120px; display: none;">
@@ -211,7 +220,7 @@
 	                                            <a href="javascript:void(0)" class="search-list db ell">不显示单位+牌号</a>
 	                                        </div>
 									</span>
-									<span class="ui-input-x pct17 mr15 input-selSearch mb10" title="点击对应选项可选择其他要求">
+									<span class="ui-input-x pct17 mr15 input-selSearch mb10 tiptop" title="点击对应选项可选择其他要求">
 										<span class="pct45 ui-inputbut  brd9 tc">出库重量要求</span>
 										<input type="text" class="pct55 f12 searchUp indent10 blue">
 										<div class="search-cont" style="min-width: 120px; display: none;">
@@ -220,7 +229,7 @@
 	                                            <a href="javascript:void(0)" class="search-list db ell">磅重出库</a>
 	                                        </div>
 									</span>
-									<span class="ui-input-x pct17  input-selSearch mb10" title="点击对应选项可选择其他要求">
+									<span class="ui-input-x pct17  input-selSearch mb10 tiptop" title="点击对应选项可选择其他要求">
 										<span class="pct45 ui-inputbut  brd9 tc">余料处理</span>
 										<input type="text" class="pct55 f12 searchUp indent10 blue">
 										<div class="search-cont" style="min-width: 120px; display: none;">
@@ -533,6 +542,251 @@
 	<!-- rightBar end-->
 
 
+
+<div class="sel-stockPanel" style="display: none;">
+        <div class="sel-stocktitle">
+            <a href="javascript:void(0)" class="sel-stocktlist sel-bright sel-current" onclick="setPanel(this,event)">城市</a>
+            <a href="javascript:void(0)" class="sel-stocktlist sel-bright" onclick="setPanel(this,event,'sel-stockpnamelist')">加工商</a>
+            <a href="javascript:void(0)" class="sel-stocktlist" onclick="setPanel(this,event,'sel-stocklist')">仓库</a>
+        </div>
+        <div class="sel-stockcontent">
+            <div class="sel-panel sel-stockcitylist" style="display: block;">
+                
+                	<a href="javascript:;" data-origin="c" data-id="320200" onclick="setCity(this,event)">无锡</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="3108" onclick="setCity(this,event)">闸北区</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="1302" onclick="setCity(this,event)">唐山</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="1201" onclick="setCity(this,event)">天津</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="1101" onclick="setCity(this,event)">北京</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="341500" onclick="setCity(this,event)">六安</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="330400" onclick="setCity(this,event)">嘉兴</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="510100" onclick="setCity(this,event)">成都</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="370100" onclick="setCity(this,event)">济南</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="1303" onclick="setCity(this,event)">秦皇岛</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="141100" onclick="setCity(this,event)">吕梁</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="410300" onclick="setCity(this,event)">洛阳</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="360200" onclick="setCity(this,event)">景德镇</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="640500" onclick="setCity(this,event)">中卫</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="6107" onclick="setCity(this,event)">汉中</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="110100" onclick="setCity(this,event)">北京</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="420100" onclick="setCity(this,event)">武汉</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="3401" onclick="setCity(this,event)">合肥</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="340200" onclick="setCity(this,event)"></a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="1102" onclick="setCity(this,event)">西城区</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="1101" onclick="setCity(this,event)">东城区</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="340200" onclick="setCity(this,event)">芜湖</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="340800" onclick="setCity(this,event)">安庆</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="411400" onclick="setCity(this,event)">商丘</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="1201" onclick="setCity(this,event)">和平区</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="500100" onclick="setCity(this,event)">重庆</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="150100" onclick="setCity(this,event)">呼和浩特</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="3107" onclick="setCity(this,event)">普陀区</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="350300" onclick="setCity(this,event)">莆田</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="110100" onclick="setCity(this,event)"></a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="210300" onclick="setCity(this,event)">鞍山</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="500100" onclick="setCity(this,event)"></a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="310100" onclick="setCity(this,event)">上海</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="330100" onclick="setCity(this,event)">杭州</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="1203" onclick="setCity(this,event)">河西区</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="1202" onclick="setCity(this,event)">河东区</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="320500" onclick="setCity(this,event)">苏州</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="440600" onclick="setCity(this,event)">佛山</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="370300" onclick="setCity(this,event)">淄博</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="520100" onclick="setCity(this,event)">贵阳</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="530100" onclick="setCity(this,event)">昆明</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="3101" onclick="setCity(this,event)">上海</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="230900" onclick="setCity(this,event)">七台河</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="330100" onclick="setCity(this,event)"></a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="340100" onclick="setCity(this,event)">合肥</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="330600" onclick="setCity(this,event)">绍兴</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="120100" onclick="setCity(this,event)">天津</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="460100" onclick="setCity(this,event)">海口</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="440100" onclick="setCity(this,event)">广州</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="330200" onclick="setCity(this,event)">宁波</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="350100" onclick="setCity(this,event)">福州</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="330500" onclick="setCity(this,event)">湖州</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="350500" onclick="setCity(this,event)">泉州</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="410100" onclick="setCity(this,event)">郑州</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="341800" onclick="setCity(this,event)">宣城</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="220100" onclick="setCity(this,event)">长春</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="4115" onclick="setCity(this,event)">信阳</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="3105" onclick="setCity(this,event)">长宁区</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="210100" onclick="setCity(this,event)">沈阳</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="3104" onclick="setCity(this,event)">徐汇区</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="360100" onclick="setCity(this,event)">南昌</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="610100" onclick="setCity(this,event)">西安</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="130100" onclick="setCity(this,event)">石家庄</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="310100" onclick="setCity(this,event)"></a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="320100" onclick="setCity(this,event)">南京</a>
+                
+                	<a href="javascript:;" data-origin="c" data-id="130900" onclick="setCity(this,event)">沧州</a>
+                
+            </div><!--select city -->
+            <div class="sel-panel sel-stockpnamelist" style="display: none;"><a href="javascript:;" data_zoneid="28" data_zone="无锡" data-id="28" op="9" onclick="setPname_value(this,event)">无锡海德钢材加工有限公司</a><a href="javascript:;" data_zoneid="28" data_zone="无锡" data-id="413" op="70977" onclick="setPname_value(this,event)">江苏金昊达钢业有限公司</a><a href="javascript:;" data_zoneid="28" data_zone="无锡" data-id="1230" op="71484" onclick="setPname_value(this,event)">测试加工主账号</a><a href="javascript:;" data_zoneid="28" data_zone="无锡" data-id="411" op="68558" onclick="setPname_value(this,event)">无锡市茂昌仓储有限公司</a><a href="javascript:;" data_zoneid="28" data_zone="无锡" data-id="1262" op="71518" onclick="setPname_value(this,event)">还是那个有限公司</a><a href="javascript:;" data_zoneid="28" data_zone="无锡" data-id="1150" op="71459" onclick="setPname_value(this,event)">上海太宝集团有限责任公司</a><a href="javascript:;" data_zoneid="28" data_zone="无锡" data-id="741" op="71252" onclick="setPname_value(this,event)">都发给他发的呀</a><a href="javascript:;" data_zoneid="28" data_zone="无锡" data-id="401" op="53959" onclick="setPname_value(this,event)">无锡市舟方钢材加工有限公司</a></div>
+            <div class="sel-panel sel-stocklist" style="display: none;"><a href="javascript:;" data-id="296" china="地址：无锡市硕放镇南开路99号(环太湖高架桥&nbsp;&nbsp;提货时间：星期一至星期日&nbsp;08:00~20:00" onclick="setStock_value(this,event)">海德库</a></div>
+        </div><!--select city -->   
+	</div>
+
+
+		<div class="domCal dn">
+		<style>
+.cal_main{box-sizing:border-box;background:#fff;}
+.cal_result{padding:20px 0 0 30px;height:116px;box-sizing:border-box;border-radius:5px;line-height:33px;text-align:left;color:#eee;background:url(../images/proc/cal-bg.png);font-size:14px;width: 388px}
+.cal_result span{display:inline-block;font-size:20px;color:#fff;padding:0 5px;font-style: italic;}
+.cal_progess{margin:20px 0px;font-size:14px;}
+.cal_progess .cal_list{clear:both;line-height:26px;text-align:left;}
+.cal_progess .cal_list label{display:inline-block;width:22px;color:#9A9A9A;font-size: 12px}
+.cal_progess .cal_list .cal_progbar{display:inline-block;width:160px;position:relative;vertical-align: middle}
+.cal_progess .cal_list .cal_progbar > i{width:16px;height:16px;position:absolute;background: #3F9BF3;border: 2px solid #FFFFFF;
+box-shadow: 0 2px 4px 0 rgba(111,135,172,0.40);border-radius:50%;cursor:pointer;top:-6px;left:0;box-sizing: border-box;/*-webkit-transition:all .15s;transition:all .15s;*/}
+.cal_progess .cal_list .cal_progbar > i:hover{width:22px;height:22px;top:-9px;}
+.cal_progess .cal_list .cal_progbar .cal_progbarbg{background:#eee;height:4px;width:160px;}
+.cal_progess .cal_list .cal_progbar .cal_progbarbg i{background:#3F9BF3 ;display:inline-block;height:4px;top:0;position: absolute;z-index: 9}
+.cal_progess .cal_list .cal_tip{clear:both;text-align:center;margin-top:10px;overflow:hidden;}
+.cal_progess .cal_list  input[type='text']{width:70px;border: 1px solid #D9D9D9;
+border-radius: 3px;line-height:22px;height:22px;outline:none;vertical-align:middle;text-align:center;font-size:16px;}
+.cal_progess .cal_list  input[type='text']:hover{border-color:#0879e9}
+.cal_list .c_tip{color:#f60;display:inline-block;display:none;text-align: right}
+.cal_main i.close{display:inline-block;position:absolute;width:24px;height:24px;right:-2px;top:-10px;background:url(../images/jgs_close.png) #fff;cursor:pointer}
+.w30{width: 30px !important}
+.w78{width: 78px;display: inline-block;}
+.qtip-cal .qtip-content{padding:0;}
+</style>
+  <!-- 计算器 -->
+	<div class="cal_main">
+	   <!--  <i class="close" onclick="closeDiv(this)" title="关闭"></i> -->
+	   <div class="pl20 pr20 pt20">
+	    <div class="cal_result">
+	              外径约：<span name="result" id="externalDiameter">0</span>m<br>
+	              壁厚约：<span name="result" id="wallThickness">0</span>cm
+	    </div>
+
+	    <div class="cal_progess">
+	        <div class="cal_list">
+	        <span class="w78">内径(mm)：</span><label>200</label>
+	            <div class="cal_progbar">
+	                <div class="cal_progbarbg" style=""><i></i></div>
+	                <i id="btn0" op="code" style=""></i>
+	            </div>
+	            <label class="w30">760</label>
+	            <input type="text" class="cal_input" id="inradium" onchange="doCount()">
+	            <div class="c_tip"></div>         
+	      </div>
+	    </div>
+	    
+	    <div class="cal_progess">
+	        <div class="cal_list">
+	         <span class="w78">卷宽(mm)：</span><label>20</label>
+	            <div class="cal_progbar">
+	                <div class="cal_progbarbg" style=""><i></i></div>
+	                <i id="btn1" op="code" style=""></i>
+	            </div>
+	            <label class="w30">2020</label>
+	            <input type="text" class="cal_input" id="width" onchange="doCount()"> 
+	            <div class="c_tip"></div>         
+	      </div>
+	    </div>
+	    
+	    <div class="cal_progess">
+	        <div class="cal_list">
+	         <span class="w78">卷重(T)：</span><label>0</label>
+	            <div class="cal_progbar">
+	                <div class="cal_progbarbg" style=""><i></i></div>
+	                <i id="btn2" op="code" style=""></i>
+	            </div>
+	            <label class="w30">40</label>
+	            <input type="text" class="cal_input" id="weight" onchange="doCount()">
+	            <div class="c_tip"></div>           
+	      </div>
+	    </div>
+	    
+	    <div class="cal_progess">
+	        <div class="cal_list">
+	         <span class="w78">中切(次)：</span><label>0</label>
+	            <div class="cal_progbar">
+	                <div class="cal_progbarbg" style=""><i></i></div>
+	                <i id="btn3" op="code" style=""></i>
+	            </div>
+	            <label class="w30">9</label>
+	            <input type="text" class="cal_input" id="cut" onchange="doCount()">
+	            <div class="c_tip"></div>           
+	      </div>
+	    </div>
+	</div>
+	  <div class="tr bte pt20 pl20 pr20 pb20">
+	  		<button class="ui-button" data-type="normal" onclick="reset()">清空</button>
+	        <!-- <a href="javascript:void(0)" onclick="doCount()" class="enterBut f12  dib tc">计算</a> -->
+	    </div>
+	    
+	</div>
+
+
+	</div>
+
+
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -546,6 +800,7 @@
 				$(".sel-stockPanel").hide();
 				$(".searchCont").hide();
 				$(".selone").hide();
+				$(".isalert").hide();
 			})
 
 
@@ -598,6 +853,25 @@
 		    		//$(".depotDiv").find("input").val("");
 		    	}
 		    });
+
+
+		    //tipclick 外径计算器
+			$('.tipclick').qtip({
+				show: { event: 'click' },
+				hide: 'unfocus',
+				content: {
+					text: function (event, api) {
+						return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+					}
+				},
+				position: {
+					viewport: $(window)
+				},
+				style: {
+					classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-cal'  //
+				}
+			});
+
 
 
 			
@@ -816,12 +1090,194 @@ function setPackageImg(_t){
 
 
 
+		//show panel
+		function clickSearchPanel(obj,e){
+			stopPro(e);
+			$(".sel-stockPanel").css({"top":$(obj).offset().top+$(obj).outerHeight(true),"left":$(obj).offset().left}).show();
+		}
+		
 
+		function ClicketValue(obj,e,flag){
+			stopPro(e);			
+			$(".isalert").hide();
+			$(obj).next(".isalert").css({"top":$(obj).offset().top+$(obj).outerHeight(true),"min-width":$(obj).outerWidth(true),"left":$(obj).offset().left-$(".mainCont ").offset().left});
+			$(obj).next(".isalert").show();
+		}
 
+		function setValue(obj,e,flag){
+			stopPro(e);			
+			$(".isalert").hide();
+			$(obj).next(".isalert").css({"top":$(obj).offset().top+$(obj).outerHeight(true),"min-width":$(obj).outerWidth(true),"left":$(obj).offset().left-$(".mainCont ").offset().left});
+			$(obj).next(".isalert").show();
+		}	
 
+		function islistValue(obj,flag){
+			$(obj).parents(".isalert").hide();
+			$(obj).parents(".isalert").prev("input").val($(obj).text());
+		}
 
+		//结算方式
+		function selbalType(obj){
+			$(obj).addClass("on").siblings().removeClass("on");
+		}
+
+		function select_Source(){
+			    layer.open({
+				type: 2,
+				shade: 0.4,
+				title: '选择原料',
+				area: ['80%', '80%'],
+				shadeClose:true,
+				content: 'searchAllStockList.html'
+			});
+		}
+
+		function opeAddsteName(){
+			layer.open({
+			    type: 2,
+			    shade: 0.4,
+			    title: '添加信息',
+			    shadeClose: true, //开启点击遮罩关闭层
+			    area : ['530px' , '410px'],
+			    content: 'addProcInfo.html'
+			});
+		}
+
+		//checkbox 选中
+		function setOptionHb(obj){
+			$(obj).parent(".checksel").toggleClass("on")
+		}
 
 	</script>
+
+	<script>
+		//内外径计算器
+		window.onload=function(){
+			var inradium = $("#inradium").val();
+		    var width = $("#width").val();
+		    var weight = $("#weight").val();
+		    new Setscale('btn0',200,760);
+		    new Setscale('btn1',20,2020);
+		    new Setscale('btn2',0,40);
+		    new Setscale('btn3',0,9);
+		}
+
+		Setscale = function (btn,v_min,v_max) {
+		    this.btn = $("#"+btn);  
+		    this.bar = this.btn.prev(".cal_progbarbg");
+		    this.title = this.btn.parents(".cal_list").find("input.cal_input");
+		    this.step = this.bar.find("i");
+		    this.init();
+		    this.v_min=v_min;
+		    this.v_max=v_max;
+		};
+
+		Setscale.prototype = {
+		    init: function () {
+		        var f = this, g = document, b = window, m = Math;
+		        var cal_max = f.bar.width() - f.btn.width();//滚动条的可计算长度
+		        f.btn.on("mousedown",function(e){
+		            f.btn.parents(".cal_list").find(".c_tip").hide();
+		            var x = (e || b.event).clientX; //点击btn后，获取初次点击鼠标的横向位置。
+		            var l = $(this).offset().left-f.bar.offset().left; // 获取当前btn距离起点的距离
+		                g.onmousemove = function (e) {                          
+		                var thisX = (e || b.event).clientX; //获取鼠标向后拉的鼠标横向位置,thisX - x:表示拉动的横向距离。
+		                var to = m.min(cal_max, m.max(0, l + (thisX - x)));//l + (thisX - x)表示拖动鼠标的长度。m.max()最小值是0;m.min()最大值是滚动条可计算长度。
+		                f.btn.css("left",to) ;
+		                f.ondrag(m.round(m.max(0, to / cal_max) * 100), to,f.v_min,f.v_max);//Math.round() 四舍五入取整，最大值为100；this.ondrag()自定义函数。
+		                
+		                b.getSelection ? b.getSelection().removeAllRanges() : g.selection.empty();//清除选择内容(如文本等)
+		            };
+		            
+		            g.onmouseup = new Function('this.onmousemove=null'); //鼠标弹起，设置鼠标移动函数为空
+		        })
+		        
+		        f.title.on("blur",function(){
+		            var val=($(this).val());
+		            var myobj=f.title.parent(".cal_list").find(".c_tip");
+		            if(checkFloat(val,myobj,f.v_min,f.v_max)){
+		                val=((val-f.v_min)/(f.v_max-f.v_min)*cal_max);
+		                f.btn.css("left",val);
+		                f.step.width(val);
+		            } 
+		        })
+		    },
+		    ondrag: function (pos, x,vmin,vmax) {
+		        this.step.width(Math.max(0, x));
+		        pos=Math.round((pos/100)*(vmax-vmin))+vmin;
+		        this.title.val(pos) ;
+		        doCount();//移动进度条自动计算
+		    }
+		}
+
+		function checkFloat(val,obj,vmin,vmax){
+		    var reg=/^\d*\.?\d*$/;
+		    if(reg.test(val)){
+		        if(val>vmax||val<vmin){
+		            obj.html("请输入"+vmin+"与"+vmax+"之间数值");
+		            obj.show();
+		            return false;
+		        }else{
+		            obj.hide();
+		            return true;        
+		        }           
+		    }else{
+		        obj.html("请输入数字");
+		        obj.show();
+		        return false;
+		    }
+		}
+
+		function reset(){
+			$(".cal_main").find("input").val("");
+			$(".cal_main").find("span[name='result']").html("0");
+			$(".cal_progbarbg").find("i").css("width",0);
+			$(".cal_progbar").find("i[op='code']").css("left",0);
+			$(".c_tip").hide();
+		}
+
+		function doCount(){
+			var inradium = $("#inradium").val();
+			var width = $("#width").val();
+			var weight = $("#weight").val();
+			var cut = $("#cut").val();
+			var reg1 = new RegExp("^[0-9]*$");//0~9正整数
+			var reg2 = /^[0-9]*\.?[0-9]+$/;//数字
+			var reg3 = /^[0-9]*[1-9][0-9]*$/;
+			if(inradium!=""&&width!=""&&weight!=""){
+				if(!reg3.test(inradium)){
+			        alert("请在内经栏输入整数！例如200、300、500……");return;
+			    }
+			    if(!reg2.test(width)){
+			        alert("请在宽度栏输入数字！");return;
+			    }
+			    if(!reg2.test(weight)){
+			        alert("请在卷重栏输入数字！");return;
+			    }
+			    if(cut!=""){
+			        if(!reg1.test(cut)){
+			            alert("请中切栏输入数字！比如1、2");return;
+			        }else{
+			            //卷重÷(中切数+1)
+			            weight = parseFloat(weight)/(parseFloat(cut)+1);
+			        }
+			    }
+			    //壁厚=sqrt{[内径(mm) ²×卷宽(mm)×6.16+卷重(Kg)]÷卷宽(mm)÷6.16}
+			    var a = ((parseFloat(inradium)/1000)*(parseFloat(inradium)/1000)*(parseFloat(width)/1000)*6.16+parseFloat(weight))/((parseFloat(width)/1000)*6.16);
+			    //[结果开根号-内径(mm)]÷1000÷2(四舍五入取整得出厘米)；
+			    a = Math.round(((Math.sqrt(a)-(parseFloat(inradium)/1000))/2)*100);//壁厚
+			    //外径=壁厚÷100×2+内径÷1000(保留2位小数，第3位小数四舍五入)；
+			    var b = (a/100*2+(parseFloat(inradium)/1000)).toFixed(2);//外径
+			    $("#externalDiameter").html(b);
+			    $("#wallThickness").html(a);
+			}
+		}
+
+		function closeDiv(obj){
+			$(obj).parent().parent().hide();
+		}
+
+</script>
 </body>
 	
 </html>

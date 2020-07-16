@@ -248,7 +248,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 
 /*proc*/
-
+.jgs2016_jgdlist  .issearch,.jgs2016_jgddown .issearch {background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAFBAMAAACHocAhAAAAHlBMVEUAAAAUZekTZekVZugUZugUZukWZ+kUZ+sWZ+kVaeoYyzb1AAAACnRSTlMA9KF6cGdeTUU9MIPVRgAAACRJREFUCNdjUGdgKGIAgsQGDjEQzSo5MYABBBxFGMCA2QBEAgBOggMgTR+aYQAAAABJRU5ErkJggg==');background-repeat: no-repeat;background-position: right;}
 .jgs2016_jgdtitle{margin-top:20px;background: #EBEEF2;border-radius: 4px 4px 0 0;clear:both;height: 36px;line-height: 36px;color:#282828;border-left: 1px #E7E7E7 solid;border-right: 1px #E7E7E7 solid;box-sizing: border-box;}
 .jgs2016_jgdtitle > span{border-right:1px rgba(0,0,0,0.07) solid;box-sizing: border-box;float:left;text-align:center;font-size: 12px;}
 .jgs2016_jgdtitle > span:last-child{border-right:0;}
@@ -271,8 +271,11 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 }
 .hbbg{background:#06cb93;width:24px;height:24px;line-height:24px;border-radius:12px;display:inline-block;font-size:12px;text-align:center;color:#fff;position:relative;margin-right: 5px;}
 .hbbg i{position:absolute;width:11px;height:11px;right:-5px;top:0px;background:url(../images/new2016_del.png) no-repeat;display:inline-block;cursor:pointer}
-.checksel {width: 15px;height: 15px;overflow: hidden;position: relative;display: inline-block;margin: 0 auto;}
-
+.checksel {vertical-align:middle;width: 15px;height: 15px;overflow: hidden;position: relative;display: inline-block;margin: 0 auto;background: url(../images/lgIcon.png)  -518px -168px no-repeat;}
+.checksel .checkselbox{opacity: 0;-webkit-opacity: 0;-moz-opacity: 0;-ms-opacity: 0;filter: alpha(opacity = 0);left:-3px;top:-2px;position: absolute;}
+.checksel.on{background-position: -468px -168px}
+.checksel:hover{background-position: -368px -168px}
+.createProc .jgProcSelect{text-align: left !important}
 
 .jgs2016_yllist .jgtip {padding: 10px 0 10px 48px;line-height: 22px}
 .jgs2016_jgddown .ui-selradio .bd_none{margin:0 ;border:0;}
@@ -312,6 +315,31 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .startGCircle{display:inline-block;width: 12px;height: 12px;background:#12D013 ;border-radius: 50%;position: relative;}
 .startGCircle:before,.endECircle:before{position:absolute;content:'';width: 6px;height: 6px;background:#fff;border-radius: 50%;left:3px;top:3px;}
 .endECircle{display:inline-block;width: 12px;height: 12px;background:#FB2020 ;border-radius: 50%;position: relative;}
+.inOutdiameter {
+    width: 30px;height: 25px;background-position: -310px -516px;
+}
+.alertInputErr,.error {border-color:#FB2020  !important;}
+
+.sel-stockPanel{border:1px #ddd solid;background:#fff;width:600px;font-size:12px;display:none;position:absolute;z-index: 9}
+.sel-stocktitle{background:#f9f9f9;height:41px;overflow:hidden}
+.sel-stocktlist{width:32%;display:inline-block;text-align:center;height:39px;line-height:39px;border-bottom:1px #ededed solid;float:left}
+.sel-stocktitle .sel-current{background:#fff;height:41px;border-bottom:none;width:34%;color:#098AEF;font-weight:bold;font-size:14px;}
+.sel-bright{border-right:1px #ededed solid}
+.sel-panel{padding:10px;text-align:left}
+.sel-panel a{display: inline-block;color: #4D4D4D;line-height: 21px;white-space: nowrap;margin: 0 0 6px 0;padding:0 5px;}
+.sel-panel a:hover{color:#1c88d3}
+.sel-stockpnamelist{overflow:auto;max-height:250px;}
+.sel-stockpnamelist > a{width:48%;display:inline-block;word-break:break-all;word-wrap:break-word;float:left;white-space:normal;*width:47%;}
+
+.isalert{position:absolute;background: #FFFFFF;box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);-webkit-box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);border-radius: 3px;max-width: 600px;top:33px;left:0;max-height: 150px;overflow-y: auto;display: none;z-index: 9;min-width:60px;}
+.isalertlist li{line-height: 30px;height: 30px;padding:0 10px;font-size:12px;color:#676767;display: block;text-align: left;cursor: pointer;}
+.isalertlist li:hover{color:#1365E8 ;background: #F0F6FF;}
+.isalert::-webkit-scrollbar{width:4px;height:4px;}
+.isalert::-webkit-scrollbar-track-piece{background-color:#ededed;margin:-2px;}
+.isalert::-webkit-scrollbar-thumb {background:#CBCBCB;border-radius:2px;}
+.isalert::-webkit-scrollbar-thumb:vertical:hover {background:#afaeae;}
+.isalert::-webkit-scrollbar-thumb:horizontal:hover {background:#afaeae}
+
 
 /* applysale */
 .order-step {position: relative;width: 70%;}

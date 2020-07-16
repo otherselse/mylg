@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择原料</title>
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css"  />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+
+
+	<style>
+		body,html{background-color: #fff}
+	</style>
+</head>
+<body>
+	<div class="pt25 pl25 pr25 pb30">
+		<div class="cl mb20">
+			<span class="ui-tip">提示：如果没有查到所需货物，请检查是否在其他账号名下。</span>
+		</div>
+		<div class="f12">
+			货物类型：
+			<span class="input-selSearch pct11 f12 mr10">
+				<input type="hidden" id="oddmentsCode1" name="stock.oddmentsCode1" value="">
+				<input type="text" class="ui-input searchUp pct100" readonly="" placeholder="货物类型" autocomplete="off" id="oddmentsCodeName"  onclick="setValue(this,event,1)">
+				<div class="search-cont">
+					<a href="javascript:void(0)" class="search-list db ell" onclick="islistValue(this,'')" op="">全部</a>
+					<a href="javascript:void(0)" class="search-list db ell" onclick="islistValue(this,'3')" op="3">原料</a>
+					<a href="javascript:void(0)" class="search-list db ell" onclick="islistValue(this,'0')" op="0">成品</a>
+					<a href="javascript:void(0)" class="search-list db ell" onclick="islistValue(this,'1')" op="1">边丝</a>
+					<a href="javascript:void(0)" class="search-list db ell" onclick="islistValue(this,'2')" op="2">头尾</a>
+				</div>
+			</span>
+			<input type="text" class="ui-input  pct11 mr10" name="stock.steSpec" placeholder="规格" >
+			<input type="text" class="ui-input  pct11 mr10" name="stock.steQuality" placeholder="牌号" >
+			<input type="text" class="ui-input  pct11 mr10" name="stock.weight" placeholder="重量" >
+			<input type="text" class="ui-input  pct11 mr10" name="stock.bagCode" placeholder="捆包号" >
+			<input type="text" class="ui-input  pct11 mr10" name="stock.inBillNo" placeholder="单据号" >	
+			<button class="ui-button mr10" id="search" onclick="submitFormButt();" type="button" style="min-width: 90px">查询</button>
+			<button class="ui-button" onclick="resetting();" type="button" data-type="clear" style="min-width: 90px">重置</button>		 
+		</div>
+		<table class="ui-table tc f12 checkbox ylxx mt20" width="100%">
+			<thead>
+				<tr>
+					<th width="5%">
+						<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>
+					</th>
+					<th width="5%">品名</th>
+					<th width="8%">
+						<label class="sort-list dib poi" onclick="setOrderCol('a.bagCode',this)">捆包号<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="Ia.bagCode"></i></label>	   				
+	              </lable></th>
+	              <th width="10%">
+	              	<label class="sort-list dib poi" onclick="setOrderCol('a.steSpec',this)">规格<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="Ia.steSpec"></i></label>	   				
+	   				</lable></th>
+	              <th width="11%">
+	              	<label class="sort-list dib poi" onclick="setOrderCol('a.steQuality',this)">牌号<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="Ia.steQuality"></i></label>
+	              </th>
+	              <th width="10%">
+	              	<label class="sort-list dib poi" onclick="setOrderCol('a.steArea',this)">钢厂<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="Ia.steArea"></i></label>
+	              </th>
+	              <th width="5%">
+	              	<label class="sort-list dib poi" onclick="setOrderCol('a.quantity',this)">数量<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="Ia.quantity"></i></label>
+	              </th>
+	              <th width="5%">
+	              	<label class="sort-list dib poi" onclick="setOrderCol('a.weight',this)">重量<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="Ia.weight"></i></label>
+	              </th>
+	              <th width="13%">
+	              	<label class="sort-list dib poi" onclick="setOrderCol('a.prBillNo',this)">单据号<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="Ia.prBillNo"></i></label>	   				
+	              </th>
+	              <th width="11%">
+	              	<label class="sort-list dib poi" onclick="setOrderCol('a.resourceCode',this)">资源号<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="Ia.resourceCode"></i></label>
+	   				</th>
+	              <th width="16%">
+	              	<label class="sort-list dib poi" onclick="setOrderCol('a.createDate',this)">入库时间<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="Ia.createDate"></i></label>	   				
+	              </th>
+				</tr>
+			</thead>
+			<tbody class="ui-thover">				
+				<tr class="poi" onclick="iselcet(this)">
+					<td class="">
+						<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+					</td>
+					<td>热轧卷板</td>
+					<td>hfuewi8</td>
+					<td>0.600*1250*C</td>
+					<td>050XLF</td>
+					<td>长江薄板</td>
+					<td>1</td>
+					<td>1.000</td>
+					
+					<td>
+						WIN(01)-20238185
+					</td>
+					<td></td>
+					<td>2020-04-09</td>
+				</tr>				
+				<tr class="poi" onclick="iselcet(this)">
+					<td class="">
+						<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+					</td>
+					<td>酸洗卷板</td>
+					<td>A0119244C00000</td>
+					<td>3.500*1160*C</td>
+					<td>SPHE</td>
+					<td>鞍钢</td>
+					<td>.5</td>
+					<td>3.185</td>
+					
+					<td>
+						WIN(01)-20238038
+					</td>
+					<td></td>
+					<td>2020-04-09</td>
+				</tr>								
+			</tbody>
+		</table>
+		<script type="text/javascript" src="../js/pagelist.js"></script>
+
+
+	</div>
+	<div class="bte fixedbar">
+		<div class="l pct40  tl pl20"><span class="dib numshow f12 pt2 pb2 pl10 pr10 lh20 g28">数量：<span id="totalQuantity" class="red">0</span>&emsp;&emsp;重量：<span id="totalWeight" class="red">0.000</span>吨</span></div>
+		<div class="l pct30 ">
+			<button class="ui-button mr10" id="search" onclick="sureClick();" type="button">插入</button>
+			<button class="ui-button" onclick="sureClick2();" type="button" data-type="clear" >返回</button>	
+		</div>
+	</div>
+
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script>
+		$(function(){
+			//排序
+			$("body").on("click", ".sort-list", function () {
+				if ($(this).find("i").hasClass("down")) {
+					$(this).find("i").removeClass("down").addClass("up");
+				} else {
+					$(this).find("i").removeClass("up").addClass("down");
+				}
+			})
+
+
+
+		})
+
+
+		//全选
+		/*function setAll(obj) {
+			var myobj = $(obj).parents(".checkbox").find("tbody").find(".ui-checkbox:not('.disabled')");
+			if (obj.checked) {
+				myobj.addClass("on");
+				myobj.find(":checkbox").prop("checked", true);
+			} else {
+				myobj.removeClass("on");
+				myobj.find(":checkbox").prop("checked", false);
+			}
+		}*/
+
+		
+
+
+	</script>
+</body>
+</html>
