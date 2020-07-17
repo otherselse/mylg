@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>发布加工单-我的乐刚</title>
+	<title>我的库存-我的乐刚</title>
 </head>
 <body class="buyer showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -22,47 +22,89 @@
 
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="createProc.html" class="ui-tab3-list rel "><span class="ui-tab3-text">发布加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="process.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">待确认</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">加工中</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">已完成</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="processList.html" class="ui-tab3-list rel"><span class="ui-tab3-text">全部加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="myStockList.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">我的库存</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="stockCheck.html" class="ui-tab3-list rel "><span class="ui-tab3-text">库存核对</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="checkList.html" class="ui-tab3-list rel"><span class="ui-tab3-text">库存记录</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius ">	
 				<div class="p20 f12">
-					<div class="cl mb5 lh24">
-						<span class="vt dib">&emsp;加工商：</span>
+					<div class="cl lh24">
+						<span class="vt dib">&emsp;&emsp;仓库：</span>
 						<div class="dib selectProcName gd8">
-                            <a  href="javscript:void(0)">全部</a>
+                            <a href="javscript:void(0)">华冶B区</a>
                             <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">上海加工运输有限责任公司</a>
+                            <a href="javscript:void(0)">华冶B区</a>
                             <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <a href="javscript:void(0)">华冶B区</a>
                             <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <a href="javscript:void(0)">华冶B区</a>
                             <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">上海加工运输有限责任公司</a>
+                            <a href="javscript:void(0)">华冶B区</a>
                             <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <a href="javscript:void(0)">华冶B区</a>
                             <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <a href="javscript:void(0)">华冶B区</a>
                             <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">上海加工运输有限责任公司</a>
+                            <a href="javscript:void(0)">华冶B区</a>
                             <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <a href="javscript:void(0)">华冶B区</a>
                             <span class="pr5 pl5 ">|</span>
                         </div>
                         <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
 					</div>
-					<div class="mb20 cl">
-						提货单号：
-						<input type="text" value="" class="ui-input  pct16 mr20" placeholder="请输入" autocomplete="off">
-						入库日期：
+					<div class="mt5">
+                        &emsp;&emsp;规格：
+                        <span class="input-selSearch  pct16 mr20">
+                            <input type="text" class="ui-input  pct100 " placeholder="请输入" autocomplete="off">
+                        </span>
+                        &emsp;捆包号：
+                        <span class="input-selSearch  pct16 mr20">
+                            <input type="text" class="ui-input  pct100 " placeholder="请输入" autocomplete="off">
+                        </span>
+                       &emsp;&emsp;牌号：
+                        <span class="input-selSearch  pct16 mr20">
+                            <input type="text" class="ui-input  pct100 " placeholder="请输入" autocomplete="off">
+                        </span>
+                         &emsp;&emsp;钢厂：
+                        <span class="input-selSearch  pct16 mr20">
+                            <input type="text" class="ui-input  pct100 " placeholder="请输入" autocomplete="off">
+                        </span>
+                        
+                    </div>
+                    <div class="mt10">
+                    	&emsp;单据号：
+                        <span class="input-selSearch  pct16 mr20">
+                            <input type="text" class="ui-input  pct100 " placeholder="请输入" autocomplete="off">
+                        </span>
+                        &emsp;车船号：
+                        <span class="input-selSearch  pct16 mr20">
+                            <input type="text" class="ui-input  pct100 " placeholder="请输入" autocomplete="off">
+                        </span>
+                        货物状态：
+                    	<span class="input-selSearch  pct16 mr20">
+                            <input type="text" class="ui-input searchUp pct100 " placeholder="请选择" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell">全部</a>
+                                <a href="javascript:void(0)" class="search-list db ell">原料</a>
+                                <a href="javascript:void(0)" class="search-list db ell">成品</a>
+                                <a href="javascript:void(0)" class="search-list db ell">边丝</a>
+                                <a href="javascript:void(0)" class="search-list db ell">头尾</a>
+                            </div>
+                        </span>
+                        
+                    </div>
+                    <div class="mt10">
+                    	重量范围：
+                        <span class="ui-input  pct16 mr20" data-type="section">
+								<input type="text" placeholder="重量">~
+								<input type="text" placeholder="重量">
+						</span>
+                        入库日期：
 						<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" ></span>
+                    </div>
+					<div class="mt20 cl  tc">
 						<button type="button" class="ui-button mr10" type="button">确认查询</button>
-
+						<button type="button" class="ui-button " type="button" data-type="normal">导出</button>
 					</div>
 
 					<!-- 加工商 search  end -->
@@ -80,6 +122,7 @@
 								<th width="8%" >业务日期</th>
 								<th width="8%" >交货日期</th>
 								<th width="8%" >结算方式</th>
+								<th width="8%" >加工状态</th>
 								<th width="5%" >操作</th>
 							</tr>
 						</thead>
@@ -95,14 +138,11 @@
 								<td>2020-07-15</td>
 								<td>2020-07-15</td>
 								<td>现结</td>
-								<td><a href="myNewProcShow.html">查看</a></td>
+								<td>审核中</td>
+								<td><a href="javascript:void(0)">查看</a></td>
 							</tr>
 						</tbody>
 					</table>
-
-					<script type="text/javascript" src="../js/pagelist.js"></script>
-	
-
 
 
 				</div>			
@@ -126,7 +166,7 @@
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
-			$(".menu").find(".proc").addClass("open").find(".smlist").eq(0).addClass("on")  //左侧菜单选中静态页面采用
+			$(".menu").find(".proc").addClass("open").find(".smlist").eq(3).addClass("on")  //左侧菜单选中静态页面采用
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
 
 			//selectProcName 展开收起 以及是否显示展开

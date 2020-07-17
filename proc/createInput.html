@@ -27,13 +27,22 @@
 				<a href="queryInputInfo.html" class="ui-tab3-list rel"><span class="ui-tab3-text">原料入库</span><i class="goldIcon ui-tab3-dot"></i></a>
 				<a href="queryProcInputInfo.html" class="ui-tab3-list rel"><span class="ui-tab3-text">成品入库</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
-			<div class="ui-content unradius ">				
-				<div class="pl20 pr20 pb30 pt30 ">
-					<div class="g28 pb20 b">收货信息</div>
-					<div class="f0">
-						<div class="pct40 dib f12 mb10">
+			<div class="ui-content unradius ">			
+				
+					<div class="pl20 pr20 pb30 pt30 bbe">
+						<div class="f12 mb10">
+                			结算方式：
+                			<span class="dib pct70 single">
+                				<input type="hidden" id="signedID" name="main.signedID">
+            					<input type="hidden" id="balType" name="main.balType" value="现结">
+                  				<button class="ui-optionNo mr5 " id="balTypeRd1" onclick="selbalType(this)" type="button">现结</button>
+                  				<button class="ui-optionNo mr5" id="balTypeRd2" onclick="selbalType(this)" type="button">有货月结</button>
+							</span>
+
+                		</div>
+						<div class="f12 ">
                 			收货仓库：
-                			<span class="input-selSearch pct60">
+                			<span class="input-selSearch pct20 mr20">
                                 <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="请输入仓库名称" onkeyup="setValue(this,event,9)" onclick="clickSearchPanel(this,event);" onchange="changeDepot();" id="v_stockname">
                                 <div class="search-cont" >
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
@@ -44,26 +53,24 @@
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                                 </div>
                             </span>
-                		</div>
-                		<div class="pct25 dib f12 mb10">
-                			服务金牌商家：
-                			<input type="text" class="ui-input  pct50"  placeholder="请选择" onclick="chooseBest(1,1)" readonly/> 
-                		</div>
-                		<div class="pct35 dib f12 mb10">
-                			结算方式：
-                			<span class="dib pct70 single">
-                				<input type="hidden" id="signedID" name="main.signedID">
-            					<input type="hidden" id="balType" name="main.balType" value="现结">
-                  				<button class="ui-optionNo mr5  on" id="balTypeRd1" onclick="selbalType(this)" type="button">现结</button>
-                  				<button class="ui-optionNo mr5" id="balTypeRd2" onclick="selbalType(this)" type="button">有货月结</button>
-							</span>
+                            服务金牌商家：
+                			<input type="text" class="ui-input  pct20 mr20"  placeholder="请选择" onclick="chooseBest(1,1)" readonly />
+                			标签打印要求：
+                			<span class="input-selSearch pct20 ">
+                                <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" >
+                                <div class="search-cont" >
+                                    <a href="javascript:void(0)" class="search-list db ell">原进原出</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">不显示单位</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">不显示牌号</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">不显示单位+牌号</a>
+                                </div>
+                            </span>
 
                 		</div>
-
 					</div>
 					<!-- 收货信息end -->
-
-					<div class="g28 pb20 b mt30">入库明细</div>
+				<div class="pl20 pr20 pb30 pt30 ">
+					<div class="g28 pb20 b ">入库明细</div>
 					<div class="cl">
                 		<a class="ui-button mr10" data-type="upfile" href="http://resource.lgsteel.cn/download/入库导入模板.xls" target="_blank">下载模板</a>
                 		<button type="button" class="ui-button" data-type="import" onclick="importExcel()">批量导入</button>
@@ -105,12 +112,13 @@
 	                <div class="pb10"><span class="g28 dib f14 b">运输要求</span> </div>
 	                <div class="cl f12 mb10">
             			提货方式：
-            			<span class="dib pct60 single ">
+            			<span class="dib pct30 single ">
             				<i class="switchDotArrow"></i>
             				<input type="hidden" id="shiprequirement" name="wareHouseinMain.shiprequirement" value="2">
               				<button class="ui-option mr5 on" type="button" onclick="setOptValue(this)" da="2">自运</button>
               				<button class="ui-option mr5 switchDotBut rel" type="button" onclick="setOptValue(this)" da="1">代运</button>
 						</span>
+						
 
 						 <div class="trans_dai cl dn" style="display: none;">
 							<div class="cl mt15" style="border: 1px solid #ececec;"></div>

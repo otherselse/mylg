@@ -1,3 +1,4 @@
+
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -9,7 +10,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>发布加工单-我的乐刚</title>
+	<title>成品入库-新增入库</title>
 </head>
 <body class="buyer showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -22,11 +23,10 @@
 
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="createProc.html" class="ui-tab3-list rel "><span class="ui-tab3-text">发布加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="process.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">待确认</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">加工中</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">已完成</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="processList.html" class="ui-tab3-list rel"><span class="ui-tab3-text">全部加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="createInput.html" class="ui-tab3-list rel "><span class="ui-tab3-text">新增入库</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="queryUnInputInfo.html" class="ui-tab3-list rel "><span class="ui-tab3-text">预入库</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="queryInputInfo.html" class="ui-tab3-list rel "><span class="ui-tab3-text">原料入库</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="queryProcInputInfo.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">成品入库</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius ">	
 				<div class="p20 f12">
@@ -57,49 +57,130 @@
                         <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
 					</div>
 					<div class="mb20 cl">
-						提货单号：
-						<input type="text" value="" class="ui-input  pct16 mr20" placeholder="请输入" autocomplete="off">
+						入库单号：
+						<input type="text" value="" class="ui-input  pct12 mr20" placeholder="请输入" autocomplete="off">
+						捆包号：
+						<input type="text" value="" class="ui-input  pct12 mr20" placeholder="请输入" autocomplete="off">
 						入库日期：
 						<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" ></span>
 						<button type="button" class="ui-button mr10" type="button">确认查询</button>
 
 					</div>
 
+
 					<!-- 加工商 search  end -->
 
 					<table class="ui-table tc f12 mt40" width="100%">
 						<thead>
 							<tr>
-								<th width="10%" >加工单号</th>
-								<th width="8%" >加工方式</th>
-								<th width="8%" >加工单价</th>
-								<th width="8%" >加工仓库</th>
-								<th width="8%" >投料重量</th>
-								<th width="8%" >结算重量</th>
-								<th width="8%" >业务金额</th>
-								<th width="8%" >业务日期</th>
-								<th width="8%" >交货日期</th>
-								<th width="8%" >结算方式</th>
+								<th width="10%" >订单号</th>
+								<th width="8%" >仓库</th>
+								<th width="8%" >运输方式</th>
+								<th width="8%" >状态</th>
+								<th width="8%" >入库日期</th>
+								<th width="8%" >重量</th>
+								<th width="8%" >前台是否显示</th>
 								<th width="5%" >操作</th>
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
-							<tr>
+							<tr class="off">
 								<td>PRO20200715829478</td>
-								<td>横切</td>
-								<td>0</td>
-								<td>华冶B区</td>
-								<td>1.000</td>
-								<td>1</td>
-								<td>0</td>
+								<td>光明库</td>
+								<td>自提</td>
+								<td>转换入库</td>
 								<td>2020-07-15</td>
+								<td>210.366</td>
+								<td><a href="javascript:void(0)" class="ui-switch goldIcon vm"></a></td>
+								<td><a href="javascript:void(0)" onclick="showMore(this)">查看</a></td>
+							</tr>
+							<tr class="hideTr dn">
+								<td colspan="8">
+									<table class="ui-table f12 auto showShadow noline" width="98%">
+										<thead>
+											<tr height="36">
+												<th colspan="7" class="bre6i bte6i bg85">
+													<div class="tc wh n">母卷信息</div>
+												</th>
+												<th colspan="4" class=" bg08">
+													<div class="tc wh n">成品信息</div>
+												</th>
+											</tr>
+											<tr>
+												<th width="8%">品名</th>
+												<th width="8%">捆包号</th>
+												<th width="10%">规格</th>
+												<th width="8%">牌号</th>
+												<th width="8%">钢厂</th>
+												<th width="8%" >数量</th>
+												<th width="8%" class="bre6i">重量</th>
+												<th width="8%">捆包号</th>
+												<th width="8%">规格</th>
+												<th width="8%">数量</th>
+												<th width="8%">重量</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="ptb10 bte6i">
+												<td>冷轧卷板</td>
+												<td>C154632</td>
+												<td>1.000*1250*C</td>
+												<td>12Crlmov</td>
+												<td>河北钢铁</td>
+												<td>1</td>
+												<td class="bre6i">1</td>
+												<td colspan="4" style="padding:0">
+													<table class="ui-table f12 noline" width="100%" style="border:0;">
+														<tr class="bte6i">
+															<td width="25%">11</td>
+															<td width="25%">11</td>
+															<td width="25%">11</td>
+															<td width="25%">11</td>
+														</tr>
+														<tr class="bte6i">
+															<td>11</td>
+															<td>11</td>
+															<td>11</td>
+															<td>11</td>
+														</tr>
+														<tr class="bte6i">
+															<td>11</td>
+															<td>11</td>
+															<td>11</td>
+															<td>11</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr height="45">
+												<td colspan="5" class="tr">合计：</td>
+												<td>2.0</td>
+												<td class="bre6i">2.000</td>
+												<td class="tr" colspan="2">
+													合计：
+												</td>
+												<td>2.0</td>
+												<td>2.000</td>
+											</tr>
+										</tfoot>
+									</table>
+								</td>
+							</tr>
+							<tr class="">
+								<td>PRO20200715829478</td>
+								<td>光明库</td>
+								<td>自提</td>
+								<td>转换入库</td>
 								<td>2020-07-15</td>
-								<td>现结</td>
-								<td><a href="myNewProcShow.html">查看</a></td>
+								<td>210.366</td>
+								<td><a href="javascript:void(0)" class="ui-switch goldIcon vm on"></a></td>
+								<td><a href="javascript:void(0)" onclick="showMore(this)">查看</a></td>
 							</tr>
 						</tbody>
 					</table>
-
+					<div class="tc mt20 mb30"><button class="ui-button w160" data-type="big">批量确认</button></div>
 					<script type="text/javascript" src="../js/pagelist.js"></script>
 	
 
@@ -126,7 +207,7 @@
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
-			$(".menu").find(".proc").addClass("open").find(".smlist").eq(0).addClass("on")  //左侧菜单选中静态页面采用
+			$(".menu").find(".proc").addClass("open").find(".smlist").eq(1).addClass("on")  //左侧菜单选中静态页面采用
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
 
 			//selectProcName 展开收起 以及是否显示展开
@@ -158,6 +239,12 @@
 			});
 
 
+			//switch 前台是否显示
+			$(".ui-switch").on("click", function () {
+				$(this).toggleClass("on").parents("tr").toggleClass("off");
+			})
+
+
 
 			
 		})
@@ -170,6 +257,11 @@
 				$(".selectProcName").height("auto");
 				$(obj).text("收起");
 			}
+		}
+
+
+		function showMore(obj){
+			$(obj).parents("tr").next(".hideTr").toggle();
 		}
 
 

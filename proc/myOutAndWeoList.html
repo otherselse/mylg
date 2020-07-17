@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>发布加工单-我的乐刚</title>
+	<title>待确认-申请提货</title>
 </head>
 <body class="buyer showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -22,18 +22,20 @@
 
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="createProc.html" class="ui-tab3-list rel "><span class="ui-tab3-text">发布加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="process.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">待确认</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">加工中</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="process.html" class="ui-tab3-list rel"><span class="ui-tab3-text">已完成</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="processList.html" class="ui-tab3-list rel"><span class="ui-tab3-text">全部加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="createOutInfo.html" class="ui-tab3-list rel "><span class="ui-tab3-text">申请提货</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="createWeoInfo.html" class="ui-tab3-list rel "><span class="ui-tab3-text">申请转货</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="myOutAndWeo.html" class="ui-tab3-list rel "><span class="ui-tab3-text">待确认</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="myOutAndWeo.html" class="ui-tab3-list rel"><span class="ui-tab3-text">提货中</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="myOutAndWeo.html" class="ui-tab3-list rel"><span class="ui-tab3-text">已完成</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="myOutAndWeoList.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">全部提单</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
-			<div class="ui-content unradius ">	
+			<div class="ui-content unradius ">				
 				<div class="p20 f12">
-					<div class="cl mb5 lh24">
+					<span class="ui-tip pct100">提示：1.已经完成付款结算的提单不能取消，已经实提出库的明细不能取消。2.提单超过7天未提货，系统将自动取消。</span>
+					<div class="cl mb5 lh24 mt20">
 						<span class="vt dib">&emsp;加工商：</span>
 						<div class="dib selectProcName gd8">
-                            <a  href="javscript:void(0)">全部</a>
+                            <a href="javscript:void(0)">全部</a>
                             <span class="pr5 pl5 ">|</span>
                             <a href="javscript:void(0)">上海加工运输有限责任公司</a>
                             <span class="pr5 pl5 ">|</span>
@@ -56,57 +58,52 @@
                         </div>
                         <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
 					</div>
-					<div class="mb20 cl">
-						提货单号：
-						<input type="text" value="" class="ui-input  pct16 mr20" placeholder="请输入" autocomplete="off">
-						入库日期：
-						<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" ></span>
-						<button type="button" class="ui-button mr10" type="button">确认查询</button>
+					<div class="mb20 cl ">
+					提货单号：
+					<input type="text" value="" class="ui-input  pct16 mr20" placeholder="请输入" autocomplete="off">
+					下单日期：
+					<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" lay-key="1"></span>
+					<button type="button" class="ui-button mr10">确认查询</button>
+				</div>
+				
 
-					</div>
 
-					<!-- 加工商 search  end -->
-
-					<table class="ui-table tc f12 mt40" width="100%">
+				<table class="ui-table tc f12 mt50" width="100%">
 						<thead>
 							<tr>
-								<th width="10%" >加工单号</th>
-								<th width="8%" >加工方式</th>
-								<th width="8%" >加工单价</th>
-								<th width="8%" >加工仓库</th>
-								<th width="8%" >投料重量</th>
-								<th width="8%" >结算重量</th>
-								<th width="8%" >业务金额</th>
-								<th width="8%" >业务日期</th>
-								<th width="8%" >交货日期</th>
-								<th width="8%" >结算方式</th>
-								<th width="5%" >操作</th>
+								<th width="8%">业务日期</th>
+								<th width="12%">提单号</th>
+								<th width="6%">提货仓库</th>
+								<th width="6%">运输要求</th>
+								<th width="6%">结算方式</th>
+								<th width="8%">预提重量</th>
+								<th width="6%">提货状态</th>
+								<th width="10%">提货车号</th>
+								<th width="10%">司机电话</th>
+								<th width="10%">提货证件</th>
+								<th width="6%">操作</th>
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
+								<td>2020-06-01</td>
 								<td>PRO20200715829478</td>
-								<td>横切</td>
-								<td>0</td>
 								<td>华冶B区</td>
-								<td>1.000</td>
-								<td>1</td>
-								<td>0</td>
-								<td>2020-07-15</td>
-								<td>2020-07-15</td>
+								<td>代运</td>
 								<td>现结</td>
-								<td><a href="myNewProcShow.html">查看</a></td>
+								<td>0.009</td>
+								<td>待确认</td>
+								<td>沪A45674<a class="ui-icon-add vm ml5 tipclick" href="javascript:void(0)" qtip-dom="addCarNum"></a></td>
+								<td>13955434556、13456324567</td>
+								<td>1111344677333322</td>
+								<td><a href="myOutDetial.html">查看</a></td>
 							</tr>
 						</tbody>
 					</table>
-
+					<div class="tc mt20 mb10"><button class="ui-button w160" data-type="big">批量确认</button></div>
 					<script type="text/javascript" src="../js/pagelist.js"></script>
-	
 
-
-
-				</div>			
-				
+				</div>
 
 
 			</div><!-- ui-content end -->
@@ -120,13 +117,18 @@
 	<!-- rightBar end-->
 
 
-	
+	<div class="addCarNum dn">
+		<div class="ui-input mb10" data-type="price"><input type="text" value="" placeholder="追加车号"></div>
+		<button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick()">保存</button>
+		<button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+	</div>
+
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
-			$(".menu").find(".proc").addClass("open").find(".smlist").eq(0).addClass("on")  //左侧菜单选中静态页面采用
+			$(".menu").find(".proc").addClass("open").find(".smlist").eq(2).addClass("on")  //左侧菜单选中静态页面采用
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
 
 			//selectProcName 展开收起 以及是否显示展开
@@ -137,10 +139,10 @@
 				$("#jgs_scroll").hide();
 			}
 
-
 			$(".selectProcName").find("a").on("click",function(){
 				$(this).addClass("on").siblings().removeClass("on");
 			})
+
 
 			//时间范围
 			laydate.render({
@@ -158,9 +160,15 @@
 			});
 
 
+			$("body").on("click", "#hideTip", function () {
+					$(".qtip").hide();
+				})
+
 
 			
 		})
+
+
 
 		function setOpen(obj) {
 			if($(".selectProcName").height()>24){
@@ -171,6 +179,8 @@
 				$(obj).text("收起");
 			}
 		}
+
+
 
 
 

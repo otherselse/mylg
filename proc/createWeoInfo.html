@@ -1,0 +1,311 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+	<title>申请转货-我的乐刚</title>
+
+</head>
+<body class="buyer showTip">
+	<script type="text/javascript" src="../js/leftBar.js"></script> 
+	<!-- leftbar end -->
+
+
+	<div class="rightBar">
+		<script type="text/javascript" src="../js/topBar.js"></script> 
+		<!-- topBar end -->
+
+		<div class="mainCont ">
+			<div class="ui-tab3">
+				<a href="createOutInfo.html" class="ui-tab3-list rel "><span class="ui-tab3-text">申请提货</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="createWeoInfo.html" class="ui-tab3-list rel on "><span class="ui-tab3-text">申请转货</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="myOutAndWeo.html" class="ui-tab3-list rel"><span class="ui-tab3-text">待确认</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="myOutAndWeo.html" class="ui-tab3-list rel"><span class="ui-tab3-text">提货中</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="myOutAndWeo.html" class="ui-tab3-list rel"><span class="ui-tab3-text">已完成</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="myOutAndWeoList.html" class="ui-tab3-list rel"><span class="ui-tab3-text">全部提单</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content unradius autoHeight">				
+				<div class="pl20 pr20 pb30 pt20" >
+            		<div class="g28 pb10 b">基本信息</div>
+            		<div class="cl mb10"><span class="ui-tip  pct100">提示：1.请按时支付仓库费用，否则将影响提货；2.加工余料免费存放30天，超期未提加工商将按市场价代售。</span></div>
+
+					<div class="f0 ">
+						<div class="pct60 dib f12  mb10">
+                			提货仓库：
+                			<span class="input-selSearch pct33">
+                                <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="请选择" id="v_stockname" onkeyup="setValue(this,event,10)" onclick="clickSearchPanel(this,event);" onchange="changeDepot();">
+                                <div class="search-cont">
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+                                    <a href="javascript:void(0)" class="search-list db ell active">选择选择2</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                                </div>
+                            </span>
+                		</div>
+                		<div class="pct40 dib f12 mb10 mt15 showTip">
+                			货主单位：   
+                			<input type="text" class="ui-input  pct50" value="上海一加实业有限公司" readonly="" >	           			
+            			</div>
+            			<div class="pct60 dib f12  mb10">
+                			上家单位：
+                			<span class="input-selSearch pct33">
+                                <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="请选择" id="v_stockname" onkeyup="setValue(this,event,10)" onclick="clickSearchPanel(this,event);" onchange="changeDepot();">
+                                <div class="search-cont">
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+                                    <a href="javascript:void(0)" class="search-list db ell active">选择选择2</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                                </div>
+                            </span>
+                            <span class="ui-tip ml5" data-type="normal">下家单位不能和上家单位相同</span>
+                		</div>
+                		<div class="pct40 dib f12 mb10">
+                			&emsp;联系人：
+                			<input type="text" class="ui-input  pct50" id="ownerContact" name="wareHouseOutMain.ownerContact" onchange="changeTelValue()" placeholder="请输入">		                    			
+                		</div>
+						<div class="pct60 dib f12 ">
+                			结算方式：
+                			<span class="dib  single">
+                				<input type="hidden" name="wareHouseOutMain.outRequire" value="">
+                  				<button class="ui-option mr5" id="balTypeRd1" name="xmjies" onclick="selbalType(this)" da="1">现结</button>
+                  				<button class="ui-option mr5" id="balTypeRd0" name="xmjies" onclick="selbalType(this)" da="0">有货月结</button>
+                  				<button class="ui-option mr5" id="balTypeRd2" name="xmjies" onclick="selbalType(this)" da="2">清仓结算</button>
+							</span>
+                		</div>     
+
+                		<div class="pct40 dib f12 ">
+                			联系电话：
+                			<input type="text" class="ui-input  pct50" id="ownerTel" name="wareHouseOutMain.ownerTel" placeholder="请输入">		                    			
+                		</div>
+                		
+                		      		
+					</div>
+
+            	</div>
+			</div><!-- ui-content end -->
+			<!-- 基本信息 end -->
+
+			<div class="ui-content autoHeight mt20">
+                    	<div class="pt20 pl20 pr20 pb10 ovh"><span class="g28 dib l b">提货信息</span><a href="javascript:void(0)" onclick="select_Source()"  class="ui-button r f12" data-type="small">+选择货物</a></div>
+                    	<div class="pl20 pr20 pb10">
+                    		<table border="0" class="ui-table tc f12 " data-type="edit">
+								<thead>
+									<tr class="">
+								          <th width="10%">品名</th>
+								          <th width="6%">捆包号</th>
+								          <th width="8%">规格</th>
+								          <th width="6%">牌号</th>
+								          <th width="6%">钢厂</th>
+								          <th width="10%">库存数量/重量</th>
+								          <th width="10%">预提数量/重量</th>
+								          <th width="8%">转户次数</th>
+								          <th width="10%">库龄/入库日期</th>
+								          <th width="4%">操作</th>
+								        </tr>
+								</thead>
+								<tbody id="stockInfo" class="ui-thover stockTROne">	
+									<tr>				
+										<td>热轧卷板</td>
+										<td>sadadx1</td>
+										<td>2.000*1250*C</td>
+										<td>/</td>
+										<td>长江薄板</td>
+										<td>1件/1.000</td>
+										<td><input type="text" china="quantity" class="ui-input pct30 tc mytitleTip" mytitletipshow="更改数量可拆包出库" name="wareHouseOutLineList[0].quantity" value="1" onchange="sumQuantity(this)"> / <input type="text" china="weight" class="ui-input pct50 tc" name="wareHouseOutLineList[0].weight" value="1.000" onchange="sumWeight(this)"></td>
+										<td>0</td>
+										<td>1天<br/>2020-07-17</td>
+										<td><a href="javascript:void(0)" onclick="deleteSTTR(0)" class="ui-icon-del vm"></a></td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr class="bgwh btef" height="40">
+										<td colspan="10">合计预提数量：<span class="red mr20">0.0</span>合计预提重量： <span class="red">2.000吨</span></td>
+									</tr>
+								</tfoot>
+							</table>
+							<!-- 内容结束 -->
+
+
+							<div class="pb10 mt30"><span class="g28 dib f14 b">运输要求</span> </div>
+							<div class="cl f12 mb10">
+		            			提货方式：
+		            			<span class="dib pct60 single ">
+		            				<i class="switchDotArrow"></i>
+		            				<input type="hidden" id="shiprequirement" name="wareHouseOutMain.shiprequirement" value="1">
+		              				<button class="ui-option mr5 on switchDotBut rel" type="button" id="selShiprequirement1" da="1" onclick="setTrans(this)">自运</button>
+		              				<button class="ui-option mr5 switchDotBut rel" type="button" id="selShiprequirement1" da="2" onclick="setTrans(this)">代运</button>
+								</span>
+
+								 <div class="cl">
+									<div class="cl mt15" style="border: 1px solid #ececec;"></div>
+									<div class="mt15 trans_zy">
+										<div class="cl trans_zyline mb10">
+											提货车号：
+											<span class="input-selSearch pct16 mr20">
+			                                    <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="请选择" id="startDepot" name="wareHouseinMain.startDepot" onkeyup="setValue(this,event,6)" onclick="setValue(this,event,6)">
+			                                    <div class="search-cont" style="display: none;">
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell active">选择选择2</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+			                                    </div>
+			                                </span>
+				                            提货证件：
+				                            <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct16 mr20" placeholder="请输入18位身份证号">
+				                             提货人：
+				                             <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct16 mr20" placeholder="请输入">
+				                              联系电话：
+				                             <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct16 " placeholder="请输入">
+				                             <a class="ui-icon-add vm ml5" href="javascript:void(0)" onclick="add_numCols(this)"></a>
+				                             <a class="ui-icon-del vm ml5" style="display: none" href="javascript:void(0)" onclick="del_numCols(this)"></a>
+			                         	 </div>
+			                             <div class="cl mt5">&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<span class="ui-tip" data-type="normal">提示：同一个提单安排的提货车辆不能超过5个</span></div>
+									</div>
+									<div class="mt15 trans_dai dn">
+										<div class="cl">
+											<i class="startGCircle v-1 mr5"></i>起始仓库：
+											<span class="input-selSearch pct16 mr20">
+			                                    <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="请选择" id="startDepot" name="wareHouseinMain.startDepot" onkeyup="setValue(this,event,6)" onclick="setValue(this,event,6)">
+			                                    <div class="search-cont" style="display: none;">
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell active">选择选择2</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+			                                    </div>
+			                                </span>
+			                                起运日期：
+			                                <input type="hidden" id="dateNow" value="2020-04-17">
+			                                <span class="ui-input mr20 pct10" data-type="time"><input type="text" class="render-time" placeholder="请选择" id="startDate" name="wareHouseinMain.startDate" readonly="" ></span>
+			                                起运地址：
+			                                <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct40 " placeholder="请输入">
+										</div>
+										<div class="mt10">
+											<i class="endECircle v-1 mr5"></i>目的仓库：
+											<span class="input-selSearch pct16 mr20">
+			                                    <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="请选择" id="startDepot" name="wareHouseinMain.startDepot" onkeyup="setValue(this,event,6)" onclick="setValue(this,event,6)">
+			                                    <div class="search-cont" style="display: none;">
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell active">选择选择2</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+			                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+			                                    </div>
+			                                </span>
+			                                到货日期：
+			                                <span class="ui-input mr20 pct10" data-type="time"><input type="text" class="render-time" placeholder="请选择" id="endDate" name="wareHouseinMain.startDate" readonly="" ></span>
+			                                到货地址：
+			                                <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct40 " placeholder="请输入">
+										</div>
+										<div class="mt10">
+											 <span class="dib" style="width: 13px">&emsp;</span>
+											 出库费用：
+											 <span class="dib pct16 mr20">运吊一票制</span>
+											 卸货方式：
+											 <span class="dib single">
+				            				<input type="hidden" id="unloadingMode" name="wareHouseinMain.unloadingMode" value="21004">
+				              				<button class="ui-option mr5 on" type="button" da="21004" onclick="setOptValue(this)">直接卸货</button>
+				              				<button class="ui-option mr5 " type="button" da="21005" onclick="setOptValue(this)">款到卸货</button>
+										</span>
+
+										</div>
+									</div>
+
+			                	</div>
+			                </div>
+			                <div class="cl tc mb30 mt30">
+			                	<button type="button" class="ui-button mr20" data-type="big">申请转货</button>
+							</div>
+                    	</div>
+                    </div>
+	
+
+
+		</div>
+		<!-- mainCont end -->
+
+	</div>
+	<!-- rightBar end-->
+
+
+	
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script>
+		$(function(){
+			$(".menu").find(".proc").addClass("open").find(".smlist").eq(2).addClass("on")  //左侧菜单选中静态页面采用
+			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
+
+			//多选
+			$(".sel_mul_op").find(".ui-optionNo").on("click",function(){
+				$(this).toggleClass("on");
+
+			})
+
+			
+		})
+
+		function select_Source(){
+			    layer.open({
+				type: 2,
+				shade: 0.4,
+				title: '选择原料',
+				area: ['80%', '80%'],
+				shadeClose:true,
+				content: 'searchAllStockList.html'
+			});
+		}
+
+
+		function add_numCols(obj){
+			var flag=$(obj).parents(".trans_zy").find(".trans_zyline").length;
+			if(flag>4){
+				layer.msg('同一个提单安排的提货车辆不能超过5个', { icon: 2 });
+				return
+			}
+			var myobj=$(obj).parents(".trans_zyline").clone(true);
+			myobj.find(".ui-icon-add").hide();
+			myobj.find(".ui-icon-del").css("display","inline-block");
+			$(obj).parents(".trans_zyline:last").after(myobj);
+		}
+
+		function del_numCols(obj){
+			$(obj).parents(".trans_zyline").remove();
+		}
+
+
+		function setTrans(obj){
+			$(obj).parents(".single").find("input").val($(obj).attr("da"))
+			if($(obj).text()=="自运"){
+				$(".trans_dai").hide();
+				$(".trans_zy").show();
+			}else if($(obj).text()=="代运"){
+				$(".trans_dai").show();
+				$(".trans_zy").hide();
+			}
+		}
+
+
+
+
+
+
+	</script>
+</body>
+	
+</html>

@@ -46,6 +46,24 @@ $(function(){
 			});
 		}
 		
+		//tipclick 点击出现数据段
+		if($(".tipclick").length>0){
+				$('.tipclick').qtip({
+					show: { event: 'click' },
+					hide: 'unfocus',
+					content: {
+						text: function (event, api) {
+							return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+						}
+					},
+					position: {
+						viewport: $(window)
+					},
+					style: {
+						classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+					}
+				})
+			}
 
 		//搜索下拉
 		$("body").on("click", function () {
