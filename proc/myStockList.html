@@ -29,31 +29,14 @@
 			<div class="ui-content unradius ">	
 				<div class="p20 f12">
 					<span class="ui-tip  pct100 mb20">提示：1.加工余料免费存放30天，超期未提加工商将按市场价代售  2.为了使你能及时了解掌握自己的货物情况，请在月底前核对好自己的存货明细，以免影响你的业务操作。</span>
-					<div class="cl lh24">
-						<span class="vt dib">&emsp;&emsp;仓库：</span>
-						<div class="dib selectProcName gd8">
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                        </div>
-                        <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
+					<div class="cl">
+						<span class="vt dib mt5">存放仓库：</span>
+						<span class="dib  single pct90">
+                  			<a class="ui-option mr5 tc" href="javscript:void(0)">华冶B区</a>
+                  			<a class="ui-option mr5 tc" href="javscript:void(0)">华冶B区</a>
+						</span>
 					</div>
-					<div class="mt5">
+					<div class="mt10">
                         &emsp;&emsp;规格：
                         <span class="input-selSearch  pct16 mr20">
                             <input type="text" class="ui-input  pct100 " placeholder="请输入" autocomplete="off">
@@ -92,31 +75,31 @@
                                 <a href="javascript:void(0)" class="search-list db ell">头尾</a>
                             </div>
                         </span>
-                        
-                    </div>
-                    <div class="mt10">
-                    	重量范围：
+                        重量范围：
                         <span class="ui-input  pct16 mr20" data-type="section">
 								<input type="text" placeholder="重量">~
 								<input type="text" placeholder="重量">
 						</span>
+                        
+                    </div>
+                    <div class="mt10">
+                    	
                         入库日期：
 						<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" ></span>
+						<button type="button" class="ui-button mr10" type="button">查询</button>
+						<button class="ui-button"  type="button" data-type="download">导出</button>
                     </div>
-					<div class="mt20 cl  tc">
-						<button type="button" class="ui-button mr10" type="button">确认查询</button>
-						<button type="button" class="ui-button " type="button" data-type="normal">导出</button>
-					</div>
+
 
 					<!-- 加工商 search  end -->
 
 					<table class="ui-table f12 mt40" width="100%">
 						<thead>
 							<tr class="tl">
-								<th width="4%" class="tc">选择</th>
+								<th width="3%" class="tc">选择</th>
 								<th width="8%" ><div class="pl10">入库日期/单据号</div></th>
 								<th width="10%"><div class="pl10">品名/钢厂/规格/牌号</div></th>
-								<th width="8%" ><div class="pl10">捆包号</div></th>
+								<th width="5%" ><div class="pl10">捆包号</div></th>
 								<th width="8%" ><div class="pl10">数量/重量/毛重</div></th>
 								<th width="6%" class="tc">销售单价</th>
 								<th width="8%" ><div class="pl10">货物状态/车船号</div></th>
@@ -128,18 +111,36 @@
 						<tbody class="ui-thover">
 							<tr>
 								<td class="tc"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
-								<td>2017-11-21<br/>PRO20200715829478</td>
-								<td>低合金卷板/河北新天<br/>6.000*1500*C /Q345B</td>
-								<td>--</td>
-								<td>1.0/ 30.0/ 30.000</td>
+								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
+								<td><div class="pl10">低合金卷板/河北新天<br/>6.000*1500*C /Q345B</div></td>
+								<td><div class="pl10">--</div></td>
+								<td><div class="pl10">1.0/ 30.0/ 30.000</div></td>
 								<td class="tc"><input type="text" class="ui-input tc pct90" data-type="small"></td>
-								<td>提货中<br/>55</td>
-								<td>SHJG201711210471<br/>--</td>
-								<td>0/514天</td>
-								<td>AKUWEIHAO / 原料<br/>测试来料情况</td>
+								<td><div class="pl10">提货中<br/>55</div></td>
+								<td><div class="pl10">SHJG201711210471<br/>--</div></td>
+								<td><div class="pl10">0/514天</div></td>
+								<td><div class="pl10">AKUWEIHAO / 原料<br/>测试来料情况</div></td>
 							</tr>
 						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="10" height="40" class="tc bgfa">
+									总计数量：<span class="red dib mr20">621250.00</span>总计重量： <span class="red dib mr20">17619.112</span>总计毛重： <span class="red dib">10347.073</span>
+								</td>
+							</tr>
+						</tfoot>
 					</table>
+					<div class="mt20 cl  tc pb20">
+						<button type="button" class="ui-button mr10" data-type="normal">去加工</button>
+						<button type="button" class="ui-button mr10" data-type="normal">申请提货</button>
+						<button type="button" class="ui-button mr10" data-type="normal">转货权</button>
+						<button type="button" class="ui-button mr10" data-type="normal">刷新挂牌</button>
+						<button type="button" class="ui-button mr10" data-type="normal">挂牌销售</button>
+						<button type="button" class="ui-button mr10" data-type="normal">取消挂牌</button>
+					</div>
+
+					<script type="text/javascript" src="../js/pagelist.js"></script>
+
 
 
 				</div>			
