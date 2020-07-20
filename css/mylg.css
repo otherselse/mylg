@@ -27,6 +27,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-option.h34{height: 34px;line-height: 34px;font-size: 14px;}
 .gae{color:#AEAEAE;}
 .searchUp.h34 +.search-cont{top:34px;}
+.ui-input.h34[data-type="price"]{padding:0;}
 
 /*leftbar*/
 .logo{height:133px;text-align: center;padding-top: 10px;}
@@ -36,10 +37,10 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .menu::-webkit-scrollbar-thumb:vertical:hover{background:#8cb2ca;}
 .menu::-webkit-scrollbar-thumb:horizontal:hover{background:#8cb2ca}
 .menu{overflow-y:auto;box-sizing: border-box;margin-top:20px;}
-.menulist{margin:0 13px;box-sizing: border-box;height: 40px;line-height: 40px;color:#fff;display:block;margin-bottom: 10px;font-size: 16px;text-indent: 13px;color: #676767;display: block}
-.menulist:hover,.smlist:hover{background: rgba(255,255,255,0.50);border-radius: 6px;color:#676767;}
+.menulist{margin:0 13px;box-sizing: border-box;height: 40px;line-height: 40px;color:#fff;display:block;margin-bottom: 10px;font-size: 16px;text-indent: 13px;color: #282828;display: block}
+.menulist:hover,.smlist:hover{background: rgba(255,255,255,0.50);border-radius: 6px;color:#282828;}
 .menulist.on,.smlist.on{background: #1365E8;box-shadow: 0 10px 15px -5px rgba(69,146,251,0.40);-webkit-box-shadow: 0 10px 15px -5px rgba(69,146,251,0.40);border-radius: 6px;color:#fff;}
-.menuline{background: #ccc;height:1px;margin-bottom: 30px}
+.menuline{background: #ccc;height:1px;margin: 20px 0 20px 0}
 .smlist{height: 35px;line-height: 35px;color:#676767;display:block;font-size: 14px;text-indent: 40px;margin:0 13px 5px;}
 
 
@@ -143,10 +144,12 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .gda{color:#DA6A0A}
 .f36{font-size: 36px;}
 .coupon-item-num{}
+.toComp .mysign{width: 70px;height: 28px;background:url(../images/base/toComp.png) no-repeat;position: absolute;left:-5px;top:5px;}
+.toPers .mysign{width: 70px;height: 28px;background:url(../images/base/toPerson.png) no-repeat;position: absolute;left:-5px;top:5px;}
 
 /*address*/
 .orderaddr.w270{width: 270px}
-.orderaddr.adr-binfo{width: 100%;margin:20px 0 0  0;height:138px;}
+.orderaddr.adr-binfo{width: 100%;margin:20px 0 0  0;height:148px;}
 .orderaddr{padding:10px;position:relative;margin-bottom:10px;display:inline-block;margin-right: 10px;width:282px;height:113px;box-sizing: border-box;border:1px #D9D9D9 dashed;border-radius: 3px;}
 .orderaddr:hover{border-color:#1365E8 }
 .addrInfo{max-height: 36px;margin-bottom: 2px;overflow: hidden}
@@ -241,7 +244,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
  .sms-content-item-panel {box-sizing: border-box;display: inline-block;width: calc(100% - 40px);font-size: 12px;line-height: 17px;vertical-align: top;}
  .sms-content-item-switch {box-sizing: border-box;display: inline-block;width: 40px;height: 100%;vertical-align: top;}
 
- .accountbg .orderaddr{height: 138px;width: 32%;color:#282828;}
+ .accountbg .orderaddr{height: 148px;width: 32%;color:#282828;}
 
 @media (min-width: 1600px) {
 	.base-comp-bg{background-size:100% 100%;}
@@ -410,8 +413,11 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .bg08{background: #08CB93 !important;}
 .pct98{width: 98%}
 .ui-button.green{background: #08CB93;}
-.ui-button.w160{width: 180px;min-width: 180px}
-.off {background-color: #F9F9F9}
+.ui-button.yelbor{color: #D2A769;border: 1px solid #D2A769;}
+.ui-button.yelbor:hover{border-color:#D2A769;color: #D2A769;background-color: #fff9f0}
+.ui-button.w160{width: 160px;min-width: 160px}
+.ui-button.w120{width: 120px;min-width: 120px}
+.offTab {background-color: #F9F9F9}
 
 /* applysale */
 .order-step {position: relative;width: 70%;}

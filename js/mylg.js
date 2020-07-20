@@ -140,7 +140,7 @@ function showsMenu(obj){
 
 //全选
 function setAll(obj) {
-	var myobj = $(obj).parents(".checkbox").find("tbody").find(".ui-checkbox:not('.disabled')");
+	var myobj = $(obj).parents(".checkbox").find(".ui-checkbox").not('.disabled').not($(obj).parent('.ui-checkbox'));
 	if (obj.checked) {
 		myobj.addClass("on");
 		myobj.find(":checkbox").prop("checked", true);
