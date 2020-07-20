@@ -129,17 +129,7 @@
                                     <td>
                                         <div class=" pct90 auto tl"> 
                                             规格：<br>
-                                            <span class="input-selSearch pct100">
-                                                <input type="text" class="ui-input searchUp pct100" data-type="small" autocomplete="off">
-                                                <div class="search-cont tl pct100">
-                                                    <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-                                                    <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                                    <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                                    <a href="javascript:void(0)" class="search-list db ell">选择选择选择选选择选择选择4</a>
-                                                    <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                                </div>
-                                            </span>
+                                            <input type="text" class="ui-input  pct100 mt5 searchUp " data-type="small" autocomplete="off" readonly=""  onclick="clickGG(this,event)" >
                                         </div>
                                         
                                     </td>
@@ -229,6 +219,39 @@
 	<!-- rightBar end-->
 
 
+    <div class="qCont  qtip-lg" style="display: none" onclick="stopPro(event)" >
+        <div class="qContent">
+            规格：<span class="radio">
+                <label class="mr20">
+                    <i class="ui-radio goldIcon v-2 mr2 on" onclick="setSte(this,0,event)"><input type="radio" class="radio-opacity" name="radio" checked="" value="0" ></i>
+                    固定规格</label>
+                <label class="mr20">
+                    <i class="ui-radio goldIcon v-2 mr2 " onclick="setSte(this,1,event)"><input type="radio" class="radio-opacity" name="radio"  value="1"></i>
+                    区间规格</label>
+            </span>
+            <div class="specification mt5">
+                <input type="text" class="ui-input  pct100 mt5" data-type="small" autocomplete="off">
+            </div>
+            <div class="specification dn mt10">
+                <span class="ui-input mr5  pct30 tc" data-type="section">
+                    <input type="text" placeholder="重量" id="s1">~<input type="text" placeholder="重量" id="s2">
+                </span>
+                <span class="ui-input mr5  pct30 tc" data-type="section">
+                    <input type="text" placeholder="宽度" id="s3">~<input type="text" placeholder="宽度" id="s4">
+                </span>
+                <span class="ui-input   pct30 tc" data-type="section">
+                    <input type="text" placeholder="重量" id="s5">~<input type="text" placeholder="重量" id="s6">
+                </span>
+            </div>
+            <div class="mt10 tr">
+                <button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick(this)">确认</button>
+                <button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+            </div>
+
+        </div>
+    </div>
+
+
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
 
@@ -237,6 +260,14 @@
 		$(function(){
 			$(".menu").find(".menulist").eq(2).addClass("on").siblings().removeClass("on")  //左侧菜单选中静态页面采用;
 			$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
+
+            $("#hideTip").on("click",function(){
+                $(this).parents(".qCont").hide();
+            })
+
+            $("body").on("click",function(){
+                $(".qCont").hide();
+            })
         })
        
         function addTalbeOrTr(obj,line){
@@ -296,6 +327,39 @@
 		$("#steQuality").val(id);
 		$("#steQualityID").val(text);
 	}
+        var _t=''
+        function clickGG(obj,e){            
+            stopPro(e);
+            _t=$(e.target);
+           /// console.log(_t)
+           var x=$(obj).offset().top+$(obj).outerHeight(true);
+           var y=$(obj).offset().left;
+           $(".qCont").css({"top":x,"left":y}).show();
+          // $(".qCont").find("input[type='text']").val('')
+        }
+
+
+        function setSte(obj,flag,e){
+            stopPro(e);            
+            $(obj).parents(".radio").find(".ui-radio").removeClass("on");
+            $(obj).addClass("on");
+             //
+            $(".qContent").find(".specification").hide();
+             $(".qContent").find(".specification").eq(flag).show()
+        }
+
+        function gotoClick(obj){
+            var myradio=$(obj).parents(".qCont").find(":radio:checked");
+            var _v='';
+            if(myradio.val()==0){
+                _v=$(obj).parents(".qCont").find(".specification").find(".ui-input").val();                
+            }else if(myradio.val()==1){
+                _v="("+ $("#s1").val()+"~"+$("#s2").val()+")*"+"("+ $("#s3").val()+"~"+$("#s4").val()+")*"+"("+ $("#s5").val()+"~"+$("#s6").val()+")"
+            }
+            _t.val(_v);
+             $(".qCont").hide();
+
+        }
 
 	</script>
 </body>

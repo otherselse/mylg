@@ -30,7 +30,7 @@
 			</div>
 			<div class="ui-content unradius ">	
 				<div class="p20 f12">
-					<div class="cl mb5 lh24">
+					<div class="cl mb5 lh24 mt10">
 						<span class="vt dib">&emsp;加工商：</span>
 						<div class="dib selectProcName gd8">
                             <a  href="javscript:void(0)">全部</a>
@@ -91,7 +91,7 @@
 								<td>转换入库</td>
 								<td>2020-07-15</td>
 								<td>210.366</td>
-								<td><a href="javascript:void(0)" class="ui-switch goldIcon vm"></a></td>
+								<td><a href="javascript:void(0)" class="ui-switch goldIcon vm "></a><span class="switchTxt f14 ml5">否</span></td>
 								<td><a href="javascript:void(0)" onclick="showMore(this)">查看</a></td>
 							</tr>
 							<tr class="hideTr dn">
@@ -175,7 +175,7 @@
 								<td>转换入库</td>
 								<td>2020-07-15</td>
 								<td>210.366</td>
-								<td><a href="javascript:void(0)" class="ui-switch goldIcon vm on"></a></td>
+								<td><a href="javascript:void(0)" class="ui-switch goldIcon vm on "></a><span class="switchTxt f14 ml5">是</span></td>
 								<td><a href="javascript:void(0)" onclick="showMore(this)">查看</a></td>
 							</tr>
 						</tbody>
@@ -242,6 +242,8 @@
 			//switch 前台是否显示
 			$(".ui-switch").on("click", function () {
 				$(this).toggleClass("on").parents("tr").toggleClass("offTab");
+				var myobj=$(this).parents("td").find(".switchTxt");
+				$(this).hasClass("on")?myobj.text("是"):myobj.text("否");
 			})
 
 

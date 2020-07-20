@@ -28,7 +28,7 @@
 			</div>
 			<div class="ui-content unradius ">	
 				<div class="p20 f12">
-					<span class="ui-tip  pct100 mb20">提示：1.加工余料免费存放30天，超期未提加工商将按市场价代售  2.为了使你能及时了解掌握自己的货物情况，请在月底前核对好自己的存货明细，以免影响你的业务操作。</span>
+					<span class="ui-tip  pct100 mb20 mt10">提示：1.加工余料免费存放30天，超期未提加工商将按市场价代售  2.为了使你能及时了解掌握自己的货物情况，请在月底前核对好自己的存货明细，以免影响你的业务操作。</span>
 					<div class="cl">
 						<span class="vt dib mt5">存放仓库：</span>
 						<span class="dib  single pct90">
@@ -167,19 +167,7 @@
 			$(".menu").find(".proc").addClass("open").find(".smlist").eq(3).addClass("on")  //左侧菜单选中静态页面采用
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
 
-			//selectProcName 展开收起 以及是否显示展开
-			if($(".selectProcName").height()>24){
-				$(".selectProcName").height(24);
-				$("#jgs_scroll").show();
-			}else{
-				$("#jgs_scroll").hide();
-			}
-
-
-			$(".selectProcName").find("a").on("click",function(){
-				$(this).addClass("on").siblings().removeClass("on");
-			})
-
+			
 			//时间范围
 			laydate.render({
 				elem: '#dateStart'
@@ -195,20 +183,15 @@
 				}
 			});
 
+			$(".single").find(".ui-option").on("click",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			})
+
 
 
 			
 		})
 
-		function setOpen(obj) {
-			if($(".selectProcName").height()>24){
-				$(".selectProcName").height(24);
-				$(obj).text("展开");
-			}else{
-				$(".selectProcName").height("auto");
-				$(obj).text("收起");
-			}
-		}
 
 
 

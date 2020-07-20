@@ -71,10 +71,13 @@ $(function(){
 		})
 		//下拉
 		$("body").on("click", ".searchUp", function (e) {
-			e.stopPropagation();
-			$(".search-cont").hide();
-			$(this).parents(".input-selSearch").find(".search-cont").css({ "left": $(this).offset().left - $(this).parents(".input-selSearch").offset().left,"min-width":$(this).outerWidth(true) })
-			$(this).parents(".input-selSearch").find(".search-cont").show();
+			if($(this).parents(".input-selSearch").length>0){
+				e.stopPropagation();
+				$(".search-cont").hide();
+				$(this).parents(".input-selSearch").find(".search-cont").css({ "left": $(this).offset().left - $(this).parents(".input-selSearch").offset().left,"min-width":$(this).outerWidth(true) })
+				$(this).parents(".input-selSearch").find(".search-cont").show();
+			}
+			
 		})
 		$("body").on("click", ".search-list", function () {
 			$(this).addClass("active").siblings().removeClass("active");
@@ -112,7 +115,8 @@ $(function(){
 
 
 		//radio点选
-		$("body").on("click", ".ui-radio", function () {
+		$("body").on("click", ".ui-radio", function (e) {
+			e.stopPropagation()
 			$(this).parents(".radio").find(".ui-radio").removeClass("on");
 			$(this).addClass("on")
 		})

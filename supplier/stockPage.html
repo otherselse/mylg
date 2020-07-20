@@ -22,7 +22,7 @@
 		<!-- topBar end -->
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">我的订单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">我的库存</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius f12">
 				<div class="pt20 pr20 pl20 pb30">
@@ -334,6 +334,10 @@
                     classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
                 }
             });
+
+            $("body").on("click", "#hideTip", function () {
+                $(".qtip").hide();
+            })
         })
              // 全选子项
              function selectAll(obj){
