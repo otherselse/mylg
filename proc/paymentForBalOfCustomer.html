@@ -1,0 +1,247 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+	<title>自主结算-我的乐刚</title>
+</head>
+<body class="buyer showTip">
+	<script type="text/javascript" src="../js/leftBar.js"></script> 
+	<!-- leftbar end -->
+
+
+	<div class="rightBar">
+		<script type="text/javascript" src="../js/topBar.js"></script> 
+		<!-- topBar end -->
+
+		<div class="mainCont ">
+			<div class="ui-tab3">
+				<a href="paymentForBalOfCustomer.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">待结算明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="billedDetailForFreeBalance.html" class="ui-tab3-list rel "><span class="ui-tab3-text">已结算明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content unradius ">				
+				<div class="p20 f12">
+					<div class="cl mb5 lh24 mt20">
+						<span class="vt dib">&emsp;加工商：</span>
+						<div class="dib selectProcName gd8">
+                            <a href="javscript:void(0)">全部</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">上海加工运输有限责任公司</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">上海加工运输有限责任公司</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">上海加工运输有限责任公司</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                        </div>
+                        <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
+					</div>
+					<div class="mb20 cl ">
+					业务日期：
+					<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" lay-key="1"></span>
+					单据号：
+					<input type="text" value="" class="ui-input  pct15 mr20" placeholder="请输入" autocomplete="off">
+					费用类型：
+					<span class="radio mr40">
+						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>加工费</label>
+						<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>其它费用</label>
+					</span>
+					是否超期：
+					<span class="radio">
+						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+						<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+					</span>
+					
+					
+				</div>
+				<div class="tc">
+					<button type="button" class="ui-button mr10" type="button">查询</button>
+					<button class="ui-button w76" type="button" data-type="download">导出</button>
+				</div>
+				
+
+
+				<table class="ui-table tc f12 mt50 checkbox" width="100%">
+						<thead>
+							<tr>
+								<th width="4%"><i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i></th>
+								<th width="8%" class="tl"><div class="pl10">单据号</div></th>
+								<th width="6%">业务日期</th>
+								<th width="6%">费用名称</th>
+								<th width="6%">结算方式</th>
+								<th width="6%">单价/重量</th>
+								<th width="8%">业务余额</th>
+								<th width="8%">应付款日期</th>
+								<th width="8%">超期天数</th>
+								<th width="8%">货主单位</th>
+								<th width="6%">操作</th>
+							</tr>
+						</thead>
+						<tbody class="ui-thover">
+							<tr>
+								<td><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>	
+								<td class="tl"><div class="pl10">PRO20200715829478</div></td>
+								<td>2020-06-01</td>								
+								<td>加工费</td>
+								<td>现结</td>
+								<td>0.09/5454.000</td>
+								<td>11.00</td>
+								<td>2020-06-01</td>
+								<td>222天</td>								
+								<td>吞吞吐吐公司</td>
+								<td><a href="javascript:void(0)" onclick="showMore(this)">查看</a></td>
+							</tr>
+							<tr class="hideTr dn">
+								<td colspan="11">
+									<table class="ui-table tc f12 auto" width="98%">
+				                        <thead>
+				                            <tr>
+				                                <th width="5%">类别</th>
+				                                <th width="8%">加工方式</th>
+				                                <th width="8%">包装方式</th>
+				                                <th width="8%">捆包号</th>
+				                                <th width="8%">品名</th>
+				                                <th width="8%">资源号</th>
+				                                <th width="8%">规格</th>
+				                                <th width="8%">牌号</th>
+				                                <th width="8%">钢厂</th>
+				                                <th width="8%">重量</th>
+				                                <th width="8%">库龄（天）</th>                                       
+				                            </tr>
+				                        </thead>
+				                        <tbody class="ui-thover">
+				                            <tr>
+				                                <td>原料</td>
+				                                <td>重卷</td>
+				                                <td>裸包装</td>
+				                                <td>dgda342442-3</td>
+				                                <td>热轧卷板</td>
+				                                <td>--</td>
+				                                <td>10.000*800*C</td>
+				                                <td>SECDPC5</td>
+				                                <td>宝钢</td>
+				                                <td>12.000</td>
+				                                <td>1</td>
+				                            </tr>
+				                        </tbody>
+				                    </table>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr height="40" class="bgfa tl">
+								<td colspan="11" >
+									<div class="pct5 l tc mr30"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</div>
+									已选中 <span class="red">7</span> 条明细，总计未付款金额 <span class="red">700.00</span> 元
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+
+				</div>
+
+
+			</div><!-- ui-content end -->
+
+
+
+		</div>
+		<!-- mainCont end -->
+
+	</div>
+	<!-- rightBar end-->
+
+
+	<div class="addCarNum dn">
+		<div class="ui-input mb10" data-type="price"><input type="text" value="" placeholder="追加车号"></div>
+		<button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick()">保存</button>
+		<button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+	</div>
+
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script>
+		$(function(){
+			$(".menu").find(".proc").addClass("open").find(".smlist").eq(4).addClass("on")  //左侧菜单选中静态页面采用
+			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
+
+			//selectProcName 展开收起 以及是否显示展开
+			if($(".selectProcName").height()>24){
+				$(".selectProcName").height(24);
+				$("#jgs_scroll").show();
+			}else{
+				$("#jgs_scroll").hide();
+			}
+
+			$(".selectProcName").find("a").on("click",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			})
+
+
+			//时间范围
+			laydate.render({
+				elem: '#dateStart'
+				, range: true
+				, theme: 'lgblue'
+				,trigger: 'click'
+				//,value:'2020-06-04 - 2020-06-08'
+
+				, change: function (value, date, endDate) {
+					console.log(value); //得到日期生成的值，如：2017-08-18
+					console.log(date.year); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+					console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+				}
+			});
+
+
+			
+
+
+			
+		})
+
+
+
+		function setOpen(obj) {
+			if($(".selectProcName").height()>24){
+				$(".selectProcName").height(24);
+				$(obj).text("展开");
+			}else{
+				$(".selectProcName").height("auto");
+				$(obj).text("收起");
+			}
+		}
+
+
+		function showMore(obj){
+			$(obj).parents("tr").next("tr").toggle();
+		}
+
+
+
+
+
+
+
+	</script>
+</body>
+	
+</html>

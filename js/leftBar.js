@@ -29,7 +29,7 @@
 		+'			<a class="smlist" href="../proc/createInput.html">新增入库</a>'
 		+'			<a class="smlist" href="../proc/createOutInfo.html">申请提货</a>'
 		+'			<a class="smlist" href="../proc/myStockList.html">我的库存</a>'
-		+'			<a class="smlist" href="">自主结算</a>'
+		+'			<a class="smlist" href="../proc/paymentForBalOfCustomer.html">自主结算</a>'
 		+'			<a class="smlist" href="">申请开票</a>'
 		+'			<a class="smlist" href="">单据打印</a>'
 		+'			<a class="smlist" href="">出入库查询</a>'

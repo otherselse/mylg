@@ -28,30 +28,13 @@
 			</div>
 			<div class="ui-content unradius ">	
 				<div class="p20 f12">
-					<span class="ui-tip  pct100 mb20">提示：核对明细时若有差异，请填写对应的核对数量、重量，若无差异无需填写，回到底部直接提交确认即可。</span>
+					<span class="ui-tip  pct100 mb20 mt10">提示：核对明细时若有差异，请填写对应的核对数量、重量，若无差异无需填写，回到底部直接提交确认即可。</span>
 					<div class="cl lh24">
 						<span class="vt dib">存放仓库：</span>
-						<div class="dib selectProcName gd8">
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">华冶B区</a>
-                            <span class="pr5 pl5 ">|</span>
-                        </div>
-                        <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
+						<span class="dib  single pct90">
+                  			<a class="ui-option mr5 tc" href="javscript:void(0)">华冶B区</a>
+                  			<a class="ui-option mr5 tc on" href="javscript:void(0)">华冶B区</a>
+						</span>
 					</div>
 					<div class="mt5">
                         &emsp;&emsp;规格：
@@ -80,42 +63,64 @@
 						</span>
                         入库日期：
 						<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" ></span>
+						<button type="button" class="ui-button mr10" type="button">查询</button>
+						<button class="ui-button w76" type="button" data-type="download">导出</button>
                     </div>
-					<div class="mt20 cl  tc">
-						<button type="button" class="ui-button mr10" type="button">确认查询</button>
-						<button type="button" class="ui-button " type="button" data-type="normal">导出</button>
-					</div>
 
 					<!-- 加工商 search  end -->
 
-					<table class="ui-table f12 mt40" width="100%">
+					<table class="ui-table f12 mt40 checkbox" width="100%" >
 						<thead>
 							<tr class="tl">
+								<th width="3%" class="tc"><i class="ui-checkbox goldIcon mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</th>
 								<th width="8%" ><div class="pl10">单据号/入库日期</div></th>
-								<th width="10%"><div class="pl10">品名/规格</div></th>
+								<th width="6%"><div class="pl10">品名/<a onclick="setUpDownIndate(this,'a.steSpec')" href="javscript:void(0)" class="g28">规格<i class="myarrow vm ml5"></i></a></div></th>
 								<th width="5%" ><div class="pl10">钢厂/牌号</div></th>
 								<th width="8%" ><div class="pl10">捆包号</div></th>
-								<th width="8%" ><div class="pl10">库存数量/重量</div></th>
-								<th width="6%" class="tc">核对数量/重量</th>								
-								<th width="8%" ><div class="pl10">毛重</div></th>
-								<th width="8%" ><div class="pl10">说明</div></th>
+								<th width="8%" class="tc">库存数量/重量</th>
+								<th width="10%" class="tc">核对数量/重量</th>								
+								<th width="6%" class="tc">毛重</th>
+								<th width="8%" class="tc">说明</th>
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
+								<td class="tc"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
 								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
 								<td><div class="pl10">低合金卷板<br/>6.000*1500*C</div></td>
 								<td><div class="pl10">中钢<br/>BTC340R</div></td>
-								<td><div class="pl10">061357</div></td>
-								<td><div class="pl10">1.0/19.8</div></td>
+								<td><div class="pl10">225/88-2</div></td>
+								<td class="tc">1.0/19.8</td>
 								<td class="tc"><input type="text" class="ui-input tc pct40" data-type="small"> / <input type="text" class="ui-input tc pct40" data-type="small"></td>
-								<td><div class="pl10">0.000</div></td>
-								<td><div class="pl10">--</div></td>
+								<td class="tc">0.000</td>
+								<td class="tc">--</td>
 							</tr>
 						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="9" height="45" class="bgfa tc">
+									重量合计：<span class="red">333.096</span>
+								</td>
+							</tr>
+						</tfoot>
 					</table>
 
+					<div class="cl mt20">
+						<span class="red">*</span>核对结果：
+						<span class="single ">
+                            <input type="hidden" value="">
+                            <button type="button" class="ui-option mr5">准确无误</button>
+                            <button type="button" class="ui-option">存在差异</button>
+                        </span>
+					</div>
+					<div class="cl mt10">
+						<span class="red">*</span>情况说明：
+						<textarea class="ui-textarea pct80" rows="3"></textarea>
+					</div>
 
+					<div class="cl tc mb30 mt30 " id="b1">
+			                	<button type="button" class="ui-button mr20" data-type="big">确认提交</button>
+							</div>
 				</div>			
 				
 
@@ -130,6 +135,10 @@
 	</div>
 	<!-- rightBar end-->
 
+	<div class="fixbottom"><a class="rightCircle trans" href="javascript:void(0)" ><i class="lgIcon bottomIcon top"></i><i class="tiptxt">顶部</i></a></div>
+
+	<div class="topbottom"><a class="rightCircle trans" href="javascript:void(0)"><i class="lgIcon bottomIcon"></i><i class="tiptxt">底部</i></a></div>
+
 
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
@@ -140,18 +149,38 @@
 			$(".menu").find(".proc").addClass("open").find(".smlist").eq(3).addClass("on")  //左侧菜单选中静态页面采用
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
 
-			//selectProcName 展开收起 以及是否显示展开
-			if($(".selectProcName").height()>24){
-				$(".selectProcName").height(24);
-				$("#jgs_scroll").show();
+			if(hasScrollbar()){
+				$(".topbottom").css({"visibility":"visible","opacity":1});
 			}else{
-				$("#jgs_scroll").hide();
+				$(".topbottom").css({"visibility":"hidden","opacity":0});
 			}
 
+			$(window).scroll(function(){
+				var sc=$(window).scrollTop();
+				var h=$(window).height();
+					if(sc>h*0.5){
+						$(".fixbottom").css({"visibility":"visible","opacity":1});
+						$(".topbottom").css({"visibility":"hidden","opacity":0});
+					}else{
+						$(".fixbottom").css({"visibility":"hidden","opacity":0});
+						$(".topbottom").css({"visibility":"visible","opacity":1});
+					}
+				
+			 });
 
-			$(".selectProcName").find("a").on("click",function(){
+			$(".fixbottom").find(".rightCircle").on("click",function(){
+		 		$('body,html').animate({scrollTop:0},500);
+			})
+			
+			$(".topbottom").find(".rightCircle").on("click",function(){
+		 		$('body,html').animate({scrollTop:$("#b1").offset().top},500);
+			})
+
+
+			$(".single").find(".ui-option").on("click",function(){
 				$(this).addClass("on").siblings().removeClass("on");
 			})
+		
 
 			//时间范围
 			laydate.render({
@@ -173,14 +202,19 @@
 			
 		})
 
-		function setOpen(obj) {
-			if($(".selectProcName").height()>24){
-				$(".selectProcName").height(24);
-				$(obj).text("展开");
+
+
+
+		function setUpDownIndate(obj,str){
+			if($(obj).hasClass("down")){
+				$(obj).removeClass().addClass("up")
 			}else{
-				$(".selectProcName").height("auto");
-				$(obj).text("收起");
+				$(obj).removeClass().addClass("down")
 			}
+		}
+
+		function hasScrollbar() {
+		    return document.body.scrollHeight > (window.innerHeight || document.documentElement.clientHeight);
 		}
 
 

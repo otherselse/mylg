@@ -87,16 +87,16 @@
                         入库日期：
 						<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" ></span>
 						<button type="button" class="ui-button mr10" type="button">查询</button>
-						<button class="ui-button"  type="button" data-type="download">导出</button>
+						<button class="ui-button w76"  type="button" data-type="download">导出</button>
                     </div>
 
 
 					<!-- 加工商 search  end -->
 
-					<table class="ui-table f12 mt40" width="100%">
+					<table class="ui-table f12 mt40 checkbox" width="100%">
 						<thead>
 							<tr class="tl">
-								<th width="3%" class="tc">选择</th>
+								<th width="3%" class="tc"><i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i></th>
 								<th width="8%" ><div class="pl10">入库日期/单据号</div></th>
 								<th width="10%"><div class="pl10">品名/钢厂/规格/牌号</div></th>
 								<th width="5%" ><div class="pl10">捆包号</div></th>
@@ -113,9 +113,9 @@
 								<td class="tc"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
 								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
 								<td><div class="pl10">低合金卷板/河北新天<br/>6.000*1500*C /Q345B</div></td>
-								<td><div class="pl10">--</div></td>
+								<td><div class="pl10">sdsddffss1345-1</div></td>
 								<td><div class="pl10">1.0/ 30.0/ 30.000</div></td>
-								<td class="tc"><input type="text" class="ui-input tc pct90" data-type="small"></td>
+								<td class="tc"><input type="text" class="ui-input tc pct90" data-type="small" placeholder="请输入"></td>
 								<td><div class="pl10">提货中<br/>55</div></td>
 								<td><div class="pl10">SHJG201711210471<br/>--</div></td>
 								<td><div class="pl10">0/514天</div></td>
@@ -124,20 +124,26 @@
 						</tbody>
 						<tfoot>
 							<tr>
-								<td colspan="10" height="40" class="tc bgfa">
-									总计数量：<span class="red dib mr20">621250.00</span>总计重量： <span class="red dib mr20">17619.112</span>总计毛重： <span class="red dib">10347.073</span>
+								<td colspan="10"  class="bgfa" style="padding:0">
+									<div class="pl20  ovh">
+										<div class="l pct40 pt20 pb10">总计：数量 <span class="red dib mr20">621250.00</span>重量 <span class="red dib mr20">17619.112</span>毛重 <span class="red dib">10347.073</span>
+										</div>
+										<div class="l pct30 tc bre pt15 pb15">
+											<button type="button" class="ui-button mr10 w90" >去加工</button>
+											<button type="button" class="ui-button mr10 w90" >申请提货</button>
+											<button type="button" class="ui-button w90 ">转货权</button>
+										</div>
+										<div class="l tc pct30 ml-1 pt15 pb15">
+											<button type="button" class="ui-button mr10 w90" data-type="normal">刷新挂牌</button>
+											<button type="button" class="ui-button mr10 w90" data-type="normal">挂牌销售</button>
+											<button type="button" class="ui-button  w90" data-type="normal">取消挂牌</button>
+										</div>
+									</div>
 								</td>
 							</tr>
 						</tfoot>
 					</table>
-					<div class="mt20 cl  tc pb20">
-						<button type="button" class="ui-button mr10" data-type="normal">去加工</button>
-						<button type="button" class="ui-button mr10" data-type="normal">申请提货</button>
-						<button type="button" class="ui-button mr10" data-type="normal">转货权</button>
-						<button type="button" class="ui-button mr10" data-type="normal">刷新挂牌</button>
-						<button type="button" class="ui-button mr10" data-type="normal">挂牌销售</button>
-						<button type="button" class="ui-button mr10" data-type="normal">取消挂牌</button>
-					</div>
+
 
 					<script type="text/javascript" src="../js/pagelist.js"></script>
 

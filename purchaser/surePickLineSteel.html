@@ -26,9 +26,49 @@
 			</div>
 			<div class="ui-content unradius ">
 				<div class="pt20 pr20 pl20 pb30">
-					<div class="g28 dib b mb10"><a class="leftArrow mr10" href="../purchaser/order.html"></a>申请记录</div>
+					<div class="g28 dib b mb10"><a class="leftArrow mr10" href="../purchaser/order.html"></a>货物明细</div>
 
-
+                    <table class="ui-table tc f12 checkbox" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="5%"><i class="ui-checkbox goldIcon mr10"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</th>
+                                <th width="12%">品名</th>
+                                <th width="15%">规格</th>
+                                <th width="8%">牌号</th>
+                                <th width="8%">签收重量（吨）</th>
+                                <th width="8%">退货重量（吨</th>
+                                <th width="8%">开票重量（吨）</th>
+                                <th width="8%">含税单价</th>
+                                <th width="8%">补差单价</th> 
+                                <th width="8%">开票额</th>                                            
+                            </tr>
+                        </thead>
+                        <tbody class="ui-thover">
+                            <tr>
+                                <td><i class="ui-checkbox goldIcon vm mr10"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>1</td>
+                                <td>热轧卷板</td>
+                                <td>10.000*800*C</td>
+                                <td>SECDPC5</td>
+                                <td>20</td>
+                                <td>1.000</td>
+                                <td>5</td>
+                                <td>5000</td>
+                                <td>5000</td>
+                                <td>12.000</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr height="40">
+                                <td colspan="10" class="">
+                                    已选：<span class="red dib mr20">20.00</span>吨，合计：<span class="red">12.000</span>元
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div class=" tc mb20 mt20">
+                        <div class="ui-button" onclick="submitShow()" id="tj" data-type="big" type="button">确认收货</div>
+                    </div>
+                    <div class="g28 f14 mt30 b cl mb10">申请记录</div>
                     <table class="ui-table tc f12 " width="100%">
                         <thead>
                             <tr>
