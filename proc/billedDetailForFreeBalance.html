@@ -22,8 +22,8 @@
 
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="paymentForBalOfCustomer.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">待结算明细</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="billedDetailForFreeBalance.html" class="ui-tab3-list rel "><span class="ui-tab3-text">已结算明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="paymentForBalOfCustomer.html" class="ui-tab3-list rel "><span class="ui-tab3-text">待结算明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="billedDetailForFreeBalance.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">已结算明细</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius ">				
 				<div class="p20 f12">
@@ -72,8 +72,9 @@
 					
 				</div>
 				<div class="tc">
-					<button type="button" class="ui-button mr10" type="button">查询</button>
-					<button class="ui-button w76" type="button" data-type="download">导出</button>
+					<button type="button" class="ui-button mr10 w76" type="button">查询</button>
+					<button class="ui-button w76 mr10" type="button " data-type="download">导出</button>
+					<button type="button" class="ui-button w76" >代付</button>
 				</div>
 				
 
@@ -81,35 +82,37 @@
 				<table class="ui-table tc f12 mt50 checkbox" width="100%">
 						<thead>
 							<tr>
-								<th width="4%"><i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i></th>
 								<th width="8%" class="tl"><div class="pl10">单据号</div></th>
 								<th width="6%">业务日期</th>
 								<th width="6%">费用名称</th>
 								<th width="6%">结算方式</th>
 								<th width="6%">单价/重量</th>
-								<th width="8%">业务余额</th>
-								<th width="8%">应付款日期</th>
-								<th width="8%">超期天数</th>
-								<th width="8%">货主单位</th>
-								<th width="6%">操作</th>
+								<th width="6%">业务余额</th>
+								<th width="6%">实付金额</th>
+								<th width="6%">余料款支付</th>
+								<th width="6%">优惠券</th>
+								<th width="10%">应付款日期/超期天数</th>
+								<th width="10%">结算单位</th>
+								<th width="5%">操作</th>
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
-								<td><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>	
 								<td class="tl"><div class="pl10">PRO20200715829478</div></td>
 								<td>2020-06-01</td>								
 								<td>加工费</td>
 								<td>现结</td>
 								<td>0.09/5454.000</td>
 								<td>11.00</td>
-								<td>2020-06-01</td>
-								<td>222天</td>								
+								<td>11.00</td>
+								<td>12.00</td>
+								<td>12.00</td>
+								<td>2020-06-01<br/>0</td>
 								<td>吞吞吐吐公司</td>
 								<td><a href="javascript:void(0)" onclick="showMore(this)">查看</a></td>
 							</tr>
 							<tr class="hideTr dn">
-								<td colspan="11">
+								<td colspan="12">
 									<table class="ui-table tc f12 auto" width="98%">
 				                        <thead>
 				                            <tr>
@@ -146,34 +149,18 @@
 							</tr>
 						</tbody>
 						<tfoot>
-							<tr height="40" class="bgfa tl">
-								<td colspan="11" >
-									<div class="pct5 l tc mr30"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</div>
-									已选中 <span class="red">7</span> 条明细，总计未付款金额 <span class="red">700.00</span> 元
+							<tr height="40" class="bgfa tc">
+								<td colspan="12" >
+									已申请页面合计： 业务金额：<span class="red">11569.85</span>元&emsp;&emsp; 实付金额：<span class="red">11569.85</span>元&emsp;优惠券：<span class="red">0.00</span>元
 								</td>
 							</tr>
 						</tfoot>
 					</table>
-
-					<div class="f14 mt30 radio">
-						<span class="b g28">&emsp;支付方式：</span>
-						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>余额：8569825.93元</label>
-                        <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>余料款：2391193087.92元</label>
-                        <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>废料款：1.8元</label>
-					</div>
-					<div class="f14 mt20 ">
-						<span class="b g28">使用优惠券：</span>
-						<span class="dib">700</span>
-
-					</div>
+					<script type="text/javascript" src="../js/pagelist.js"></script>
+					
 
 				</div>
 
-				<div class="bte pt25 pb30 tc mt10">
-					<button class="ui-button mr10 w90" type="button">提交</button>
-					<button class="ui-button mr10 w90" type="button">扫码支付</button>
-					<button class="ui-button  w90" type="button">找人代付</button>
-				</div>
 
 
 			</div><!-- ui-content end -->

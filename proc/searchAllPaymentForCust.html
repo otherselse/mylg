@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>自主结算-我的乐刚</title>
+	<title>待开票明细-申请开票</title>
 </head>
 <body class="buyer showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -22,12 +22,12 @@
 
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="paymentForBalOfCustomer.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">待结算明细</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="billedDetailForFreeBalance.html" class="ui-tab3-list rel "><span class="ui-tab3-text">已结算明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="searchAllPaymentForCust.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">待开票明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="billedDetailForCust.html" class="ui-tab3-list rel "><span class="ui-tab3-text">已开票明细</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius ">				
 				<div class="p20 f12">
-					<div class="cl mb5 lh24 mt20">
+					<div class="cl  lh24 mt10">
 						<span class="vt dib">&emsp;加工商：</span>
 						<div class="dib selectProcName gd8">
                             <a href="javscript:void(0)">全部</a>
@@ -53,63 +53,74 @@
                         </div>
                         <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
 					</div>
-					<div class="mb20 cl ">
-					业务日期：
-					<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" lay-key="1"></span>
-					单据号：
-					<input type="text" value="" class="ui-input  pct15 mr20" placeholder="请输入" autocomplete="off">
-					费用类型：
-					<span class="radio mr40">
-						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>加工费</label>
-						<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>其它费用</label>
-					</span>
-					是否超期：
-					<span class="radio">
+					<div class="mb10 cl lh30">
+					是否结算：
+					<span class="radio mr20 dib" style="width: 290px">
+						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>全部</label>
 						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 						<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 					</span>
+					结算方式：
+					<span class="radio">
+						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>有货月结</label>
+						<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>现结</label>
+					</span>
 					
 					
 				</div>
-				<div class="tc">
-					<button type="button" class="ui-button mr10" type="button">查询</button>
-					<button class="ui-button w76" type="button" data-type="download">导出</button>
+				<div class="cl">
+						开票类型：
+						<span class="single  mr20">
+                            <input type="hidden" value="">
+                            <button type="button" class="ui-option mr5" type="button">加工发票</button>
+                            <button type="button" class="ui-option mr5" type="button">仓储发票</button>
+                            <button type="button" class="ui-option mr5" type="button">废料发票</button>
+                        </span>
+                        业务日期：
+					<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" lay-key="1"></span>
+					资源号：
+					<input type="text" value="" class="ui-input  pct15 mr20" placeholder="请输入" autocomplete="off">
+					<button type="button" class="ui-button  " type="button">查询</button>
 				</div>
+					
+
 				
 
 
-				<table class="ui-table tc f12 mt50 checkbox" width="100%">
+				<table class="ui-table tc f12 mt30 checkbox" width="100%">
 						<thead>
 							<tr>
-								<th width="4%"><i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i></th>
 								<th width="8%" class="tl"><div class="pl10">单据号</div></th>
 								<th width="6%">业务日期</th>
 								<th width="6%">费用名称</th>
 								<th width="6%">结算方式</th>
 								<th width="6%">单价/重量</th>
-								<th width="8%">业务余额</th>
-								<th width="8%">应付款日期</th>
-								<th width="8%">超期天数</th>
-								<th width="8%">货主单位</th>
-								<th width="6%">操作</th>
+								<th width="6%">业务余额</th>
+								<th width="6%">实付金额</th>
+								<th width="6%">余料款支付</th>
+								<th width="6%">优惠券</th>
+								<th width="10%">应付款日期/超期天数</th>
+								<th width="10%">结算单位</th>
+								<th width="5%">操作</th>
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
-								<td><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>	
 								<td class="tl"><div class="pl10">PRO20200715829478</div></td>
 								<td>2020-06-01</td>								
 								<td>加工费</td>
 								<td>现结</td>
 								<td>0.09/5454.000</td>
 								<td>11.00</td>
-								<td>2020-06-01</td>
-								<td>222天</td>								
+								<td>11.00</td>
+								<td>12.00</td>
+								<td>12.00</td>
+								<td>2020-06-01<br/>0</td>
 								<td>吞吞吐吐公司</td>
 								<td><a href="javascript:void(0)" onclick="showMore(this)">查看</a></td>
 							</tr>
 							<tr class="hideTr dn">
-								<td colspan="11">
+								<td colspan="12">
 									<table class="ui-table tc f12 auto" width="98%">
 				                        <thead>
 				                            <tr>
@@ -146,34 +157,18 @@
 							</tr>
 						</tbody>
 						<tfoot>
-							<tr height="40" class="bgfa tl">
-								<td colspan="11" >
-									<div class="pct5 l tc mr30"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</div>
-									已选中 <span class="red">7</span> 条明细，总计未付款金额 <span class="red">700.00</span> 元
+							<tr height="40" class="bgfa tc">
+								<td colspan="12" >
+									已申请页面合计： 业务金额：<span class="red">11569.85</span>元&emsp;&emsp; 实付金额：<span class="red">11569.85</span>元&emsp;优惠券：<span class="red">0.00</span>元
 								</td>
 							</tr>
 						</tfoot>
 					</table>
-
-					<div class="f14 mt30 radio">
-						<span class="b g28">&emsp;支付方式：</span>
-						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>余额：8569825.93元</label>
-                        <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>余料款：2391193087.92元</label>
-                        <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>废料款：1.8元</label>
-					</div>
-					<div class="f14 mt20 ">
-						<span class="b g28">使用优惠券：</span>
-						<span class="dib">700</span>
-
-					</div>
+					<script type="text/javascript" src="../js/pagelist.js"></script>
+					
 
 				</div>
 
-				<div class="bte pt25 pb30 tc mt10">
-					<button class="ui-button mr10 w90" type="button">提交</button>
-					<button class="ui-button mr10 w90" type="button">扫码支付</button>
-					<button class="ui-button  w90" type="button">找人代付</button>
-				</div>
 
 
 			</div><!-- ui-content end -->
@@ -198,7 +193,7 @@
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
-			$(".menu").find(".proc").addClass("open").find(".smlist").eq(4).addClass("on")  //左侧菜单选中静态页面采用
+			$(".menu").find(".proc").addClass("open").find(".smlist").eq(5).addClass("on")  //左侧菜单选中静态页面采用
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
 
 			//selectProcName 展开收起 以及是否显示展开
