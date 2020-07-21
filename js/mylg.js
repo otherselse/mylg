@@ -85,7 +85,8 @@ $(function(){
 			$(this).parents(".input-selSearch").find(".search-cont").hide();
 		})
 
-		$("input[type='text']").on("click",function(){
+	
+		$("input[type='text']").each(function(){
 			$(this).attr("autocomplete","off");
 		})
 

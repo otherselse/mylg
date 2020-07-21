@@ -28,6 +28,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .searchUp.h34 +.search-cont{top:34px;}
 .ui-input.h34[data-type="price"]{padding:0;}
 .ui-input[data-type='section']{min-width:inherit;}
+.mb40{margin-bottom: 40px}
 
 .qCont{background: #fff;padding: 0px;line-height: 18px;background-color: #fff;border-color: #E2E2E2;color: #454545;position: absolute;
     top:10px;left:0;max-width: 380px;min-width: 50px; border-radius: 5px;}
@@ -170,7 +171,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .addressBookBut{display: none}
 .addressDBook{padding-top: 5px;}
 .defautTip{color:#FB2020;background-color: #FFE3E3;display: inline-block;padding:1px 5px; }
-
+.orderaddr.disabled{background: #FAFAFA}
+.personText{position:absolute;display:inline-block;font-size:18px;color:#333;transform:rotate(-17deg);-webkit-transform:rotate(-17deg);left:50%;top:55px;margin-left:-140px;}
 
 /*pageWrap*/
 .pageWrap{margin: 20px auto 0;text-align: center;}
@@ -244,7 +246,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .base-finan-add:hover{border-color: #1365E8}
 .base-finan-tip{margin:50px -10% 0; }
 .sms-content {box-sizing: border-box;display: inline-block;width: 800px;vertical-align: top;}
-.sms-content-item {box-sizing: border-box;width: 44%;height: 70px; margin: -1px 4% 0px 0;float: left;padding: 16px 19px;border: 1px solid #E6E6E6;background: #F9F9F9;
+.sms-content-item {box-sizing: border-box;width: 44%;height: 94px; margin: -1px 4% 0px 0;float: left;padding: 16px 19px;border: 1px solid #E6E6E6;background: #F9F9F9;
     text-align: left;cursor: pointer;}
 .sms-content-item:nth-of-type(2n){margin-right:0;}
 .sms-content-item.on{background: #fff}
