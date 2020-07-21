@@ -34,7 +34,7 @@
 		+'			<a class="smlist" href="">单据打印</a>'
 		+'			<a class="smlist" href="">出入库查询</a>'
 		+'			<a class="smlist" href="">签约</a>'
-		+'			<a class="smlist" href="">订单售后</a>'
+		+'			<a class="smlist" href="../proc/afterProcess.html">订单售后</a>'
 		+'		</div>'
 		+'	</div>'
 		+'	<div class="mulfolder trans" onclick="showsMenu(this)">'
