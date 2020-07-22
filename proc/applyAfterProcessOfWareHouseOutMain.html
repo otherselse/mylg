@@ -92,7 +92,13 @@
 					</div>
 					<div class="mt10 pl30 f12">
 						&emsp;&emsp;<span class="red">*</span> 问题描述：
-						<textarea class="ui-textarea pct80" rows="3" placeholder="如有问题请在此输入"></textarea>
+						<div class="ui-textarea-x pct80 dib">
+							<textarea id="someId" placeholder="如有问题请在此输入" maxlength="500" rows="3" onkeyup="checksumJg(this)"></textarea>
+							<div class="ui-textarea"></div>
+							<label for="someId" class="ui-textarea-count">
+								<span id="schedulRemarksLeft">0</span>/<span>500</span>
+							</label>
+						</div>
 					</div>
 					<div class="mt20 pl30 f12">
 						&emsp;&emsp;<span class="red">*</span> 问题图片：
