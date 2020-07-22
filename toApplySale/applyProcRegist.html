@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>评审中心-仓库评审信息录入</title>
+	<title>评审中心-加工商评审信息录入</title>
 </head>
 <body class="showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -24,7 +24,7 @@
 		<!-- topBar end -->
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">仓库评审信息录入</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">加工商评审信息录入</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius">
 				<div class="pt20 pr30 pl30 pb30">
@@ -261,7 +261,7 @@
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
-			$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(4).addClass("on")  //首页选中;
+			$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(5).addClass("on")  //首页选中;
 			$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
 
 		})
@@ -330,8 +330,8 @@
 			}
 			$(obj).parent().find("a").removeClass("on");
 			$(obj).addClass("on");
-        }
-        // 添加仓库
+		}
+         // 添加仓库
          function addStockInfo(obj){
              var cloneBox = $(obj).parents(".stockInfo").clone(true)
              cloneBox.find(".del-stock").show()

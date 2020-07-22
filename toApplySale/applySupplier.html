@@ -62,7 +62,6 @@
                             <div class="pct50 dib f14 mb10">
                                 <span class="dib pct24 tr"><span class="red vm">*</span>联系人：</span>
                                 <input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                                <a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写“实缴资本”"></a>
                             </div>
                             <div class="pct50 dib f14 mb10">
                                 <span class="dib pct24 tr"><span class="red">*</span>银行账号：</span>
@@ -100,7 +99,7 @@
                                     </span>
                                     <input type="text" class="pct80  f12" placeholder="请输入">
                                 </span>
-                                万<a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写“实缴资本”"></a>
+                                万<a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写“注册资本”"></a>
                             </div>
                             <div class="pct50 dib f14 mb10">
                                 <span class="dib pct24 tr"><span class="red vm">*</span>联系地址：</span>
@@ -126,17 +125,17 @@
                             </div>
                             <div class="f14 mb10">
                                 <span class="dib pct12 tr"><span class="red vm">*</span>注册时间：</span>
-                                <span class="ui-input pct25 h34" data-type="time"><input type="text" placeholder="选择时间" id="time2" readonly="" ></span>
-                                <a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写“实缴资本”"></a>
+                                <span class="ui-input pct25 h34" data-type="time"><input type="text" placeholder="选择时间" id="render-time" class="render-time" readonly="" ></span>
+                                <a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写公司成立的年限"></a>
                             </div>
                             <div class="f14 mb10">
                                 <span class="dib pct12 tr"><span class="red vm">*</span>选择现场评审人员：</span>
                                 <span class="radio vt">
-                                    <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>指定金牌商家</label>
-                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>由平台分配</label>
+                                    <label class="mr15"><i class="ui-radio goldIcon v-3 mr2 on" ><input type="radio" class="radio-opacity" name="radio" onclick="isSelect(this,0)"></i>指定金牌商家</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"  ><input type="radio" class="radio-opacity" name="radio" onclick="isSelect(this,1)"></i>由平台分配</label>
                                 </span>
                             </div>
-                            <div class="f14 mb10">
+                            <div class="f14 mb10" id="selectOperator"> 
                                 <span class="dib pct12 tr"></span>
                                 <span class="input-selSearch pct25">
                                     <input type="text" class="ui-input searchUp h34 pct100" placeholder="请选择" autocomplete="off">
@@ -150,11 +149,10 @@
                                     </div>
                                 </span>
                             </div>
-                            <div class=" mb10 f0">
+                            <div class=" mb10 f0 dn" id="wenxintishi">
                                 <span class="dib pct12 tr"></span>
                                 <span class="ui-tip pct88" data-type="normal">温馨提示：大侠，提交评审后乐刚管理人员将会及时去贵单位进行现场考察，请您耐心等待！</span>
                             </div>
-               
 
                      </div>
                      <!-- 基本信息 -->
@@ -448,9 +446,18 @@
 				// $("#spsc").show();
 				$(".upPhoto").hide();
 				$(".upVideo").show();
-			}
-		
-		}
+            }
+        }
+            //选择现场评审人员
+            function isSelect(obj,flag){
+                if(flag){
+                    $("#wenxintishi").show()
+                    $("#selectOperator").hide()
+                }else{
+                    $("#wenxintishi").hide()
+                    $("#selectOperator").show()
+                }
+            }
 	</script>
 </body>
 </html>

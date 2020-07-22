@@ -428,6 +428,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-button.w120{width: 120px;min-width: 120px}
 .ui-button.w90{width: 90px;min-width: 90px}
 .ui-button.w76{width: 76px;min-width: 76px}
+.ui-option.w60{width: 60px;min-width: 60px;}
 
 .offTab {background-color: #F9F9F9}
 .myarrow{width: 8px;height: 12px;display: inline-block;background:url(../images/lgIcon.png) -121px -219px;}
@@ -464,6 +465,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .banner-stock{background: url('../images/applySale/banner-stock.png') no-repeat;background-size: 100% 100%;}
 .banner-corp{background: url('../images/applySale/banner-corp.png') no-repeat;background-size: 100% 100%;}
 .banner-supplier{background: url('../images/applySale/banner-supplier.png') no-repeat;background-size: 100% 100%;}
+.banner-proc{background: url('../images/applySale/banner-proc.png') no-repeat;background-size: 100% 100%;}
+.banner-trans{background: url('../images/applySale/banner-trans.png') no-repeat;background-size: 100% 100%;}
 
 .apply-comp-bg{border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;-ms-border-radius: 6px;-o-border-radius: 6px;height: 200px;}
 .apply-comp-cont{padding: 5px 0 0 34px;font-size: 14px;line-height: 25px;}
@@ -477,6 +480,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .tip-icon{display: inline-block;background: url(http://resource.lgsteel.cn/gold2020/images/tip.png) no-repeat ;width: 150px;height: 90px;background-position: center 0;}
 .tip-text{flex: 1;}
 .stamp{width: 125px;height: 122px;border: 1px solid #F4F4F4;}
+.realTitle{color: #282828;}
 /* button */
 .ui-button[data-color="white"]{background: #fff;color: #1365e8;}
 .ui-button[data-color="white"]:hover {color: #2172F5;background-color: #F0F6FF;}

@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>评审中心-仓库评审信息录入</title>
+	<title>评审中心-承运商评审信息录入</title>
 </head>
 <body class="showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -24,7 +24,7 @@
 		<!-- topBar end -->
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">仓库评审信息录入</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">承运商评审信息录入</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius">
 				<div class="pt20 pr30 pl30 pb30">
@@ -36,6 +36,18 @@
                     </div>
                      <div class="mt20">
                             <div class=" mb10">
+                                <span class="dib pct12 tr"><span class="red vm">*</span>评审类型：</span>
+                                <span class="single f0">
+                                    <input type="hidden">
+                                    <button type="button" class="ui-option h34 on mr10">我司代运</button>
+                                    <button type="button" class="ui-option h34 mr10">自运</button>
+                                </span>
+                            </div>
+                            <div class=" mb10">
+                                <span class="dib pct12 tr"><span class="red vm">*</span>公司名称：</span>
+                                <input type="text" class="ui-input pct25 h34" value="阿里巴巴不差钢投资集团" disabled>
+                            </div>
+                            <div class=" mb10">
                                 <span class="dib pct12 tr"><span class="red vm">*</span>企业性质：</span>
                                 <span class="single f0">
                                     <input type="hidden">
@@ -44,10 +56,6 @@
                                     <button type="button" class="ui-option h34 mr10">合资</button>
                                     <button type="button" class="ui-option h34">外资</button>
                                 </span>
-                            </div>
-                            <div class=" mb10">
-                                <span class="dib pct12 tr">公司名称：</span>
-                                <input type="text" class="ui-input pct25 h34" value="阿里巴巴不差钢投资集团" disabled>
                             </div>
                             <div class="mb10">
                                 <span class="dib pct12 tr">联系地址：</span>
@@ -67,7 +75,6 @@
                                 <span class="dib pct12 tr"><span class="red">*</span>开户账号：</span>
                                 <input type="text" class="ui-input pct25 h34" value="中国工商银行南京新街口支行" disabled>
                             </div>
-                          
                             <div class="pct50 dib f14 mb10">
                                 <span class="dib pct24 tr"><span class="red">*</span>银行账号：</span>
                                 <input type="text" class="ui-input pct50 h34" value="7883939393303030" disabled>
@@ -138,14 +145,8 @@
                     <div class="mt10 stockList">
                             <div class="stockInfo f0 mt20">
                                 <div class="l pct5  stockInfo-left">
-                                    <div class="add-stock">
-                                        <a class="ui-icon-add vm mb5" href="##" onclick="addStockInfo(this)"></a>
-                                        <a href="javascript:void(0)" class="db f12 g80">增加</a>
-                                    </div>
-                                    <div class="del-stock dn mt50">
-                                        <a class="ui-icon-del vm mb5" href="##" onclick="delStockInfo(this)"></a>
-                                        <a href="javascript:void(0)" class="db f12 g80">删除</a>
-                                    </div>
+                                    <a class="ui-icon-add vm mb5" href="##" onclick="addStockInfo(this)"></a>
+                                    <a href="javascript:void(0)" class="db f12" >添加</a>
                                 </div>
                                 <div class="l pct95  pb10 pl25 pt30 clearfix stockInfo-right ">
                                     <div class="mb10 f14">
@@ -261,7 +262,7 @@
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
-			$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(4).addClass("on")  //首页选中;
+			$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(6).addClass("on")  //首页选中;
 			$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
 
 		})
@@ -330,16 +331,10 @@
 			}
 			$(obj).parent().find("a").removeClass("on");
 			$(obj).addClass("on");
-        }
-        // 添加仓库
+		}
          function addStockInfo(obj){
              var cloneBox = $(obj).parents(".stockInfo").clone(true)
-             cloneBox.find(".del-stock").show()
              $(obj).parents('.stockList').append(cloneBox);
-         }
-        //  删除仓库
-         function delStockInfo(obj){
-              $(obj).parents(".stockInfo").remove()
          }
 	</script>
 </body>
