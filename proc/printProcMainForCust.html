@@ -1,0 +1,141 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+	<title>加工单-我的乐刚</title>
+</head>
+<body class="buyer showTip">
+	<script type="text/javascript" src="../js/leftBar.js"></script> 
+	<!-- leftbar end -->
+
+
+	<div class="rightBar">
+		<script type="text/javascript" src="../js/topBar.js"></script> 
+		<!-- topBar end -->
+
+		<div class="mainCont ">
+			<div class="ui-tab3">
+				<a href="printWareHouseinLineForCust.html" class="ui-tab3-list rel "><span class="ui-tab3-text">入库单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="printProcMainForCust.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="printProcWeightMemoForCust.html" class="ui-tab3-list rel "><span class="ui-tab3-text">出库码单</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content unradius ">	
+				<div class="p20 f12">
+					<div class="cl lh24">
+						<span class="vt dib">加工仓库：</span>
+						<span class="dib  single pct90">
+                  			<a class="ui-option mr5 tc" href="javscript:void(0)">华冶B区</a>
+                  			<a class="ui-option mr5 tc " href="javscript:void(0)">华冶B区</a>
+                  			<a class="ui-option mr5 tc" href="javscript:void(0)">华冶B区</a>
+                  			<a class="ui-option mr5 tc " href="javscript:void(0)">华冶B区</a>
+						</span>
+					</div>
+					<div class="mt10">
+						业务日期：
+						<span class="ui-input  pct16 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="indateStart" readonly="" ></span>
+                        重量范围：
+                        <span class="ui-input  pct16 mr20" data-type="section">
+								<input type="text" placeholder="重量">~
+								<input type="text" placeholder="重量">
+						</span> 
+						<button type="button" class="ui-button mr10" type="button">查询</button>                                        
+                    </div>
+
+
+					<!-- 加工商 search  end -->
+
+					<table class="ui-table f12 mt40 tc" width="100%" >
+						<thead>
+							<tr class="">
+								<th width="12%" >业务日期</th>
+								<th width="12%">加工单号</th>
+								<th width="10%" >加工方式</th>
+								<th width="10%" >加工单价</th>
+								<th width="10%">投料重量</th>
+								<th width="10%">业务金额</th>
+								<th width="10%">结算方式</th>
+								<th width="10%">交货日期</th>
+								<th width="10%">操作</th>								
+							</tr>
+						</thead>
+						<tbody class="ui-thover">
+							<tr>
+								<td>2020-07-17 10:02:15</td>
+								<td>PRO20200717528963</td>
+								<td>纵剪</td>
+								<td>100.00</td>
+								<td>1.00</td>
+								<td>100.00</td>
+								<td>现结</td>
+								<td>2020-08-06</td>
+								<td><a href="javascript:void(0)">打印</a></td>
+							</tr>
+						</tbody>
+					</table>
+					<script type="text/javascript" src="../js/pagelist.js"></script>
+
+				</div>			
+				
+
+
+			</div><!-- ui-content end -->
+
+
+
+		</div>
+		<!-- mainCont end -->
+
+	</div>
+	<!-- rightBar end-->
+
+
+
+
+	
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script>
+		$(function(){
+			$(".menu").find(".proc").addClass("open").find(".smlist").eq(6).addClass("on")  //左侧菜单选中静态页面采用
+			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
+	
+
+
+			$(".single").find(".ui-option").on("click",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			})
+		
+
+	
+			//时间范围
+			laydate.render({
+				elem: '#indateStart'
+				, range: true
+				, theme: 'lgblue'
+				,trigger: 'click'
+				//,value:'2020-06-04 - 2020-06-08'
+
+				, change: function (value, date, endDate) {
+					console.log(value); //得到日期生成的值，如：2017-08-18
+					console.log(date.year); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+					console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+				}
+			});
+
+
+
+		})
+
+
+	</script>
+</body>
+	
+</html>

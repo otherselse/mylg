@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>订单售后-我的乐刚</title>
+	<title>售后记录-订单售后</title>
 </head>
 <body class="buyer showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -22,8 +22,8 @@
 
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="afterProcess.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">售后申请</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="afterProcessRecode.html" class="ui-tab3-list rel "><span class="ui-tab3-text">售后记录</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="afterProcess.html" class="ui-tab3-list rel "><span class="ui-tab3-text">售后申请</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="afterProcessRecode.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">售后记录</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius ">				
 				<div class="p20 f12">
@@ -58,8 +58,15 @@
 				<div class="cl">
 					订单号：
 					<input type="text" value="" class="ui-input  pct15 mr20" placeholder="请输入" autocomplete="off">
-                    交货日期：
-					<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" lay-key="1"></span>
+                    申请日期：
+					<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly=""></span>
+					审核状态：
+					<span class="radio  dib mr20">
+						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>全部</label>
+						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>审核中</label>
+						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio"></i>审核通过</label>
+						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio"></i>审核未通过</label>
+					</span>
 					
 					<button type="button" class="ui-button  " type="button">查询</button>
 				</div>
@@ -71,24 +78,101 @@
 				<table class="ui-table tc f12 mt30 checkbox" width="100%">
 						<thead>
 							<tr>
-								<th width="12%" class="tl">
-									<div class="pl10">单据号</div>
-								</th>
+								<th width="12%">订单号</th>
+								<th width="10%">申请日期</th>
 								<th width="10%">加工仓库</th>
-								<th width="10%">结算重量</th>
-								<th width="10%">业务金额</th>
-								<th width="10%">应付款日期</th>
-								<th width="10%">操作</th>
+								<th width="10%">损失金额</th>
+								<th width="10%">售后类型</th>
+								<th width="10%">质量异议处理协议</th>
+								<th width="10%">审核状态</th>
+								<th width="10%">售后明细</th>
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
-								<td class="tl"><div class="pl10"><i class="mon-bal m_w mr5 tiptop" title="<i class='mon-bal m_w mr5 mb5'>现</i>现结<br/><i class='mon-bal mr5 mb5'>月</i>月结<br/><i class='mon-bal mr5 m_f mb5'>清</i>清仓结算">现</i>PRO20200715829478</div></td>
-								<td>华冶B区</td>								
-								<td>11.000</td>
-								<td>12.00</td>
-								<td>2020-06-01</td>
-								<td><a href="applyAfterProcessOfWareHouseOutMain.html">申请售后</a></td>
+								<td>PRO20200224282374</td>
+								<td>2020-03-19 17:31:13</td>								
+								<td>华冶B区</td>
+								<td>￥123.00</td>
+								<td>优惠券抵扣</td>
+								<td><a href="##">SHSQ20200319001</a></td>
+								<td>审核通过</td>
+								<td><a href="javascript:void(0)" onclick="showDetailMore(this)">查看</a></td>
+							</tr>
+							<tr class="hideTr dn">
+								<td colspan="8">
+									<table class="ui-table tc f12 auto" width="98%">
+				                        <thead>
+				                            <tr>
+				                                <th width="5%">序号</th>				                                
+				                                <th width="8%">资源号</th>
+				                                <th width="8%">品名</th>
+				                                <th width="8%">牌号</th>
+				                                <th width="8%">钢厂</th>
+				                                <th width="8%">规格</th>
+				                                <th width="8%">数量</th> 
+				                                <th width="8%">重量</th>
+				                                                                      
+				                            </tr>
+				                        </thead>
+				                        <tbody class="ui-thover">
+				                            <tr>
+				                                <td>1</td>				                                
+				                                <td>dgda342442-3</td>
+				                                <td>热轧卷板</td>
+				                                <td>SECDPC5</td>
+				                                <td>宝钢</td>
+				                                <td>10.000*800*C</td>
+				                                <td>1</td>
+				                                <td>12.000</td>
+				                            </tr>
+				                        </tbody>
+				                    </table>
+									<div class="g28 b f14 auto pct98 tl pt20">其它信息</div>
+				                    <table class="ui-table f12  mt10 auto" width="98%">
+										<tbody><tr>
+											<td width="10%" class="bgfa"><span class="pl15 g80">售后原因：</span></td>
+											<td width="90%">
+												<span class="pl15">
+												尺寸加工错误、毛刺公差不符
+											</span>
+											</td>
+										</tr>
+										<tr>
+											<td class="bgfa"><span class="pl15 g80">售后原因：</span></td>
+											<td>
+												<span class="pl15">
+													测试超时审批扣分
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<td class="bgfa"><span class="pl15 g80">问题图片：</span></td>
+											<td>
+												<span class="pl15 g28"><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></span>
+											</td>
+										</tr>
+										<tr>
+											<td class="bgfa"><span class="pl15 g80">异议协议：</span></td>
+											<td>
+												<span class="pl15 g28"><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></span>
+											</td>
+										</tr>
+										<tr>
+											<td class="bgfa"><span class="pl15 g80">审核结果：</span></td>
+											<td>
+												<span class="pl15">
+													---
+												</span>
+											</td>
+										</tr>
+										
+									</tbody>
+								</table>
+
+
+									
+								</td>
 							</tr>							
 						</tbody>
 					</table>
@@ -168,8 +252,14 @@
 		}
 
 
-		function showMore(obj){
-			$(obj).parents("tr").next("tr").toggle();
+		function showDetailMore(obj){
+			if($(obj).parents("tr").next("tr").css("display")=="none"){
+				$(obj).parents("tr").next("tr").show();
+				$(obj).text("收起");
+			}else{
+				$(obj).parents("tr").next("tr").hide();
+				$(obj).text("查看");
+			}
 		}
 
 
