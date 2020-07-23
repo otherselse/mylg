@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>出库码单-我的乐刚</title>
+	<title>签约-我的乐刚</title>
 </head>
 <body class="buyer showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -22,60 +22,53 @@
 
 		<div class="mainCont ">
 			<div class="ui-tab3">
-				<a href="printWareHouseinLineForCust.html" class="ui-tab3-list rel "><span class="ui-tab3-text">入库单</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="printProcMainForCust.html" class="ui-tab3-list rel "><span class="ui-tab3-text">加工单</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="printProcWeightMemoForCust.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">出库码单</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="createSignInfo.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">申请签约</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="searchSignInfo.html" class="ui-tab3-list rel "><span class="ui-tab3-text">审批中</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="searchSignInfo.html" class="ui-tab3-list rel "><span class="ui-tab3-text">生效中</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="searchSignInfo.html" class="ui-tab3-list rel "><span class="ui-tab3-text">已过期</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="searchSignInfo.html" class="ui-tab3-list rel "><span class="ui-tab3-text">未通过</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius ">	
 				<div class="p20 f12">
-					<div class="cl lh24">
-						<span class="vt dib mt5">加工仓库：</span>
-						<span class="dib  single pct90">
-                  			<a class="ui-option mr5 tc" href="javscript:void(0)">华冶B区</a>
-                  			<a class="ui-option mr5 tc " href="javscript:void(0)">华冶B区</a>
-                  			<a class="ui-option mr5 tc" href="javscript:void(0)">华冶B区</a>
-                  			<a class="ui-option mr5 tc " href="javscript:void(0)">华冶B区</a>
-						</span>
-					</div>
-					<div class="mt10">
-						业务日期：
-						<span class="ui-input  pct16 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="indateStart" readonly="" ></span>
-                        出库单号：
-                        <input type="text" class="ui-input  pct16 mr20" placeholder="请输入" autocomplete="off"> 
-						<button type="button" class="ui-button " type="button">查询</button>                                        
-                    </div>
-
 
 					<!-- 加工商 search  end -->
 
-					<table class="ui-table f12 mt40 " width="100%" >
+					<table class="ui-table f12 mt40 checkbox" width="100%" >
 						<thead>
 							<tr class="tl">
-								<th width="12%" ><div class="pl10">业务日期/提单号</div></th>
-								<th width="8%"><div class="pl10">提货仓库</div></th>
-								<th width="8%" ><div class="pl10">运输要求</div></th>
-								<th width="12%" ><div class="pl10">配单时间/码单号</div></th>
-								<th width="8%"><div class="pl10">出库数量/重量</div></th>
-								<th width="8%"><div class="pl10">提货车号</div></th>
-								<th width="16%"><div class="pl10">提货人/手机</div></th>
-								<th width="8%" class="tc">操作</th>								
+								<th width="12%" ><div class="pl10">入库日期/入库单号</div></th>
+								<th width="12%"><div class="pl10">品名/捆包号</div></th>
+								<th width="12%" ><div class="pl10">规格</div></th>
+								<th width="8%" ><div class="pl10">钢厂/牌号</div></th>
+								<th width="12%"><div class="pl10">入库数量/重量</div></th>
+								<th width="10%" class="tc">车船号</th>
+								<th width="10%" class="tc">炉号</th>
+								<th width="10%" class="tc">资源号</th>								
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
-								<td><div class="pl10">2017-11-21<br>PRO20200715829478</div></td>
-								<td><div class="pl10">华冶B区</div></td>
-								<td><div class="pl10">自运</div></td>
-								<td><div class="pl10">2020-07-21 10:35:32<br>PRO20200715829478</div></td>
-								<td><div class="pl10">2/2.000</div></td>
-								<td><div class="pl10">沪A88888</div></td>
-								<td><div class="pl10">贝壳<br>13906294036,12211236554</div></td>
-								<td class="tc"><a href="javascript:void(0)">打印</a></td>
+								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
+								<td><div class="pl10">低合金卷板<br/>fhueiwh1</div></td>
+								<td><div class="pl10">6.000*1500*C</div></td>
+								<td><div class="pl10">联丰<br/>050XLF</div></td>
+								<td><div class="pl10">1.0/ 1.000</div></td>
+								<td class="tc">--</td>
+								<td class="tc">--</td>
+								<td class="tc">--</td>
+
 							</tr>
 						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="9" height="45" class="bgfa tc">
+								数量合计：<span class="red mr30">333.096</span>
+									重量合计：<span class="red">333.096</span>
+								</td>
+							</tr>
+						</tfoot>
 					</table>
 					<script type="text/javascript" src="../js/pagelist.js"></script>
-
 				</div>			
 				
 
@@ -99,7 +92,7 @@
 	<script type="text/javascript" src="../js/mylg.js"></script>
 	<script>
 		$(function(){
-			$(".menu").find(".proc").addClass("open").find(".smlist").eq(6).addClass("on")  //左侧菜单选中静态页面采用
+			$(".menu").find(".proc").addClass("open").find(".smlist").eq(8).addClass("on")  //左侧菜单选中静态页面采用
 			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
 	
 
@@ -109,7 +102,6 @@
 			})
 		
 
-	
 			//时间范围
 			laydate.render({
 				elem: '#indateStart'

@@ -1,0 +1,303 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+	<title>已开票明细-申请开票</title>
+</head>
+<body class="buyer showTip">
+	<script type="text/javascript" src="../js/leftBar.js"></script> 
+	<!-- leftbar end -->
+
+
+	<div class="rightBar">
+		<script type="text/javascript" src="../js/topBar.js"></script> 
+		<!-- topBar end -->
+
+		<div class="mainCont ">
+			<div class="ui-tab3">
+				<a href="searchAllPaymentForCust.html" class="ui-tab3-list rel "><span class="ui-tab3-text">待开票明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="billedDetailForCust.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">已开票明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content unradius ">				
+				<div class="pt20 f12 pl20 pr20 pb30">
+					<div class="cl  lh24 mt10">
+						<span class="vt dib">&emsp;加工商：</span>
+						<div class="dib selectProcName gd8">
+                            <a href="javscript:void(0)">全部</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">上海加工运输有限责任公司</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">上海加工运输有限责任公司</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">上海加工运输有限责任公司</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                            <span class="pr5 pl5 ">|</span>
+                        </div>
+                        <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
+					</div>
+					<div class="cl mt5">
+						开票类型：
+						<span class="single  mr20">
+                            <input type="hidden" value="">
+                            <button type="button" class="ui-option mr5" type="button">加工发票</button>
+                            <button type="button" class="ui-option mr5" type="button">仓储发票</button>
+                            <button type="button" class="ui-option mr5" type="button">废料发票</button>
+                        </span>
+                        开票状态：
+                        <span class="radio mr20">
+                        	<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>全部</label>
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>开票中</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>已开票</label>
+						</span>
+						申请日期：
+					<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly=""></span>
+					发票号：
+					<input type="text" value="" class="ui-input  pct10 mr20" placeholder="请输入" autocomplete="off">
+					<button type="button" class="ui-button  " type="button">查询</button>
+				</div>
+
+				<table class="ui-table tc f12 mt30" width="100%">
+						<thead>
+							<tr>
+								<th width="12%" class="tl"><div class="pl10">发票抬头</div></th>
+								<th width="10%">申请日期</th>
+								<th width="8%">发票类型</th>
+								<th width="10%">开票金额</th>
+								<th width="10%">发票号码</th>
+								<th width="8%">开票状态</th>
+								<th width="8%">开票资料</th>
+								<th width="8%">取票方式</th>
+								<th width="10%">开票明细</th>
+							</tr>
+						</thead>
+						<tbody class="ui-thover">
+							<tr>
+								<td class="tl"><div class="pl10">阿里巴巴钢铁投资集团</div></td>
+								<td>2020-06-10 20:35:25</td>
+								<td>仓储发票</td>								
+								<td>2,187.30</td>
+								<td>--</td>
+								<td><span class="ui-icon-circles">开票中</span></td>
+								<td><a href="javascript:void(0)" onclick="showtrMoreTable(this,'s_invoice')">查看</a></td>
+								<td><a href="javascript:void(0)" onclick="showtrMoreTable(this,'s_post')"  datakd="1">快递到家</a></td>
+								<td><a href="billedDetailForFee.html">查看</a></td>
+							</tr>
+							<tr class="hideTr dn">
+								<td colspan="9">
+									<table class="ui-table tl f12 auto s_invoice" width="98%">
+                                        <tbody>
+                                            <tr class="indent10">
+                                                <td width="15%" class="bgfa">发票要求：</td>
+                                                <td colspan="3" width="85%">
+                                                    <span class="checkbox">
+                                                        <label class="mr15"><i class="ui-checkbox goldIcon v-3 mr2 on "><input type="checkbox" class="checkbox-opacity" name="checkbox" disabled=""></i>显示单价</label>
+                                                        <label class="mr15"><i class="ui-checkbox goldIcon v-3 mr2 on"><input type="checkbox" class="checkbox-opacity" name="checkbox" disabled=""></i>显示重量</label>
+                                                        <label><i class="ui-checkbox goldIcon v-3 mr2 disabled"><input type="checkbox" class="checkbox-opacity" name="checkbox" disabled=""></i>显示计量单位 </label>
+                                                    </span>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="indent10">
+                                                <td class="bgfa">发票编号：</td>
+                                                <td width="35%" >
+                                                    123123
+                                                </td>
+                                                <td class="bgfa" width="15%" >开票日期：</td>
+                                                <td width="35%">2019-08-28</td>
+                                            </tr>
+                                            <tr class="indent10">
+                                                <td class="bgfa">购货单位名称：</td>
+                                                <td >上海加工运输有限责任公司</td>
+                                                <td class="bgfa">购货单位地址电话： </td>
+                                                <td >上海市卢湾区1</td>
+                                            </tr>
+                                            <tr class="indent10">
+                                                <td class="bgfa">购货单位开户银行及账号：</td>
+                                                <td >上海建设银行-</td>
+                                                <td class="bgfa">购货单位税务登记号： </td>
+                                                <td >123212340000121111</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="ui-table tl f12 auto s_post" width="98%">
+                                    	<caption class="f14 g28 tl  mb10 b ">快递信息</caption>
+                                        <tbody>
+                                            <tr class="indent10">
+                                                <td class="bgfa">快递单号：</td>
+                                                <td >
+                                                    123123
+                                                </td>
+                                                <td class="bgfa">快递公司：</td>
+                                                <td>---</td>
+                                            </tr>
+                                            <tr class="indent10">
+                                                <td class="bgfa">收件单位：</td>
+                                                <td >
+                                                    上海精锐捷实达
+                                                </td>
+                                                <td class="bgfa">收 件 人：</td>
+                                                <td>---</td>
+                                            </tr>
+                                            <tr class="indent10">
+                                                <td class="bgfa">收件地址：</td>
+                                                <td >
+                                                    海-上海市-宝山区富锦路1234富锦路123
+                                                </td>
+                                                <td class="bgfa">手机号码：</td>
+                                                <td>143 5235 2646</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+								</td>
+							</tr>
+							<tr>
+								<td class="tl"><div class="pl10">阿里巴巴钢铁投资集团</div></td>
+								<td>2020-06-10 20:35:25</td>
+								<td>仓储发票</td>								
+								<td>2,187.30</td>
+								<td>--</td>
+								<td><span class="ui-icon-circles" type="green">已开票</span></td>
+								<td><a href="javascript:void(0)" onclick="showtrMoreTable(this,'s_invoice')">查看</a></td>
+								<td><a href="javascript:void(0)" onclick="showtrMoreTable(this,'s_post')"  datakd="1">快递到家</a></td>
+								<td><a href="billedDetailForFee.html">查看</a></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr height="40" class="bgfa tc">
+								<td colspan="9" class="tc">
+									合计： 开票金额<span class="red">1,876,050.72</span> 元
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+					<!-- 表格end -->
+
+					<script type="text/javascript" src="../js/pagelist.js"></script>				
+					
+					
+
+				</div>
+
+
+			</div><!-- ui-content end -->
+
+
+
+		</div>
+		<!-- mainCont end -->
+
+	</div>
+	<!-- rightBar end-->
+
+
+
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script>
+		$(function(){
+			$(".menu").find(".proc").addClass("open").find(".smlist").eq(5).addClass("on")  //左侧菜单选中静态页面采用
+			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
+
+			//selectProcName 展开收起 以及是否显示展开
+			if($(".selectProcName").height()>24){
+				$(".selectProcName").height(24);
+				$("#jgs_scroll").show();
+			}else{
+				$("#jgs_scroll").hide();
+			}
+
+			$(".selectProcName").find("a").on("click",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			})
+
+
+			//时间范围
+			laydate.render({
+				elem: '#dateStart'
+				, range: true
+				, theme: 'lgblue'
+				,trigger: 'click'
+				//,value:'2020-06-04 - 2020-06-08'
+
+				, change: function (value, date, endDate) {
+					console.log(value); //得到日期生成的值，如：2017-08-18
+					console.log(date.year); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+					console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+				}
+			});
+
+
+			
+
+
+			
+		})
+
+
+
+		function setOpen(obj) {
+			if($(".selectProcName").height()>24){
+				$(".selectProcName").height(24);
+				$(obj).text("展开");
+			}else{
+				$(".selectProcName").height("auto");
+				$(obj).text("收起");
+			}
+		}
+
+
+	function showtrMoreTable(obj,str,mainID,procLineIdStr){
+	    var myobj=$(obj).parents("tr").next("tr.hideTr");
+	    var mytext=$(obj).attr('dataKd');
+	    if(myobj.css("display")==="none"){
+	        $(obj).text('收起');
+	        myobj.show();
+	        myobj.find(".ui-table").hide();
+	        myobj.find("."+str).show();
+	        // if(arguments.length>2){
+	        //     showtrMore(obj,str,mainID,procLineIdStr)
+	        // }
+	    }else{
+	        if(mytext=="1"){
+	            $(obj).text('快递到家');
+	        }else{
+	            $(obj).text('查看');
+	        }
+	        if(myobj.find("."+str).css("display")==="none"){
+	            myobj.find(".ui-table").hide();
+	            myobj.find("."+str).show();
+	            // if(arguments.length>2){
+	            //     showtrMore(obj,str,mainID,procLineIdStr)
+	            // }
+	        }else{
+	            myobj.hide();
+	        }
+
+	    }
+
+	}
+
+	</script>
+</body>
+	
+</html>

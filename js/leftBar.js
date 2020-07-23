@@ -33,7 +33,7 @@
 		+'			<a class="smlist" href="../proc/searchAllPaymentForCust.html">申请开票</a>'
 		+'			<a class="smlist" href="../proc/printWareHouseinLineForCust.html">单据打印</a>'
 		+'			<a class="smlist" href="../proc/myOutList.html">出入库查询</a>'
-		+'			<a class="smlist" href="">签约</a>'
+		+'			<a class="smlist" href="../proc/createSignInfo.html">签约</a>'
 		+'			<a class="smlist" href="../proc/afterProcess.html">订单售后</a>'
 		+'		</div>'
 		+'	</div>'
@@ -49,7 +49,7 @@
 		+'			<a class="smlist" href="../toApplySale/toCorpInfoForTrans.html">承运商评审</a>'
 		+'		</div>'
 		+'	</div>'
-		+'	<a class="menulist myaccount" href="../base/base.html"><i class="lgIcon imenu-info vm mr5"></i>账户信息</a><span class="dib mb40"></span>';
+		+'	<a class="menulist myaccount" href="../base/base.html"><i class="lgIcon imenu-info vm mr5"></i>账户信息</a><span class="dib h100"></span>';
 
 
 	var str1='<div class="leftBar">'
