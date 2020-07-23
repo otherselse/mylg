@@ -90,37 +90,33 @@
 				<table class="ui-table tc f12 mt30 checkbox" width="100%">
 						<thead>
 							<tr>
-								<th width="8%" class="tl"><div class="pl10">单据号</div></th>
-								<th width="6%">业务日期</th>
-								<th width="6%">费用名称</th>
-								<th width="6%">结算方式</th>
-								<th width="6%">单价/重量</th>
-								<th width="6%">业务余额</th>
-								<th width="6%">实付金额</th>
-								<th width="6%">余料款支付</th>
-								<th width="6%">优惠券</th>
-								<th width="10%">应付款日期/超期天数</th>
-								<th width="10%">结算单位</th>
-								<th width="5%">操作</th>
+								<th width="5%">选择</th>
+								<th width="12%" class="tl"><div class="pl10">货主单位</div></th>
+								<th width="12%">订单号</th>
+								<th width="10%">业务日期</th>
+								<th width="10%">费用名称</th>
+								<th width="8%">单价</th>
+								<th width="8%">重量</th>
+								<th width="8%">业务余额</th>
+								<th width="10%">实付金额</th>
+								<th width="8%">操作</th>
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
-								<td class="tl"><div class="pl10">PRO20200715829478</div></td>
+								<td><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
+								<td class="tl"><div class="pl10">阿里巴巴钢铁投资集团</div></td>
+								<td ><i class="mon-bal m_w mr5 tiptop"  title="<i class='mon-bal m_w mr5 mb5'>现</i>现结<br/><i class='mon-bal mr5 mb5'>月</i>月结<br/><i class='mon-bal mr5 m_f mb5'>清</i>清仓结算" >现</i>PRO20200715829478</td>
 								<td>2020-06-01</td>								
 								<td>加工费</td>
-								<td>现结</td>
-								<td>0.09/5454.000</td>
-								<td>11.00</td>
-								<td>11.00</td>
-								<td>12.00</td>
-								<td>12.00</td>
-								<td>2020-06-01<br/>0</td>
-								<td>吞吞吐吐公司</td>
+								<td>75.00</td>
+								<td>5454.000</td>
+								<td>5454.00</td>
+								<td>57789.00</td>
 								<td><a href="javascript:void(0)" onclick="showMore(this)">查看</a></td>
 							</tr>
 							<tr class="hideTr dn">
-								<td colspan="12">
+								<td colspan="10">
 									<table class="ui-table tc f12 auto" width="98%">
 				                        <thead>
 				                            <tr>
@@ -158,19 +154,43 @@
 						</tbody>
 						<tfoot>
 							<tr height="40" class="bgfa tc">
-								<td colspan="12" >
-									已申请页面合计： 业务金额：<span class="red">11569.85</span>元&emsp;&emsp; 实付金额：<span class="red">11569.85</span>元&emsp;优惠券：<span class="red">0.00</span>元
+								<td colspan="10" class="tl">
+									<div class="ovh pt10 pb10">
+										<div class="l pct5 tc pt5">
+											<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
+										</div>
+										<div class="l pct20 pt5">已选<span class="red">1</span>项，申请开票金额：<span class="red">11569.85</span>元</div>				
+										<div class="l pct60 tc">
+											<script type="text/javascript" src="../js/pagelist.js"></script>
+										</div>
+									</div>
 								</td>
 							</tr>
 						</tfoot>
 					</table>
-					<script type="text/javascript" src="../js/pagelist.js"></script>
+					<!-- 表格end -->
+
+
+					<div class="mt30"> 核对结果：
+                        <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>不显示单价
+                        <i class="ui-checkbox goldIcon vm mr5 ml10"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>不显示重量
+                        <i class="ui-checkbox goldIcon vm mr5 ml10"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>不显示计量单位
+                    </div>
+					<div class="mt15"> 发票名称：
+                        <span class="single">
+                            <input type="hidden">
+                            <button type="button" class="ui-option mr5" type="button">综合加工费</button>
+                            <button type="button" class="ui-option " type="button">仓储发票</button>
+                        </span>
+                    </div>
+					
 					
 
 				</div>
 
-
-
+				<div class="tc mt20 bte pt30 pb30">
+                    <button class="ui-button" type="button" data-type="big" onclick="window.location='clearingBillByCorpName.html'">下一步</button>
+                </div>
 			</div><!-- ui-content end -->
 
 
@@ -182,11 +202,6 @@
 	<!-- rightBar end-->
 
 
-	<div class="addCarNum dn">
-		<div class="ui-input mb10" data-type="price"><input type="text" value="" placeholder="追加车号"></div>
-		<button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick()">保存</button>
-		<button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
-	</div>
 
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -245,14 +260,14 @@
 
 
 		function showMore(obj){
-			$(obj).parents("tr").next("tr").toggle();
+			if($(obj).parents("tr").next("tr").css("display")=="none"){
+				$(obj).parents("tr").next("tr").show();
+				$(obj).text("收起");
+			}else{
+				$(obj).parents("tr").next("tr").hide();
+				$(obj).text("查看");
+			}
 		}
-
-
-
-
-
-
 
 	</script>
 </body>
