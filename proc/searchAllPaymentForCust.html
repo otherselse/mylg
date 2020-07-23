@@ -92,12 +92,12 @@
 							<tr>
 								<th width="5%">选择</th>
 								<th width="12%" class="tl"><div class="pl10">货主单位</div></th>
-								<th width="10%">订单号</th>
+								<th width="12%">订单号</th>
 								<th width="10%">业务日期</th>
 								<th width="10%">费用名称</th>
-								<th width="10%">单价</th>
-								<th width="10%">重量</th>
-								<th width="10%">业务余额</th>
+								<th width="8%">单价</th>
+								<th width="8%">重量</th>
+								<th width="8%">业务余额</th>
 								<th width="10%">实付金额</th>
 								<th width="8%">操作</th>
 							</tr>
@@ -111,7 +111,7 @@
 								<td>加工费</td>
 								<td>75.00</td>
 								<td>5454.000</td>
-								<td>抄码</td>
+								<td>5454.00</td>
 								<td>57789.00</td>
 								<td><a href="javascript:void(0)" onclick="showMore(this)">查看</a></td>
 							</tr>
@@ -154,21 +154,43 @@
 						</tbody>
 						<tfoot>
 							<tr height="40" class="bgfa tc">
-								<td colspan="10" >
-
-									<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>
-									已申请页面合计： 业务金额：<span class="red">11569.85</span>元&emsp;&emsp; 实付金额：<span class="red">11569.85</span>元&emsp;优惠券：<span class="red">0.00</span>元
+								<td colspan="10" class="tl">
+									<div class="ovh pt10 pb10">
+										<div class="l pct5 tc pt5">
+											<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
+										</div>
+										<div class="l pct20 pt5">已选<span class="red">1</span>项，申请开票金额：<span class="red">11569.85</span>元</div>				
+										<div class="l pct60 tc">
+											<script type="text/javascript" src="../js/pagelist.js"></script>
+										</div>
+									</div>
 								</td>
 							</tr>
 						</tfoot>
 					</table>
-					<script type="text/javascript" src="../js/pagelist.js"></script>
+					<!-- 表格end -->
+
+
+					<div class="mt30"> 核对结果：
+                        <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>不显示单价
+                        <i class="ui-checkbox goldIcon vm mr5 ml10"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>不显示重量
+                        <i class="ui-checkbox goldIcon vm mr5 ml10"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>不显示计量单位
+                    </div>
+					<div class="mt15"> 发票名称：
+                        <span class="single">
+                            <input type="hidden">
+                            <button type="button" class="ui-option mr5" type="button">综合加工费</button>
+                            <button type="button" class="ui-option " type="button">仓储发票</button>
+                        </span>
+                    </div>
+					
 					
 
 				</div>
 
-
-
+				<div class="tc mt20 bte pt30 pb30">
+                    <button class="ui-button" type="button" data-type="big" onclick="window.location='clearingBillByCorpName.html'">下一步</button>
+                </div>
 			</div><!-- ui-content end -->
 
 
@@ -180,11 +202,6 @@
 	<!-- rightBar end-->
 
 
-	<div class="addCarNum dn">
-		<div class="ui-input mb10" data-type="price"><input type="text" value="" placeholder="追加车号"></div>
-		<button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick()">保存</button>
-		<button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
-	</div>
 
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -251,12 +268,6 @@
 				$(obj).text("查看");
 			}
 		}
-
-
-
-
-
-
 
 	</script>
 </body>

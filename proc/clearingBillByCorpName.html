@@ -1,0 +1,341 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+	<title>待开票明细-申请开票</title>
+</head>
+<body class="buyer showTip">
+	<script type="text/javascript" src="../js/leftBar.js"></script> 
+	<!-- leftbar end -->
+
+
+	<div class="rightBar">
+		<script type="text/javascript" src="../js/topBar.js"></script> 
+		<!-- topBar end -->
+
+		<div class="mainCont ">
+			<div class="ui-tab3">
+				<a href="searchAllPaymentForCust.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">待开票明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="billedDetailForCust.html" class="ui-tab3-list rel "><span class="ui-tab3-text">已开票明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content unradius ">				
+				<div class="p20 ">
+					<div class="cl mt10 g80 f12">
+						<span class="leftArrow poi mr5" onclick="prev()"></span> <b class="g28 mr10 f14">申请开票</b>
+						发票类型：<span class="g28">加工发票</span>
+						发票名称：<span class="g28">综合加工费</span>
+					</div>
+					<div class="clearingBill  f12 mt10">
+                        <span>申请开票金额：￥</span><span class="b f18">129345.22</span>
+                    </div>
+                    <div class="g28 b mt35">选择开票信息</div>
+                    <div class="invoiceMsg mt15 f0">
+                        <div class="l invoice pct25 pt10 bre f12">
+                            <div class="invoiceCorpMsg ">
+                                <div class="invoiceCorpMsg-item">
+                                    <i class="icon-check ml15 v-3 mr5">
+                                        <input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+                                    <span>阿里巴巴不差钢投资集团</span>
+                                    <span class="ui-label ml5  vb defaultInvoice" data-type="red">默认开票</span>
+                                </div>
+                                <div class="invoiceCorpMsg-item on">
+                                    <i class="icon-check ml15 v-3 mr5 on">
+                                        <input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+                                    <span>阿里巴巴不差钢投资集团</span>
+                                   
+                                </div>
+                                <div class="invoiceCorpMsg-item">
+                                    <i class="icon-check ml15 v-3 mr5">
+                                        <input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+                                    <span>阿里巴巴不差钢投资集团</span>
+                              
+                                </div>
+                                <div class="invoiceCorpMsg-item">
+                                    <i class="icon-check ml15 v-3 mr5">
+                                        <input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+                                    <span>阿里巴巴不差钢投资集团</span>
+                                
+                                </div>
+                            </div>
+                            <div class="f12 pl15 invoiceCorpMsg-item">
+                                <a href="javascript:void(0)" class="icon-add" onclick="addInvoice()">新增抬头</a>
+                            </div>
+                        </div>
+                        <div class="pct75  f0 l pt20 pl20 pr15 invoice ">
+                            <div class="clearfix">
+                                <div class="f12 l pct25">
+                                    <span class="gga">发票抬头</span> <br>
+                                    <span class="g28 mt5">阿里巴巴不差钢投资集团</span>
+                                </div>
+                                <div class="f12 l ml40 pct25">
+                                    <span class="gga">开户银行</span> <br>
+                                    <span class="g28 mt5">建设银行上海自贸区实验区分行</span>
+                                </div>
+                                <div class="f12 l ml40 pct25">
+                                    <span class="gga">注册电话</span> <br>
+                                    <span class="g28 mt5">13569779442</span>
+                                </div>
+                                <div class="r pct10 tr">
+                                    <a href="javascript:void(0)" class="f12" onclick="editInvoice()">修改</a>
+                                </div>
+                            </div>
+                            <div class="mt20 clearfix">
+                                <div class="f12 l  pct25 ">
+                                    <span class="gga">统一社会信用代码</span> <br>
+                                    <span class="g28 mt5">13845966600660444003X</span>
+                                </div>
+                                <div class="f12 l ml40 pct25 ">
+                                    <span class="gga">银行账户</span> <br>
+                                    <span class="g28 mt5">4559 2345 3345 2245 345</span>
+                                </div>
+                                <div class="f12 l ml40 pct25 ">
+                                    <span class="gga">注册地址</span> <br>
+                                    <span class="g28 mt5">上海市浦东新区张衡路毕升路688号上海市浦东新区张衡路毕升路688号</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- invoiceMsg end -->
+
+                    <div class="mt30 g28 b">收货信息</div>
+                    <div class="mt15 f12">取票方式：
+	                    <span class="single">
+	                        <button type="button" class="ui-option mr5 on" onclick="outType(0)">快递到家</button>
+	                        <button type="button" class="ui-option" onclick="outType(1)">上门取件</button>
+	                    </span>
+	                </div>
+	                <div class="mt15 f12">收货地址：</div>
+	                <div class="addressBook mt10 h110" style="display: block;">
+                        <div class="dib pct100 addressDBook f12 ">
+                            <div class="orderaddr vt active h100">
+                                <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
+                                <span class="dib pct70">
+                                    <span class="dib addrInfo">上海宝山区月浦镇锦乐路288号上海宝山区月浦镇锦乐路288号</span>
+                                    <span class="dib ell pct100 lh16 g80 mt10">
+                                        收件人：&emsp;张三张三张三张三张三张三张三张三张三张三张三张三<br>
+                                        联系电话：18945866993
+                                    </span>
+                                </span>
+                                <span class="dib pct28 vt tr">
+                                    <span class="dib addrbut mb5 defautTip">默认地址</span><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                </span>
+                            </div>
+                            <div class="orderaddr vt h100">
+                                <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
+                                <span class="dib pct70">
+                                    <span class="dib addrInfo">上海宝山区月浦镇锦乐路288号上海宝山区月浦镇锦乐路288号</span>
+                                    <span class="dib ell pct100 lh16 g80 mt10">
+                                        收件人：&emsp;张三张三张三张三张三张三张三张三张三张三张三张三<br>
+                                        联系电话：18945866993
+                                    </span>
+                                </span>
+                                <span class="dib pct28 vt tr">
+                                    <a class="dib addrbut mb5" href="javascript:void(0)">设为默认</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                </span>
+                            </div>
+                            <div class="orderaddr vt h100">
+                                <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
+                                <span class="dib pct70">
+                                    <span class="dib addrInfo">上海宝山区月浦镇锦乐路288号上海宝山区月浦镇锦乐路288号</span>
+                                    <span class="dib ell pct100 lh16 g80 mt10">
+                                        收件人：&emsp;张三张三张三张三张三张三张三张三张三张三张三张三<br>
+                                        联系电话：18945866993
+                                    </span>
+                                </span>
+                                <span class="dib pct28 vt tr">
+                                    <a class="dib addrbut mb5" href="javascript:void(0)">设为默认</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                </span>
+                            </div>
+                            <div class="orderaddr vt h100">
+                                <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
+                                <span class="dib pct70">
+                                    <span class="dib addrInfo">上海宝山区月浦镇锦乐路288号上海宝山区月浦镇锦乐路288号</span>
+                                    <span class="dib ell pct100 lh16 g80 mt10">
+                                        收件人：&emsp;张三张三张三张三张三张三张三张三张三张三张三张三<br>
+                                        联系电话：18945866993
+                                    </span>
+                                </span>
+                                <span class="dib pct28 vt tr">
+                                    <a class="dib addrbut mb5" href="javascript:void(0)">设为默认</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                </span>
+                            </div>
+                            <div class="orderaddr vt h100">
+                                <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
+                                <span class="dib pct70">
+                                    <span class="dib addrInfo">上海宝山区月浦镇锦乐路288号上海宝山区月浦镇锦乐路288号</span>
+                                    <span class="dib ell pct100 lh16 g80 mt10">
+                                        收件人：&emsp;张三张三张三张三张三张三张三张三张三张三张三张三<br>
+                                        联系电话：18945866993
+                                    </span>
+                                </span>
+                                <span class="dib pct28 vt tr">
+                                    <a class="dib addrbut mb5" href="javascript:void(0)">设为默认</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                </span>
+                            </div>
+                            <div class="orderaddr vt h100">
+                                <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
+                                <span class="dib pct70">
+                                    <span class="dib addrInfo">上海宝山区月浦镇锦乐路288号上海宝山区月浦镇锦乐路288号</span>
+                                    <span class="dib ell pct100 lh16 g80 mt10">
+                                        收件人：&emsp;张三张三张三张三张三张三张三张三张三张三张三张三<br>
+                                        联系电话：18945866993
+                                    </span>
+                                </span>
+                                <span class="dib pct28 vt tr">
+                                    <a class="dib addrbut mb5" href="javascript:void(0)">设为默认</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                </span>
+                            </div>
+                            <div class="orderaddr vt h100">
+                                <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
+                                <span class="dib pct70">
+                                    <span class="dib addrInfo">上海宝山区月浦镇锦乐路288号上海宝山区月浦镇锦乐路288号</span>
+                                    <span class="dib ell pct100 lh16 g80 mt10">
+                                        收件人：&emsp;张三张三张三张三张三张三张三张三张三张三张三张三<br>
+                                        联系电话：18945866993
+                                    </span>
+                                </span>
+                                <span class="dib pct28 vt tr">
+                                    <a class="dib addrbut mb5" href="javascript:void(0)">设为默认</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt10 f12 g28 corpAddr dn">上海市宝山区杨行工业园共悦路218号--财务部</div>
+                    <!-- addressBook end -->
+                    <div class="cl addressBookBut  f12" style="display: block;">
+                        <a href="javascript:void(0)" class="mr20 f12 link-up addScroll">更多地址 </a>
+                        <a href="javascript:void(0)" onclick="addAddr()">新增地址 +</a>
+                    </div>
+
+					
+
+
+					<div class="tc mt30 mb30">
+                        <button class="ui-button mr10" type="button" data-type="big">申请开票</button>
+                        <button class="ui-button w245" data-type="bb" small-type="grey" onclick="prev()">返回</button>
+                    </div>
+
+				</div>
+
+	
+			</div><!-- ui-content end -->
+
+
+
+		</div>
+		<!-- mainCont end -->
+
+	</div>
+	<!-- rightBar end-->
+
+
+
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script>
+		$(function(){
+			$(".menu").find(".proc").addClass("open").find(".smlist").eq(5).addClass("on")  //左侧菜单选中静态页面采用
+			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
+
+
+			 $(".invoiceCorpMsg").on("click",".checkbox-opacity",function(){
+                  $(this).parent().addClass('on').parent().addClass('on').siblings().removeClass('on').children('.icon-check').removeClass('on')
+            
+           })
+			
+			
+		})
+
+
+
+		//取件方式
+        function outType(str) {
+            if (str == 1) {
+                $(".addressBook").hide();
+                $(".addressBookBut").hide();
+                $(".corpAddr").show();
+            } else {
+                $(".addressBook").show();
+                $(".addressBookBut").show();
+                $(".corpAddr").hide();
+            }
+        }
+        if ($(".addressBook").height() == ($(".addressBook").find(".addressDBook").height())) {
+            $(".addScroll").hide();
+        } else {
+            $(".addScroll").show();
+        }
+
+
+
+        //addScroll  收起地址
+        $(".addScroll").on("click", function () {
+            if ($(this).text().indexOf("收起地址") > -1) {
+                $(".addressBook").css("height", "123px");
+                $(this).html('展开地址').removeClass("down")
+            } else {
+                $(".addressBook").css("height", "auto");
+                $(this).html('收起地址').addClass("down")
+            }
+        })
+        //新增收货地址
+        function addAddr() {
+            layer.open({
+                type: 2,
+                shade: 0.4,
+                title: '新增收货地址',
+                area: ['637px', '341px'],
+                shadeClose: true,
+                content: 'addAddr.html'
+            });
+        }
+        //编辑收货地址
+        function editAddr() {
+            layer.open({
+                type: 2,
+                shade: 0.4,
+                title: '编辑收货地址',
+                area: ['637px', '341px'],
+                shadeClose: true,
+                content: 'addAddr.html'
+            });
+        }
+        //新增发票信息
+        function addInvoice(){
+            layer.open({
+                type: 2,
+                shade: 0.4,
+                title: '新增发票信息',
+                area: ['510px', '470px'],
+                shadeClose: true,
+                content: 'addInvoice.html'
+            });
+        }
+        //修改发票信息
+        function editInvoice(){
+            layer.open({
+                type: 2,
+                shade: 0.4,
+                title: '修改发票信息',
+                area: ['510px', '470px'],
+                shadeClose: true,
+                content: 'addInvoice.html'
+            });
+        }
+
+		function prev(){
+            window.history.back();
+        }
+
+	</script>
+</body>
+	
+</html>
