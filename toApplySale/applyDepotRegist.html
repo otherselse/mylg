@@ -27,7 +27,7 @@
 				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">仓库评审信息录入</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius">
-				<div class="pt20 pr30 pl30 pb30">
+				<div class="pt20 pr30 pl30 pb50">
                     <span class="poi" onclick="prev()">
                         <span class="leftArrow "></span> 返回上一级
                      </span>
@@ -137,17 +137,7 @@
                                 </div>
                                 <div class="f14 mb10" id="selectOperator"> 
                                     <span class="dib pct12 tr"></span>
-                                    <span class="input-selSearch pct25">
-                                        <input type="text" class="ui-input searchUp h34 pct100" placeholder="请选择" autocomplete="off">
-                                        <div class="search-cont" style="display: none;">
-                                            <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-                                            <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                            <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                            <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                            <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                            <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                        </div>
-                                    </span>
+                                        <input type="text" class="ui-input searchUp h34 pct25" placeholder="请选择" readonly onclick="selectGolden1()">
                                 </div>
                                 <div class=" mb10 f0 dn" id="wenxintishi">
                                     <span class="dib pct12 tr"></span>
@@ -157,7 +147,7 @@
 
                      </div>
                      <!-- 加工商信息 -->
-                    <div class="mt50">    
+                    <div class="mt50">
                         <span class="b g28 ">仓库信息</span>
                     </div>
                     <div class="mt10 stockList">
@@ -370,6 +360,29 @@
          function delStockInfo(obj){
               $(obj).parents(".stockInfo").remove()
          }
+            //选择现场评审人员
+            function isSelect(obj,flag){
+                if(flag){
+                    $("#wenxintishi").show()
+                    $("#selectOperator").hide()
+                }else{
+                    $("#wenxintishi").hide()
+                    $("#selectOperator").show()
+                }
+            }
+            // 选择推荐金牌商家
+			function selectGolden1(webType,elementID){
+                var url = './selectGolden.html';
+                // $("#imageList").find(".tipAlarm").hide();
+                layer.open({
+                    type: 2,
+                    title: '选择现场评审人员',
+                    shadeClose: true,
+                    shade: 0.5,
+                    area: ['720px', '70%'],
+                    content: url
+                });
+            }
 	</script>
 </body>
 </html>

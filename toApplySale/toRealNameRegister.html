@@ -142,17 +142,7 @@
 						</div>
 						<div class="dib f14 pct50 mb10">
 							<span class="applyTitle dib tr"><span class="red">*</span>推荐金牌商家：</span>
-							<span class="input-selSearch pct50">
-								<input type="text" class="ui-input h34  pct100 searchUp" placeholder="请选择">
-								<div class="search-cont">
-									<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-								</div>
-							</span>
+								<input type="text" class="ui-input h34  pct50 searchUp " readonly placeholder="请选择" onclick="selectGolden1()">
 						</div>
 					</div>
 					<div class="mt30">
@@ -274,7 +264,27 @@
 		   }
 		   function prev(){
                 window.history.back();
+			}
+			// 选择推荐金牌商家
+			function selectGolden1(webType,elementID){
+                var url = './selectGolden.html';
+                // $("#imageList").find(".tipAlarm").hide();
+                layer.open({
+                    type: 2,
+                    title: '选择推荐金牌商家',
+                    shadeClose: true,
+                    shade: 0.5,
+                    area: ['720px', '70%'],
+                    content: url
+                });
             }
+            //  //选择金牌商家之后页面回写数据
+			// function getImageInfo(obj,elementID) {
+			// 	//元素前缀各自可以定义。与elementID拼接作为唯一性标示。需要返回哪些值，自己决定
+			// 	document.getElementById("operatorID1").value=obj.userID;
+			// 	document.getElementById("operator1").value=obj.userName;
+			// $("#goldName").value(obj.userName)
+			// }
 	</script>
 </body>
 </html>

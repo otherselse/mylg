@@ -27,7 +27,7 @@
 				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">承运商评审信息录入</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius">
-				<div class="pt20 pr30 pl30 pb30">
+				<div class="pt20 pr30 pl30 pb50">
                     <span class="poi" onclick="prev()">
                         <span class="leftArrow "></span> 返回上一级
                      </span>
@@ -134,6 +134,21 @@
                                     <button class="ui-button " data-type="upfile">附件上传</button>
                                     <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" data-hasqtip="6" oldtitle="删除" title=""></i></span>
                                 </div>
+                            </div>
+                            <div class="f14 mb10">
+                                <span class="dib pct12 tr"><span class="red vm">*</span>选择现场评审人员：</span>
+                                <span class="radio vt">
+                                    <label class="mr15"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio" onclick="isSelect(this,0)"></i>指定金牌商家</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="isSelect(this,1)"></i>由平台分配</label>
+                                </span>
+                            </div>
+                            <div class="f14 mb10" id="selectOperator"> 
+                                <span class="dib pct12 tr"></span>
+                                    <input type="text" class="ui-input searchUp h34 pct25" placeholder="请选择" readonly onclick="selectGolden1()">
+                            </div>
+                            <div class=" mb10 f0 dn" id="wenxintishi">
+                                <span class="dib pct12 tr"></span>
+                                <span class="ui-tip pct88" data-type="normal">温馨提示：大侠，提交评审后乐刚管理人员将会及时去贵单位进行现场考察，请您耐心等待！</span>
                             </div>
 
 
