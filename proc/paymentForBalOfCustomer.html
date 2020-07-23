@@ -157,22 +157,50 @@
 
 					<div class="f14 mt30 radio">
 						<span class="b g28">&emsp;支付方式：</span>
-						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>余额：8569825.93元</label>
-                        <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>余料款：2391193087.92元</label>
-                        <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>废料款：1.8元</label>
+						<span class="dib sel_mul pct90">
+                  			<a class="ui-optionNo mr5 tc" id="zhye" value="1" href="javscript:void(0)">账户余额：8569825.93元</a>
+                  			<a class="ui-optionNo mr5 tc" id="ylkye" value="2" href="javscript:void(0)">余料款余额：2391193087.92元</a>
+						</span>
 					</div>
 					<div class="f14 mt20 ">
-						<span class="b g28">使用优惠券：</span>
-						<span class="dib">700</span>
-
+						<span class="b g28">使用优惠券：</span> 
+						<span class="dib"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setCoupon(this)"></i>优惠券余额：<span class="red">700</span>元</span>
+					</div>
+					<div class="mt20 coupon-cont">
+						<div class="coupon-item f12 rel poi">
+							<i class="lgIcon circleDot"></i>
+                            <span class="pct60 dib gda vt ell"><span class="f36 lt-1 sv">100</span> 元</span>
+                            <div class="gda mt30">有效期：2020-06-13至2021-07-24</div>
+                        </div>
+                        <div class="coupon-item f12 rel poi">
+							<i class="lgIcon circleDot"></i>
+                            <span class="pct60 dib gda vt ell"><span class="f36 lt-1 sv">100</span> 元</span>
+                            <div class="gda mt30">有效期：2020-06-13至2021-07-24</div>
+                        </div>
+                        <div class="coupon-item f12 rel poi">
+							<i class="lgIcon circleDot"></i>
+                            <span class="pct60 dib gda vt ell"><span class="f36 lt-1 sv ">100</span> 元</span>
+                            <div class="gda mt30">有效期：2020-06-13至2021-07-24</div>
+                        </div>
+                        <div class="coupon-item f12 rel poi">
+							<i class="lgIcon circleDot"></i>
+                            <span class="pct60 dib gda vt ell"><span class="f36 lt-1 sv">100</span> 元</span>
+                            <div class="gda mt30">有效期：2020-06-13至2021-07-24</div>
+                        </div>
+                        <div class="coupon-item f12 rel poi">
+							<i class="lgIcon circleDot"></i>
+                            <span class="pct60 dib gda vt ell"><span class="f36 lt-1 sv">100</span> 元</span>
+                            <div class="gda mt30">有效期：2020-06-13至2021-07-24</div>
+                        </div>
+                        <div class="tc mt20 f20 dn coupinNumber" >已选中优惠券金额<span class="red pl10" id="spanSum">0.00</span>元</div>
 					</div>
 
 				</div>
 
 				<div class="bte pt25 pb30 tc mt10">
 					<button class="ui-button mr10 w90" type="button">提交</button>
-					<button class="ui-button mr10 w90" type="button">扫码支付</button>
-					<button class="ui-button  w90" type="button">找人代付</button>
+					<button class="ui-button mr10 w90" type="button" onclick="scanCodetoPay(this)">扫码支付</button>
+					<button class="ui-button  w90" type="button" id="searchAgency">找人代付</button>
 				</div>
 
 
@@ -187,10 +215,54 @@
 	<!-- rightBar end-->
 
 
-	<div class="addCarNum dn">
-		<div class="ui-input mb10" data-type="price"><input type="text" value="" placeholder="追加车号"></div>
-		<button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick()">保存</button>
-		<button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+	<div id="payment" class="openqrDiv dn  pl30 pr30 pt30">
+		<div class="tc f12">
+		    支付金额：<span class="red f16 ">￥ </span> <span class="red f16" id="paymoney">46700.34</span>
+		</div>
+		<div class="scanbg tc g80  mt10 auto">
+		    <div class="scanwbg "><img src="../images/exp.png" id="qrcode"></div>
+		    <div class="f12 mt10">
+			    <button type="button" class="ui-button mr10 w90" >支付成功</button>
+			    <button type="button" class="ui-button  w90" data-type="normal" id="openqrClose">取消支付</button>
+		    </div>
+		</div>
+		<div class="mt15 tc">
+		    <span class="f12 vm">支持应用：</span>
+		    <!-- <i class="payIcon-zfb mr5 vm"></i> -->
+		    <i class="payIcon-wx mr5 vm"></i>
+		    <i class="payIcon-wy vm"></i>
+		</div>
+		<div class="f12 mt10 tc">
+		    支持微信和银联扫码支付,后续会支持支付宝扫码支付
+		</div>
+	</div>
+
+	<div class="repayContent dn">
+		<div class="p20">
+			<div class="mb10 tc">
+				代付单位：<span class="input-selSearch  pct50 tl">
+                            <input type="text" class="ui-input searchUp pct100 " placeholder="输入名称或公司首字母即时搜索" autocomplete="off">
+                            <div class="search-cont pct100" >
+                                <a href="javascript:void(0)" class="search-list db ell">上海一加实业有限公司</a>
+                            </div>
+                        </span>
+			</div>
+			<div class="mb10 tc">
+				<span class="vt dib">历史单位：</span>
+				<span class="pct50 dib tl" style="height: 105px;overflow-y: auto">
+                            <span class="db">上海钢铁科技有限公司</span>
+                            <span class="db">上海钢铁科技有限公司</span>
+                            <span class="db">上海钢铁科技有限公司</span>
+                            <span class="db">上海钢铁科技有限公司</span>
+                            <span class="db">上海钢铁科技有限公司</span>
+                        </span>
+			</div>
+			
+		</div>
+		<div class="f12 mt40 tc bte pt20 pb20">
+			    <button type="button" class="ui-button mr10 w90">确认</button>
+			    <button type="button" class="ui-button  w90 jggreybbsubmit  " data-type="clear" id="">取消</button>
+		    </div>
 	</div>
 
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
@@ -230,6 +302,37 @@
 			});
 
 
+			  $(".sel_mul a").on("click", function () {
+			  		$(this).toggleClass("on");
+			  				  	
+			  })
+
+			  //优惠券总额
+			  $(".coupon-item").on("click",function(){
+			  	  $(this).toggleClass("on");
+			  	  var s=0;
+			  	  $(this).parents(".coupon-cont").find(".on").find(".sv").each(function(){
+			  	  		s+=$(this).text()*1;
+			  	  })
+			  	  $(".coupinNumber").show();
+			  	  $("#spanSum").text(s);
+			  })
+
+
+			  //找人代付
+			  $("#searchAgency").on("click",function(){
+				  	var mypage=layer.open({
+					    type: 1,
+					    title: '找人代付',
+					    shadeClose: true, //开启点击遮罩关闭层
+					    area : ['600px' ],
+					    content:$(".repayContent")
+					});
+					$(".jggreybbsubmit").on("click",function(){
+			         	layer.close(mypage);
+			        });
+			  })
+
 			
 
 
@@ -254,6 +357,33 @@
 		}
 
 
+		function setCoupon(obj){
+			if(obj.checked){
+				$(".coupon-cont").show();
+			}else{
+				$(".coupon-cont").hide();
+			}
+		}
+
+
+		function scanCodetoPay(obj){
+			openqr()
+		}
+
+		function openqr(){
+			var mypage=layer.open({
+		        type: 1,
+		        title: false,
+		        shadeClose: false,
+		        shade: 0.4,
+		        closeBtn:0,
+		        area: ['580px', '500px'],
+		        content: $(".openqrDiv")
+		    });
+		    $("#openqrClose").on("click",function(){
+		    	layer.close(mypage)
+		    })
+		}
 
 
 
