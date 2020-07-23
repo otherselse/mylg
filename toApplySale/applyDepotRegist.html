@@ -127,7 +127,32 @@
                                     <button class="ui-button " data-type="upfile">附件上传</button>
                                     <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" data-hasqtip="6" oldtitle="删除" title=""></i></span>
                                 </div>
-                            </div>
+                            </div> 
+                             <div class="f14 mb10">
+                                    <span class="dib pct12 tr"><span class="red vm">*</span>选择现场评审人员：</span>
+                                    <span class="radio vt">
+                                        <label class="mr15"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio" onclick="isSelect(this,0)"></i>指定金牌商家</label>
+                                        <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="isSelect(this,1)"></i>由平台分配</label>
+                                    </span>
+                                </div>
+                                <div class="f14 mb10" id="selectOperator"> 
+                                    <span class="dib pct12 tr"></span>
+                                    <span class="input-selSearch pct25">
+                                        <input type="text" class="ui-input searchUp h34 pct100" placeholder="请选择" autocomplete="off">
+                                        <div class="search-cont" style="display: none;">
+                                            <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class=" mb10 f0 dn" id="wenxintishi">
+                                    <span class="dib pct12 tr"></span>
+                                    <span class="ui-tip pct88" data-type="normal">温馨提示：大侠，提交评审后乐刚管理人员将会及时去贵单位进行现场考察，请您耐心等待！</span>
+                                </div>
 
 
                      </div>
@@ -175,8 +200,10 @@
                                     <div class="mb10 f14">
                                         <span class="red vm">*</span>仓库电话：<input type="text" class="ui-input h34 pct30">
                                     </div>
-                                    <div class="mb10 pct50 dib f14 vt">
-                                        <span class="red vm">*</span>土地性质：
+                                    <div class="mb10 pct50 dib f14">
+                                        <span class="dib vsb">
+                                            <span class="red vm">*</span>土地性质：
+                                        </span>
                                             <div class="dib vt">
                                                 <span class="single f0">
                                                     <input type="hidden">
@@ -188,8 +215,10 @@
                                                 </div>
                                             </div>
                                     </div>
-                                    <div class="mb10 pct50 dib f14 vt">
-                                      &emsp;<span class="red vm">*</span>厂房性质：
+                                    <div class="mb10 pct50 dib f14">
+                                        &emsp;<span class="dib vsb">
+                                            <span class="red vm">*</span>厂房性质：
+                                        </span>
                                         <div class="dib vt">
                                             <span class="single f0">
                                                 <input type="hidden">
