@@ -90,37 +90,33 @@
 				<table class="ui-table tc f12 mt30 checkbox" width="100%">
 						<thead>
 							<tr>
-								<th width="8%" class="tl"><div class="pl10">单据号</div></th>
-								<th width="6%">业务日期</th>
-								<th width="6%">费用名称</th>
-								<th width="6%">结算方式</th>
-								<th width="6%">单价/重量</th>
-								<th width="6%">业务余额</th>
-								<th width="6%">实付金额</th>
-								<th width="6%">余料款支付</th>
-								<th width="6%">优惠券</th>
-								<th width="10%">应付款日期/超期天数</th>
-								<th width="10%">结算单位</th>
-								<th width="5%">操作</th>
+								<th width="5%">选择</th>
+								<th width="12%" class="tl"><div class="pl10">货主单位</div></th>
+								<th width="10%">订单号</th>
+								<th width="10%">业务日期</th>
+								<th width="10%">费用名称</th>
+								<th width="10%">单价</th>
+								<th width="10%">重量</th>
+								<th width="10%">业务余额</th>
+								<th width="10%">实付金额</th>
+								<th width="8%">操作</th>
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
-								<td class="tl"><div class="pl10">PRO20200715829478</div></td>
+								<td><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
+								<td class="tl"><div class="pl10">阿里巴巴钢铁投资集团</div></td>
+								<td ><i class="mon-bal m_w mr5 tiptop"  title="<i class='mon-bal m_w mr5 mb5'>现</i>现结<br/><i class='mon-bal mr5 mb5'>月</i>月结<br/><i class='mon-bal mr5 m_f mb5'>清</i>清仓结算" >现</i>PRO20200715829478</td>
 								<td>2020-06-01</td>								
 								<td>加工费</td>
-								<td>现结</td>
-								<td>0.09/5454.000</td>
-								<td>11.00</td>
-								<td>11.00</td>
-								<td>12.00</td>
-								<td>12.00</td>
-								<td>2020-06-01<br/>0</td>
-								<td>吞吞吐吐公司</td>
+								<td>75.00</td>
+								<td>5454.000</td>
+								<td>抄码</td>
+								<td>57789.00</td>
 								<td><a href="javascript:void(0)" onclick="showMore(this)">查看</a></td>
 							</tr>
 							<tr class="hideTr dn">
-								<td colspan="12">
+								<td colspan="10">
 									<table class="ui-table tc f12 auto" width="98%">
 				                        <thead>
 				                            <tr>
@@ -158,7 +154,9 @@
 						</tbody>
 						<tfoot>
 							<tr height="40" class="bgfa tc">
-								<td colspan="12" >
+								<td colspan="10" >
+
+									<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>
 									已申请页面合计： 业务金额：<span class="red">11569.85</span>元&emsp;&emsp; 实付金额：<span class="red">11569.85</span>元&emsp;优惠券：<span class="red">0.00</span>元
 								</td>
 							</tr>
@@ -245,7 +243,13 @@
 
 
 		function showMore(obj){
-			$(obj).parents("tr").next("tr").toggle();
+			if($(obj).parents("tr").next("tr").css("display")=="none"){
+				$(obj).parents("tr").next("tr").show();
+				$(obj).text("收起");
+			}else{
+				$(obj).parents("tr").next("tr").hide();
+				$(obj).text("查看");
+			}
 		}
 
 
