@@ -178,8 +178,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .pct85{width: 85%}
 .addressBook.h110{height: 110px;}
 
-.city-picker-input{opacity:1 !important; top: 0px; left: 0px; filter:alpha(opacity=100);}
-.city-picker-input +.city-picker-span{opacity:0; filter:alpha(opacity=0);}
+/* .city-picker-input{opacity:1 !important; top: 0px; left: 0px; filter:alpha(opacity=100);}
+.city-picker-input +.city-picker-span{opacity:0; filter:alpha(opacity=0);} */
 
 /*pageWrap*/
 .pageWrap{margin: 20px auto 0;text-align: center;}
