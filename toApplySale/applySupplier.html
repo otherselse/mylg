@@ -27,7 +27,7 @@
 				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">供应商评审</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content unradius">
-				<div class="pt20 pr30 pl30 pb30">
+				<div class="pt20 pr30 pl30 pb50">
                     <span class="poi" onclick="prev()">
                         <span class="leftArrow "></span> 返回上一级
                      </span>
@@ -41,8 +41,8 @@
                                 <span class="dib pct12 tr"><span class="red vm">*</span>账户类型：</span>
                                 <span class="single f0">
                                     <input type="hidden">
-                                    <button type="button" class="ui-option h34 on mr10">人民币账户</button>
-                                    <button type="button" class="ui-option h34">美元账户</button>
+                                    <button type="button" class="ui-option h34 on mr10" onclick="showCont(this,0)">人民币账户</button>
+                                    <button type="button" class="ui-option h34" onclick="showCont(this,1)">美元账户</button>
                                 </span>
                             </div>
                             <div class="f14 mb10">
@@ -72,22 +72,35 @@
                                 <input type="text" class="ui-input pct50 h34" placeholder="请输入">
                             </div>
                             <div class="pct50 dib f14 mb10">
-                                <span class="dib pct24 tr"><span class="red">*</span>开户账号：</span>
+                                <span class="dib pct24 tr"><span class="red">*</span>开户银行：</span>
                                 <input type="text" class="ui-input pct50 h34" placeholder="请输入">
                             </div>
                             <div class="pct50 dib f14 mb10">
                                 <span class="dib pct24 tr">固定电话：</span>
                                 <input type="text" class="ui-input pct50 h34" placeholder="请输入">
                             </div>
+                            <div class="pct50 dib f14 mb10 isUSD" style="display: none;" >
+                                <span class="dib pct24 tr"><span class="red">*</span>美元开户银行地址：</span>
+                                <input type="text" class="ui-input pct50 h34" placeholder="请输入">
+                            </div>
+
                             <div class="pct50 dib f14 mb10">
                                 <span class="dib pct24 tr"><span class="red vm">*</span>公司税号：</span>
+                                <input type="text" class="ui-input pct50 h34" placeholder="请输入">
+                            </div>
+                            <div class="pct50 dib f14 mb10 isUSD" style="display: none;">
+                                <span class="dib pct24 tr"><span class="red vm">*</span>Swift Code：：</span>
+                                <input type="text" class="ui-input pct50 h34" placeholder="请输入">
+                            </div>
+                            <div class="pct50 dib f14 mb10 isUSD " style="display: none;">
+                                <span class="dib pct24 tr"><span class="red vm">*</span>Email：</span>
                                 <input type="text" class="ui-input pct50 h34" placeholder="请输入">
                             </div>
                             <div class="pct50 dib f14 mb10">
                                 <span class="dib pct24 tr"><span class="red vm">*</span>公司传真：</span>
                                 <input type="text" class="ui-input pct50 h34" placeholder="请输入">
                             </div>
-                            <div class="pct50 dib f14 mb10">
+                            <div class="pct50 dib f14 mb10 tipshow" >
                                 <span class="dib pct24 tr"><span class="red vm">*</span>注册资本：</span>
                                 <span class="ui-input-x pct50 h34 mr5 ">
                                     <span class="pct20 ui-inputbut  brd9 input-selSearch vt bgfa">
@@ -97,7 +110,7 @@
                                             <a href="javascript:void(0)" class="search-list db ell ">$</a>
                                         </div>
                                     </span>
-                                    <input type="text" class="pct80  f12" placeholder="请输入">
+                                    <input type="text" class="pct80  f12 specialTip" placeholder="请输入">
                                 </span>
                                 万<a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写“注册资本”"></a>
                             </div>
@@ -105,7 +118,7 @@
                                 <span class="dib pct24 tr"><span class="red vm">*</span>联系地址：</span>
                                 <input type="text" class="ui-input pct50 h34" placeholder="请选择所在区域">
                             </div>
-                            <div class="pct50 dib f14 mb10">
+                            <div class="pct50 dib f14 mb10 tipshow">
                                 <span class="dib pct24 tr"><span class="red vm">*</span>实缴资金：</span>
                                 <span class="ui-input-x pct50 h34 mr5 ">
                                     <span class="pct20 ui-inputbut  brd9 input-selSearch vt bgfa">
@@ -115,7 +128,7 @@
                                             <a href="javascript:void(0)" class="search-list db ell ">$</a>
                                         </div>
                                     </span>
-                                    <input type="text" class="pct80  f12" placeholder="请输入">
+                                    <input type="text" class="pct80  f12 specialTip" placeholder="请输入">
                                 </span>
                                 万<a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写“实缴资本”"></a>
                             </div>
@@ -123,9 +136,9 @@
                                 <span class="dib pct24 tr"></span>
                                 <input type="text" class="ui-input pct50 h34" placeholder="详细地址">
                             </div>
-                            <div class="f14 mb10">
+                            <div class="f14 mb10 tipshow">
                                 <span class="dib pct12 tr"><span class="red vm">*</span>注册时间：</span>
-                                <span class="ui-input pct25 h34" data-type="time"><input type="text" placeholder="选择时间" id="render-time" class="render-time" readonly="" ></span>
+                                <span class="ui-input pct25 h34" data-type="time"><input type="text" placeholder="选择时间" id="render-time" class="render-time specialTip" readonly="" ></span>
                                 <a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写公司成立的年限"></a>
                             </div>
                             <div class="f14 mb10">
@@ -137,17 +150,10 @@
                             </div>
                             <div class="f14 mb10" id="selectOperator"> 
                                 <span class="dib pct12 tr"></span>
-                                <span class="input-selSearch pct25">
-                                    <input type="text" class="ui-input searchUp h34 pct100" placeholder="请选择" autocomplete="off">
-                                    <div class="search-cont" style="display: none;">
-                                        <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                    </div>
-                                </span>
+                            
+                                    <input type="text" class="ui-input searchUp h34 pct25" placeholder="请选择" readonly onclick="selectGolden1()">
+                                
+                               
                             </div>
                             <div class=" mb10 f0 dn" id="wenxintishi">
                                 <span class="dib pct12 tr"></span>
@@ -166,16 +172,18 @@
                             <a class="ui-option h34 mr10 on switchDotBut tc rel" href="javascript:void(0)" onclick="changeUpType(this,1)">现场照片上传</a>
                             <a class="ui-option h34 tc  rel" href="javascript:void(0)" onclick="changeUpType(this,2)">远程视频拍摄</a>
                          </span>
+                         <span class="ui-tip ml10" >注：视频拍摄有效期为一个月内，请按具体要求进行拍摄上传。每个视频大小需在30M以内</span>
+                        
                     </div>
                      <div>
                         <div class="cl mt10" style="border: 1px solid #ececec;"></div>
                         <div class="upPhoto mt20">
                             <div class="mb10">
-                                <span class="dib pct12 tr vt">正门抬头照片：</span>
+                                <span class="dib pct12 tr">正门抬头照片：</span>
                                 <button class="ui-button " data-type="upfile">附件上传</button>
                             </div>
                             <div class="mb10 f0">
-                                <span class="dib pct12 tr vt"></span>
+                                <span class="dib pct12 tr"></span>
                                 <span class="ui-tip pct88" data-type="normal">注：评审人员与抬头合照，若无抬头标识，需评审人员手持营业执照原件拍照</span>
                             </div>
                             <div class="mb10">
@@ -187,37 +195,37 @@
                                 <span class="ui-tip pct88" data-type="normal">注：照片数量不少于5张、不多于10张，每张照片需有水印拍摄时间</span>
                             </div>
                             <div class="mb10">
-                                <span class="dib pct12 tr vt">仓库抬头照片：</span>
+                                <span class="dib pct12 tr">仓库抬头照片：</span>
                                 <button class="ui-button " data-type="upfile">附件上传</button>
                             </div>
                             <div class="mb10 f0">
-                                <span class="dib pct12 tr vt"></span>
+                                <span class="dib pct12 tr"></span>
                                 <span class="ui-tip pct88" data-type="normal">注：评审人员与货物实际所在仓库抬头合照，照片须有水印时间</span>
                             </div>
                             <div class="mb10">
-                                <span class="dib pct12 tr vt">货物照片：</span>
+                                <span class="dib pct12 tr">货物照片：</span>
                                 <button class="ui-button " data-type="upfile">附件上传</button>
                             </div>
                             <div class="mb10 f0">
-                                <span class="dib pct12 tr vt"></span>
+                                <span class="dib pct12 tr"></span>
                                 <span class="ui-tip pct88" data-type="normal">注：照片数量不少于5张、不多于10张，每张照片需有水印拍摄时间；货物照片为该公司实际库存，严禁用他人库存顶替，弄虚作假者负全责</span>
                             </div>
                         </div>
-                        <div class="upVideo mt20">
+                        <div class="upVideo mt20 dn">
                             <div class="mb10">
                                 <span class="dib pct12 tr vt">办公环境及工作人员视频：</span>
                                 <button class="ui-button " data-type="upfile">附件上传</button>
                             </div>
                             <div class="mb10 f0">
-                                <span class="dib pct12 tr vt"></span>
+                                <span class="dib pct12 tr"></span>
                                 <span class="ui-tip pct88" data-type="normal">注：办公环境及工作人员视频：包含公司抬头及办公室环境，若公司没有抬头则需要拍摄营业执照与办公环境，拍摄公司抬头和营业执照时需停留2秒，文字内容需清晰可辨，需拍摄者口述拍摄日期，包含年月日 （可上传三个视频，至少一个视频）</span>
                             </div>
                             <div class="mb10">
-                                <span class="dib pct12 tr vt">仓库视频：</span>
+                                <span class="dib pct12 tr">仓库视频：</span>
                                 <button class="ui-button " data-type="upfile">附件上传</button>
                             </div>
                             <div class="mb10 f0">
-                                <span class="dib pct12 tr vt"></span>
+                                <span class="dib pct12 tr"></span>
                                 <span class="ui-tip pct88" data-type="normal">注：仓库视频：包含仓库抬头及存货视频，需拍摄者口述拍摄日期，包含年月日， 货物视频为该公司实际库存，严禁用他人库存顶替，弄虚作假者负全责（可上传三个视频，至少一个视频）</span>
                             </div>
                             <div class="mb10">
@@ -225,15 +233,14 @@
                                 <button class="ui-button " data-type="upfile">附件上传</button>
                             </div>
                             <div class="mb10 f0">
-                                <span class="dib pct12 tr vt"></span>
+                                <span class="dib pct12 tr"></span>
                                 <span class="ui-tip pct88" data-type="normal">注：生产环境视频：包含加工生产车间工作情况及原料或产成品堆放情况视频，需拍摄者口述拍摄日期，包含年月日，视频需拍摄实际工作开展情况，弄虚作假者负全责（可上传三个视频，至少一个视频）</span>
                             </div>
                         </div>
                      </div>
                      <!-- 企业信息 -->
                      <div class="mt45 ">
-                         <span class=" b g28 pct10">评审资料</span>
-                         <span class="ui-tip ml10 pct90" data-type="blue">所有上传附件请加盖公章或合同章</span>
+                         <span class=" b g28">评审资料</span>
                     </div>
                     <div class="mt20">
                         <div class="mb10">
@@ -248,12 +255,14 @@
                             <div class="mb10">
                                 <span class="dib pct12 tr"></span>
                                 <span class="red">*</span>营业执照副本：&ensp;&ensp;
+                                <span class="ui-tip " data-type="normal">请加盖公章或合同鲜章</span>
                                 <button class="ui-button " data-type="upfile">附件上传</button>
                                 <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
                             </div>
                             <div class="mb10">
                                 <span class="dib pct12 tr"></span>
                                 <span class="red">*</span>银行开户许可证：
+                                <span class="ui-tip " data-type="normal">请加盖公章或合同鲜章</span>
                                 <button class="ui-button " data-type="upfile">附件上传</button>
                                 <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
                             </div>
@@ -279,8 +288,9 @@
                             </div>
                             <div class="mb10">
                                 <span class="dib pct12 tr"></span>
-                                <span class="red">*</span>银行开户许可证：&ensp;&ensp;&ensp;&ensp;
+                                <span class="red">*</span>开户资料/开户证明：&ensp;
                                 <button class="ui-button " data-type="upfile">附件上传</button>
+                                <span class="ui-tip ml25" data-type="normal">请加盖公章或合同鲜章</span>
                                 <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
                             </div>
                         </div>
@@ -457,6 +467,26 @@
                     $("#wenxintishi").hide()
                     $("#selectOperator").show()
                 }
+            }
+            function showCont(obj,flag){
+                if(flag){
+                        $(".isUSD").show()
+                }else{
+                    $(".isUSD").hide()
+                }
+            }
+            // 选择推荐金牌商家
+			function selectGolden1(webType,elementID){
+                var url = './selectGolden.html';
+                // $("#imageList").find(".tipAlarm").hide();
+                layer.open({
+                    type: 2,
+                    title: '选择现场评审人员',
+                    shadeClose: true,
+                    shade: 0.5,
+                    area: ['720px', '70%'],
+                    content: url
+                });
             }
 	</script>
 </body>

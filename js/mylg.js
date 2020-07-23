@@ -121,6 +121,17 @@ $(function(){
 			$(this).parents(".radio").find(".ui-radio").removeClass("on");
 			$(this).addClass("on")
 		})
+		//tipshow
+		$("body").on("click",".specialTip",function(){
+			$(this).parents(".tipshow").find('.icon-info').qtip({
+			   show:true,
+			   style: {
+				   classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+			   },
+			   hide:'unfocus'
+		   });
+
+})
 
 		
 })
