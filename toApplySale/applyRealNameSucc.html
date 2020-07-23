@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+	<title>评审中心-实名认证评审</title>
+</head>
+<body class="showTip">
+	<script type="text/javascript" src="../js/leftBar.js"></script> 
+	<!-- leftbar end -->
+
+
+	<div class="rightBar">
+		<script type="text/javascript" src="../js/topBar.js"></script> 
+		<!-- topBar end -->
+		<div class="mainCont ">
+			<div class="ui-tab3">
+				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">实名认证评审</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content unradius">
+				<div class="pt20 pr20 pl20 pb30">
+                    <div class="auto mb30">
+                        <div class="dib tc pct90">
+                           <span class="order-step dib tl ">
+                               <a class="dib order-realName1  tc rel g67  pr5" href="javascript:void(0)">
+                                   <i class="circle24 mr5">1</i>提交申请
+                               </a>
+                               <a class="dib order-realName2 tc rel g67  pr5 on" href="javascript:void(0)">
+                                   <i class="circle24  mr5 ">2</i>平台审核
+                               </a>
+                               <a class="dib order-realName3 tc rel g67 pr5 " href="./applyRealNameErr.html">
+                                   <i class="circle24 mr5">3</i>完成
+                               </a>
+                           </span>
+                        </div>
+                   </div>
+                   <div class="applyResultBox auto pct80">
+                        <img src="../images/applySale/applysucc.png" alt="">
+                         <span class="g28 f18 mt15">您的资料已经提交审核，工作人员将于60分钟内审核完毕</span> 
+                         <span class="g80 f12 mt10">如有问题请拨打客服热线：4008-200-666</span> 
+                   </div>
+              
+				</div>
+			</div>
+		</div>
+		<!-- mainCont end -->
+
+	</div>
+
+
+	
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+
+	
+	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script>
+		$(function(){
+			$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(0).addClass("on")  //首页选中;
+			$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
+		})
+   
+	</script>
+</body>
+</html>
