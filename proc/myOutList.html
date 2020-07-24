@@ -45,6 +45,12 @@
 						</span>
 					</div>
 					<div class="mt10">
+						出库日期：
+						<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="outdateStart" readonly="" ></span>
+						 出库单号：
+                        <span class="input-selSearch  pct16 mr20">
+                            <input type="text" class="ui-input  pct100 " placeholder="请输入" autocomplete="off">
+                        </span> 
                         &emsp;&emsp;规格：
                         <span class="input-selSearch pct16 mr20">
                                 <input type="text" class="ui-input  pct100 searchUp" autocomplete="off" placeholder="请输入">
@@ -57,26 +63,25 @@
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                                 </div>
                             </span>
-                        &emsp;捆包号：
-                        <span class="input-selSearch  pct16 mr20">
-                            <input type="text" class="ui-input  pct100 " placeholder="请输入" autocomplete="off">
-                        </span>  
-                        出库单号：
-                        <span class="input-selSearch  pct16 mr20">
-                            <input type="text" class="ui-input  pct100 " placeholder="请输入" autocomplete="off">
-                        </span> 
-                        重量范围：
-                        <span class="ui-input  pct16 mr20" data-type="section">
-								<input type="text" placeholder="重量">~
-								<input type="text" placeholder="重量">
-						</span>                                         
+                       
+                       
+                                                             
                     </div>
 
                     <div class="mt10">
-                    	出库日期：
-						<span class="ui-input  pct16 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="outdateStart" readonly="" ></span>
-                        入库日期：
-						<span class="ui-input  pct16 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="indateStart" readonly="" ></span>
+                    	入库日期：
+						<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="indateStart" readonly="" ></span>                    	
+						 &emsp;捆包号：
+                        <span class="input-selSearch  pct16 mr20">
+                            <input type="text" class="ui-input  pct100 " placeholder="请输入" autocomplete="off">
+                        </span>
+                        重量范围：
+                        <span class="ui-input  pct16 mr20" data-type="section">
+								<input type="text" placeholder="最小值">~
+								<input type="text" placeholder="重量">
+						</span>    
+
+                        
 						<button type="button" class="ui-button mr10" type="button">查询</button>
 						<button class="ui-button w76" type="button" data-type="download">导出</button>
                     </div>
