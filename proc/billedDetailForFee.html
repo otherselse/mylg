@@ -1,0 +1,154 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+	<title>已开票明细-申请开票</title>
+</head>
+<body class="buyer showTip">
+	<script type="text/javascript" src="../js/leftBar.js"></script> 
+	<!-- leftbar end -->
+
+
+	<div class="rightBar">
+		<script type="text/javascript" src="../js/topBar.js"></script> 
+		<!-- topBar end -->
+
+		<div class="mainCont ">
+			<div class="ui-tab3">
+				<a href="searchAllPaymentForCust.html" class="ui-tab3-list rel "><span class="ui-tab3-text">待开票明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="billedDetailForCust.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">已开票明细</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content unradius ">				
+				<div class="pt20  pl20 pr20 pb30">					
+					<div class="g28 b mt10"><a class="leftArrow mr10" href="billedDetailForCust.html"></a>返回上页</div>
+					<div class="cl f12 pl30 mt10">
+						<span class="pct30 dib g9a">发票抬头：<span class="g28">上海一加实业有限公司</span></span>
+						<span class="pct30 dib g9a">发票类型：<span class="g28">仓储发票</span></span>
+						<span class="pct30 dib g9a">开票金额：<span class="g28">2187.3</span></span>
+						<span class="pct30 dib g9a">发票号码：<span class="g28">64489789789</span></span>
+						<span class="pct30 dib g9a">开票状态：<span class="g28">开票中</span></span>
+					</div>
+
+				<table class="ui-table tc f12 mt30" width="100%">
+						<thead>
+							<tr>
+								<th width="12%" class="tl"><div class="pl10">单据号</div></th>
+								<th width="10%">业务日期</th>
+								<th width="8%">费用名称</th>
+								<th width="10%">单价</th>
+								<th width="10%">重量</th>
+								<th width="8%">业务金额</th>
+								<th width="8%">开票金额</th>
+								<th width="8%">明细</th>
+							</tr>
+						</thead>
+						<tbody class="ui-thover">
+							<tr>
+								<td class="tl"><div class="pl10">WIN(01)-20452363</div></td>
+								<td>2020-06-10</td>
+								<td>仓储发票</td>								
+								<td>13</td>
+								<td>32.100</td>
+								<td>417.30</td>
+								<td>417.30</td>
+								<td><a href="javascript:void(0)" onclick="showDetailMore(this)">查看</a></td>
+							</tr>
+							<tr class="hideTr dn">
+								<td colspan="8">
+									<table class="ui-table tc f12 auto" width="98%">
+				                        <thead>
+				                            <tr>
+				                                <th width="5%">类别</th>
+				                                <th width="8%">加工方式</th>
+				                                <th width="8%">包装方式</th>
+				                                <th width="8%">捆包号</th>
+				                                <th width="8%">品名</th>
+				                                <th width="8%">资源号</th>
+				                                <th width="8%">规格</th>
+				                                <th width="8%">牌号</th>
+				                                <th width="8%">钢厂</th>
+				                                <th width="8%">重量</th>
+				                                <th width="8%">库龄（天）</th>                                       
+				                            </tr>
+				                        </thead>
+				                        <tbody class="ui-thover">
+				                            <tr>
+				                                <td>原料</td>
+				                                <td>重卷</td>
+				                                <td>裸包装</td>
+				                                <td>dgda342442-3</td>
+				                                <td>热轧卷板</td>
+				                                <td>--</td>
+				                                <td>10.000*800*C</td>
+				                                <td>SECDPC5</td>
+				                                <td>宝钢</td>
+				                                <td>12.000</td>
+				                                <td>1</td>
+				                            </tr>
+				                        </tbody>
+				                    </table>
+				                    <!-- table end -->
+								</td>
+							</tr>
+
+						</tbody>
+
+					</table>
+					<!-- 表格end -->
+
+					<script type="text/javascript" src="../js/pagelist.js"></script>				
+					
+					
+
+				</div>
+
+
+			</div><!-- ui-content end -->
+
+
+
+		</div>
+		<!-- mainCont end -->
+
+	</div>
+	<!-- rightBar end-->
+
+
+
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script>
+		$(function(){
+			$(".menu").find(".proc").find(".smenu").show().find(".smlist").eq(5).addClass("on")  //左侧菜单选中静态页面采用
+			$(".ui-switchCont").find(".ui-switchBut").eq(0).addClass("on").siblings().removeClass("on") //我是买家选中;
+
+			
+		})
+
+
+
+		
+
+
+	function showDetailMore(obj){
+			if($(obj).parents("tr").next("tr").css("display")=="none"){
+				$(obj).parents("tr").next("tr").show();
+				$(obj).text("收起");
+			}else{
+				$(obj).parents("tr").next("tr").hide();
+				$(obj).text("查看");
+			}
+		}
+
+	</script>
+</body>
+	
+</html>
