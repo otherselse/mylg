@@ -543,7 +543,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .bbe6{border-bottom: 1px solid #e6e6e6;}
 .pb40{padding-bottom: 40px;}
 .applyResultBox{background: #FFFFFF;border: 1px solid #EEEEEE;box-shadow: 0 3px 8px 0 rgba(0,0,0,0.07);border-radius: 6px;height: 464px;display: flex;flex-direction: column;align-items: center;justify-content: center;}
-.applyInterval{background: url(../images/applySale/timebg.png) no-repeat left;width: 85px;height: 24px;}
+.applyInterval{background: url(../images/applySale/timebg.png) no-repeat left;width: 58px;height: 24px;line-height: 24px;}
 .ml8{margin-left: 8px;}
 /* button */
 .ui-button[data-color="white"]{background: #fff;color: #1365e8;}
