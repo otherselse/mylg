@@ -45,7 +45,8 @@
 				<div class="pt20 pr20 pl20 pb30">
                     <div class="g28 b  mb10">选择收款账号</div>
                     <div class="accountbg pl40 pr40">
-                                <div class="orderaddr vt toPers disabled distip poi" title="当前账户未实名，私人账户不可用">
+                        <div class="tiptop poi vt toPers dib" title="当前账户未实名，私人账户不可用">
+                                <div class="orderaddr disabled" >
                                     <i class="mysign"></i>
                                      <span class="dib pct90">
                                         <span class="dib ell pct100 pt15 pl10 lh28">
@@ -55,8 +56,10 @@
                                             <span class="g9a">开户地区：</span>上海市-宝山区
                                         </span>
                                      </span>
-                                </div><!-- orderaddr -->
-                                 <div class="orderaddr vt toPers poi">                                    
+                                </div>
+                            </div><!-- orderaddr -->
+                            <div class="poi vt toPers dib">
+                                 <div class="orderaddr">                                    
                                     <i class="mysign"></i>
                                      <span class="dib pct90">
                                         <span class="dib ell pct100 pt15 pl10 lh28">
@@ -66,8 +69,10 @@
                                             <span class="g9a">开户地区：</span>上海市-宝山区
                                         </span>
                                      </span>
-                                  </div><!-- orderaddr -->
-                                 <div class="orderaddr vt toComp poi">                                    
+                                  </div>
+                            </div><!-- orderaddr -->
+                            <div class="poi vt toPers dib">
+                                 <div class="orderaddr">                                    
                                     <i class="mysign"></i>
                                      <span class="dib pct90">
                                         <span class="dib ell pct100 pt15 pl10 lh28">
@@ -77,8 +82,10 @@
                                             <span class="g9a">开户地区：</span>上海市-宝山区
                                         </span>
                                      </span>
-                                </div><!-- orderaddr -->
-                                <div class="orderaddr vt toPers disabled distip poi" title="当前账户未实名，私人账户不可用">
+                                </div>
+                            </div><!-- orderaddr -->
+                            <div class="tiptop poi vt toPers dib" title="当前账户未实名，私人账户不可用">
+                                <div class="orderaddr disabled  ">
                                     <i class="mysign"></i>
                                      <span class="dib pct90">
                                         <span class="dib ell pct100 pt15 pl10 lh28">
@@ -88,8 +95,9 @@
                                             <span class="g9a">开户地区：</span>上海市-宝山区
                                         </span>
                                      </span>
-                                </div><!-- orderaddr -->
-                            </div>
+                                </div>
+                            </div><!-- orderaddr -->
+                        </div>
 
                     <div class="g28 dib b mt30 ">提现信息</div>
                     <div class="cl mb10 pl40 pt20">
@@ -163,20 +171,6 @@
                 layer.msg("设置为默认")
              })
 
-
-             if($(".distip").length>0){ //提示显示在元素的上方
-                $('.distip').eq(0).qtip({
-                    show:true,
-                    hide:'unfocus',
-                    position: {
-                        my: 'bottom center', //my:是指三角的位置
-                        at: 'top center' //是在提示在组件的相对位置
-                    },
-                    style: {
-                        classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
-                    }
-                });
-            }
 			
 		})
 

@@ -69,7 +69,7 @@
                                 <div class="cl mt5 addressBook" style="display: block;">
                                     <span class="dib vt pt5">收货地址：</span>
                                     <div class="dib pct90 addressDBook">
-                                        <div class="orderaddr vt w270 ">
+                                        <div class="orderaddr vt w270 poi">
                                             <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
                                              <span class="dib pct70">
                                                 <span class="dib addrInfo lh18 f14">上海宝山区月浦镇锦乐路288号</span>
@@ -79,10 +79,10 @@
                                                 </span>
                                              </span>
                                              <span class="dib pct28 vt tr">
-                                                <a class="dib addrbut mb5" href="javascript:void(0)" onclick="setActive(this)">选择该地址</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                                <a class="dib addrbut" href="javascript:void(0)" onclick="editAddr(event)">编辑地址</a>
                                              </span>
                                         </div>
-                                        <div class="orderaddr vt w270">
+                                        <div class="orderaddr vt w270 poi">
                                             <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
                                              <span class="dib pct70">
                                                 <span class="dib addrInfo lh18 f14">上海宝山区月浦镇锦乐路288号</span>
@@ -92,10 +92,10 @@
                                                 </span>
                                              </span>
                                              <span class="dib pct28 vt tr">
-                                                <a class="dib addrbut mb5" href="javascript:void(0)" onclick="setActive(this)">选择该地址</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                                <a class="dib addrbut" href="javascript:void(0)" onclick="editAddr(event)">编辑地址</a>
                                              </span>
                                         </div>
-                                        <div class="orderaddr vt w270">
+                                        <div class="orderaddr vt w270 poi">
                                             <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
                                              <span class="dib pct70">
                                                 <span class="dib addrInfo lh18 f14">上海宝山区月浦镇锦乐路288号</span>
@@ -105,10 +105,10 @@
                                                 </span>
                                              </span>
                                              <span class="dib pct28 vt tr">
-                                                <a class="dib addrbut mb5" href="javascript:void(0)" onclick="setActive(this)">选择该地址</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                                <a class="dib addrbut" href="javascript:void(0)" onclick="editAddr(event)">编辑地址</a>
                                              </span>
                                         </div>
-                                        <div class="orderaddr vt w270">
+                                        <div class="orderaddr vt w270 poi">
                                             <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
                                              <span class="dib pct70">
                                                 <span class="dib addrInfo lh18 f14">上海宝山区月浦镇锦乐路288号</span>
@@ -118,10 +118,10 @@
                                                 </span>
                                              </span>
                                              <span class="dib pct28 vt tr">
-                                                <a class="dib addrbut mb5" href="javascript:void(0)" onclick="setActive(this)">选择该地址</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                                <a class="dib addrbut" href="javascript:void(0)" onclick="editAddr(event)">编辑地址</a>
                                              </span>
                                         </div>
-                                        <div class="orderaddr vt w270">
+                                        <div class="orderaddr vt w270 poi">
                                             <a class="dib goldIcon addrdel" href="javascript:void(0)"></a>
                                              <span class="dib pct70">
                                                 <span class="dib addrInfo lh18 f14">上海宝山区月浦镇锦乐路288号</span>
@@ -131,7 +131,7 @@
                                                 </span>
                                              </span>
                                              <span class="dib pct28 vt tr">
-                                                <a class="dib addrbut mb5" href="javascript:void(0)" onclick="setActive(this)">选择该地址</a><br><a class="dib addrbut" href="javascript:void(0)" onclick="editAddr()">编辑地址</a>
+                                                <a class="dib addrbut" href="javascript:void(0)" onclick="editAddr(event)">编辑地址</a>
                                              </span>
                                         </div>
                                     </div>
@@ -329,6 +329,11 @@
                     $(this).html('收起地址').addClass("down")
                 }
             })
+
+
+            $(".orderaddr").on("click",function(){
+                $(this).addClass("active").siblings().removeClass("active");
+            })
 			
 		})
 
@@ -350,7 +355,8 @@
         }
 
 
-        function editAddr(){
+        function editAddr(e){
+            stopPro(e)
             layer.open({
                 type: 2,
                 shade: 0.4,
