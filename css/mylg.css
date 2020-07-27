@@ -504,6 +504,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .greenDf{color:#fff;}
 .greenDf:before{content:'';position:absolute;width: 0;height: 0;border-top: 35px solid #08CB93;border-right:48px solid transparent;top: 0px;left: 0px;}
 .greenDfRot{position: absolute;left:-1px;top:4px;display: inline-block;transform: rotate(-35deg);}
+.fixedButton{position: fixed;bottom:10px;width: 100%;margin-left:-112.5px;}
+.pr50{padding-right:50px;}
 
 /* applysale */
 .order-step {position: relative;width: 70%;}
