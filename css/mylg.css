@@ -563,8 +563,16 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 	.m_fn{float: none;}
 	.m_db{display: block;}
 	.m_dn{display: none}
+	.m_mt10{margin-top: 10px;}
 	.m_mt20{margin-top: 20px;}
-	.m_index_db{float:none;width: 100%}
+	.m_index_db{float:none;display: block}
 	.m_index_db > .ml10{margin-left:0;}
 	.m_index_db >.flexslider{margin-right: 0}
+	.m-tabLimitSCroll{overflow-x:auto;}
+    .m-tabLimitSCroll > .ui-table{min-width: 1440px;}
+    .addressBook{height: auto}
+    .base-info-left{width: 100%}
+    .base-info-right{width: 100%}
+    .package_menu {width:80%;display: inline-block;vertical-align: middle}
+    .package_menu > .ui-option{margin-bottom: 5px}
 }
