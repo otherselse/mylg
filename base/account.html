@@ -162,22 +162,36 @@
 
 
 	<div id="logOffWrap" class="dn">
-		<div class="mt20">
-			<span class="dib pct30 tr">账号：</span>
-			15869724444
-		</div>
-		<div class="mt20">
-			<span class="dib pct30 tr">验证码：</span>
-			<span class="ui-input-x pct40 h34">
-                <input type="text" class="pct50 tc f12">
-                 <span class="pct50 ui-inputbut bld9 tc bgwh"><button class="blue nbut lh34" id="codeec" type="button">发送验证码</button></span>
-            </span>
+		<div class="logOffCont">
+			<div class="mt20">
+				<span class="dib pct30 tr">账号：</span>
+				15869724444
+			</div>
+			<div class="mt20">
+				<span class="dib pct30 tr">验证码：</span>
+				<span class="ui-input-x pct40 h34">
+	                <input type="text" class="pct50 tc f12">
+	                 <span class="pct50 ui-inputbut bld9 tc bgwh"><button class="blue nbut lh34" id="codeec" type="button">发送验证码</button></span>
+	            </span>
 
+			</div>
+			<div class="mt30 tc mb30">
+				<button class="ui-button mr10 w180" type="button" data-type="big" onclick="doSubmit()">确定</button>
+				<button class="ui-button w80" data-type="bb" small-type="grey" type="button" onclick="layer.closeAll()">取消</button>
+			</div>
 		</div>
-		<div class="mt30 tc mb30">
-			<button class="ui-button mr10 w180" type="button" data-type="big" onclick="doSubmit()">确定</button>
-			<button class="ui-button w80" data-type="bb" small-type="grey" type="button" onclick="layer.closeAll()">取消</button>
+		<div class="loading dn">
+			<div class="mt50 tc pt20"><i class="ui-icon-waiting vm mr5"></i>正在注销中...</div> 
 		</div>
+		<div class="success dn">
+			<div class="tc mt40"><span class="ui-tip" data-type="normal" style="padding-top:0"><span class="f18  dib g28">确定要注销吗？</span></span><br/><br/>注销后，该账户将不能登录使用乐刚网</div>
+			<div class="tc mt30"><button class="ui-button mr20" type="button">确定注销</button><button class="ui-button" type="button" data-type="normal">我再想想</button></div>
+		</div>
+		<div class="failture dn">
+			<div class="mt50 tc pt20"><i class="ui-icon-error vm mr5"></i>操作失败，请重试！</div> 
+			<div class="mt20 tc"><button class="ui-button" type="button" data-type="normal">重新再试</button></div>
+		</div>
+
 	</div>
 
 	
@@ -268,6 +282,12 @@
 				area: ['500px', '380px'],
 				content: $("#permissionTransfer")	
 			});
+		}
+
+
+		function doSubmit(){
+			$(".logOffCont").hide();
+			$(".loading").show();
 		}
 
 	
