@@ -295,8 +295,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .hbbg i{position:absolute;width:11px;height:11px;right:-5px;top:0px;background:url(../images/new2016_del.png) no-repeat;display:inline-block;cursor:pointer}
 .checksel {vertical-align:middle;width: 15px;height: 15px;overflow: hidden;position: relative;display: inline-block;margin: 0 auto;background: url(../images/lgIcon.png)  -518px -168px no-repeat;}
 .checksel .checkselbox{opacity: 0;-webkit-opacity: 0;-moz-opacity: 0;-ms-opacity: 0;filter: alpha(opacity = 0);left:-3px;top:-2px;position: absolute;}
-.checksel.on{background-position: -468px -168px}
 .checksel:hover{background-position: -368px -168px}
+.checksel.on,.checksel:hover.on{background-position: -468px -168px}
 .createProc .jgProcSelect{text-align: left !important}
 
 .jgs2016_yllist .jgtip {padding: 10px 0 10px 48px;line-height: 22px}
