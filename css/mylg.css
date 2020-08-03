@@ -299,6 +299,10 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .checksel.on,.checksel:hover.on{background-position: -468px -168px}
 .createProc .jgProcSelect{text-align: left !important}
 
+.hoog {background: #1bb869;width: 22px;height: 18px;border-radius: 3px;display: inline-block;font-size: 12px;
+    text-align: left;color: #fff;position: relative;margin-right:4px;line-height:18px;
+}
+
 .jgs2016_yllist .jgtip {padding: 10px 0 10px 48px;line-height: 22px}
 .jgs2016_jgddown .ui-selradio .bd_none{margin:0 ;border:0;}
 .jgs2016_jgddown .jgs2016_jgbut{padding:0 10px;height: 25px;line-height: 25px; border-radius: 3px;border:1px #1365E8 solid;color: #1365E8;display: inline-block;font-size: 12px;text-decoration: none;box-sizing: border-box;cursor: pointer;transition: border-color .15s, background-color .15s;-webkit-transition: border-color .15s, background-color .15s;text-align: center;}
