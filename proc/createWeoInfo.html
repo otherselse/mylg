@@ -98,6 +98,7 @@
 			<div class="ui-content autoHeight mt20">
                     	<div class="pt20 pl20 pr20 pb10 ovh"><span class="g28 dib l b">提货信息</span><a href="javascript:void(0)" onclick="select_Source()"  class="ui-button r f12" data-type="small">+选择货物</a></div>
                     	<div class="pl20 pr20 pb10">
+                    		<div class="m-tabLimitSCroll">
                     		<table border="0" class="ui-table tc f12 " data-type="edit">
 								<thead>
 									<tr class="">
@@ -133,6 +134,7 @@
 									</tr>
 								</tfoot>
 							</table>
+						</div>
 							<!-- 内容结束 -->
 
 
@@ -166,10 +168,11 @@
 				                            <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct16 mr20" placeholder="请输入18位身份证号">
 				                             提货人：
 				                             <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct16 mr20" placeholder="请输入">
-				                              联系电话：
+				                             <span class="m_fn m_mt10 m_index_db"> 联系电话：
 				                             <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct16 " placeholder="请输入">
 				                             <a class="ui-icon-add vm ml5" href="javascript:void(0)" onclick="add_numCols(this)"></a>
 				                             <a class="ui-icon-del vm ml5" style="display: none" href="javascript:void(0)" onclick="del_numCols(this)"></a>
+				                         </span>
 			                         	 </div>
 			                             <div class="cl mt5">&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<span class="ui-tip" data-type="normal">提示：同一个提单安排的提货车辆不能超过5个</span></div>
 									</div>
@@ -191,7 +194,7 @@
 			                                <input type="hidden" id="dateNow" value="2020-04-17">
 			                                <span class="ui-input mr20 pct10" data-type="time"><input type="text" class="render-time" placeholder="请选择" id="startDate" name="wareHouseinMain.startDate" readonly="" ></span>
 			                                起运地址：
-			                                <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct40 " placeholder="请输入">
+			                                <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct30 " placeholder="请输入">
 										</div>
 										<div class="mt10">
 											<i class="endECircle v-1 mr5"></i>目的仓库：
@@ -209,7 +212,7 @@
 			                                到货日期：
 			                                <span class="ui-input mr20 pct10" data-type="time"><input type="text" class="render-time" placeholder="请选择" id="endDate" name="wareHouseinMain.startDate" readonly="" ></span>
 			                                到货地址：
-			                                <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct40 " placeholder="请输入">
+			                                <input type="text" id="startPlaceName" name="wareHouseinMain.startPlaceName" class="ui-input pct30 " placeholder="请输入">
 										</div>
 										<div class="mt10">
 											 <span class="dib" style="width: 13px">&emsp;</span>

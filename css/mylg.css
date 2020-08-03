@@ -582,4 +582,9 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .pct20{width: 17%}
     .sel_mul_op{width: 70%;vertical-align: middle;}
     .sel_mul_op .ui-optionNo{margin-bottom: 10px}
+    .pct90{width: 88%}
+    .invoiceMsg > .invoice{float:none;width: 100%;}
+    .invoiceMsg > .invoice.pct75{border-top:1px #dedede solid;}
+    .invoiceMsg{height: auto}
+    .m_tc{text-align: center;}
 }
