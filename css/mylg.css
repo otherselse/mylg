@@ -255,7 +255,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .base-finan-add:hover{border-color: #1365E8}
 .base-finan-tip{margin:50px -10% 0; }
 .sms-content {box-sizing: border-box;display: inline-block;width: 800px;vertical-align: top;}
-.sms-content-item {box-sizing: border-box;width: 44%;height: 94px; margin: -1px 4% 0px 0;float: left;padding: 16px 19px;border: 1px solid #E6E6E6;background: #F9F9F9;
+.sms-content-item {box-sizing: border-box;width: 44%;height: 94px; margin: -1px 2% 0px 2%;float: left;padding: 16px 19px;border: 1px solid #E6E6E6;background: #F9F9F9;
     text-align: left;cursor: pointer;}
 .sms-content-item:nth-of-type(2n){margin-right:0;}
 .sms-content-item.on{background: #fff}
@@ -587,4 +587,6 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .invoiceMsg > .invoice.pct75{border-top:1px #dedede solid;}
     .invoiceMsg{height: auto}
     .m_tc{text-align: center;}
+    .znstepline{top:10px;}
+    .sms-content{width: 100%;margin-left:auto;margin-right:auto;text-align: center;box-sizing: border-box;}
 }
