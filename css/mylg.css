@@ -560,12 +560,15 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-input-x.h34 > input{box-sizing: border-box;padding-left: 5px;line-height: 32px;}
 
 @media (max-width: 1024px) {
+	html,body{font-size:14px !important;}
+	.f12{font-size:14px !important;}
+	.f14{font-size:16px !important;}
 	.m_fn{float: none;}
 	.m_db{display: block;}
 	.m_dn{display: none}
 	.m_mt10{margin-top: 10px;}
 	.m_mt20{margin-top: 20px;}
-	.m_index_db{float:none;display: block}
+	.m_index_db{float:none;display: block;width: 100%}
 	.m_index_db > .ml10{margin-left:0;}
 	.m_index_db >.flexslider{margin-right: 0}
 	.m-tabLimitSCroll{overflow-x:auto;}
@@ -575,4 +578,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .base-info-right{width: 100%}
     .package_menu {width:80%;display: inline-block;vertical-align: middle}
     .package_menu > .ui-option{margin-bottom: 5px}
+    .selectProcName{width: 83%}
+    .pct20{width: 17%}
+    .sel_mul_op{width: 70%;vertical-align: middle;}
+    .sel_mul_op .ui-optionNo{margin-bottom: 10px}
 }
