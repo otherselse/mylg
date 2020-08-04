@@ -37,6 +37,11 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .qContent{font-size:12px;line-height: 12px;direction: ltr;box-shadow: none;box-sizing: border-box;padding: 14px;}
 .qCont:before{content:'';width: 0;height:0;border-width: 6px;border-style: solid;border-color:  transparent transparent #fff transparent ;
     ;top:-10px;left:20px;transform:translateX(-50%);position: absolute;}
+.no_bottom.ui-table tr:last-child > td{border-bottom: 0}
+.no_right.ui-table td:last-child{border-right:0;}
+.redbg{background:#FF6B6B;}
+.qsIcon{width: 18px;height: 18px;background-position: -164px -214px;}
+
 /*leftbar*/
 .logo{height:133px;text-align: center;padding-top: 10px;}
 .menu::-webkit-scrollbar {width:6px;height:4px;}
