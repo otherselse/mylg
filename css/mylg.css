@@ -468,8 +468,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .mon-bal.m_f{color:#5F89A1 ;border-color: #5F89A1 }
 .mon-bal.m_j{color: #C2976D;border-color: #C2976D;}
 .city-picker-span{vertical-align:middle;border-radius:3px;height: 34px;line-height: 34px;font-size: 14px;border:1px solid #D9D9D9;box-sizing:border-box;text-indent:10px;}
-.coupon-item > .circleDot{width: 24px;height: 24px;background-position: -213px -213px;position: absolute;top:35px;right:32px;background-color:transparent;}
-.coupon-item.on > .circleDot{background-position: -263px -213px;}
+.coupon-item > .circleDot{width: 24px;height: 24px;box-sizing:border-box;border: 1px solid #9A9A9A;border-radius:50%;position: absolute;top:35px;right:32px;background-color:transparent;}
+.coupon-item.on > .circleDot{background-position: -414px -214px;border:0;}
 .coupon-cont{padding-left:87px;display: none}
 .ui-table .pageWrap{margin-top:0;}
 
@@ -574,9 +574,29 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .indexFIcon2{width: 50px;height: 50px;background-position: -250px -200px}
 .indexFIcon3{width: 50px;height: 50px;background-position: -300px -200px}
 .indexFIcon4{width: 50px;height: 50px;background-position: -350px -200px}
-.indexFNum{width:30px;height:30px;border-radius:50%;color:#FB2020;font-size:18px;line-height:30px;text-align:center;background: #FFE0E0;}
+.indexFNum{width:30px;height:30px;border-radius:50%;color:#1365E8;font-size:18px;line-height:30px;text-align:center;background: #DCEAFF;}
 .indexFastNCont{display: block;}
 .indexFastNav:hover .indexFastNCont{transform: translateX(10px);}
+
+.ui-thover tr:hover td{
+    border-right: 1px solid #ebf7ff;
+}
+.ui-table thead th {
+    background-image: linear-gradient(180deg, #FCFCFC 0%, #DFE2E6 100%);
+    box-shadow: inset 1px 2px 1px 0 #FFFFFF;
+    border-bottom: 1px solid #cccc;
+}
+.ui-table[data-type='edit'] thead th {
+    background-image: linear-gradient(180deg, #FCFCFC 0%, #DFE2E6 100%);
+    box-shadow: inset 1px 2px 1px 0 #FFFFFF;
+    border-bottom: 1px solid #cccc;
+}
+.ui-table[data-type='noLine'] thead th {
+    background-image: linear-gradient(180deg, #FCFCFC 0%, #DFE2E6 100%);
+    border-bottom: 1px solid #cccc;
+    box-shadow:none;
+}
+
 @media (max-width: 1024px) {
 	html,body{font-size:14px !important;}
 	.f12{font-size:14px !important;}
@@ -593,7 +613,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .m-tabLimitSCroll > .ui-table{min-width: 1440px;}
     .addressBook{height: auto}
     .base-info-left{width: 100%}
-    .base-info-right{width: 100%}
+    .base-info-right{width: 100%;border-top:1px #dedede solid;}
     .package_menu {width:80%;display: inline-block;vertical-align: middle}
     .package_menu > .ui-option{margin-bottom: 5px}
     .selectProcName{width: 83%}
@@ -611,5 +631,6 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .indexFastNav{width:48.5%;margin-right: 3%;}
     .indexFastNav:nth-of-type(2n){margin-right: 0}
     .indexFastNav:nth-of-type(-n+2){margin-bottom:20px;}
+    .ui-option, .ui-optionNo{font-size: 14px}
 
 }
