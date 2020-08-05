@@ -568,6 +568,15 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-input-x .ui-inputbut.bgwh{background: #fff}
 .ui-input-x.h34 > input{box-sizing: border-box;padding-left: 5px;line-height: 32px;}
 
+.indexFastNav{color:#282828;display:block;font-size:16px;height:110px;background: #FFFFFF;box-shadow: 0 10px 20px 0 #EBEFF7;border-radius: 6px;width:23.87%;margin-right: 1.5%;float:left;}
+.indexFastNav:last-child{margin-right:0;}
+.indexFIcon1{width: 50px;height: 50px;background-position: -200px -200px}
+.indexFIcon2{width: 50px;height: 50px;background-position: -250px -200px}
+.indexFIcon3{width: 50px;height: 50px;background-position: -300px -200px}
+.indexFIcon4{width: 50px;height: 50px;background-position: -350px -200px}
+.indexFNum{width:30px;height:30px;border-radius:50%;color:#FB2020;font-size:18px;line-height:30px;text-align:center;background: #FFE0E0;}
+.indexFastNCont{display: block;}
+.indexFastNav:hover .indexFastNCont{transform: translateX(10px);}
 @media (max-width: 1024px) {
 	html,body{font-size:14px !important;}
 	.f12{font-size:14px !important;}
@@ -599,4 +608,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .znstepline{top:10px;}
     .sms-content{width: 100%;margin-left:auto;margin-right:auto;text-align: center;box-sizing: border-box;}
     .m_pct30{width: 30%}
+    .indexFastNav{width:48.5%;margin-right: 3%;}
+    .indexFastNav:nth-of-type(2n){margin-right: 0}
+    .indexFastNav:nth-of-type(-n+2){margin-bottom:20px;}
+
 }
