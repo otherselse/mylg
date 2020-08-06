@@ -598,7 +598,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     box-shadow:none;
 }
 
-.ui-button.disabled.applyBtn, .applyBtn.ui-button:disabled {
+.ui-button.disabled.apply-btn, .apply-btn.ui-button:disabled {
     color: rgba(255,255,255,0.5);
     cursor: default;
     opacity: 1;
