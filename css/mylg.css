@@ -568,6 +568,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-input-x .ui-inputbut.bgwh{background: #fff}
 .ui-input-x.h34 > input{box-sizing: border-box;padding-left: 5px;line-height: 32px;}
 
+
 .indexFastNav{color:#282828;display:block;font-size:16px;height:110px;background: #FFFFFF;box-shadow: 0 10px 20px 0 #EBEFF7;border-radius: 6px;width:23.87%;margin-right: 1.5%;float:left;}
 .indexFastNav:last-child{margin-right:0;}
 .indexFIcon1{width: 50px;height: 50px;background-position: -200px -200px}
@@ -595,6 +596,12 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     background-image: linear-gradient(180deg, #FCFCFC 0%, #DFE2E6 100%);
     border-bottom: 1px solid #cccc;
     box-shadow:none;
+}
+
+.ui-button.disabled.apply-btn, .apply-btn.ui-button:disabled {
+    color: rgba(255,255,255,0.5);
+    cursor: default;
+    opacity: 1;
 }
 
 @media (max-width: 1024px) {
@@ -632,5 +639,12 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .indexFastNav:nth-of-type(2n){margin-right: 0}
     .indexFastNav:nth-of-type(-n+2){margin-bottom:20px;}
     .ui-option, .ui-optionNo{font-size: 14px}
-
+    .applyBox .pct50{width: 100%;}
+    .applyBox .ui-input.pct50,.applyBox .ui-input-x.pct50{width: 30%;}
+    .applyBox .pct12{width: 24%;}
+    .m_pct5{width: 5% !important;}
+    .m_pct40{width: 40% !important;}
+    .m_pct10{width: 10% !important;}
+    .m_pct100{width: 100% !important;}
+    .searchInput .pct13{width: 10% !important;}
 }
