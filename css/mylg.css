@@ -37,6 +37,11 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .qContent{font-size:12px;line-height: 12px;direction: ltr;box-shadow: none;box-sizing: border-box;padding: 14px;}
 .qCont:before{content:'';width: 0;height:0;border-width: 6px;border-style: solid;border-color:  transparent transparent #fff transparent ;
     ;top:-10px;left:20px;transform:translateX(-50%);position: absolute;}
+.no_bottom.ui-table tr:last-child > td{border-bottom: 0}
+.no_right.ui-table td:last-child{border-right:0;}
+.redbg{background:#FF6B6B;}
+.qsIcon{width: 18px;height: 18px;background-position: -164px -214px;}
+
 /*leftbar*/
 .logo{height:133px;text-align: center;padding-top: 10px;}
 .menu::-webkit-scrollbar {width:6px;height:4px;}
@@ -87,7 +92,6 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .topBar{height:76px;border-bottom: 1px rgba(128,128,128,0.2) solid;box-sizing: border-box;}
 .mainCont{padding:20px 30px;}
 .mainContnot{padding:0px 30px;}
-
 
 
 /* new  web and scroll banner*/
@@ -256,14 +260,14 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .base-finan-add:hover{border-color: #1365E8}
 .base-finan-tip{margin:50px -10% 0; }
 .sms-content {box-sizing: border-box;display: inline-block;width: 800px;vertical-align: top;}
-.sms-content-item {box-sizing: border-box;width: 44%;height: 94px; margin: -1px 4% 0px 0;float: left;padding: 16px 19px;border: 1px solid #E6E6E6;background: #F9F9F9;
+.sms-content-item {box-sizing: border-box;width: 44%;height: 94px; margin: -1px 2% 0px 2%;float: left;padding: 16px 19px;border: 1px solid #E6E6E6;background: #F9F9F9;
     text-align: left;cursor: pointer;}
 .sms-content-item:nth-of-type(2n){margin-right:0;}
 .sms-content-item.on{background: #fff}
  .sms-content-item-panel {box-sizing: border-box;display: inline-block;width: calc(100% - 40px);font-size: 12px;line-height: 17px;vertical-align: top;}
  .sms-content-item-switch {box-sizing: border-box;display: inline-block;width: 40px;height: 100%;vertical-align: top;}
 
- .accountbg .orderaddr{height: 148px;width: 32%;color:#282828;}
+ .accountbg .orderaddr{height: 148px;width:320px;color:#282828;margin-right:15px;margin-bottom: 20px}
 
 @media (min-width: 1600px) {
 	.base-comp-bg{background-size:100% 100%;}
@@ -296,9 +300,13 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .hbbg i{position:absolute;width:11px;height:11px;right:-5px;top:0px;background:url(../images/new2016_del.png) no-repeat;display:inline-block;cursor:pointer}
 .checksel {vertical-align:middle;width: 15px;height: 15px;overflow: hidden;position: relative;display: inline-block;margin: 0 auto;background: url(../images/lgIcon.png)  -518px -168px no-repeat;}
 .checksel .checkselbox{opacity: 0;-webkit-opacity: 0;-moz-opacity: 0;-ms-opacity: 0;filter: alpha(opacity = 0);left:-3px;top:-2px;position: absolute;}
-.checksel.on{background-position: -468px -168px}
 .checksel:hover{background-position: -368px -168px}
+.checksel.on,.checksel:hover.on{background-position: -468px -168px}
 .createProc .jgProcSelect{text-align: left !important}
+
+.hoog {background: #1bb869;width: 22px;height: 18px;border-radius: 3px;display: inline-block;font-size: 12px;
+    text-align: left;color: #fff;position: relative;margin-right:4px;line-height:18px;
+}
 
 .jgs2016_yllist .jgtip {padding: 10px 0 10px 48px;line-height: 22px}
 .jgs2016_jgddown .ui-selradio .bd_none{margin:0 ;border:0;}
@@ -460,8 +468,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .mon-bal.m_f{color:#5F89A1 ;border-color: #5F89A1 }
 .mon-bal.m_j{color: #C2976D;border-color: #C2976D;}
 .city-picker-span{vertical-align:middle;border-radius:3px;height: 34px;line-height: 34px;font-size: 14px;border:1px solid #D9D9D9;box-sizing:border-box;text-indent:10px;}
-.coupon-item > .circleDot{width: 24px;height: 24px;background-position: -213px -213px;position: absolute;top:35px;right:32px;background-color:transparent;}
-.coupon-item.on > .circleDot{background-position: -263px -213px;}
+.coupon-item > .circleDot{width: 24px;height: 24px;box-sizing:border-box;border: 1px solid #9A9A9A;border-radius:50%;position: absolute;top:35px;right:32px;background-color:transparent;}
+.coupon-item.on > .circleDot{background-position: -414px -214px;border:0;}
 .coupon-cont{padding-left:87px;display: none}
 .ui-table .pageWrap{margin-top:0;}
 
@@ -504,6 +512,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .greenDf{color:#fff;}
 .greenDf:before{content:'';position:absolute;width: 0;height: 0;border-top: 35px solid #08CB93;border-right:48px solid transparent;top: 0px;left: 0px;}
 .greenDfRot{position: absolute;left:-1px;top:4px;display: inline-block;transform: rotate(-35deg);}
+.fixedButton{position: fixed;bottom:10px;width: 100%;margin-left:-112.5px;}
+.pr50{padding-right:50px;}
 
 /* applysale */
 .order-step {position: relative;width: 70%;}
@@ -558,8 +568,83 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-input-x .ui-inputbut.bgwh{background: #fff}
 .ui-input-x.h34 > input{box-sizing: border-box;padding-left: 5px;line-height: 32px;}
 
+
+.indexFastNav{color:#282828;display:block;font-size:16px;height:110px;background: #FFFFFF;box-shadow: 0 10px 20px 0 #EBEFF7;border-radius: 6px;width:23.87%;margin-right: 1.5%;float:left;}
+.indexFastNav:last-child{margin-right:0;}
+.indexFIcon1{width: 50px;height: 50px;background-position: -200px -200px}
+.indexFIcon2{width: 50px;height: 50px;background-position: -250px -200px}
+.indexFIcon3{width: 50px;height: 50px;background-position: -300px -200px}
+.indexFIcon4{width: 50px;height: 50px;background-position: -350px -200px}
+.indexFNum{width:30px;height:30px;border-radius:50%;color:#1365E8;font-size:18px;line-height:30px;text-align:center;background: #DCEAFF;}
+.indexFastNCont{display: block;}
+.indexFastNav:hover .indexFastNCont{transform: translateX(10px);}
+
+.ui-thover tr:hover td{
+    border-right: 1px solid #ebf7ff;
+}
+.ui-table thead th {
+    background-image: linear-gradient(180deg, #FCFCFC 0%, #DFE2E6 100%);
+    box-shadow: inset 1px 2px 1px 0 #FFFFFF;
+    border-bottom: 1px solid #cccc;
+}
+.ui-table[data-type='edit'] thead th {
+    background-image: linear-gradient(180deg, #FCFCFC 0%, #DFE2E6 100%);
+    box-shadow: inset 1px 2px 1px 0 #FFFFFF;
+    border-bottom: 1px solid #cccc;
+}
+.ui-table[data-type='noLine'] thead th {
+    background-image: linear-gradient(180deg, #FCFCFC 0%, #DFE2E6 100%);
+    border-bottom: 1px solid #cccc;
+    box-shadow:none;
+}
+
 .ui-button.disabled.applyBtn, .applyBtn.ui-button:disabled {
     color: rgba(255,255,255,0.5);
     cursor: default;
     opacity: 1;
+}
+
+@media (max-width: 1024px) {
+	html,body{font-size:14px !important;}
+	.f12{font-size:14px !important;}
+	.f14{font-size:16px !important;}
+	.m_fn{float: none;}
+	.m_db{display: block;}
+	.m_dn{display: none}
+	.m_mt10{margin-top: 10px;}
+	.m_mt20{margin-top: 20px;}
+	.m_index_db{float:none;display: block;width: 100%}
+	.m_index_db > .ml10{margin-left:0;}
+	.m_index_db >.flexslider{margin-right: 0}
+	.m-tabLimitSCroll{overflow-x:auto;}
+    .m-tabLimitSCroll > .ui-table{min-width: 1440px;}
+    .addressBook{height: auto}
+    .base-info-left{width: 100%}
+    .base-info-right{width: 100%;border-top:1px #dedede solid;}
+    .package_menu {width:80%;display: inline-block;vertical-align: middle}
+    .package_menu > .ui-option{margin-bottom: 5px}
+    .selectProcName{width: 83%}
+    .pct20{width: 17%}
+    .sel_mul_op{width: 70%;vertical-align: middle;}
+    .sel_mul_op .ui-optionNo{margin-bottom: 10px}
+    .pct90{width: 88%}
+    .invoiceMsg > .invoice{float:none;width: 100%;}
+    .invoiceMsg > .invoice.pct75{border-top:1px #dedede solid;}
+    .invoiceMsg{height: auto}
+    .m_tc{text-align: center;}
+    .znstepline{top:10px;}
+    .sms-content{width: 100%;margin-left:auto;margin-right:auto;text-align: center;box-sizing: border-box;}
+    .m_pct30{width: 30%}
+    .indexFastNav{width:48.5%;margin-right: 3%;}
+    .indexFastNav:nth-of-type(2n){margin-right: 0}
+    .indexFastNav:nth-of-type(-n+2){margin-bottom:20px;}
+    .ui-option, .ui-optionNo{font-size: 14px}
+    .applyBox .pct50{width: 100%;}
+    .applyBox .ui-input.pct50,.applyBox .ui-input-x.pct50{width: 30%;}
+    .applyBox .pct12{width: 24%;}
+    .m_pct5{width: 5% !important;}
+    .m_pct40{width: 40% !important;}
+    .m_pct10{width: 10% !important;}
+    .m_pct100{width: 100% !important;}
+    .searchInput .pct13{width: 10% !important;}
 }
