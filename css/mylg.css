@@ -41,6 +41,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .no_right.ui-table td:last-child{border-right:0;}
 .redbg{background:#FF6B6B;}
 .qsIcon{width: 18px;height: 18px;background-position: -164px -214px;}
+.topImg{width: 32px;min-height: 34px;margin-top: -2px;}
+.topImgCont{width: 32px;height: 32px;border-radius: 50%;border: 1px solid #c1c1c1;display: inline-block;overflow: hidden;vertical-align: middle;}
 
 /*leftbar*/
 .logo{height:133px;text-align: center;padding-top: 10px;}
