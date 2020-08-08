@@ -71,29 +71,26 @@
 				<table class="ui-table tc f12 mt50" width="100%">
 						<thead>
 							<tr>
-								<th width="8%">业务日期</th>
-								<th width="12%">提单号</th>
-								<th width="6%">提货仓库</th>
-								<th width="6%">运输要求</th>
-								<th width="6%">结算方式</th>
+								<th width="12%"><div class="pl20 tl">业务日期/提单号</div></th>
+								<th width="10%">提货仓库</th>
+								<th width="8%">结算方式</th>
 								<th width="8%">预提重量</th>
-								<th width="10%">提货车号</th>
-								<th width="10%">司机电话</th>
-								<th width="10%">提货证件</th>
+								<th width="8%">提单状态</th>
+								<th width="8%">运输要求</th>
+								<th width="14%">提货车号</th>
 								<th width="6%">操作</th>
+							
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
-								<td>2020-06-01</td>
-								<td>PRO20200715829478</td>
+								<td><div class="pl20 tl">2020-06-01<br/>PRO20200715829478</div></td>
 								<td>华冶B区</td>
-								<td>代运</td>
 								<td>现结</td>
-								<td>0.009</td>
-								<td>沪A45674<a class="ui-icon-add vm ml5 tipclick" href="javascript:void(0)" qtip-dom="addCarNum"></a></td>
-								<td>13955434556、13456324567</td>
-								<td>1111344677333322</td>
+								<td>222.335</td>
+								<td>待确认</td>
+								<td>字体</td>
+								<td>沪A45674,陕W23223<a href="javascript:void(0)" onclick="editCar()" class="ml5">[修改车号]</a></td>
 								<td><a href="myOutDetial.html">查看</a></td>
 							</tr>
 						</tbody>
@@ -116,10 +113,14 @@
 	<!-- rightBar end-->
 
 
-	<div class="addCarNum dn">
+	<!-- <div class="addCarNum dn">
 		<div class="ui-input mb10" data-type="price"><input type="text" value="" placeholder="追加车号"></div>
 		<button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick()">保存</button>
 		<button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+	</div> -->
+
+	<div class="addCarNum dn">
+
 	</div>
 
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
@@ -180,7 +181,16 @@
 		}
 
 
-
+		function editCar(){
+			    layer.open({
+				type: 2,
+				shade: 0.4,
+				title: '修改车号',
+				area: ['1200px', '350px'],
+				shadeClose:true,
+				content: 'editCar.html'
+			});
+		}
 
 
 
