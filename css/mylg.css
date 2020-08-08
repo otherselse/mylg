@@ -44,6 +44,10 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .topImg{width: 32px;min-height: 34px;margin-top: -2px;}
 .topImgCont{width: 32px;height: 32px;border-radius: 50%;border: 1px solid #c1c1c1;display: inline-block;overflow: hidden;vertical-align: middle;}
 
+.on .ui-checkbox-unable, .on .ui-checkbox-unable:hover{
+    background-position: -368px -68px;
+}
+
 /*leftbar*/
 .logo{height:133px;text-align: center;padding-top: 10px;}
 .menu::-webkit-scrollbar {width:6px;height:4px;}
