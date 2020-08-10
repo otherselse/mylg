@@ -72,7 +72,7 @@
 					<table class="ui-table f12 mt40 checkbox" width="100%" >
 						<thead>
 							<tr class="tl">
-								<th width="3%" class="tc"><i class="ui-checkbox goldIcon mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</th>
+								<th width="3%" class="tc"><i class="ui-checkbox goldIcon mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setOptAll(this)"></i>全选</th>
 								<th width="8%" ><div class="pl10">单据号/入库日期</div></th>
 								<th width="6%"><div class="pl10">品名/<a onclick="setUpDownIndate(this,'a.steSpec')" href="javscript:void(0)" class="g28">规格<i class="myarrow vm ml5"></i></a></div></th>
 								<th width="5%" ><div class="pl10">钢厂/牌号</div></th>
@@ -84,8 +84,19 @@
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
-							<tr>
-								<td class="tc"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
+							<tr onclick="selLine(this)">
+								<td class="tc"><i class="ui-checkbox-unable goldIcon vm"></i></td>
+								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
+								<td><div class="pl10">低合金卷板<br/>6.000*1500*C</div></td>
+								<td><div class="pl10">中钢<br/>BTC340R</div></td>
+								<td><div class="pl10">225/88-2</div></td>
+								<td class="tc">1.0/19.8</td>
+								<td class="tc"><input type="text" class="ui-input tc pct40" data-type="small"> / <input type="text" class="ui-input tc pct40" data-type="small"></td>
+								<td class="tc">0.000</td>
+								<td class="tc">--</td>
+							</tr>
+							<tr onclick="selLine(this)">
+								<td class="tc"><i class="ui-checkbox-unable goldIcon vm"></i></td>
 								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
 								<td><div class="pl10">低合金卷板<br/>6.000*1500*C</div></td>
 								<td><div class="pl10">中钢<br/>BTC340R</div></td>
@@ -219,7 +230,21 @@
 		}
 
 
+		function selLine(obj){
+			if($(obj).hasClass("on")){
+				$(obj).removeClass("on")
+			}else{
+				$(obj).addClass("on")
+			}
+		}
 
+		function setOptAll(obj){
+			if(obj.checked){
+				$(obj).parents(".ui-table").find("tbody").find("tr").addClass("on");
+			}else{
+				$(obj).parents(".ui-table").find("tbody").find("tr").removeClass("on");
+			}
+		}
 
 
 	</script>
