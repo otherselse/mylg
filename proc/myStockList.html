@@ -84,8 +84,7 @@
 						</span>
                         
                     </div>
-                    <div class="mt10">
-                    	
+                    <div class="mt10">                    	
                         入库日期：
 						<span class="ui-input  pct20 mr20" data-type="time"><input type="text" placeholder="开始时间 - 结束时间" id="dateStart" readonly="" ></span>
 						<button type="button" class="ui-button mr10" type="button">查询</button>
@@ -94,39 +93,132 @@
 
 
 					<!-- 加工商 search  end -->
-					<div class="m-tabLimitSCroll">
-					<table class="ui-table f12 mt40 checkbox" width="100%">
+					<div class="lgui-table-tools ovh mt40 f14">
+						<div class="dn lgui-table-tcont" >
+							<div class="p20 "><span class="dib lgui-table-detail"></span></div>
+							<div class="bte pt10 tc ovh">
+								<div class="l pct20">&emsp;</div>
+								<div class="l pct60 tc">
+									<input type="button" value="确认" onclick="setBut()" class="ui-button mr10 w90" />
+									<input type="button" value="取消" class="ui-button w90 cancelBut"  data-type="clear" />
+								</div>
+								<div class="l pct20 mt5"><a href="javascript:void(0)">恢复默认</a></div>														
+							</div>
+						</div>
+					</div>
+					<div class="m-tabLimitSCroll lgui-table-box">
+					<table class="ui-table f12  checkbox" width="100%">
 						<thead>
 							<tr class="tl">
 								<th width="3%" class="tc"><i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i></th>
-								<th width="8%" ><div class="pl10"><label onclick="setUpDownIndate(this,'a.inDate')" class="down">入库日期<i class=" myarrow vm"></i></label>/单据号</div></th>
-								<th width="10%"><div class="pl10">品名/钢厂/规格/牌号</div></th>
-								<th width="5%" ><div class="pl10">捆包号</div></th>
-								<th width="8%" ><div class="pl10">数量/重量/毛重</div></th>
-								<th width="6%" class="tc">销售单价</th>
-								<th width="8%" ><div class="pl10">货物状态/车船号</div></th>
-								<th width="8%" ><div class="pl10">资源号/炉号</div></th>
-								<th width="8%" ><div class="pl10">过户次数/库龄</div></th>
-								<th width="12%" ><div class="pl10">库位号/货物类型/来料情况</div></th>
+								<th width="8%" ><div class="pl10">入库日期/单据号</div></th>
+								<th width="8%" ><div class="pl10">捆包号</div></th>
+								<th width="7%" ><div class="pl10">品名</div></th>
+								<th width="7%" ><div class="pl10">规格</div></th>
+								<th width="6%" ><div class="pl10">钢厂/牌号</div></th>
+								<th width="5%" ><div class="pl10">数量</div></th>
+								<th width="5%" ><div class="pl10">重量</div></th>
+								<th width="5%" ><div class="pl10">毛重</div></th>
+								<th width="5%" class="tc" >销售单价</th>
+								<th width="7%" data-item-field="counts"><div class="pl10">过户次数</div></th>
+								<th width="5%" data-item-field="resource"><div class="pl10">资源号</div></th>
+								<th width="5%" data-item-field="heatNo"><div class="pl10">炉号</div></th>
+								<th width="5%" data-item-field="stockAge"><div class="pl10">库龄</div></th>
+								<th width="5%" data-item-field="shipNo"><div class="pl10">车船号</div></th>
+								<th width="14%" >
+									<span class="l pl10">货物情况</span>
+									<span class="r pr10"><a href="javascript:void(0)" onclick="showCols(this)"><i class="colset dib mr2 vm"></i>设置</a></span>
+								</th>
+
 							</tr>
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
 								<td class="tc"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
 								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
-								<td><div class="pl10">低合金卷板/河北新天<br/>6.000*1500*C /Q345B</div></td>
-								<td><div class="pl10">sdsddffss1345-1</div></td>
-								<td><div class="pl10">1.0/ 30.0/ 30.000</div></td>
+								<td><div class="pl10">
+									<span class="f_blueSquare vt">储</span>
+									<span class="dib pct70 bkall">sdsddffss1345-1</span>
+								</div></td>
+								<td><div class="pl10">低合金卷板</div></td>
+								<td><div class="pl10 ">
+									<span class="f_greenCircle vt">成</span>
+									<span class="dib pct70">3.000*(100*1+200*2+300*3)*C</span>								
+								</div></td>
+								<td><div class="pl10">宝钢新日铁<br/>DC51D+AZ-FB</div></td>
+								<td><div class="pl10">2232</div></td>
+								<td><div class="pl10">22.345</div></td>
+								<td><div class="pl10">22.330</div></td>
 								<td class="tc"><input type="text" class="ui-input tc pct90" data-type="small" placeholder="请输入"></td>
-								<td><div class="pl10">提货中<br/>55</div></td>
-								<td><div class="pl10">SHJG201711210471<br/>--</div></td>
-								<td><div class="pl10">0/514天</div></td>
-								<td><div class="pl10">AKUWEIHAO / 原料<br/>测试来料情况</div></td>
+								<td data-item-field="counts"><div class="pl10">11</div></td>
+								<td data-item-field="resource"><div class="pl10">22</div></td>
+								<td data-item-field="heatNo"><div class="pl10">33</div></td>
+								<td data-item-field="stockAge"><div class="pl10">44</div></td>
+								<td data-item-field="shipNo"><div class="pl10">55</div></td>
+								<td>
+									<div class="pl10">来料散包，来料生锈，包装破损，货物氧化</div>
+									<div class="pl10 mt5"><a href="##" class="mr2">12323.jpg</a><a href="##" class="mr2">12323.jpg</a></div>
+								</td>								
 							</tr>
+							<tr>
+								<td class="tc"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
+								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
+								<td><div class="pl10">
+									<span class="f_greenSquare vt">加</span>
+									<span class="dib pct70 bkall">sdsddffss1345-1</span>
+								</div></td>
+								<td><div class="pl10">低合金卷板</div></td>
+								<td><div class="pl10 ">
+									<span class="f_greyCircle vt">原</span>
+									<span class="dib pct70">3.000*(100*1+200*2+300*3)*C</span>								
+								</div></td>
+								<td><div class="pl10">宝钢新日铁<br/>DC51D+AZ-FB</div></td>
+								<td><div class="pl10">2232</div></td>
+								<td><div class="pl10">22.345</div></td>
+								<td><div class="pl10">22.330</div></td>
+								<td class="tc"><input type="text" class="ui-input tc pct90" data-type="small" placeholder="请输入"></td>
+								<td data-item-field="counts"><div class="pl10">11</div></td>
+								<td data-item-field="resource"><div class="pl10">22</div></td>
+								<td data-item-field="heatNo"><div class="pl10">33</div></td>
+								<td data-item-field="stockAge"><div class="pl10">44</div></td>
+								<td data-item-field="shipNo"><div class="pl10">55</div></td>
+								<td>
+									<div class="pl10">来料散包，来料生锈，包装破损，货物氧化...<a href="javascript:void(0)" onclick="showMore()">更多</a></div>
+									<div class="pl10 mt5"><a href="##" class="mr2">12323.jpg</a><a href="##" class="mr2">12323.jpg</a></div>
+								</td>								
+							</tr>
+							<tr>
+								<td class="tc"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
+								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
+								<td><div class="pl10">
+									<span class="f_redSquare vt">提</span>
+									<span class="dib pct70 bkall">sdsddffss1345-1</span>
+								</div></td>
+								<td><div class="pl10">低合金卷板</div></td>
+								<td><div class="pl10 ">
+									<span class="f_orangeCircle vt">丝</span>
+									<span class="dib pct70">3.000*(100*1+200*2+300*3)*C</span>								
+								</div></td>
+								<td><div class="pl10">宝钢新日铁<br/>DC51D+AZ-FB</div></td>
+								<td><div class="pl10">2232</div></td>
+								<td><div class="pl10">22.345</div></td>
+								<td><div class="pl10">22.330</div></td>
+								<td class="tc"><input type="text" class="ui-input tc pct90" data-type="small" placeholder="请输入"></td>
+								<td data-item-field="counts"><div class="pl10">11</div></td>
+								<td data-item-field="resource"><div class="pl10">22</div></td>
+								<td data-item-field="heatNo"><div class="pl10">33</div></td>
+								<td data-item-field="stockAge"><div class="pl10">44</div></td>
+								<td data-item-field="shipNo"><div class="pl10">55</div></td>
+								<td>
+									<div class="pl10">来料散包，来料生锈，包装破损，货物氧化</div>
+									<div class="pl10 mt5"><a href="##" class="mr2">12323.jpg</a><a href="##" class="mr2">12323.jpg</a></div>
+								</td>								
+							</tr>
+							
 						</tbody>
 						<tfoot>
 							<tr>
-								<td colspan="10"  class="bgfa" style="padding:0">
+								<td colspan="16"  class="bgfa" style="padding:0">
 									<div class="pl20  ovh">
 										<div class="l pct40 pt20 pb10">总计：数量 <span class="red dib mr20">621250.00</span>重量 <span class="red dib mr20">17619.112</span>毛重 <span class="red dib">10347.073</span>
 										</div>
@@ -171,6 +263,8 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 	<script type="text/javascript" src="../js/mylg.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/table/lgBaseFuncBut.js"></script>
+	
 	<script>
 		$(function(){
 			$(".menu").find(".proc").addClass("open").find(".smlist").eq(3).addClass("on")  //左侧菜单选中静态页面采用
@@ -197,13 +291,54 @@
 			})
 
 
+			//cols 定义显示及权限
+			var mylgColInfo=[{"name":"counts","intro":"过户次数","status":false},{"name":"resource","intro":"资源号","status":false},{"name":"heatNo","intro":"炉号","status":false},{"name":"stockAge","intro":"库龄","status":false},{"name":"shipNo","intro":"车船号","status":false}]
+
+			lgScrollTable.choiceCol(mylgColInfo,'.lgui-table-detail','.lgui-table-box'); //根据表格中列的配置，实现初始化表格
+
+
 
 			
 		})
 
 
+		function  showCols(){
+			var selCol =layer.open({
+                    type: 1,
+                    title: "自定义表头字段",
+                    shadeClose: false,
+                    shade: 0.5,
+                    closeBtn: 1,
+                    fixed :true,
+                    area: ['480px', '220px'],
+                    content:$(".lgui-table-tcont")
+                });
 
+			$(".cancelBut").on("click",function(){
+				layer.close(selCol)
+			})
+		}
 
+		function setBut(){
+			lgScrollTable.seltable('.lgui-table-detail','.lgui-table-box');
+		}
+
+		function showMore(){
+			var selCol =layer.open({
+                    type: 1,
+                    title: "捆包号：WIN2031040801234 货物情况",
+                    shadeClose: false,
+                    shade: 0.5,
+                    closeBtn: 1,
+                    fixed :true,
+                    area: ['480px'],
+                    content:'<div class="p20">来料散包,来料生锈,包装破损,货物氧化，来料散包,来料生锈,包装破损,货物氧化，来料散包,来料生锈,包装破损,货物氧化，来料散包,来料生锈,包装破损,货物氧化</div><div class="tc bte pt20 pb20"><input type="button" value="取消" class="ui-button w90 cancelButbz"  data-type="clear" /></div>'
+                });
+
+			$(".cancelButbz").on("click",function(){
+				layer.close(selCol)
+			})
+		}
 
 
 	</script>
