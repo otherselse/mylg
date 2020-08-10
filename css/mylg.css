@@ -660,10 +660,15 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .ui-option, .ui-optionNo{font-size: 14px}
     .applyBox .pct50{width: 100%;}
     .applyBox .ui-input.pct50,.applyBox .ui-input-x.pct50{width: 30%;}
-    .applyBox .pct12{width: 24%;}
+    .applyBox{font-size: 16px !important;}
+    .applyBox .pct12{width: 30%;}
+    .applyBox .pct24{width: 30%;}
+    .applyBox .pct88{width: 70%;}
+
     .m_pct5{width: 5% !important;}
     .m_pct40{width: 40% !important;}
     .m_pct10{width: 10% !important;}
     .m_pct100{width: 100% !important;}
     .searchInput .pct13{width: 10% !important;}
+    .m_mb10{margin-bottom: 10px !important;}
 }
