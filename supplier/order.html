@@ -29,8 +29,10 @@
 					<div class="f0 searchInput">
 						<span class="f12">订单号：</span> <input type="text" class="ui-input pct13 mr20" placeholder="请输入">
 						<span class="f12">合同日期：</span>
-						<span class="ui-input tc f0 pct16 mr20" data-type="time">
-							<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+						<span class="ui-input tc mr20 pct16 f0" data-type="time">
+							<input name="orderIndex.bizDateStart" id="bizDateStart" value="" class="render-time pct45" type="text" readonly="" placeholder="开始时间">
+							<span class="dib pct5">-</span>
+							<input name="orderIndex.bizDateEnd" id="bizDateEnd" value="" class="render-time pct45" type="text" readonly="" placeholder="结束时间" autocomplete="off">
 						</span>
 						<span class="f12">采购合同号：</span>
 						<input type="text" class="ui-input pct13 mr20" placeholder="请输入">
