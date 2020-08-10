@@ -48,6 +48,12 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     background-position: -368px -68px;
 }
 
+.lgui-table-tItem{display:inline-block;width:33.33%;line-height: 24px;text-indent: 24px;padding:5px 0;-webkit-transition: .5s all;transition: .5s all;}
+.lgui-table-tItem:hover{background: #f2f2f2}
+.lgui-table-tItem label{position: relative; display: inline-block;background: url(http://resource.lgsteel.cn/gold2020/images/goldIcon.png) -218px -68px no-repeat;width: 14px;height: 14px;vertical-align: middle;margin-right: 5px}
+.lgui-table-tItem label:hover{background-position: -268px -68px}
+.lgui-table-tItem label.on{ background-position: -368px -68px;}
+
 /*leftbar*/
 .logo{height:133px;text-align: center;padding-top: 10px;}
 .menu::-webkit-scrollbar {width:6px;height:4px;}
@@ -520,6 +526,13 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .greenDfRot{position: absolute;left:-1px;top:4px;display: inline-block;transform: rotate(-35deg);}
 .fixedButton{position: fixed;bottom:10px;width: 100%;margin-left:-112.5px;}
 .pr50{padding-right:50px;}
+.f_blueSquare{border: 1px solid #1365E8;border-radius: 3px;color:#1365E8;display: inline-block;padding:0px 3px;}
+.f_redSquare{border: 1px solid #FF6B6B ;border-radius: 3px;color:#FF6B6B ;display: inline-block;padding:0px 3px;}
+.f_greenSquare{border: 1px solid #08CB93;border-radius: 3px;color:#08CB93;display: inline-block;padding:0px 3px;}
+.f_greenCircle{border: 1px solid #08CB93;border-radius: 50%;color:#08CB93;display: inline-block;padding:0px 3px;}
+.f_orangeCircle{border: 1px solid #F79424;border-radius: 50%;color:#F79424;display: inline-block;padding:0px 3px;}
+.f_greyCircle{border: 1px solid #3F629B;border-radius: 50%;color:#3F629B;display: inline-block;padding:0px 3px;}
+.colset{width: 20px;height: 20px;background: url(../images/proc/col.png) no-repeat;}
 
 /* applysale */
 .order-step {position: relative;width: 70%;}
