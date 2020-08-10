@@ -622,6 +622,9 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     cursor: default;
     opacity: 1;
 }
+.stockTitle{display: flex;align-items: baseline;} 
+.stockTitle-cont{flex: 1;} 
+
 
 @media (max-width: 1024px) {
 	html,body{font-size:14px !important;}
@@ -671,4 +674,10 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .m_pct100{width: 100% !important;}
     .searchInput .pct13{width: 10% !important;}
     .m_mb10{margin-bottom: 10px !important;}
+    .pct16 {width: 12%;}
+    .ui-input[data-type='time'] >input.pct45 {
+        width: 41%;
+    }
+    
+
 }
