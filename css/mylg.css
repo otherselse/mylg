@@ -674,10 +674,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .m_pct100{width: 100% !important;}
     .searchInput .pct13{width: 10% !important;}
     .m_mb10{margin-bottom: 10px !important;}
-    .pct16 {width: 12%;}
+    .pct16 {width: 20%;}
     .ui-input[data-type='time'] >input.pct45 {
         width: 41%;
     }
-    
-
 }
