@@ -166,8 +166,43 @@
                                 <td>SPB(22)-20000295</td>
                                 <td>确认</td>
                                 <td>正常</td>
-                                <td>---</td> 
-                            </tr>                                        
+                                <td><a href="javascript:void(0)" onclick="showMore(this)">查看</a></td> 
+                            </tr> 
+                            <tr class="hideTr dn">
+                                <td colspan="6">
+                                    <table class="ui-table tc f12 auto" width="98%">
+                                    <thead>
+                                        <tr>
+                                            <th width="10%">品名</th>
+                                            <th width="10%">规格</th>
+                                            <th width="10%">牌号</th>
+                                            <th width="10%">签收重量</th>
+                                            <th width="10%">退货重量</th>
+                                            <th width="10%">开票重量</th>
+                                            <th width="10%">含税单价</th>
+                                            <th width="10%">补差单价</th>
+                                            <th width="10%">开票金额</th>
+                                            <th width="10%">状态</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="ui-thover">
+                                        <tr>
+                                            <td>---</td>
+                                            <td>----</td>
+                                            <td>----</td>
+                                            <td>----</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                            <td>--</td>
+                                            <td>1</td>
+                                            <td>--</td>
+                                            <td>--</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr> 
+
                             
                         </tbody>
                 </table>
@@ -244,6 +279,10 @@
 	            content:  'openPick.html'
 	        });
 	    }
+
+        function showMore(obj){
+            $(obj).parents("tr").next("tr").toggle();
+        }
 
 	</script>
 </body>
