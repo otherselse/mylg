@@ -23,7 +23,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .pct28{width: 28%}
 .pct35{width: 35%}
 .ui-input[data-type='time'] >input.pct45 {
-    width: 41%;
+    width: 43%;
 }
 .ui-input.h34{height: 34px;line-height: 34px;font-size: 14px;}
 .ui-button.w280{width: 280px;min-width: 280px;}
