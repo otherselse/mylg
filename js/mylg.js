@@ -101,9 +101,6 @@ $(function(){
 			  });
 			});
 		}
-		
-
-
 		//checkbox
 		$("body").on("click", ".ui-checkbox", function () {
 			$(this).toggleClass("on")
@@ -132,8 +129,6 @@ $(function(){
 		   });
 
 })
-
-		
 })
 
 
