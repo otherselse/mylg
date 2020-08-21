@@ -30,6 +30,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-input.h34{height: 34px;line-height: 34px;font-size: 14px;}
 .ui-button.w280{width: 280px;min-width: 280px;}
 .ui-option.h34{height: 34px;line-height: 34px;font-size: 14px;}
+.ui-input[data-type='section'] >input{width: 43%}
 .gae{color:#AEAEAE;}
 .searchUp.h34 +.search-cont{top:34px;}
 .ui-input.h34[data-type="price"]{padding:0;}
@@ -531,12 +532,16 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .greenDfRot{position: absolute;left:-1px;top:4px;display: inline-block;transform: rotate(-35deg);}
 .fixedButton{position: fixed;bottom:10px;width: 100%;margin-left:-112.5px;}
 .pr50{padding-right:50px;}
+
+.f_greySquare{border: 1px solid #3F629B;border-radius: 3px;color:#3F629B;display: inline-block;padding:0px 3px;}
+.f_orangeSquare{border: 1px solid #F79424;border-radius: 3px;color:#F79424;display: inline-block;padding:0px 3px;}
 .f_blueSquare{border: 1px solid #1365E8;border-radius: 3px;color:#1365E8;display: inline-block;padding:0px 3px;}
 .f_redSquare{border: 1px solid #FF6B6B ;border-radius: 3px;color:#FF6B6B ;display: inline-block;padding:0px 3px;}
 .f_greenSquare{border: 1px solid #08CB93;border-radius: 3px;color:#08CB93;display: inline-block;padding:0px 3px;}
 .f_greenCircle{border: 1px solid #08CB93;border-radius: 50%;color:#08CB93;display: inline-block;padding:0px 3px;}
 .f_orangeCircle{border: 1px solid #F79424;border-radius: 50%;color:#F79424;display: inline-block;padding:0px 3px;}
 .f_greyCircle{border: 1px solid #3F629B;border-radius: 50%;color:#3F629B;display: inline-block;padding:0px 3px;}
+.f_blueCircle{border: 1px solid #1365E8;border-radius: 50%;color:#1365E8;display: inline-block;padding:0px 3px;}
 .colset{width: 20px;height: 20px;background: url(../images/proc/col.png) no-repeat;}
 
 /* applysale */
