@@ -13,6 +13,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-button.w220{width: 220px;min-width: 220px;}
 .ui-button.h44{height: 44px;line-height: 44px;}
 .ui-button.w245{width: 245px;min-width: 245px}
+.ui-button.plr10{padding-left:10px;padding-right: 10px;}
+.ui-button > .print{background:url(../images/print.png);width: 14px;height: 14px;vertical-align: middle;display:inline-block;}
 .gd9{color:#D9D9D9}
 .gd8{color:#D8D8D8}
 .edit-icon{width: 14px;height: 14px;background-position: -518px -118px;}
@@ -37,6 +39,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-input[data-type='section']{min-width:inherit;}
 .mb40{margin-bottom: 40px}
 .h100{height: 100px}
+
 
 .qCont{background: #fff;padding: 0px;line-height: 18px;background-color: #fff;border-color: #E2E2E2;color: #454545;position: absolute;
     top:10px;left:0;max-width: 380px;min-width: 50px; border-radius: 5px;}
@@ -582,8 +585,6 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .applyResultBox{background: #FFFFFF;border: 1px solid #EEEEEE;box-shadow: 0 3px 8px 0 rgba(0,0,0,0.07);border-radius: 6px;height: 464px;display: flex;flex-direction: column;align-items: center;justify-content: center;}
 .applyInterval{background: url(../images/applySale/timebg.png) no-repeat left;width: 58px;height: 24px;line-height: 24px;}
 .ml8{margin-left: 8px;}
-
-
 /* button */
 .ui-button[data-color="white"]{background: #fff;color: #1365e8;}
 .ui-button[data-color="white"]:hover {color: #2172F5;background-color: #F0F6FF;}
