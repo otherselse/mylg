@@ -141,7 +141,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .znstepcont{height: 30px;}
 .znstepcircle{left:0;background: #D8D8D8;;line-height:8px;width:8px;height: 8px;text-align:center;border-radius: 50%;}
 .znstepcircle.selected{background-color:#10C861;}
-.znstepline{line-height: 1px;padding:0;top:8px;left:7px;height: 1px;border-top: 1px #CCCCCC dashed ;}
+.znstepline{line-height: 1px;padding:0;top:4px;left:7px;height: 1px;border-top: 1px #CCCCCC dashed ;}
 .znstepline.selected{border-color: #10C861}
 .znstepcircleorange{left:0;background:#FF6B6B;line-height:8px;width:8px;height: 8px;text-align:center;border-radius: 50%;}
 .ml-10{margin-left:-10px;}
@@ -676,7 +676,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .invoiceMsg > .invoice.pct75{border-top:1px #dedede solid;}
     .invoiceMsg{height: auto}
     .m_tc{text-align: center;}
-    .znstepline{top:10px;}
+    /*.znstepline{top:10px;}*/
+    .znstepcont.pct90{width: 95%}
     .sms-content{width: 100%;margin-left:auto;margin-right:auto;text-align: center;box-sizing: border-box;}
     .m_pct30{width: 30%}
     .indexFastNav{width:48.5%;margin-right: 3%;}
