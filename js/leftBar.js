@@ -35,6 +35,7 @@
 		+'			<a class="smlist" href="../proc/myOutList.html">出入库查询</a>'
 		+'			<a class="smlist" href="../proc/createSignInfo.html">签约</a>'
 		+'			<a class="smlist" href="../proc/afterProcess.html">订单售后</a>'
+		+'			<a class="smlist" href="../proc/analysisProc.html">统计分析</a>'
 		+'		</div>'
 		+'	</div>'
 		+'	<div class="mulfolder trans" onclick="showsMenu(this)">'
