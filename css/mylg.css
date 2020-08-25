@@ -170,6 +170,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .payBank-js{background:url(../images/payIcon.png) -360px -32px #fff;}
 .payBank-ny{background:url(../images/payIcon.png) -180px -100px #fff;}
 .payBankItem:hover,.payBankItem.on{border-color:#2172F5;}
+.payBankItem.on:before{content:'';background-position:bottom right;background-repeat:no-repeat;background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAASFBMVEUAAAAUZukUZukTZehTj+5qnvD+/v/4+v7s8v1+qO8ncurZ5vutyffw8vWUufSOtfOGsPNwofFlmvBimO9fl+83fOszeusUZuiqTSyEAAAAA3RSTlMAgOaInBvYAAAAT0lEQVQY02XIRxKAIAAEQXUkmvP/f6pU4QG2j93UWgkkkEACCSSQoIpzpYxjiBSx+wv+WG4wrgdy0Htj7AaQ4ytnZ5IcqcYHIKYohCq6ML33tgKbIh8BSwAAAABJRU5ErkJggg==') ;}
 .baseinfo-bot{min-height: calc(100% - 400px)}
 .coupon-top-box{box-sizing:border-box;padding:10px 4%;background: #F0F6FF;border: 1px solid #D5E0F0;;box-sizing: border-box;}
 .tip-icon{width: 166px;height: 97px;background: url(../images/base/tip.png) no-repeat;display: inline-block;}
@@ -697,7 +698,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .m_pct100{width: 100% !important;}
     .searchInput .pct13{width: 10% !important;}
     .m_mb10{margin-bottom: 10px !important;}
-    .pct16 {width: 20%;}
+    /*.pct16 {width: 20%;}*/
     .ui-input[data-type='time'] >input.pct45 {
         width: 41%;
     }
