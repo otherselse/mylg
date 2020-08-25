@@ -587,6 +587,10 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .applyResultBox{background: #FFFFFF;border: 1px solid #EEEEEE;box-shadow: 0 3px 8px 0 rgba(0,0,0,0.07);border-radius: 6px;height: 464px;display: flex;flex-direction: column;align-items: center;justify-content: center;}
 .applyInterval{background: url(../images/applySale/timebg.png) no-repeat left;width: 58px;height: 24px;line-height: 24px;}
 .ml8{margin-left: 8px;}
+.more_but{border-radius: 25px;padding:4px 20px;display: inline-block;border:1px #dedede solid;font-size: 12px;color:#282828;}
+.more_but:hover{background-color: #F0F6FF;border-color:#1365E8;color: #1365E8; }
+.more_but:hover .imenu-up{background-position:-517px -68px;}
+
 /* button */
 .ui-button[data-color="white"]{background: #fff;color: #1365e8;}
 .ui-button[data-color="white"]:hover {color: #2172F5;background-color: #F0F6FF;}
@@ -640,6 +644,9 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .stockTitle{display: flex;align-items: baseline;} 
 .stockTitle-cont{flex: 1;} 
 
+.ui-thover tr:hover .noline  td{
+   border-right: 0  
+}
 
 @media (max-width: 1024px) {
 	html,body{font-size:14px !important;}
