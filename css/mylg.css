@@ -158,19 +158,19 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .scanbg{background: #F1F3F7;border: 1px solid #EEEEEE;border-radius: 3px;width: 508px;height:319px;}
 .scanwbg{border: 1px solid #E6E6E6;background: #fff;box-sizing: border-box;width: 238px;height: 240px;margin:25px auto 10px;padding:10px;}
 .scanwbg > img{width: 218px;height:220px;}
-.mr76{margin-left: 76px;}
+.ml76{margin-left: 76px;}
 .payIcon-wy{display: inline-block;width: 86px;height: 32px;background:url(../images/payIcon.png) -69px 0;}
 .payIcon-wx{display: inline-block;width: 92px;height: 32px;background:url(../images/payIcon.png) -155px 0;}
 .payIcon-zfb{display: inline-block;width: 69px;height: 32px;background:url(../images/payIcon.png) 0 0;}
 .ui-tip[data-type='normal'].linetwo { background-position: 0px 10px;padding: 0 10px 0 20px;}
-.payBankItem{border: 1px solid #E6E6E6;border-radius: 3px;width: 180px;height:68px;cursor: pointer;}
+.payBankItem{border: 1px solid #E6E6E6;border-radius: 3px;width: 180px;height:68px;cursor: pointer;position: relative;}
 .payBank-zs{background:url(../images/payIcon.png) -180px -32px #fff;}
 .payBank-zg{background:url(../images/payIcon.png) 0px -32px #fff;}
 .payBank-gs{background:url(../images/payIcon.png) 0px -100px #fff;}
 .payBank-js{background:url(../images/payIcon.png) -360px -32px #fff;}
 .payBank-ny{background:url(../images/payIcon.png) -180px -100px #fff;}
 .payBankItem:hover,.payBankItem.on{border-color:#2172F5;}
-.payBankItem.on:before{content:'';background-position:bottom right;background-repeat:no-repeat;background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAASFBMVEUAAAAUZukUZukTZehTj+5qnvD+/v/4+v7s8v1+qO8ncurZ5vutyffw8vWUufSOtfOGsPNwofFlmvBimO9fl+83fOszeusUZuiqTSyEAAAAA3RSTlMAgOaInBvYAAAAT0lEQVQY02XIRxKAIAAEQXUkmvP/f6pU4QG2j93UWgkkkEACCSSQoIpzpYxjiBSx+wv+WG4wrgdy0Htj7AaQ4ytnZ5IcqcYHIKYohCq6ML33tgKbIh8BSwAAAABJRU5ErkJggg==') ;}
+.payBankItem.on:before{position:absolute;content:'';width:180px;height:70px;right:0px;bottom:0px;background-position:bottom right;background-repeat:no-repeat;background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAASFBMVEUAAAAUZukUZukTZehTj+5qnvD+/v/4+v7s8v1+qO8ncurZ5vutyffw8vWUufSOtfOGsPNwofFlmvBimO9fl+83fOszeusUZuiqTSyEAAAAA3RSTlMAgOaInBvYAAAAT0lEQVQY02XIRxKAIAAEQXUkmvP/f6pU4QG2j93UWgkkkEACCSSQoIpzpYxjiBSx+wv+WG4wrgdy0Htj7AaQ4ytnZ5IcqcYHIKYohCq6ML33tgKbIh8BSwAAAABJRU5ErkJggg==') ;}
 .baseinfo-bot{min-height: calc(100% - 400px)}
 .coupon-top-box{box-sizing:border-box;padding:10px 4%;background: #F0F6FF;border: 1px solid #D5E0F0;;box-sizing: border-box;}
 .tip-icon{width: 166px;height: 97px;background: url(../images/base/tip.png) no-repeat;display: inline-block;}
@@ -619,7 +619,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .indexFastNav:hover .indexFastNCont{transform: translateX(10px);}
 
 .ui-thover tr:hover td{
-    border-right: 1px solid #ebf7ff;
+    border-color: #ebf7ff;
 }
 .ui-table thead th {
     background-image: linear-gradient(180deg, #FCFCFC 0%, #DFE2E6 100%);
