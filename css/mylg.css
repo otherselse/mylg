@@ -548,6 +548,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .f_orangeCircle{border: 1px solid #F79424;border-radius: 50%;color:#F79424;display: inline-block;padding:0px 3px;}
 .f_greyCircle{border: 1px solid #3F629B;border-radius: 50%;color:#3F629B;display: inline-block;padding:0px 3px;}
 .f_blueCircle{border: 1px solid #1365E8;border-radius: 50%;color:#1365E8;display: inline-block;padding:0px 3px;}
+.f_redCircle{border: 1px solid #FF6B6B ;border-radius: 50%;color:#FF6B6B ;display: inline-block;padding:0px 3px;}
+
 .colset{width: 20px;height: 20px;background: url(../images/proc/col.png) no-repeat;}
 
 /* applysale */
@@ -670,6 +672,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .package_menu > .ui-option{margin-bottom: 5px}
     .selectProcName{width: 83%}
     .pct20{width: 17%}
+    .sel_mul_opt{width: 70%;vertical-align: top;}
     .sel_mul_op{width: 70%;vertical-align: middle;}
     .sel_mul_op .ui-optionNo{margin-bottom: 10px}
     .pct90{width: 88%}
@@ -702,4 +705,6 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .ui-input[data-type='time'] >input.pct45 {
         width: 41%;
     }
+    .accountbg .orderaddr{width: 100%}
+    .accountbg .toPers,.accountbg .toComp {display: block;}
 }
