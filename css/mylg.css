@@ -14,7 +14,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-button.h44{height: 44px;line-height: 44px;}
 .ui-button.w245{width: 245px;min-width: 245px}
 .ui-button.plr10{padding-left:10px;padding-right: 10px;}
-.ui-button > .print{background:url(../images/print.png);width: 14px;height: 14px;vertical-align: middle;display:inline-block;}
+.ui-button > .print{background:url(../images/print.png);width: 14px;height: 14px;vertical-align: -3px;display:inline-block;}
 .gd9{color:#D9D9D9}
 .gd8{color:#D8D8D8}
 .edit-icon{width: 14px;height: 14px;background-position: -518px -118px;}
