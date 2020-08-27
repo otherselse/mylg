@@ -275,6 +275,10 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .base-comp-band{background: #FFFFFF;border: 1px solid #FFFFFF;border-radius: 11px;color: #CC924D;height:22px;line-height: 22px;font-size: 12px;padding:0 5px;}
 .base-comp-apply{background: #FFFFFF;border: 1px solid #E2B886;border-radius: 11px;color: #CC924D;height:22px;line-height: 22px;font-size: 12px;padding:0 5px;}
 .base-comp-band.no{color:#FB2020;}
+.base-comp-band[data-type="fail"]{color:#FB2020;}
+.base-comp-band[data-type="wait"]{color:#08cb93;}
+.apply-wait-icon {background: url(../images/applySale/wait.png) no-repeat ;width: 16px;height: 16px;display: inline-block;}
+.apply-fail-icon {background: url(../images/applySale/fail.png) no-repeat ;width: 16px;height: 16px;display: inline-block;}
 .base-brand-ic{width: 16px;height: 16px;background-position: -467px -117px;}
 .base-brand-noic{width: 16px;height: 16px;background-position:-17px -217px}
 .base-comp-cont{color:#fff;padding:20px 0 0 34px;line-height: 25px;}

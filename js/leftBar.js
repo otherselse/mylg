@@ -22,7 +22,7 @@
 
 	//固定部分菜单
 	var strgd='<div class="menuline"></div>'
-		+'	<div class="mulfolder trans proc" onclick="showsMenu(this)">'
+		+'	<div class="mulfolder trans proc" onclick="showsMenu(this,event)">'
 		+'		<a class="menulist" href="javascript:void(0)"><i class="lgIcon imenu-proc vm mr5"></i>加工管理<i class="imenu-up lgIcon vm ml5"></i></a>'
 		+'		<div class="smenu">'
 		+'			<a class="smlist" href="../proc/createProc.html">一键下单</a>'
@@ -38,7 +38,7 @@
 		+'			<a class="smlist" href="../proc/analysisProc.html">统计分析</a>'
 		+'		</div>'
 		+'	</div>'
-		+'	<div class="mulfolder trans" onclick="showsMenu(this)">'
+		+'	<div class="mulfolder trans" onclick="showsMenu(this,event)">'
 		+'	<a class="menulist" href="javascript:void(0)"><i class="lgIcon imenu-review vm mr5"></i>评审中心<i class="imenu-up lgIcon vm ml5"></i></a>'
 		+'		<div class="smenu">'
 		+'			<a class="smlist" href="../toApplySale/toRealNameRegister1.html">实名认证</a>'
