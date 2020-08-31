@@ -29,7 +29,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 .ui-input.range[data-type='time']{padding:0;width: 210px;}
 .ui-input.range[data-type='time'] > input:first-child{width: 38%;background: none}
-.ui-input.range[data-type='time'] > input:last-child{width: 42%}
+.ui-input.range[data-type='time'] > input:last-child{width: 38%}
 
 .ui-input.h34{height: 34px;line-height: 34px;font-size: 14px;}
 .ui-button.w280{width: 280px;min-width: 280px;}
@@ -725,6 +725,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .searchInput .pct13{width: 10% !important;}
     .m_mb10{margin-bottom: 10px !important;}
     .pct16 {width: 14%;}
+    .ui-input[data-type='time'] >input{width: 92%}
     .ui-input[data-type='time'] >input.pct45 {
         width: 41%;
     }
