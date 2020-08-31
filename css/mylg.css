@@ -15,6 +15,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-button.w245{width: 245px;min-width: 245px}
 .ui-button.plr10{padding-left:10px;padding-right: 10px;}
 .ui-button > .print{background:url(../images/print.png);width: 14px;height: 14px;vertical-align: -3px;display:inline-block;}
+.ui-button[data-type="print"]{min-width: 96px;border: 1px #D9D9D9 solid;color: #1365E8;font-size: 12px;padding-left: 16px;background: #fff;}
+.ui-button[data-type='print']:not(:disabled):hover{border-color: #C3DAFF;color: #1365E8;background-color: #F0F6FF;}
 .gd9{color:#D9D9D9}
 .gd8{color:#D8D8D8}
 .edit-icon{width: 14px;height: 14px;background-position: -518px -118px;}
@@ -39,7 +41,10 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-input[data-type='section']{min-width:inherit;}
 .mb40{margin-bottom: 40px}
 .h100{height: 100px}
-
+.ui-button.disabled.forwjw, .ui-button.forwjw:disabled {
+    cursor: default;
+    background: #c0c0c0;
+}
 
 .qCont{background: #fff;padding: 0px;line-height: 18px;background-color: #fff;border-color: #E2E2E2;color: #454545;position: absolute;
     top:10px;left:0;max-width: 380px;min-width: 50px; border-radius: 5px;}
@@ -199,7 +204,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .addressBookBut{display: none}
 .addressDBook{padding-top: 5px;}
 .defautTip{color:#FB2020;background-color: #FFE3E3;display: inline-block;padding:1px 5px; }
-.orderaddr.disabled{background: #FAFAFA}
+.orderaddr.disabled{background: rgba(250,250,250,.4);opacity: 1;color: #9a9a9a !important;}
 .personText{position:absolute;display:inline-block;font-size:18px;color:#333;transform:rotate(-17deg);-webkit-transform:rotate(-17deg);left:50%;top:55px;margin-left:-140px;}
 .orderaddr.h100{height: 100px}
 .pct85{width: 85%}
@@ -654,9 +659,21 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-thover tr:hover .noline  td{
    border-right: 0  
 }
-
+.wxts-icon{
+    display: inline-block;
+    width: 130px;
+    height: 107px;
+    background: url(../images/wxts.png) no-repeat center center;
+}
+.pr80{padding-right: 80px;}
+.df{display: flex;}
+.fl1{flex:1}
 @media (max-width: 1024px) {
-	html,body{font-size:14px !important;}
+    html,body{font-size:14px !important;}
+    html,body{
+        -webkit-text-size-adjust: 100% !important;
+      }
+      
 	.f12{font-size:14px !important;}
 	.f14{font-size:16px !important;}
 	.m_fn{float: none;}
@@ -692,10 +709,13 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .indexFastNav:nth-of-type(2n){margin-right: 0}
     .indexFastNav:nth-of-type(-n+2){margin-bottom:20px;}
     .ui-option, .ui-optionNo{font-size: 14px}
-    .applyBox .pct50{width: 100%;}
-    .applyBox .ui-input.pct50,.applyBox .ui-input-x.pct50{width: 30%;}
+    /* .applyBox .pct50{width: 100%;} */
+    /* .applyBox .ui-input.pct50,.applyBox .ui-input-x.pct50{width: 30%;} */
+    .m_pct30{width: 30% !important;}
+    .m_pct100{width: 100% !important;}
     .applyBox{font-size: 16px !important;}
     .applyBox .pct12{width: 30%;}
+    
     .applyBox .pct24{width: 30%;}
     .applyBox .pct88{width: 70%;}
 
@@ -711,4 +731,8 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     }
     .accountbg .orderaddr{width: 100%}
     .accountbg .toPers,.accountbg .toComp {display: block;}
+    .m_pct90{width: 90% !important;}
+    .applyBoxTran{font-size: 16px !important;}
+    .applyBoxTran .pct12{width: 25%;}
+    .stockInfo {height: 560px !important;}
 }
