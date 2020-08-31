@@ -34,7 +34,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .ui-input.h34{height: 34px;line-height: 34px;font-size: 14px;}
 .ui-button.w280{width: 280px;min-width: 280px;}
 .ui-option.h34{height: 34px;line-height: 34px;font-size: 14px;}
-.ui-input[data-type='section'] >input{width: 43%}
+.ui-input[data-type='section'] >input{width: 42%}
 .gae{color:#AEAEAE;}
 .searchUp.h34 +.search-cont{top:34px;}
 .ui-input.h34[data-type="price"]{padding:0;}
