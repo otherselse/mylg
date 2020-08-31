@@ -720,7 +720,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 	}
 	100%{
-		transform:translateY(-5%);opacity:0.5
+		transform:translateY(-10%);opacity:0.2
 	}
 }
 
@@ -737,7 +737,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 	}
 	100%{
-		transform:translateY(-5%);opacity:0.5
+		transform:translateY(-10%);opacity:0.2
 	}
 }
 @media (max-width: 1024px) {
