@@ -80,7 +80,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .menulist:hover,.smlist:hover{background: rgba(255,255,255,0.50);border-radius: 6px;color:#282828;}
 .menulist.on,.smlist.on{background: #1365E8;box-shadow: 0 10px 15px -5px rgba(69,146,251,0.40);-webkit-box-shadow: 0 10px 15px -5px rgba(69,146,251,0.40);border-radius: 6px;color:#fff;}
 .menuline{background: #ccc;height:1px;margin: 20px 0 20px 0}
-.smlist{height: 35px;line-height: 35px;color:#676767;display:block;font-size: 14px;text-indent: 40px;margin:0 13px 5px;}
+.smlist{height: 35px;line-height: 35px;color:#282828;display:block;font-size: 14px;text-indent: 40px;margin:0 13px 5px;}
 
 
 .mulfolder > .smenu{display: none}
@@ -740,6 +740,10 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 		transform:translateY(-10%);opacity:0.2
 	}
 }
+
+/* html,body{font-size:14px;}
+ .f12{font-size: 14px}
+ .ef12{font-size: 12px}*/
 @media (max-width: 1024px) {
     html,body{font-size:14px !important;}
     html,body{
