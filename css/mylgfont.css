@@ -14,7 +14,12 @@
 .flex_center{display: flex;align-items: center;}
 .ui-input.range[data-type='time']{width: 240px}
 .isalertlist li{font-size: 14px}
-.ui-input.range[data-type='time'] > input:first-child{width: 36%;background: none;}
-.ui-input.range[data-type='time'] > input:last-child{width: 43%;}
+.ui-input.range[data-type='time'] > input:last-child{width: 46%;}
 .t_linerbg{line-height:16px;display: inline-block;position: relative;}
 .t_linerbg:before{width:4px;background:#3482ff;content: '';display: inline-block;position: absolute;height:100%;}
+
+@media (max-width: 1024px) {
+	.ui-input.range[data-type='time'] > input:last-child {
+    	width: 38%;
+	}
+}
