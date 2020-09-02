@@ -11,6 +11,10 @@
 	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
 	<link rel="stylesheet" href="../css/mylgfont.css" type="text/css" />
 	<title>我的库存-我的乐刚</title>
+	<style>
+		.ui-table{min-width: 1600px;}
+		.m-tabLimitSCroll{overflow:auto;max-height: 500px;}	
+	</style>
 </head>
 <body class="buyer showTip">
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
@@ -109,7 +113,7 @@
 					</div>
 					<div class="m-tabLimitSCroll lgui-table-box">
 					<table class="ui-table f12  checkbox" width="100%">
-						<thead>
+						<!-- <thead>
 							<tr class="tl">
 								<th width="3%" class="tc"><i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i></th>
 								<th width="8%" ><div class="pl10">入库日期/单据号</div></th>
@@ -126,7 +130,31 @@
 								<th width="5%" data-item-field="heatNo"><div class="pl10">炉号</div></th>
 								<th width="5%" data-item-field="stockAge"><div class="pl10">库龄</div></th>
 								<th width="5%" data-item-field="shipNo"><div class="pl10">车船号</div></th>
-								<th width="14%" >
+								<th width="14%" class="sticky-right">
+									<span class="l pl10">货物情况</span>
+									<span class="r pr10"><a href="javascript:void(0)" onclick="showCols(this)"><i class="colset dib mr2 vm"></i>设置</a></span>
+								</th>
+
+							</tr>
+						</thead> -->
+						<thead>
+							<tr class="tl">
+								<th  class="tc"><i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i></th>
+								<th><div class="pl10">入库日期/单据号</div></th>
+								<th  ><div class="pl10">捆包号</div></th>
+								<th ><div class="pl10">品名</div></th>
+								<th  ><div class="pl10">规格</div></th>
+								<th ><div class="pl10">钢厂/牌号</div></th>
+								<th><div class="pl10">数量</div></th>
+								<th ><div class="pl10">重量</div></th>
+								<th><div class="pl10">毛重</div></th>
+								<th class="tc" width="5%">销售单价</th>
+								<th  data-item-field="counts"><div class="pl10">过户次数</div></th>
+								<th data-item-field="resource"><div class="pl10">资源号</div></th>
+								<th  data-item-field="heatNo"><div class="pl10">炉号</div></th>
+								<th data-item-field="stockAge"><div class="pl10">库龄</div></th>
+								<th data-item-field="shipNo"><div class="pl10">车船号</div></th>
+								<th  class="sticky-right" width="14%">
 									<span class="l pl10">货物情况</span>
 									<span class="r pr10"><a href="javascript:void(0)" onclick="showCols(this)"><i class="colset dib mr2 vm"></i>设置</a></span>
 								</th>
@@ -135,16 +163,17 @@
 						</thead>
 						<tbody class="ui-thover">
 							<tr>
-								<td class="tc"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
+								<td class="tc"><i class="ui-checkbox goldIcon vm disabled"><input type="checkbox" class="checkbox-opacity" name="checkbox" disabled=""></i></td>
 								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
 								<td><div class="pl10 flex_center">
 									<span class="f_blueSquare mr2">储</span>
-									<span class="dib pct70 bkall">sdsddff</span>
+									<span class="dib pct90 bkall">sdsddff</span>
 								</div></td>
 								<td><div class="pl10">低合金卷板</div></td>
-								<td><div class="pl10 flex_center">
-									<span class="f_greenCircle mr2">成</span>
-									<span class="dib pct70">3.000*(100*1)*C</span>								
+								<td><div class="pl10 ">
+									<!-- <span class="f_greenCircle mr2">成</span>
+									<span class="dib pct90">3.000*(100*1)*C</span> -->	
+									<span class="f_greenCircle mr2">成</span>3.000*(100*1)*C							
 								</div></td>
 								<td><div class="pl10">宝钢新日铁<br/>DC51D+AZ-FB</div></td>
 								<td><div class="pl10">2232</div></td>
@@ -156,7 +185,7 @@
 								<td data-item-field="heatNo"><div class="pl10">33</div></td>
 								<td data-item-field="stockAge"><div class="pl10">44</div></td>
 								<td data-item-field="shipNo"><div class="pl10">55</div></td>
-								<td>
+								<td class="sticky-right">
 									<div class="pl10">来料散包，来料生锈，包装破损，货物氧化</div>
 									<div class="pl10 mt5"><a href="##" class="mr2">12323.jpg</a><a href="##" class="mr2">12323.jpg</a></div>
 								</td>								
@@ -166,12 +195,13 @@
 								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
 								<td><div class="pl10 flex_center">
 									<span class="f_greenSquare mr2">加</span>
-									<span class="dib pct70 bkall">sdsddffss1345-1</span>
+									<span class="dib  bkall">sdsddffss1345-1</span>
 								</div></td>
 								<td><div class="pl10">低合金卷板</div></td>
-								<td><div class="pl10 flex_center">
-									<span class="f_greyCircle mr2">原</span>
-									<span class="dib pct70">3.000*(100*1+200*2+300*3)*C</span>								
+								<td><div class="pl10 ">
+									<!-- <span class="f_greyCircle mr2">原</span>
+									<span class="dib ">3.000*(100*1+200*2+300*3)*C</span>		 -->	
+									<span class="f_greenCircle mr2">成</span>3.000*(100*1)*C									
 								</div></td>
 								<td><div class="pl10">宝钢新日铁<br/>DC51D+AZ-FB</div></td>
 								<td><div class="pl10">2232</div></td>
@@ -183,7 +213,7 @@
 								<td data-item-field="heatNo"><div class="pl10">33</div></td>
 								<td data-item-field="stockAge"><div class="pl10">44</div></td>
 								<td data-item-field="shipNo"><div class="pl10">55</div></td>
-								<td>
+								<td class="sticky-right">
 									<div class="pl10">来料散包，来料生锈，包装破损，货物氧化...<a href="javascript:void(0)" onclick="showMore()">更多</a></div>
 									<div class="pl10 mt5"><a href="##" class="mr2">12323.jpg</a><a href="##" class="mr2">12323.jpg</a></div>
 								</td>								
@@ -193,12 +223,13 @@
 								<td><div class="pl10">2017-11-21<br/>PRO20200715829478</div></td>
 								<td><div class="pl10 flex_center">
 									<span class="f_redSquare mr2">提</span>
-									<span class="dib pct70 bkall">sdsddffss1345-1</span>
+									<span class="dib  bkall">sdsddffss1345-1</span>
 								</div></td>
 								<td><div class="pl10">低合金卷板</div></td>
-								<td><div class="pl10 flex_center">
-									<span class="f_orangeCircle mr2">丝</span>
-									<span class="dib pct70">3.000*(100*1+200*2+300*3)*C</span>								
+								<td><div class="pl10 ">
+									<!-- <span class="f_orangeCircle mr2">丝</span>
+									<span class="dib ">3.000*(100*1+200*2+300*3)*C</span>			 -->
+									<span class="f_greenCircle mr2">成</span>3.000*(100*1)*3.000*(100*1)							
 								</div></td>
 								<td><div class="pl10">宝钢新日铁<br/>DC51D+AZ-FB</div></td>
 								<td><div class="pl10">2232</div></td>
@@ -210,16 +241,17 @@
 								<td data-item-field="heatNo"><div class="pl10">33</div></td>
 								<td data-item-field="stockAge"><div class="pl10">44</div></td>
 								<td data-item-field="shipNo"><div class="pl10">55</div></td>
-								<td>
+								<td class="sticky-right">
 									<div class="pl10">来料散包，来料生锈，包装破损，货物氧化</div>
 									<div class="pl10 mt5"><a href="##" class="mr2">12323.jpg</a><a href="##" class="mr2">12323.jpg</a></div>
 								</td>								
 							</tr>
 							
 						</tbody>
-						<tfoot>
-							<tr>
-								<td colspan="16"  class="bgfa" style="padding:0">
+						
+					</table>
+				</div>
+				<div class="cl bgfa">
 									<div class="pl20  ovh">
 										<div class="l pct40 pt20 pb10">总计：数量 <span class="red dib mr20">621250.00</span>重量 <span class="red dib mr20">17619.112</span>毛重 <span class="red dib">10347.073</span>
 										</div>
@@ -234,11 +266,7 @@
 											<button type="button" class="ui-button  w90" data-type="normal">取消挂牌</button>
 										</div>
 									</div>
-								</td>
-							</tr>
-						</tfoot>
-					</table>
-				</div>
+			</div>
 
 
 					<script type="text/javascript" src="../js/pagelist.js"></script>
@@ -297,11 +325,25 @@
 
 			lgScrollTable.choiceCol(mylgColInfo,'.lgui-table-detail','.lgui-table-box'); //根据表格中列的配置，实现初始化表格
 
+			addTabRight()
+			 $(window).resize(function(){
+			 	addTabRight()
+			 })
+
+			
 
 
 			
 		})
 
+		function addTabRight(){
+			if($(".lgui-table-box").width()<1400){
+				 	$(".sticky-right").addClass("table-cell-fix-right").css("right","0px").addClass("table-cell-fix-right-last");
+				 }else{
+				 	$(".sticky-right").removeClass("table-cell-fix-right-last")
+				 }
+
+		}
 
 		function  showCols(){
 			var selCol =layer.open({

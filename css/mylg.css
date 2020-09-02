@@ -29,7 +29,6 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 .ui-input.range[data-type='time']{padding:0;width: 210px;}
 .ui-input.range[data-type='time'] > input:first-child{width: 38%;background: none}
-.ui-input.range[data-type='time'] > input:last-child{width: 38%}
 
 .ui-input.h34{height: 34px;line-height: 34px;font-size: 14px;}
 .ui-button.w280{width: 280px;min-width: 280px;}
@@ -741,9 +740,47 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 	}
 }
 
-/* html,body{font-size:14px;}
+/*20200902 add */
+ html,body{font-size:14px;}
  .f12{font-size: 14px}
- .ef12{font-size: 12px}*/
+ .ef12{font-size: 12px}
+ .ui-option, .ui-optionNo{font-size: 14px;}
+ .ui-input{font-size: 14px;}
+ .search-list, .search-mylist{font-size: 14px;}
+ .jgs2016_jgdlist span input[type='text'], .jgs2016_jgddown input[type='text'], .rklist input[type='text']{font-size: 14px;}
+ .ui-input-x .ui-inputbut{font-size: 14px;}
+ .package_div{width: 270px}
+ .f_greySquare,.f_orangeSquare,.f_blueSquare,.f_redSquare,.f_greenSquare,.f_greenCircle,.f_orangeCircle,.f_greyCircle,.f_blueCircle,.f_redCircle{font-size: 12px;box-sizing: border-box;width: 20px;height: 20px}
+ .createProc .search-cont[data-type='mul']{width: 380px}
+.jgfs_tiemo .selone{font-size: 14px}
+.selectProcName a{padding-top:2px;padding-bottom: 2px;}
+.flex_center{display: flex;align-items: center;}
+.ui-input.range[data-type='time']{width: 240px}
+.isalertlist li{font-size: 14px}
+.ui-input.range[data-type='time'] > input:last-child{width: 46%;}
+.t_linerbg{line-height:16px;display: inline-block;position: relative;}
+.t_linerbg:before{width:4px;background:#3482ff;content: '';display: inline-block;position: absolute;height:100%;left:0;top:0}
+.ui-table tbody td{color:#282828;}
+.ui-table.checkbox .ui-checkbox,.ui-table.checkbox .ui-checkbox-unable{width: 20px;height:20px;background-position: -215px -65px}
+.ui-table.checkbox .ui-checkbox:not(:disabled):hover,.ui-table.checkbox .ui-checkbox-unable:not(:disabled):hover{background-position:-265px -65px}
+.ui-table.checkbox .ui-checkbox.on,.ui-table.checkbox  .ui-checkbox.on:hover,.ui-table.checkbox  .ui-checkbox-unable.on,.ui-table.checkbox  .ui-checkbox-unable.on:hover{background-position:-365px -65px;}
+.ui-table.checkbox .radio-opacity, .ui-table.checkbox .checkbox-opacity{width: 20px;height:20px;}
+.ui-table.checkbox .ui-checkbox.disabled, .ui-table.checkbox .ui-checkbox-unable.disabled {
+    background-position: -315px -65px;
+    opacity: 1;
+}
+
+.ui-table.checkbox .on .ui-checkbox-unable, .ui-table.checkbox .on .ui-checkbox-unable:hover{
+    background-position: -365px -65px;
+}
+
+
+/*fix table*/
+.table-cell-fix-left,.table-cell-fix-right{left:0;position: -webkit-sticky!important; position: sticky!important;z-index: 2;background: #fff;}
+.table-cell-fix-last:after{-webkit-box-shadow: inset 10px 0 8px -8px rgba(0,0,0,.15);box-shadow: inset 10px 0 8px -8px rgba(0,0,0,.15);position: absolute;top: 0;right: 0;bottom: -1px;width: 30px;-webkit-transform: translateX(100%);transform: translateX(100%);-webkit-transition: -webkit-box-shadow .3s; transition: -webkit-box-shadow .3s;transition: box-shadow .3s;transition: box-shadow .3s,-webkit-
+			box-shadow .3s; content: '';pointer-events: none;}
+.table-cell-fix-right-last::after {position: absolute;top: 0;bottom: -1px;left: 0;width: 30px;-webkit-transform: translateX(-100%);transform: translateX(-100%); -webkit-transition: -webkit-box-shadow .3s;transition: -webkit-box-shadow .3s; transition: box-shadow .3s;transition: box-shadow .3s,-webkit-box-shadow .3s; content: '';pointer-events: none;-webkit-box-shadow: inset -10px 0 8px -8px rgba(0,0,0,.15);box-shadow: inset -10px 0 8px -8px rgba(0,0,0,.15);}
+
 @media (max-width: 1024px) {
     html,body{font-size:14px !important;}
     html,body{
@@ -802,9 +839,9 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .m_mb10{margin-bottom: 10px !important;}
     .pct16 {width: 14%;}
     .ui-input[data-type='time'] >input{width: 92%}
-    .ui-input[data-type='time'] >input.pct45 {
-        width: 41%;
-    }
+    .ui-input.range[data-type='time'] > input:last-child {
+    	width: 38%;
+	}
     .accountbg .orderaddr{width: 100%}
     .accountbg .toPers,.accountbg .toComp {display: block;}
     .m_pct90{width: 90% !important;}
