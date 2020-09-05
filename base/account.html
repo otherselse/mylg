@@ -39,10 +39,11 @@
 						<thead>
 							<tr>
 								<th width="12%">账号</th>
-								<th width="12%" class="tl"><div class="pl10">姓名</div></th>
-								<th width="12%" class="tl"><div class="pl10">联系电话</div></th>
-								<th width="15%" class="tl"><div class="pl10">注册时间</div></th>
-								<th width="12%">状态</th>
+								<th width="6%" class="tl"><div class="pl10">姓名</div></th>
+								<th width="10%" class="tl"><div class="pl10">联系电话</div></th>
+								<th width="13%" class="tl"><div class="pl10">注册时间</div></th>
+								<th width="14%">拥有权限</th>
+								<th width="8%">状态</th>
 								<th width="15%" >操作</th>
 							</tr>
 						</thead>
@@ -52,6 +53,20 @@
 								<td class="tl"><div class="pl10">杨白劳</div></td>
 								<td class="tl"><div class="pl10">145788884556</div></td>
 								<td class="tl"><div class="pl10">2020-03-14 09:23:22</div></td>
+								<td>
+									<div class="pl10">
+										<div class="l pct80 ovh">
+											<dib class="pct50 l tl">一键下单</dib>
+											<dib class="pct50 l  tl">新增入库</dib>
+											<dib class="pct50 l  tl">申请提货</dib>
+											<dib class="pct50 l  tl">我的库存</dib>
+											<dib class="pct50 l  tl">单据打印</dib>
+											<dib class="pct50 l  tl">出入库查询</dib>
+											<dib class="pct50 l  tl">签约</dib>
+										</div>
+										<div class="l pct20"><a href="javascript:void(0)" onclick="setAuthority()">配置</a></div>
+									</div>
+								</td>
 								<td>正常</td>
 								<td>
 									<a href="javascript:void(0)" onclick="accountPermissionChange('17542');">权限解除</a>
@@ -59,11 +74,31 @@
 									<a href="javascript:void(0)" onclick="toPermissionTransfer('17542','15869724444','0');">权限移交</a>
 								</td>
 							</tr>
+							<tr class="disabled">
+								<td><span class="ui-label mr5 f12" >子</span>4449393939</td>
+								<td class="tl"><div class="pl10">杨白劳</div></td>
+								<td class="tl"><div class="pl10">145788884556</div></td>
+								<td class="tl"><div class="pl10">2020-03-14 09:23:22</div></td>
+								<td><div class="pl10">
+										<div class="l pct80 ovh">
+											<dib class="pct50 l tl">一键下单</dib>
+											<dib class="pct50 l  tl">新增入库</dib>
+											<dib class="pct50 l  tl">申请提货</dib>
+											<dib class="pct50 l  tl">我的库存</dib>
+											<dib class="pct50 l  tl">单据打印</dib>
+											<dib class="pct50 l  tl">出入库查询</dib>
+											<dib class="pct50 l  tl">签约</dib>
+										</div>
+										<div class="l pct20"><a href="javascript:void(0)" onclick="setAuthority()">配置</a></div></td>
+								<td>已注销</td>
+								<td><a href="javascript:void(0)"  onclick="closeAccount(22292);">注销</a></td>
+							</tr>
 							<tr>
 								<td><span class="ui-label mr5 f12" >子</span>4449393939</td>
 								<td class="tl"><div class="pl10">杨白劳</div></td>
 								<td class="tl"><div class="pl10">145788884556</div></td>
 								<td class="tl"><div class="pl10">2020-03-14 09:23:22</div></td>
+								<td>正常</td>
 								<td>正常</td>
 								<td><a href="javascript:void(0)"  onclick="closeAccount(22292);">注销</a></td>
 							</tr>
@@ -72,6 +107,17 @@
 								<td class="tl"><div class="pl10">杨白劳</div></td>
 								<td class="tl"><div class="pl10">145788884556</div></td>
 								<td class="tl"><div class="pl10">2020-03-14 09:23:22</div></td>
+								<td><div class="pl10">
+										<div class="l pct80 ovh">
+											<dib class="pct50 l tl">一键下单</dib>
+											<dib class="pct50 l  tl">新增入库</dib>
+											<dib class="pct50 l  tl">申请提货</dib>
+											<dib class="pct50 l  tl">我的库存</dib>
+											<dib class="pct50 l  tl">单据打印</dib>
+											<dib class="pct50 l  tl">出入库查询</dib>
+											<dib class="pct50 l  tl">签约</dib>
+										</div>
+										<div class="l pct20"><a href="javascript:void(0)" onclick="setAuthority()">配置</a></div></td>
 								<td>正常</td>
 								<td><a href="javascript:void(0)" onclick="uploadFunction(19414,'1')">申请主账号</a></td>
 							</tr>
@@ -194,6 +240,23 @@
 
 	</div>
 
+	<div id="authority" class="dn  checkbox">
+		<div class="ovh pl20 pr20 pt30 pb30">
+		<label class="mb10 l pct50"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>一键下单</label>
+		<label class="mb10 l pct50"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>新增入库</label>
+		<label class="mb10 l pct50"><i class="ui-checkbox goldIcon vm  mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>申请提货</label>
+		<label class="mb10 l pct50"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>我的库存</label>
+		<label class="mb10 l pct50"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>自主结算</label>
+		<label class="mb10 l pct50"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>申请开票</label>
+		<label class="mb10 l pct50"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>单据打印</label>
+		<label class="mb10 l pct50"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>出入库查询</label><label class="mb10 l pct50"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>签约</label><label class="mb10 l pct50"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>订单售后</label>
+	</div>
+		<div class="tc">
+			<button class="ui-button mr10" type="button" >确定</button>
+			<button class="ui-button " data-type="clear" type="button" id="authorityClose">取消</button>
+		</div>
+	</div>
+
 	
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -290,6 +353,19 @@
 			$(".loading").show();
 		}
 
+
+		function setAuthority(){
+			var mypage=layer.open({
+				type: 1,
+				title: '权限配置',
+				area: ['500px', '340px'],
+				content: $("#authority")	
+			});
+			$("#authorityClose").on("click",function(){
+				layer.close(mypage)
+			})
+
+		}
 	
 
 
