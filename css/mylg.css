@@ -860,6 +860,52 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     background: url(../images/applySale/icon-bigger.png) no-repeat center;
 }
 
+.but-vipSize{
+	width: 138px;height: 38px;
+}
+
+.dac {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+}
+
+.dfc {
+  display: flex;
+  align-items: center
+}
+
+.daj {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.df {
+  display: flex;
+}
+
+.f1 {
+  flex: 1;
+}
+
+.order-step5{
+	position: absolute;
+}
+.order-step5{
+	background: transparent;
+}
+.order-step5.on{
+	color: #1365E8;
+	font-weight: bold;
+	background: transparent;
+}
+
+.wsn {
+  white-space: nowrap;
+}
+
 /*移动端 */
 @media (max-width: 1024px) {
     html,body{font-size:14px !important;}
