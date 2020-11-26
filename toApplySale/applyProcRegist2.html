@@ -11,12 +11,7 @@
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 		<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-		<title>评审中心-供应商评审</title>
-		<style type="text/css">
-			.w90 {
-				width: 90px;
-			}
-		</style>
+		<title>评审中心-仓库评审信息录入</title>
 	</head>
 	<body class="showTip">
 		<script type="text/javascript" src="../js/leftBar.js"></script>
@@ -27,38 +22,34 @@
 			<!-- topBar end -->
 			<div class="mainCont ">
 				<div class="ui-tab3">
-					<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">供应商评审信息录入</span><i class="goldIcon ui-tab3-dot"></i></a>
+					<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">加工商评审信息录入</span><i class="goldIcon ui-tab3-dot"></i></a>
 				</div>
 				<div class="ui-content unradius">
 					<div class="pt20 pr30 pl30 ">
-						<span class="poi pct25 dib" onclick="retrunTtoCorpInfoForSupplier()">
+						<span class="poi pct30 dib" onclick="retrunTapplyDepotRegist()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
-						<span class="tc auto dib pct50">
+						<span class="tc auto dib pct40">
 							<span class="order-step dib tl" style="top: -20px;">
-								<a class="dib order-step5 tc rel g67 pr5" onclick="prev()" style="left: -8%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67  pr5" onclick="prev()" style="left: -8%;" href="javascript:void(0)">
 									<i class="circle24 mr5 ml5 mb5">1</i>
-									<div>基本信息</div>
+									<div>加工商信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 on pr5" style="left: 25%;" href="javascript:void(0)">
-									<i class="circle24 mr5 mb5">2</i>
+								<a class="dib order-step5 tc rel g67 on pr5" onclick="prev()" style="left: 43%;" href="javascript:void(0)">
+									<i class="circle24  mr5 mb5">2</i>
 									<div>代理人信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5" onclick="toNextStep()" style="left: 58%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5" onclick="toNextStep()" style="left: 97%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">3</i>
-									<div>现场资料上传</div>
-								</a>
-								<a class="dib order-step5 tc rel g67 pr5" style="left:95%;" href="javascript:void(0)">
-									<i class="circle24 mr5 mb5">4</i>
-									<div class="wsn">评审资料</div>
+									<div class="wsn">仓库信息</div>
 								</a>
 							</span>
 						</span>
-						<span class="poi dib pct25"></span>
+						<span class="poi dib pct30"></span>
 					</div>
 					<div class="bte6 mt20"></div>
-					<div class="pr30 pl30 pb20">
-						<span class="db b g28 mt20">代理人信息</span>
+					<div class="pr30 pl30 pb30">
+						<span class="db b g28 f16 mt20">代理人信息</span>
 						<div class="mt20 f0 applyBox">
 							<div class="pct50 dib f14 mb10">
 								<span class="dib pct24 tr"><span class="red vm">*</span>企业代理人：</span>
@@ -119,8 +110,8 @@
 						</div>
 						
 					</div>
-					<div class="mt10 bte6 pb30 tc">
-						<div class="mt20">
+					<div class="bte6 pb30 tc">
+						<div class="mt20 daj">
 							<button class="ui-button but-vipSize" type="button" onclick="prev()" data-type="clear">上一步</button>
 							<button class="ui-button but-vipSize ml10" onclick="toNextStep()" type="button">下一步</button>
 						</div>
@@ -130,11 +121,11 @@
 			<!-- mainCont end -->
 
 		</div>
+		<div class="layer_sqs dn layui-layer-wrap" style="width: 560px; display: none;">
+			<img src="http://www.lgsteel.cn/statics/img/mylg/weituoshu.jpg?v=2">
+		</div>
+		
 
-	<div class="layer_sqs dn layui-layer-wrap" style="width: 560px; display: none;">
-		<img src="http://www.lgsteel.cn/statics/img/mylg/weituoshu.jpg?v=2">
-	</div>
-	
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 
@@ -142,20 +133,21 @@
 		<script type="text/javascript" src="../js/mylg.js"></script>
 		<script>
 			$(function() {
-				$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(2).addClass("on") //首页选中;
+				$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(5).addClass("on") //首页选中;
 				$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
 
 			})
-			function retrunTtoCorpInfoForSupplier(){
-				window.location="toCorpInfoForSupplier.html";
+			function retrunTapplyDepotRegist(){
+				window.location="toCorpInfoForProc.html";
 			}
 			function toNextStep(){
 				if($(".Sname").val().trim()!=""){
-					window.location="applySupplier3.html";
+					window.location="applyProcRegist3.html";
 				}else{
 					alert("请填写企业代理人");
 				}
 			}
+			
 			function showSqs(){
 					layer.open({
 			    	type: 1,
@@ -166,6 +158,7 @@
 			    	content: $('.layer_sqs')
 					});
 				}
+
 			function changeChecked(obj, id, value, num) {
 				$("#" + id).val(value);
 				if (id != 'companyStatus' && id != 'isWarrantName') {
@@ -196,6 +189,14 @@
 				$("#fileUploadDiv2").show()
 			}
 
+			function showHide(className, code) {
+				if (code) {
+					$("." + className).show();
+				} else {
+					$("." + className).hide();
+				}
+			}
+
 			function showHide2(code) {
 				if (code == '2') {
 					$("#personFile").show();
@@ -215,7 +216,6 @@
 
 
 			function changeUpType(obj, annexType) {
-				$(obj).addClass("on switchDotBut ").siblings("a").removeClass("on switchDotBut ");
 				if (annexType == 1) {
 					$("#annexType").val(1);
 					// $("#spsc").hide();
@@ -227,6 +227,18 @@
 					$(".upPhoto").hide();
 					$(".upVideo").show();
 				}
+				$(obj).parent().find("a").removeClass("on");
+				$(obj).addClass("on");
+			}
+			// 添加仓库
+			function addStockInfo(obj) {
+				var cloneBox = $(obj).parents(".stockInfo").clone(true)
+				cloneBox.find(".del-stock").show()
+				$(obj).parents('.stockList').append(cloneBox);
+			}
+			//  删除仓库
+			function delStockInfo(obj) {
+				$(obj).parents(".stockInfo").remove()
 			}
 			//选择现场评审人员
 			function isSelect(obj, flag) {
@@ -236,14 +248,6 @@
 				} else {
 					$("#wenxintishi").hide()
 					$("#selectOperator").show()
-				}
-			}
-
-			function showCont(obj, flag) {
-				if (flag) {
-					$(".isUSD").show()
-				} else {
-					$(".isUSD").hide()
 				}
 			}
 			// 选择推荐金牌商家

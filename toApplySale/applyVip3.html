@@ -37,16 +37,16 @@
 				</div>
 				<div class="ui-content unradius">
 					<div class="pt20 pr30 pl30">
-						<span class="poi pct15 dib" onclick="prev()">
+						<span class="poi pct15 dib" onclick="retrunToCorpInfo()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
 						<span class="tc auto dib pct70">
 							<span class="order-step dib tl" style="top: -20px;">
-								<a class="dib order-step5 tc rel g67  pr5" style="left: -4%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67  pr5" onclick="prev()"  style="left: -4%;" href="javascript:void(0)">
 									<i class="circle24 mr5 ml5 mb5">1</i>
 									<div>基本信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67  pr5" style="left: 18.25%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67  pr5" onclick="prev()"  style="left: 18.25%;" href="javascript:void(0)">
 									<i class="circle24  mr5 mb5">2</i>
 									<div>企业信息</div>
 								</a>
@@ -54,7 +54,7 @@
 									<i class="circle24 mr5 mb5">3</i>
 									<div>代理人信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5" style="left: 70.75%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5" onclick="toNextStep()" style="left: 70.75%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">4</i>
 									<div>评审资料</div>
 								</a>
@@ -72,7 +72,7 @@
 						<div class="mt20 f0 applyBox">
 							<div class="pct50 dib f14 mb10">
 								<span class="dib pct24 tr"><span class="red vm">*</span>企业代理人：</span>
-								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+								<input type="text" class="ui-input  pct50 h34 Sname" placeholder="请输入">
 							</div>
 							<div class="pct50 dib f14 mb10">
 								<span class="dib pct24 tr"><span class="red vm">*</span>推荐金牌商家：</span>
@@ -95,10 +95,8 @@
 							<div class="pct50 dib f14 ">
 								<span class="dib pct24 tr"><span class="red vm">*</span>实名认证授权书：</span>
 								<button class="ui-button mr5" data-type="upfile">附件上传</button>
-								<button class="ui-button mr5" data-type="download" type="button">授权书下载</button>
-								<a href="http://resource.lgsteel.cn/admin2020/images/hwqj.jpg" target="_blank" class="tiptop" data-hasqtip="5"
-								 title="<img src='http://resource.lgsteel.cn/admin2020/images/hwqj.jpg' style='backgroun-size:100% 100%;' width='570' height='300'>"
-								 aria-describedby="qtip-5">查看示例</a>
+								<button class="ui-button mr5" data-type="download" style="min-width: 110px" type="button">授权书下载</button>
+								<a href="javascript:void(0)" onclick="showSqs()" >查看示例</a>
 							</div>
 							<div class="pct50 dib f14 mb10">
 								<span class="dib pct24 tr"><span class="red vm">*</span>身份证号码：</span>
@@ -132,10 +130,8 @@
 					</div>
 					<div class="mt10 bte6 pb30 tc">
 						<div class="mt20 daj">
-							<button class="ui-button but-vipSize" type="button" onclick="prev()" data-type="clear">上一步</button>
-							<a href="applyVip4.html">
-								<button class="ui-button but-vipSize ml10" type="button">下一步</button>
-							</a>
+							<button class="ui-button but-vipSize mr10" type="button" onclick="prev()" data-type="clear">上一步</button>
+							<button class="ui-button but-vipSize" onclick="toNextStep()" type="button">下一步</button>
 						</div>
 					</div>
 				</div>
@@ -143,6 +139,9 @@
 			</div>
 		</div>
 
+		<div class="layer_sqs dn layui-layer-wrap" style="width: 560px; display: none;">
+			<img src="http://www.lgsteel.cn/statics/img/mylg/weituoshu.jpg?v=2">
+		</div>
 
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -175,6 +174,28 @@
 
 				});
 			})
+
+			function showSqs(){
+					layer.open({
+			    	type: 1,
+			    	area: ['700px', '90%'],
+			    	shadeClose: true,
+			    	shade: 0.5,
+			    	title: false, //不显示标题
+			    	content: $('.layer_sqs')
+					});
+				}
+			function retrunToCorpInfo(){
+				window.location="toCorpInfo.html";
+			}
+			
+			function toNextStep(){
+				if($(".Sname").val().trim()!=""){
+					window.location="applyVip4.html";
+				}else{
+					alert("请填写企业代理人");
+				}
+			}
 
 			function changeChecked(obj, id, value, num) {
 				$("#" + id).val(value);

@@ -27,7 +27,7 @@
 				<div class="ui-content unradius">
 					<!-- 没实名认证之后显示 -->
 					<div class="pt20 pr30 dn pl30 ">
-						<span class="poi pct30 dib" onclick="prev()">
+						<span class="poi pct30 dib" onclick="retrunTapplyDepotRegist()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
 						<span class="tc auto dib pct40">
@@ -51,7 +51,7 @@
 					<!-- 结束 -->
 					<!-- 实名认证之后显示 -->
 					<div class="pt20 pr30 pl30 ">
-						<span class="poi pct40 dib" onclick="prev()">
+						<span class="poi pct40 dib" onclick="retrunTapplyDepotRegist()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
 						<span class="tc auto dib pct20">
@@ -60,7 +60,7 @@
 									<i class="circle24 mr5 ml5 mb5">1</i>
 									<div>加工商信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5"  style="left: 97%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5" onclick="toNextStep()" style="left: 97%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">2</i>
 									<div class="wsn">仓库信息</div>
 								</a>
@@ -92,7 +92,7 @@
 							</div>
 							<div class="mb10">
 								<span class="dib pct12 tr">联系地址：</span>
-								<input type="text" class="ui-input pct25 h34" placeholder="请选择所在区域">
+								<input type="text" class="ui-input pct25 h34 Sname" placeholder="请选择所在区域">
 								<input type="text" class="ui-input pct25 h34 ml5" placeholder="详细地址">
 							</div>
 							<div class="f14 mb10 dfc">
@@ -202,9 +202,7 @@
 					<div class="bte6 pb30 tc">
 						<div class="mt20">
 							<!-- 加判断是否实名跳转哪个页面 实名跳 applyDepotRegist3 否则跳 applyDepotRegist2-->
-							<a href="applyDepotRegist2.html">
-								<button class="ui-button but-vipSize" type="button">下一步</button>
-							</a>
+							<button class="ui-button but-vipSize" onclick="toNextStep()" type="button">下一步</button>
 						</div>
 					</div>
 				</div>
@@ -226,6 +224,18 @@
 
 			})
 
+			function retrunTapplyDepotRegist(){
+				window.location="toCorpInfoForDepot.html";
+			}
+			function toNextStep(){
+				if($(".Sname").val().trim()!=""){
+					window.location="applyDepotRegist2.html";
+				}else{
+					alert("请填写联系地址");
+				}
+			}
+			
+
 			function changeChecked(obj, id, value, num) {
 				$("#" + id).val(value);
 				if (id != 'companyStatus' && id != 'isWarrantName') {
@@ -243,7 +253,6 @@
 						target1.style.display = "none";
 					}
 				}
-
 			}
 
 			function showDivNew(obj) {

@@ -18,7 +18,6 @@
 	<script type="text/javascript" src="../js/leftBar.js"></script> 
 	<!-- leftbar end -->
 
-
 	<div class="rightBar">
 		<script type="text/javascript" src="../js/topBar.js"></script> 
 		<!-- topBar end -->
@@ -29,7 +28,7 @@
 			<div class="ui-content unradius">
 				<!-- 没实名认证之后显示 -->
 				<div class="pt20 pr30 dn pl30">
-					<span class="poi pct15 dib" onclick="prev()">
+					<span class="poi pct15 dib" onclick="retrunToCorpInfo()">
 						<span class="leftArrow "></span> 返回上一级
 					</span>
 					<span class="tc auto dib pct70">
@@ -38,11 +37,11 @@
 								<i class="circle24 mr5 ml5 mb5">1</i>
 								<div>基本信息</div>
 							</a>
-							<a class="dib order-step5 tc rel g67 on pr5"  style="left: 21%;" href="javascript:void(0)">
+							<a class="dib order-step5 tc rel g67 on pr5" style="left: 21%;" href="javascript:void(0)">
 								<i class="circle24  mr5 mb5">2</i>
 								<div>企业信息</div>
 							</a>
-							<a class="dib order-step5 tc rel g67 pr5"  style="left: 46%;" href="javascript:void(0)">
+							<a class="dib order-step5 tc rel g67 pr5"  onclick="toNextStep()" style="left: 46%;" href="javascript:void(0)">
 								<i class="circle24 mr5 mb5">3</i>
 								<div>代理人信息</div>
 							</a>
@@ -61,12 +60,12 @@
 				<!-- 结束 -->
 				<!-- 实名认证之后显示 -->
 				<div class="pt20 pr30 pl30">
-					<span class="poi pct25 dib" onclick="prev()">
+					<span class="poi pct25 dib" onclick="retrunToCorpInfo()">
 						<span class="leftArrow "></span> 返回上一级
 					</span>
 					<span class="tc auto dib pct50">
 						<span class="order-step dib tl" style="top: -20px;">
-							<a class="dib order-step5 tc rel g67  pr5" style="left: -8%;" href="javascript:void(0)">
+							<a class="dib order-step5 tc rel g67 pr5" onclick="prev()" style="left: -8%;" href="javascript:void(0)">
 								<i class="circle24 mr5 ml5 mb5">1</i>
 								<div>基本信息</div>
 							</a>
@@ -74,7 +73,7 @@
 								<i class="circle24 mr5 mb5">2</i>
 								<div>企业信息</div>
 							</a>
-							<a class="dib order-step5 tc rel g67 pr5" style="left: 58%;" href="javascript:void(0)">
+							<a class="dib order-step5 tc rel g67 pr5" onclick="toNextStep()" style="left: 58%;" href="javascript:void(0)">
 								<i class="circle24 mr5 mb5">3</i>
 								<div>评审资料</div>
 							</a>
@@ -172,7 +171,7 @@
                                 <button type="button" class="ui-option h34" onclick="changeChecked(this,'factoryTypeName','租用',819002);showHide('factoryType',0)">租用</button>
                             </span>
                             <span class="input-selSearch ml10">
-                                <input type="text" class=" ui-input searchUp h34" readonly="" placeholder="占位符" autocomplete="off">
+                                <input type="text" class="ui-input searchUp h34 pm2" readonly="" placeholder="占位符" autocomplete="off">
                                 <div class="search-cont">
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
@@ -202,10 +201,8 @@
                 </div>
 				<div class="mt10 bte6 pb30 tc">
              	<div class="mt20 daj"> <!-- 加判断是否实名跳转哪个页面 实名跳 applySupplier3 否则跳 applySupplier2-->
-					<button class="ui-button but-vipSize" type="button" onclick="prev()" data-type="clear">上一步</button>
-             		<a href="applyVip3.html">
-             			<button class="ui-button but-vipSize ml10" type="button">下一步</button>
-             		</a>
+					<button class="ui-button but-vipSize mr10" type="button" onclick="prev()" data-type="clear">上一步</button>
+             		<button class="ui-button but-vipSize" onclick="toNextStep()" type="button">下一步</button>
              	</div>
              </div>
 			</div>
@@ -246,6 +243,19 @@
 
 	});
 		})
+		
+		function retrunToCorpInfo(){
+			window.location="toCorpInfo.html";
+		}
+		
+		function toNextStep(){
+			if($(".pm2").val().trim()!=""){
+				window.location="applyVip3.html";
+			}else{
+				alert("请选择厂房平方米");
+			}
+		}
+		
         function changeChecked(obj,id,value,num){
                 $("#"+id).val(value);
                 if(id!='companyStatus'&&id!='isWarrantName'){

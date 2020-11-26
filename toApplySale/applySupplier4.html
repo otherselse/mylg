@@ -33,20 +33,20 @@
 					
 					<!-- 没实名认证之后显示 -->
 					<div class="pt20 pr30 dn pl30">
-						<span class="poi pct25 dib" onclick="prev()">
+						<span class="poi pct25 dib" onclick="retrunTtoCorpInfoForSupplier()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
 						<span class="tc auto dib pct50">
 							<span class="order-step dib tl" style="top: -20px;">
-								<a class="dib order-step5 tc rel g67  pr5" style="left: -8%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67  pr5" onclick="prev()" style="left: -8%;" href="javascript:void(0)">
 									<i class="circle24 mr5 ml5 mb5">1</i>
 									<div>基本信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67  pr5" style="left: 25%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67  pr5" onclick="prev()" style="left: 25%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">2</i>
 									<div>代理人信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5" style="left: 58%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5" onclick="prev()" style="left: 58%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">3</i>
 									<div>现场资料上传</div>
 								</a>
@@ -60,17 +60,17 @@
 					</div>
 					<!-- 实名认证之后显示 -->
 					<div class="pt20 pr30 pl30">
-						<span class="poi pct30 dib" onclick="prev()">
+						<span class="poi pct30 dib" onclick="retrunTtoCorpInfoForSupplier()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
 						<span class="">
 							<span class="tc auto dib pct40">
 								<span class="order-step dib tl" style="top: -20px;">
-									<a class="dib order-step5 tc rel g67  pr5" style="left: -8%;" href="javascript:void(0)">
+									<a class="dib order-step5 tc rel g67  pr5" onclick="prev()" style="left: -8%;" href="javascript:void(0)">
 										<i class="circle24 mr5 ml5 mb5">1</i>
 										<div>基本信息</div>
 									</a>
-									<a class="dib order-step5 tc rel g67 pr5"  style="left: 43%;" href="javascript:void(0)">
+									<a class="dib order-step5 tc rel g67 pr5" onclick="prev()" style="left: 43%;" href="javascript:void(0)">
 										<i class="circle24  mr5 mb5">2</i>
 										<div>现场资料上传</div>
 									</a>
@@ -209,7 +209,7 @@
 								<span class="dib tr pct12">可开票日期：</span>
 								每月
 								<span class="input-selSearch pct10">
-									<input type="text" class="ui-input searchUp pct100" value="0" readonly autocomplete="off">
+									<input type="text" class="ui-input searchUp pct100 Sname" value="0" readonly autocomplete="off">
 									<div class="search-cont pct100">
 										<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
 										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
@@ -244,9 +244,7 @@
 						</div>
 						<div class="mt10 daj">
 							<button class="ui-button but-vipSize" type="button">提交评审</button>
-							<a href="applySupplier.html">
-								<button class="ui-button but-vipSize ml10" type="button" data-type="clear">预览信息</button>
-							</a>
+								<button class="ui-button but-vipSize ml10" onclick="toNextStep()" type="button" data-type="clear">预览信息</button>
 						</div>
 					</div>
 				</div>
@@ -267,7 +265,17 @@
 				$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
 
 			})
-
+			function retrunTtoCorpInfoForSupplier(){
+				window.location="toCorpInfoForSupplier.html";
+			}
+			
+			function toNextStep(){
+				if($(".Sname").val().trim()!="0"){
+					window.location="applySupplier.html";
+				}else{
+					alert("请选择可开票日期-月");
+				}
+			}
 			function changeChecked(obj, id, value, num) {
 				$("#" + id).val(value);
 				if (id != 'companyStatus' && id != 'isWarrantName') {

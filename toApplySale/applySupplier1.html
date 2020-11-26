@@ -32,16 +32,16 @@
 				<div class="ui-content unradius">
 					<!-- 没实名认证之后显示 -->
 					<div class="pt20 pr30 dn pl30">
-						<span class="poi pct25 dib" onclick="prev()">
+						<span class="poi pct25 dib" onclick="retrunTtoCorpInfoForSupplier()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
 						<span class="tc auto dib pct50">
 							<span class="order-step dib tl" style="top: -20px;">
-								<a class="dib order-step5 tc rel g67 on pr5" style="left: -8%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 on pr5"  style="left: -8%;" href="javascript:void(0)">
 									<i class="circle24 mr5 ml5 mb5">1</i>
 									<div>基本信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67  pr5" style="left: 25%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67  pr5" onclick="toNextStep()" style="left: 25%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">2</i>
 									<div>代理人信息</div>
 								</a>
@@ -59,7 +59,7 @@
 					</div>
 					<!-- 实名认证之后显示 -->
 					<div class="pt20 pr30 pl30">
-						<span class="poi pct30 dib" onclick="prev()">
+						<span class="poi pct30 dib" onclick="retrunTtoCorpInfoForSupplier()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
 						<span class="">
@@ -69,7 +69,7 @@
 										<i class="circle24 mr5 ml5 mb5">1</i>
 										<div>基本信息</div>
 									</a>
-									<a class="dib order-step5 tc rel g67 pr5"  style="left: 43%;" href="javascript:void(0)">
+									<a class="dib order-step5 tc rel g67 pr5" onclick="toNextStep()" style="left: 43%;" href="javascript:void(0)">
 										<i class="circle24  mr5 mb5">2</i>
 										<div>现场资料上传</div>
 									</a>
@@ -110,7 +110,7 @@
 							</div>
 							<div class="pct50 dib f14 mb10">
 								<span class="dib pct24 tr"><span class="red vm">*</span>公司名称：</span>
-								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+								<input type="text" class="ui-input pct50 h34 Sname" placeholder="请输入">
 							</div>
 							<div class="pct50 dib f14 mb10">
 								<span class="dib pct24 tr"><span class="red">*</span>银行账号：</span>
@@ -199,9 +199,7 @@
 					<div class="mt10 bte6 pb30 tc">
 						<div class="mt20">
 							<!-- 加判断是否实名跳转哪个页面 实名跳 applySupplier3 否则跳 applySupplier2-->
-							<a href="applySupplier2.html">
-								<button class="ui-button but-vipSize" type="button">下一步</button>
-							</a>
+							<button class="ui-button but-vipSize" onclick="toNextStep()" type="button">下一步</button>
 						</div>
 					</div>
 				</div>
@@ -240,7 +238,17 @@
 						target1.style.display = "none";
 					}
 				}
-
+			}
+			
+			function retrunTtoCorpInfoForSupplier(){
+				window.location="toCorpInfoForSupplier.html";
+			}
+			function toNextStep(){
+				if($(".Sname").val().trim()!=""){
+					window.location="applySupplier2.html";
+				}else{
+					alert("请填写公司名称");
+				}
 			}
 
 			function showDivNew(obj) {

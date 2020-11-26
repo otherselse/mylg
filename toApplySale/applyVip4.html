@@ -28,20 +28,20 @@
 					
 					<!-- 没实名认证之后显示 -->
 					<div class="pt20 pr30 dn pl30">
-						<span class="poi pct15 dib" onclick="prev()">
+						<span class="poi pct15 dib" onclick="retrunToCorpInfo()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
 						<span class="tc auto dib pct70">
 							<span class="order-step dib tl" style="top: -20px;">
-								<a class="dib order-step5 tc rel g67  pr5" style="left: -5%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67  pr5" onclick="prev()" style="left: -5%;" href="javascript:void(0)">
 									<i class="circle24 mr5 ml5 mb5">1</i>
 									<div>基本信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5"  style="left: 21%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5" onclick="prev()" style="left: 21%;" href="javascript:void(0)">
 									<i class="circle24  mr5 mb5">2</i>
 									<div>企业信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5"  style="left: 46%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5" onclick="prev()" style="left: 46%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">3</i>
 									<div>代理人信息</div>
 								</a>
@@ -49,7 +49,7 @@
 									<i class="circle24 mr5 mb5">4</i>
 									<div>评审资料</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5" style="left: 97%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5"  style="left: 97%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">5</i>
 									<div class="wsn">额度/账期</div>
 								</a>
@@ -60,24 +60,24 @@
 					<!-- 结束 -->
 					<!-- 实名认证之后显示 -->
 					<div class="pt20 pr30 pl30">
-						<span class="poi pct25 dib" onclick="prev()">
+						<span class="poi pct25 dib" onclick="retrunToCorpInfo()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
 						<span class="tc auto dib pct50">
 							<span class="order-step dib tl" style="top: -20px;">
-								<a class="dib order-step5 tc rel g67  pr5" style="left: -8%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67  pr5" onclick="prev()" style="left: -8%;" href="javascript:void(0)">
 									<i class="circle24 mr5 ml5 mb5">1</i>
 									<div>基本信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67  pr5" style="left: 25%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67  pr5" onclick="prev()" style="left: 25%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">2</i>
 									<div>企业信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 on pr5" style="left: 58%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 on pr5" onclick="prev()" style="left: 58%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">3</i>
 									<div>评审资料</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5" style="left:95%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5"  style="left:95%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">4</i>
 									<div class="wsn">额度/账期</div>
 								</a>
@@ -274,7 +274,7 @@
 							</div>
 							<div class="mb10">
 								<span class="dib pct12 tr ">企业实际控制人：</span>
-								<input type="text" class="ui-input h34 pct25" placeholder="请输入">
+								<input type="text" class="ui-input h34 pct25 pm2" placeholder="请输入">
 							</div>
 							<div class="mb10">
 								<span class="dib pct12 tr ">银行授信额度：</span>
@@ -286,10 +286,8 @@
 					</div>
 					<div class="mt10 bte6 pb30 tc">
 						<div class="mt20 daj">
-							<button class="ui-button but-vipSize" type="button" onclick="prev()" data-type="clear">上一步</button>
-							<a href="applyVip5.html">
-								<button class="ui-button but-vipSize ml10" type="button">下一步</button>
-							</a>
+							<button class="ui-button but-vipSize mr10" type="button" onclick="prev()" data-type="clear">上一步</button>
+							<button class="ui-button but-vipSize" onclick="toNextStep()" type="button">下一步</button>
 						</div>
 					</div>
 				</div>
@@ -328,6 +326,18 @@
 
 				});
 			})
+			
+			function retrunToCorpInfo(){
+				window.location="toCorpInfo.html";
+			}
+			
+			function toNextStep(){
+				if($(".pm2").val().trim()!=""){
+					window.location="applyVip5.html";
+				}else{
+					alert("请输入企业实际控制人");
+				}
+			}
 
 			function changeChecked(obj, id, value, num) {
 				$("#" + id).val(value);

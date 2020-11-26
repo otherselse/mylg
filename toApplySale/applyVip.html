@@ -1,644 +1,686 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
-	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-	<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
-	<title>评审中心-VIP客户评审信息录入</title>
-</head>
-<body class="showTip">
-	<script type="text/javascript" src="../js/leftBar.js"></script> 
-	<!-- leftbar end -->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<link rel="stylesheet" href="../css/mylg.css" type="text/css" />
+		<title>评审中心-VIP客户评审信息录入</title>
+	</head>
+	<body class="showTip">
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- leftbar end -->
 
 
-	<div class="rightBar">
-		<script type="text/javascript" src="../js/topBar.js"></script> 
-		<!-- topBar end -->
-		<div class="mainCont ">
-			<div class="ui-tab3">
-				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">VIP客户评审信息预览</span><i class="goldIcon ui-tab3-dot"></i></a>
-			</div>
-			<div class="ui-content unradius">
-				<div class="pt20 pr30 pl30 pb50">
-                    <span class="poi" onclick="prev()">
-                        <span class="leftArrow "></span> 返回上一级
-                     </span>
-                     <span class="db b g28 mt25">基本信息</span>
-                     <div class="mt20 f0 applyBox">
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"><span class="red vm">*</span>业务类型：</span>
-                     		<span class="single f0">
-                     			<input type="hidden">
-                     			<button type="button" class="ui-option h34 on mr10">款到卸货业务</button>
-                     			<button type="button" class="ui-option h34">欠款业务</button>
-                     		</span>
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr">注册地址：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请选择所在区域">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"><span class="red vm">*</span>公司名称：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"></span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="详细地址">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"><span class="red vm">*</span>联系人：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10 tipshow">
-                     		<span class="dib pct24 tr"><span class="red vm">*</span>注册资本：</span>
-                     		<span class="ui-input-x pct50 h34 mr5">
-                     			<span class="pct20 ui-inputbut  brd9 input-selSearch vt bgfa">
-                     				<input type="text" class="searchUp ui-inputlink f12" readonly="" value="￥" autocomplete="off">
-                     				<div class="search-cont pct100">
-                     					<a href="javascript:void(0)" class="search-list db ell active">￥</a>
-                     					<a href="javascript:void(0)" class="search-list db ell ">$</a>
-                     				</div>
-                     			</span>
-                     			<input type="text" class="pct80  f12 specialTip" placeholder="请输入">
-                     		</span>
-                     		万<a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写“注册资本”"></a>
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr">联系地址：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请选择所在区域">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10 tipshow">
-                     		<span class="dib pct24 tr"><span class="red vm">*</span>实缴资本：</span>
-                     		<span class="ui-input-x pct50 h34 mr5 ">
-                     			<span class="pct20 ui-inputbut  brd9 input-selSearch vt bgfa">
-                     				<input type="text" class="searchUp ui-inputlink f12" readonly="" value="￥" autocomplete="off">
-                     				<div class="search-cont pct100">
-                     					<a href="javascript:void(0)" class="search-list db ell active">￥</a>
-                     					<a href="javascript:void(0)" class="search-list db ell ">$</a>
-                     				</div>
-                     			</span>
-                     			<input type="text" class="pct80  f12 specialTip" placeholder="请输入">
-                     		</span>
-                     		万<a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写“实缴资本”"></a>
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"></span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="详细地址">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr">企业法人：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr">公司网址：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                     	</div>
-                     	
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr">身份证上传：</span>
-                     		<button class="ui-button " data-type="upfile">正面</button>
-                     		<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
-                     			 title="删除"></i></span>
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr">E-mail：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"></span>
-                     		<button class="ui-button " data-type="upfile">反面</button>
-                     		<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
-                     			 title="删除"></i></span>
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"><span class="red">*</span>联系电话：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"><span class="red">*</span>银行账号：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"><span class="red">*</span>固定电话：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"><span class="red">*</span>开户账号：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"><span class="red">*</span>传真：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                     	</div>
-                     	<div class="pct50 dib f14 mb10">
-                     		<span class="dib pct24 tr"><span class="red">*</span>税号：</span>
-                     		<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-                     	</div>
-                     </div>
-					 <!-- 基本信息 -->
-                    <span class="db b g28 mt50">企业信息</span>
-                    <div class="mt20 applyBox f14">
-                         <div class="mb10"> 
-                            <span class="dib pct12 tr"><span class="red">*</span>企业性质：</span>
-                            <span class="single f0">
-                                <input type="hidden" name="applySale.corpTypeName" id="corpTypeName" value="">
-                                <input type="hidden" name="applySale.corpType" id="corpTypeName1" value="">
-                                <button type="button" class="ui-option h34  mr10" onclick="changeChecked(this,'corpTypeName','国企',1);">国企</button>
-                                <button type="button" class="ui-option h34 mr10" onclick="changeChecked(this,'corpTypeName','民营',2);">民营</button>
-                                <button type="button" class="ui-option h34 mr10" onclick="changeChecked(this,'corpTypeName','合资',4);">合资</button>
-                                <button type="button" class="ui-option h34 " onclick="changeChecked(this,'corpTypeName','外资',5);">外资</button>
-                            </span>
-                         </div>
-                         <div class="mb10 dn" id="showWaiZi"> 
-                            <span class="dib pct12 tr"><span class="red">*</span>外商投资批准证书：</span>
-                            <button class="ui-button " data-type="upfile">附件上传</button>
-                         </div>
-                         <div class="mb10"> 
-                            <span class="dib pct12 tr"><span class="red">*</span>是否上市公司：</span>
-                            <span class="single f0">
-                                <input type="hidden">
-                                <button type="button" class="ui-option h34 on mr10">是</button>
-                                <button type="button" class="ui-option h34 ">否</button>
-                            </span>
-                         </div>
-                         <div class="mb10 f0"> 
-                            <span class="dib pct12 f14 tr vt"><span class="red">*</span>行业分类：</span>
-                            <span class="single f0 dib ml5 f14">
-                                <input type="hidden" name="applySale.industryID" id="industryID" value="1">
-                                <button type="button" class="ui-option h34 on mr10 industry m_mb10" data="1" t="精密/高新仪器">精密/高新仪器</button>
-                                <button type="button" class="ui-option h34 mr10 industry m_mb10" data="93" t="家用/民用电器">家用/民用电器</button>
-                                <button type="button" class="ui-option h34 mr10 industry m_mb10" data="94" t="电力/电气">电力/电气</button>
-                                <button type="button" class="ui-option h34 mr10 industry m_mb10" data="95" t="钢结构/建筑">钢结构/建筑</button>
-                                <button type="button" class="ui-option h34 mr10 industry m_mb10" data="96" t="重型机械">重型机械</button>
-                                <button type="button" class="ui-option h34 mr10 industry m_mb10" data="97" t="石油化工">石油化工</button>
-                                <button type="button" class="ui-option h34 mr10 industry m_mb10" data="98" t="金属冶炼">金属冶炼</button>
-                                <button type="button" class="ui-option h34 industry" data="99" t>其它</button>
-                            </span>
-                            <input type="text" class="ui-input h34 pct10 dn ml10" name="applySale.industryName" id="industryName" value="">
-                         </div>
-                         <div class="mb10"> 
-                            <span class="dib pct12 tr"><span class="red">*</span>销售渠道：</span>
-                            <span class="single f0">
-                                <input type="hidden">
-                                <button type="button" class="ui-option h34 on mr10">国内销售</button>
-                                <button type="button" class="ui-option h34 mr10">国外销售</button>
-                                <button type="button" class="ui-option h34">国内外销售结合</button>
-                            </span>
-                         </div>
-                         <div class="mb10"> 
-                            <span class="dib pct12 tr"><span class="red">*</span>土地性质：</span>
-                            <span class="single f0">
-                                <input type="hidden" name="applySale.landTypeName" id="landTypeName" value="">
-                                <input type="hidden" name="applySale.landType" id="landTypeName1" value="">
-                                <button type="button" class="ui-option h34  mr10" onclick="changeChecked(this,'landTypeName','自有',818001);showHide('landType',1)">自有</button>
-                                <button type="button" class="ui-option h34" onclick="changeChecked(this,'landTypeName','租用',818002);showHide('landType',0)">租用</button>
-                            </span>
-                            <span class="input-selSearch ml10">
-                                <input type="text" class=" ui-input searchUp h34" readonly="" placeholder="占位符" autocomplete="off">
-                                <div class="search-cont">
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                </div>
-                            </span><span class="f12">&nbsp;平方米</span>
-                         </div>
-                         <div class="mb10 landType dn"> 
-                            <span class="dib pct12 tr"></span>
-                            土地证上传：<button class="ui-button " data-type="upfile">附件上传</button><span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                         </div>
-                         <div class="mb10 f0"> 
-                            <span class="dib pct12 tr f14"><span class="red">*</span>厂房性质：</span>
-                            <span class="single f0 ml5">
-                                <input type="hidden" name="applySale.factoryTypeName" id="factoryTypeName" value="">
-                                <input type="hidden" name="applySale.factoryType" id="factoryTypeName1" value="">
-                                <button type="button" class="ui-option h34  mr10" onclick="changeChecked(this,'factoryTypeName','自有',819001);showHide('factoryType',1)">自有</button>
-                                <button type="button" class="ui-option h34" onclick="changeChecked(this,'factoryTypeName','租用',819002);showHide('factoryType',0)">租用</button>
-                            </span>
-                            <span class="input-selSearch ml10">
-                                <input type="text" class=" ui-input searchUp h34" readonly="" placeholder="占位符" autocomplete="off">
-                                <div class="search-cont">
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                </div>
-                            </span><span class="f12">&nbsp;平方米</span>
-                         </div>
-                         <div class="mb10 factoryType  dn"> 
-                            <span class="dib pct12 tr"></span>
-                            产权证上传：<button class="ui-button " data-type="upfile">附件上传</button><span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                         </div>
-                         <div class="mb10 f0" >
-                             <span class="dib pct12 tr f14 vt"><span class="red">*</span>厂房性质：</span>
-                             <span class="checkbox pct88 f14 dib">
-                                <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>热轧</label>
-                                <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>冷轧涂镀</label>
-                                <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>型材</label>
-                                <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>不锈钢</label>
-                                <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>优特钢</label>
-                                <label class="mr20 m_db"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>其它</label>
-                            </span>
-                         </div>
-                     </div>
-					
-					<span class="db b g28 mt25">代理人信息</span>
-					<div class="mt20 f0 applyBox">
-						<div class="pct50 dib f14 mb10">
-							<span class="dib pct24 tr"><span class="red vm">*</span>企业代理人：</span>
-							<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+		<div class="rightBar">
+			<script type="text/javascript" src="../js/topBar.js"></script>
+			<!-- topBar end -->
+			<div class="mainCont ">
+				<div class="ui-tab3">
+					<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">VIP客户评审信息预览</span><i class="goldIcon ui-tab3-dot"></i></a>
+				</div>
+				<div class="ui-content unradius">
+					<div class="pt20 pr30 pl30 pb50">
+						<span class="poi" onclick="prev()">
+							<span class="leftArrow "></span> 返回上一级
+						</span>
+						<span class="db b g28 mt25">基本信息</span>
+						<div class="mt20 f0 applyBox">
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red vm">*</span>业务类型：</span>
+								<span class="single f0">
+									<input type="hidden">
+									<button type="button" class="ui-option h34 on mr10">款到卸货业务</button>
+									<button type="button" class="ui-option h34">欠款业务</button>
+								</span>
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr">注册地址：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请选择所在区域">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red vm">*</span>公司名称：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"></span>
+								<input type="text" class="ui-input pct50 h34" placeholder="详细地址">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red vm">*</span>联系人：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 mb10 tipshow">
+								<span class="dib pct24 tr"><span class="red vm">*</span>注册资本：</span>
+								<span class="ui-input-x pct50 h34 mr5">
+									<span class="pct20 ui-inputbut  brd9 input-selSearch vt bgfa">
+										<input type="text" class="searchUp ui-inputlink f12" readonly="" value="￥" autocomplete="off">
+										<div class="search-cont pct100">
+											<a href="javascript:void(0)" class="search-list db ell active">￥</a>
+											<a href="javascript:void(0)" class="search-list db ell ">$</a>
+										</div>
+									</span>
+									<input type="text" class="pct80  f12 specialTip" placeholder="请输入">
+								</span>
+								万<a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写“注册资本”"></a>
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr">联系地址：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请选择所在区域">
+							</div>
+							<div class="pct50 dib f14 mb10 tipshow">
+								<span class="dib pct24 tr"><span class="red vm">*</span>实缴资本：</span>
+								<span class="ui-input-x pct50 h34 mr5 ">
+									<span class="pct20 ui-inputbut  brd9 input-selSearch vt bgfa">
+										<input type="text" class="searchUp ui-inputlink f12" readonly="" value="￥" autocomplete="off">
+										<div class="search-cont pct100">
+											<a href="javascript:void(0)" class="search-list db ell active">￥</a>
+											<a href="javascript:void(0)" class="search-list db ell ">$</a>
+										</div>
+									</span>
+									<input type="text" class="pct80  f12 specialTip" placeholder="请输入">
+								</span>
+								万<a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="注：请按工商登记信息如实填写“实缴资本”"></a>
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"></span>
+								<input type="text" class="ui-input pct50 h34" placeholder="详细地址">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr">企业法人：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr">公司网址：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr">身份证上传：</span>
+								<button class="ui-button " data-type="upfile">正面</button>
+								<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+									 title="删除"></i></span>
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr">E-mail：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"></span>
+								<button class="ui-button " data-type="upfile">反面</button>
+								<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+									 title="删除"></i></span>
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red">*</span>联系电话：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red">*</span>银行账号：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red">*</span>固定电话：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red">*</span>开户账号：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red">*</span>传真：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red">*</span>税号：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
 						</div>
-						<div class="pct50 dib f14 mb10">
-							<span class="dib pct24 tr"><span class="red vm">*</span>推荐金牌商家：</span>
-							<span class="input-selSearch pct50">
-							    <input type="text" class=" ui-input searchUp pct100 h34" readonly="" placeholder="占位符" autocomplete="off">
-							    <div class="search-cont pct100">
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-							    </div>
-							</span>
+						<!-- 基本信息 -->
+						<span class="db b g28 mt50">企业信息</span>
+						<div class="mt20 applyBox f14">
+							<div class="mb10">
+								<span class="dib pct12 tr"><span class="red">*</span>企业性质：</span>
+								<span class="single f0">
+									<input type="hidden" name="applySale.corpTypeName" id="corpTypeName" value="">
+									<input type="hidden" name="applySale.corpType" id="corpTypeName1" value="">
+									<button type="button" class="ui-option h34  mr10" onclick="changeChecked(this,'corpTypeName','国企',1);">国企</button>
+									<button type="button" class="ui-option h34 mr10" onclick="changeChecked(this,'corpTypeName','民营',2);">民营</button>
+									<button type="button" class="ui-option h34 mr10" onclick="changeChecked(this,'corpTypeName','合资',4);">合资</button>
+									<button type="button" class="ui-option h34 " onclick="changeChecked(this,'corpTypeName','外资',5);">外资</button>
+								</span>
+							</div>
+							<div class="mb10 dn" id="showWaiZi">
+								<span class="dib pct12 tr"><span class="red">*</span>外商投资批准证书：</span>
+								<button class="ui-button " data-type="upfile">附件上传</button>
+							</div>
+							<div class="mb10">
+								<span class="dib pct12 tr"><span class="red">*</span>是否上市公司：</span>
+								<span class="single f0">
+									<input type="hidden">
+									<button type="button" class="ui-option h34 on mr10">是</button>
+									<button type="button" class="ui-option h34 ">否</button>
+								</span>
+							</div>
+							<div class="mb10 f0">
+								<span class="dib pct12 f14 tr vt"><span class="red">*</span>行业分类：</span>
+								<span class="single f0 dib ml5 f14">
+									<input type="hidden" name="applySale.industryID" id="industryID" value="1">
+									<button type="button" class="ui-option h34 on mr10 industry m_mb10" data="1" t="精密/高新仪器">精密/高新仪器</button>
+									<button type="button" class="ui-option h34 mr10 industry m_mb10" data="93" t="家用/民用电器">家用/民用电器</button>
+									<button type="button" class="ui-option h34 mr10 industry m_mb10" data="94" t="电力/电气">电力/电气</button>
+									<button type="button" class="ui-option h34 mr10 industry m_mb10" data="95" t="钢结构/建筑">钢结构/建筑</button>
+									<button type="button" class="ui-option h34 mr10 industry m_mb10" data="96" t="重型机械">重型机械</button>
+									<button type="button" class="ui-option h34 mr10 industry m_mb10" data="97" t="石油化工">石油化工</button>
+									<button type="button" class="ui-option h34 mr10 industry m_mb10" data="98" t="金属冶炼">金属冶炼</button>
+									<button type="button" class="ui-option h34 industry" data="99" t>其它</button>
+								</span>
+								<input type="text" class="ui-input h34 pct10 dn ml10" name="applySale.industryName" id="industryName" value="">
+							</div>
+							<div class="mb10">
+								<span class="dib pct12 tr"><span class="red">*</span>销售渠道：</span>
+								<span class="single f0">
+									<input type="hidden">
+									<button type="button" class="ui-option h34 on mr10">国内销售</button>
+									<button type="button" class="ui-option h34 mr10">国外销售</button>
+									<button type="button" class="ui-option h34">国内外销售结合</button>
+								</span>
+							</div>
+							<div class="mb10">
+								<span class="dib pct12 tr"><span class="red">*</span>土地性质：</span>
+								<span class="single f0">
+									<input type="hidden" name="applySale.landTypeName" id="landTypeName" value="">
+									<input type="hidden" name="applySale.landType" id="landTypeName1" value="">
+									<button type="button" class="ui-option h34  mr10" onclick="changeChecked(this,'landTypeName','自有',818001);showHide('landType',1)">自有</button>
+									<button type="button" class="ui-option h34" onclick="changeChecked(this,'landTypeName','租用',818002);showHide('landType',0)">租用</button>
+								</span>
+								<span class="input-selSearch ml10">
+									<input type="text" class=" ui-input searchUp h34" readonly="" placeholder="占位符" autocomplete="off">
+									<div class="search-cont">
+										<a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span><span class="f12">&nbsp;平方米</span>
+							</div>
+							<div class="mb10 landType dn">
+								<span class="dib pct12 tr"></span>
+								土地证上传：<button class="ui-button " data-type="upfile">附件上传</button><span class="ui-files ml10 vm"><a href="javascript:void(0)"
+									 class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+							</div>
+							<div class="mb10 f0">
+								<span class="dib pct12 tr f14"><span class="red">*</span>厂房性质：</span>
+								<span class="single f0 ml5">
+									<input type="hidden" name="applySale.factoryTypeName" id="factoryTypeName" value="">
+									<input type="hidden" name="applySale.factoryType" id="factoryTypeName1" value="">
+									<button type="button" class="ui-option h34  mr10" onclick="changeChecked(this,'factoryTypeName','自有',819001);showHide('factoryType',1)">自有</button>
+									<button type="button" class="ui-option h34" onclick="changeChecked(this,'factoryTypeName','租用',819002);showHide('factoryType',0)">租用</button>
+								</span>
+								<span class="input-selSearch ml10">
+									<input type="text" class=" ui-input searchUp h34" readonly="" placeholder="占位符" autocomplete="off">
+									<div class="search-cont">
+										<a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span><span class="f12">&nbsp;平方米</span>
+							</div>
+							<div class="mb10 factoryType  dn">
+								<span class="dib pct12 tr"></span>
+								产权证上传：<button class="ui-button " data-type="upfile">附件上传</button><span class="ui-files ml10 vm"><a href="javascript:void(0)"
+									 class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+							</div>
+							<div class="mb10 f0">
+								<span class="dib pct12 tr f14 vt"><span class="red">*</span>厂房性质：</span>
+								<span class="checkbox pct88 f14 dib">
+									<label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+											 name="checkbox"></i>热轧</label>
+									<label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+											 name="checkbox"></i>冷轧涂镀</label>
+									<label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+											 name="checkbox"></i>型材</label>
+									<label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+											 name="checkbox"></i>不锈钢</label>
+									<label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+											 name="checkbox"></i>优特钢</label>
+									<label class="mr20 m_db"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+											 name="checkbox"></i>其它</label>
+								</span>
+							</div>
 						</div>
-						<div class="pct50 dib f14 mb10">
-							<span class="dib pct24 tr"><span class="red vm">*</span>手机号码：</span>
-							<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+
+						<span class="db b g28 mt25">代理人信息</span>
+						<div class="mt20 f0 applyBox">
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red vm">*</span>企业代理人：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red vm">*</span>推荐金牌商家：</span>
+								<span class="input-selSearch pct50">
+									<input type="text" class=" ui-input searchUp pct100 h34" readonly="" placeholder="占位符" autocomplete="off">
+									<div class="search-cont pct100">
+										<a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span>
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red vm">*</span>手机号码：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 ">
+								<span class="dib pct24 tr"><span class="red vm">*</span>实名认证授权书：</span>
+								<button class="ui-button mr5" data-type="upfile">附件上传</button>
+								<button class="ui-button mr5" data-type="download" style="min-width: 110px" type="button">授权书下载</button>
+								<a href="javascript:void(0)" onclick="showSqs()" >查看示例</a>
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"><span class="red vm">*</span>身份证号码：</span>
+								<input type="text" class="ui-input pct50 h34" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f14 rel" style="top: -10px;">
+								<span class="dib pct24 tr"></span>
+								<span>
+									<span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+										 title="删除"></i></span>
+									<span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+										 title="删除"></i></span>
+								</span>
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr">身份证上传：</span>
+								<button class="ui-button " data-type="upfile">正面</button>
+								<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+									 title="删除"></i></span>
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"></span>
+							</div>
+							<div class="pct50 dib f14 mb10">
+								<span class="dib pct24 tr"></span>
+								<button class="ui-button " data-type="upfile">反面</button>
+								<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+									 title="删除"></i></span>
+							</div>
 						</div>
-						<div class="pct50 dib f14 ">
-							<span class="dib pct24 tr"><span class="red vm">*</span>实名认证授权书：</span>
-							<button class="ui-button mr5" data-type="upfile">附件上传</button>
-							<button class="ui-button mr5" data-type="download" type="button">授权书下载</button>
-							<a href="http://resource.lgsteel.cn/admin2020/images/hwqj.jpg" target="_blank" class="tiptop" data-hasqtip="5" title="<img src='http://resource.lgsteel.cn/admin2020/images/hwqj.jpg' style='backgroun-size:100% 100%;' width='570' height='300'>" aria-describedby="qtip-5">查看示例</a>
+
+						<!-- 企业信息 -->
+						<div class="mt45 ">
+							<span class=" b g28 pct10">评审资料</span>
+							<span class="ui-tip ml10 pct90" data-type="blue">所有上传附件请加盖公章或合同章</span>
 						</div>
-						<div class="pct50 dib f14 mb10">
-							<span class="dib pct24 tr"><span class="red vm">*</span>身份证号码：</span>
-							<input type="text" class="ui-input pct50 h34" placeholder="请输入">
-						</div>
-						<div class="pct50 dib f14 rel" style="top: -10px;">
-							<span class="dib pct24 tr"></span>
-							<span >
+						<div class="mt20 applyBox">
+							<div class="mb10">
+								<span class="dib pct12 tr"><span class="red vm">*</span>证件上传：</span>
+								<span class="single f0">
+									<input type="hidden">
+									<button type="button" class="ui-option h34 on mr10" id="fileType1" onclick="showDivNew(this)">新版营业执照</button>
+									<button type="button" class="ui-option h34" id="fileType2" onclick="showDivOld(this)">旧版三证</button>
+								</span>
+							</div>
+							<div id="fileUploadDiv1">
+								<div class="mb10">
+									<span class="dib pct12 tr"></span>
+									<span class="red">*</span>营业执照副本：&ensp;&ensp;
+									<button class="ui-button " data-type="upfile">附件上传</button>
+									<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+										 title="删除"></i></span>
+								</div>
+								<div class="mb10">
+									<span class="dib pct12 tr"></span>
+									<span class="red">*</span>银行开户许可证：
+									<button class="ui-button " data-type="upfile">附件上传</button>
+									<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+										 title="删除"></i></span>
+								</div>
+							</div>
+							<div id="fileUploadDiv2" class="dn">
+								<div class="mb10">
+									<span class="dib pct12 tr"></span>
+									<span class="red">*</span>营业执照副本：&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+									<button class="ui-button " data-type="upfile">附件上传</button>
+									<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+										 title="删除"></i></span>
+								</div>
+								<div class="mb10">
+									<span class="dib pct12 tr"></span>
+									<span class="red">*</span>税务登记证：&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+									<button class="ui-button " data-type="upfile">附件上传</button>
+									<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+										 title="删除"></i></span>
+								</div>
+								<div class="mb10">
+									<span class="dib pct12 tr"></span>
+									<span class="red">*</span>企业组织机构代码证：
+									<button class="ui-button " data-type="upfile">附件上传</button>
+									<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+										 title="删除"></i></span>
+								</div>
+								<div class="mb10">
+									<span class="dib pct12 tr"></span>
+									<span class="red">*</span>银行开户许可证：&ensp;&ensp;&ensp;&ensp;
+									<button class="ui-button " data-type="upfile">附件上传</button>
+									<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+										 title="删除"></i></span>
+								</div>
+							</div>
+
+							<div class="mb10">
+								<span class="dib pct12 tr">企业征信报告：</span>
+								<button class="ui-button " data-type="upfile">附件上传</button>
+								<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+									 title="删除"></i></span>
+							</div>
+							<div class="mb10">
+								<span class="dib pct12 tr">水电费支付凭证：</span>
+								<button class="ui-button " data-type="upfile">附件上传</button>
+								<span class="ui-tip ml10" data-type="normal">请上传近三个月的银行往来凭证</span>
 								<span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
 									 title="删除"></i></span>
-								 <span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
+							</div>
+							<div class="mb10">
+								<span class="dib pct12 tr">与其它供应商往来：</span>
+								<button class="ui-button " data-type="upfile">附件上传</button>
+								<span class="ui-tip ml10" data-type="normal">请上传近三个月的银行往来凭证</span>
+								<span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
 									 title="删除"></i></span>
-							</span>
+							</div>
+							<div class="mb10">
+								<span class="dib pct12 tr "><span class="red">*</span>担保方式：</span>
+								<span class="single f0">
+									<input type="hidden" name="applySale.isWarrant" id="isWarrantName" value="1">
+									<button type="button" class="ui-option h34 on mr10" name="isWarrantName1" onclick="changeChecked(this,'isWarrantName','1',1);showHide2(1)">无</button>
+									<button type="button" class="ui-option h34  mr10" name="isWarrantName1" onclick="changeChecked(this,'isWarrantName','2',2);showHide2(2)">个人</button>
+									<button type="button" class="ui-option h34" name="isWarrantName1" onclick="changeChecked(this,'isWarrantName','3',3);showHide2(3)">单位</button>
+								</span>
+							</div>
+							<div id="personFile" class="dn">
+								<div class="mb10">
+									<span class="dib pct12 tr "></span>
+									<span class="ui-tip ">1、需上传担保人身份证件、个人房产或者车辆证明、担保函，其中车辆证明需提供车辆行驶证及车辆照片，个人房产证明需提供房产证及房屋目视化图片（或者房屋产权调查清单）<br>
+										2、担保函资料担保人必须签字按手印，身份证复印件必须签字按手印，原件邮寄至乐刚合规部 <a href="javascript:void(0)" class="ml10">担保函下载</a></span>
+								</div>
+
+								<div class="mb10">
+									<span class="dib pct12 tr "></span>
+									<span class="red">*</span>担保人身份证正反面复印件：<button class="ui-button " data-type="upfile">附件上传</button>
+								</div>
+								<div class="mb10">
+									<span class="dib pct12 tr "></span>
+									&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="red">*</span>其它担保资料：<button
+									 class="ui-button " data-type="upfile">附件上传</button>
+								</div>
+							</div>
+
+							<div id="companyFile" class="dn">
+								<div class="mb10 f0">
+									<span class="dib pct12 tr "></span>
+									<span class="ui-tip pct88"> 1、需上传担保单位营业执照、土地及厂房产权证明、担保函，如提供土地及厂房产权证明，需同时提供土地及厂房产权调查清单）<a href="javascript:void(0)"
+										 class="ml10">担保函下载</a></span>
+								</div>
+
+								<div class="mb10">
+									<span class="dib pct12 tr "></span>
+									&ensp;&ensp;<span class="red">*</span>上传担保单位营业执照：<button class="ui-button " data-type="upfile">附件上传</button>
+								</div>
+								<div class="mb10">
+									<span class="dib pct12 tr "></span>
+									<span class="red">*</span>上传担保单位开户许可证：<button class="ui-button " data-type="upfile">附件上传</button>
+								</div>
+								<div class="mb10">
+									<span class="dib pct12 tr "></span>
+									&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="red">*</span>其它担保资料：<button class="ui-button "
+									 data-type="upfile">附件上传</button>
+								</div>
+							</div>
+							<div class="mb10">
+								<span class="dib pct12 tr "><span class="red">*</span>现场评审方式：</span>
+								<span class="single f0">
+									<input type="hidden" id="annexType" name="applySale.annexType" value="1">
+									<button type="button" class="ui-option h34 on mr10" onclick="changeUpType(this,1)">现场照片上传</button>
+									<button type="button" class="ui-option h34  mr10" onclick="changeUpType(this,2)">远程视频拍摄</button>
+								</span>
+							</div>
+							<div class="upPhoto ">
+								<div class="mb10">
+									<span class="dib pct12 tr vt">办公场所照片：</span>
+									<button class="ui-button " data-type="upfile">附件上传</button>
+								</div>
+								<div class="mb10 f0">
+									<span class="dib pct12 tr vt"></span>
+									<span class="ui-tip pct88" data-type="normal">注：办公楼外观、内部办公环境及办公人员等照片5-10张，每张照片均需有水印拍摄时间，至少一张照片中有评审人员出镜</span>
+								</div>
+								<div class="mb10">
+									<span class="dib pct12 tr vt">生产现场照片：</span>
+									<button class="ui-button " data-type="upfile">附件上传</button>
+								</div>
+								<div class="mb10 f0">
+									<span class="dib pct12 tr vt"></span>
+									<span class="ui-tip pct88" data-type="normal">注：厂区、车间、机器设备、原料、成品和工作人员等照片5-10张，每张照片均需有水印拍摄时间，至少一张照片中有评审人员出镜；<br>
+										建筑类企业上传在建工程合同原件和在建现场照片</span>
+								</div>
+								<div class="mb10">
+									<span class="dib pct12 tr vt">公司抬头照片：</span>
+									<button class="ui-button " data-type="upfile">附件上传</button>
+								</div>
+								<div class="mb10 f0">
+									<span class="dib pct12 tr vt"></span>
+									<span class="ui-tip pct88" data-type="normal">注：公司大门抬头照片1-2张，评审人员与公司抬头合影，抬头需与待评审的客户名称一致</span>
+								</div>
+							</div>
+							<div class="upVideo dn ">
+								<div class="mb10">
+									<span class="dib pct12 tr vt">办公环境及工作人员视频：</span>
+									<button class="ui-button " data-type="upfile">附件上传</button>
+								</div>
+								<div class="mb10 f0">
+									<span class="dib pct12 tr vt"></span>
+									<span class="ui-tip pct88" data-type="normal">注：办公环境及工作人员视频：包含公司抬头及办公室环境，若公司没有抬头则需要拍摄营业执照与办公环境，拍摄公司抬头和营业执照时需停留2秒，文字内容需清晰可辨，需拍摄者口述拍摄日期，包含年月日
+										（可上传三个视频，至少一个视频）</span>
+								</div>
+								<div class="mb10">
+									<span class="dib pct12 tr vt">生产环境视频：</span>
+									<button class="ui-button " data-type="upfile">附件上传</button>
+								</div>
+								<div class="mb10 f0">
+									<span class="dib pct12 tr vt"></span>
+									<span class="ui-tip pct88" data-type="normal">注：生产环境视频：包含加工生产车间工作情况及原料或产成品堆放情况视频，需拍摄者口述拍摄日期，包含年月日，视频需拍摄实际工作开展情况，弄虚作假者负全责（可上传三个视频，至少一个视频）</span>
+								</div>
+
+
+							</div>
+							<div class="mb10">
+								<span class="dib pct12 tr ">企业实际控制人：</span>
+								<input type="text" class="ui-input h34 pct25" placeholder="请输入">
+							</div>
+							<div class="mb10">
+								<span class="dib pct12 tr ">银行授信额度：</span>
+								<input type="text" class="ui-input h34 pct25 mr5" placeholder="请输入">万元
+							</div>
 						</div>
-						<div class="pct50 dib f14 mb10">
-							<span class="dib pct24 tr">身份证上传：</span>
-							<button class="ui-button " data-type="upfile">正面</button>
-							<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
-								 title="删除"></i></span>
+						<!-- 评审资料 -->
+						<div class="mt50">
+							<span class="b g28">申请额度和账期</span>
 						</div>
-						<div class="pct50 dib f14 mb10">
-							<span class="dib pct24 tr"></span>
+						<div class="mt10">
+							<span class="ui-tip pct100" data-type="blue">温馨提示：您可以跟进实际业务需要申请期望额度，但最终平台给予的授信额度需具体结合贵企业的各项信息概况综合评定，请知悉！</span>
 						</div>
-						<div class="pct50 dib f14 mb10">
-							<span class="dib pct24 tr"></span>
-							<button class="ui-button " data-type="upfile">反面</button>
-							<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5"
-								 title="删除"></i></span>
+						<div class="mt35 applyBox">
+							<div class="mb10">
+								<span class="pct12 dib tr"><span class="red">*</span>期望额度：</span>
+								<input type="text" class="ui-input h34 pct25 mr5">万元
+							</div>
+							<div class="mt10">
+								<div class="mb10">
+									<span class="pct12 dib tr"><span class="red">*</span>期望账期：</span>
+									<input type="text" class="ui-input h34 pct25 mr5" placeholder="≤90">天
+								</div>
+							</div>
+						</div>
+						<!-- 申请额度和账期 -->
+
+					</div>
+					<div class="mt10 bte6 pb30 tc">
+						<div class="mt30  f12">
+							<i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>我已阅读并同意<a
+							 href="javascript:void(0)">《乐刚供应链VIP客户交易规则》</a>
+						</div>
+						<div class="mt15">
+							<button class="ui-button w280 h44" type="button">提交评审</button>
 						</div>
 					</div>
-					
-					 <!-- 企业信息 -->
-                     <div class="mt45 ">
-                         <span class=" b g28 pct10">评审资料</span>
-                         <span class="ui-tip ml10 pct90" data-type="blue">所有上传附件请加盖公章或合同章</span>
-                    </div>
-                    <div class="mt20 applyBox">
-                        <div class="mb10">
-                            <span class="dib pct12 tr"><span class="red vm">*</span>证件上传：</span>
-                            <span class="single f0">
-                                <input type="hidden">
-                                <button type="button" class="ui-option h34 on mr10" id="fileType1" onclick="showDivNew(this)">新版营业执照</button>
-                                <button type="button" class="ui-option h34" id="fileType2" onclick="showDivOld(this)">旧版三证</button>
-                            </span>
-                        </div>
-                        <div id="fileUploadDiv1">
-                            <div class="mb10">
-                                <span class="dib pct12 tr"></span>
-                                <span class="red">*</span>营业执照副本：&ensp;&ensp;
-                                <button class="ui-button " data-type="upfile">附件上传</button>
-                                <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                            </div>
-                            <div class="mb10">
-                                <span class="dib pct12 tr"></span>
-                                <span class="red">*</span>银行开户许可证：
-                                <button class="ui-button " data-type="upfile">附件上传</button>
-                                <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                            </div>
-                        </div>
-                        <div id="fileUploadDiv2" class="dn">
-                            <div class="mb10">
-                                <span class="dib pct12 tr"></span>
-                                <span class="red">*</span>营业执照副本：&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-                                <button class="ui-button " data-type="upfile">附件上传</button>
-                                <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                            </div>
-                            <div class="mb10">
-                                <span class="dib pct12 tr"></span>
-                                <span class="red">*</span>税务登记证：&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-                                <button class="ui-button " data-type="upfile">附件上传</button>
-                                <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                            </div>
-                            <div class="mb10">
-                                <span class="dib pct12 tr"></span>
-                                <span class="red">*</span>企业组织机构代码证：
-                                <button class="ui-button " data-type="upfile">附件上传</button>
-                                <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                            </div>
-                            <div class="mb10">
-                                <span class="dib pct12 tr"></span>
-                                <span class="red">*</span>银行开户许可证：&ensp;&ensp;&ensp;&ensp;
-                                <button class="ui-button " data-type="upfile">附件上传</button>
-                                <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                            </div>
-                        </div>
-                      
-                        <div class="mb10">
-                            <span class="dib pct12 tr">企业征信报告：</span>
-                            <button class="ui-button " data-type="upfile">附件上传</button>
-                            <span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                        </div>
-                        <div class="mb10">
-                            <span class="dib pct12 tr">水电费支付凭证：</span>
-                            <button class="ui-button " data-type="upfile">附件上传</button>
-                            <span class="ui-tip ml10" data-type="normal">请上传近三个月的银行往来凭证</span>
-                            <span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                        </div>
-                        <div class="mb10">
-                            <span class="dib pct12 tr">与其它供应商往来：</span>
-                            <button class="ui-button " data-type="upfile">附件上传</button>
-                            <span class="ui-tip ml10" data-type="normal">请上传近三个月的银行往来凭证</span>
-                            <span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                        </div>
-                        <div class="mb10">
-                            <span class="dib pct12 tr "><span class="red">*</span>担保方式：</span>
-                            <span class="single f0">
-                                <input type="hidden" name="applySale.isWarrant" id="isWarrantName" value="1">
-                                <button type="button" class="ui-option h34 on mr10" name="isWarrantName1" onclick="changeChecked(this,'isWarrantName','1',1);showHide2(1)">无</button>
-                                <button type="button" class="ui-option h34  mr10" name="isWarrantName1" onclick="changeChecked(this,'isWarrantName','2',2);showHide2(2)">个人</button>
-                                <button type="button" class="ui-option h34" name="isWarrantName1" onclick="changeChecked(this,'isWarrantName','3',3);showHide2(3)">单位</button>
-                            </span>
-                        </div>
-                        <div id="personFile" class="dn">
-                            <div class="mb10">
-                                <span class="dib pct12 tr "></span>
-                                <span class="ui-tip ">1、需上传担保人身份证件、个人房产或者车辆证明、担保函，其中车辆证明需提供车辆行驶证及车辆照片，个人房产证明需提供房产证及房屋目视化图片（或者房屋产权调查清单）<br>
-                                    2、担保函资料担保人必须签字按手印，身份证复印件必须签字按手印，原件邮寄至乐刚合规部 <a href="javascript:void(0)" class="ml10">担保函下载</a></span>
-                            </div>
-                            
-                            <div class="mb10">
-                                <span class="dib pct12 tr "></span>
-                                <span class="red">*</span>担保人身份证正反面复印件：<button class="ui-button " data-type="upfile">附件上传</button>
-                            </div>
-                            <div class="mb10">
-                                <span class="dib pct12 tr "></span>
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="red">*</span>其它担保资料：<button class="ui-button " data-type="upfile">附件上传</button>
-                            </div>
-                        </div>
-
-                        <div id="companyFile" class="dn">
-                            <div class="mb10 f0">
-                                <span class="dib pct12 tr "></span>
-                                <span class="ui-tip pct88"> 1、需上传担保单位营业执照、土地及厂房产权证明、担保函，如提供土地及厂房产权证明，需同时提供土地及厂房产权调查清单）<a href="javascript:void(0)" class="ml10">担保函下载</a></span>
-                            </div>
-                            
-                            <div class="mb10">
-                                <span class="dib pct12 tr "></span>
-                                &ensp;&ensp;<span class="red">*</span>上传担保单位营业执照：<button class="ui-button " data-type="upfile">附件上传</button>
-                            </div>
-                            <div class="mb10">
-                                <span class="dib pct12 tr "></span>
-                                <span class="red">*</span>上传担保单位开户许可证：<button class="ui-button " data-type="upfile">附件上传</button>
-                            </div>
-                            <div class="mb10">
-                                <span class="dib pct12 tr "></span>
-                               &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="red">*</span>其它担保资料：<button class="ui-button " data-type="upfile">附件上传</button>
-                            </div>
-                        </div>
-                        <div class="mb10">
-                            <span class="dib pct12 tr "><span class="red">*</span>现场评审方式：</span>
-                            <span class="single f0">
-                                <input type="hidden" id="annexType" name="applySale.annexType" value="1">
-                                <button type="button" class="ui-option h34 on mr10" onclick="changeUpType(this,1)">现场照片上传</button>
-                                <button type="button" class="ui-option h34  mr10" onclick="changeUpType(this,2)">远程视频拍摄</button>
-                            </span>
-                        </div>
-                        <div class="upPhoto ">
-                            <div class="mb10">
-                                <span class="dib pct12 tr vt">办公场所照片：</span>
-                                <button class="ui-button " data-type="upfile">附件上传</button>
-                            </div>
-                            <div class="mb10 f0">
-                                <span class="dib pct12 tr vt"></span>
-                                <span class="ui-tip pct88" data-type="normal">注：办公楼外观、内部办公环境及办公人员等照片5-10张，每张照片均需有水印拍摄时间，至少一张照片中有评审人员出镜</span>
-                            </div>
-                            <div class="mb10">
-                                <span class="dib pct12 tr vt">生产现场照片：</span>
-                                <button class="ui-button " data-type="upfile">附件上传</button>
-                            </div>
-                            <div class="mb10 f0">
-                                <span class="dib pct12 tr vt"></span>
-                                <span class="ui-tip pct88" data-type="normal">注：厂区、车间、机器设备、原料、成品和工作人员等照片5-10张，每张照片均需有水印拍摄时间，至少一张照片中有评审人员出镜；<br> 建筑类企业上传在建工程合同原件和在建现场照片</span>
-                            </div>
-                            <div class="mb10">
-                                <span class="dib pct12 tr vt">公司抬头照片：</span>
-                                <button class="ui-button " data-type="upfile">附件上传</button>
-                            </div>
-                            <div class="mb10 f0">
-                                <span class="dib pct12 tr vt"></span>
-                                <span class="ui-tip pct88" data-type="normal">注：公司大门抬头照片1-2张，评审人员与公司抬头合影，抬头需与待评审的客户名称一致</span>
-                            </div>
-                        </div>
-                        <div class="upVideo dn ">
-                            <div class="mb10">
-                                <span class="dib pct12 tr vt">办公环境及工作人员视频：</span>
-                                <button class="ui-button " data-type="upfile">附件上传</button>
-                            </div>
-                            <div class="mb10 f0">
-                                <span class="dib pct12 tr vt"></span>
-                                <span class="ui-tip pct88" data-type="normal">注：办公环境及工作人员视频：包含公司抬头及办公室环境，若公司没有抬头则需要拍摄营业执照与办公环境，拍摄公司抬头和营业执照时需停留2秒，文字内容需清晰可辨，需拍摄者口述拍摄日期，包含年月日 （可上传三个视频，至少一个视频）</span>
-                            </div>
-                            <div class="mb10">
-                                <span class="dib pct12 tr vt">生产环境视频：</span>
-                                <button class="ui-button " data-type="upfile">附件上传</button>
-                            </div>
-                            <div class="mb10 f0">
-                                <span class="dib pct12 tr vt"></span>
-                                <span class="ui-tip pct88" data-type="normal">注：生产环境视频：包含加工生产车间工作情况及原料或产成品堆放情况视频，需拍摄者口述拍摄日期，包含年月日，视频需拍摄实际工作开展情况，弄虚作假者负全责（可上传三个视频，至少一个视频）</span>
-                            </div>
-                        
-                           
-                        </div>
-                        <div class="mb10">
-                            <span class="dib pct12 tr ">企业实际控制人：</span>
-                           <input type="text" class="ui-input h34 pct25" placeholder="请输入">
-                        </div>
-                        <div class="mb10">
-                            <span class="dib pct12 tr ">银行授信额度：</span>
-                           <input type="text" class="ui-input h34 pct25 mr5" placeholder="请输入">万元
-                        </div>
-                    </div>
-                    <!-- 评审资料 -->
-                    <div class="mt50">
-                        <span class="b g28">申请额度和账期</span>
-                    </div>
-                    <div class="mt10">
-                        <span class="ui-tip pct100" data-type="blue">温馨提示：您可以跟进实际业务需要申请期望额度，但最终平台给予的授信额度需具体结合贵企业的各项信息概况综合评定，请知悉！</span>
-                    </div>
-                    <div class="mt35 applyBox">
-                        <div class="mb10">
-                            <span class="pct12 dib tr"><span class="red">*</span>期望额度：</span>
-                            <input type="text" class="ui-input h34 pct25 mr5" >万元
-                        </div>
-                        <div class="mt10">
-                            <div class="mb10">
-                                <span class="pct12 dib tr"><span class="red">*</span>期望账期：</span>
-                                <input type="text" class="ui-input h34 pct25 mr5" placeholder="≤90">天
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 申请额度和账期 -->
-                     
-                </div>
-                <div class="mt10 bte6 pb30 tc">
-                    <div class="mt30  f12">
-                        <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>我已阅读并同意<a href="javascript:void(0)">《乐刚供应链VIP客户交易规则》</a>
-                    </div>
-                    <div class="mt15">
-                        <button class="ui-button w280 h44" type="button">提交评审</button>
-                    </div>
-                </div>
+				</div>
 			</div>
+			<!-- mainCont end -->
+
 		</div>
-		<!-- mainCont end -->
-
-	</div>
-
-
-	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
-
 	
-	<script type="text/javascript" src="../js/mylg.js"></script>
-	<script>
-		$(function(){
-			$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(1).addClass("on")  //首页选中;
-			$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
+		<div class="layer_sqs dn layui-layer-wrap" style="width: 560px; display: none;">
+			<img src="http://www.lgsteel.cn/statics/img/mylg/weituoshu.jpg?v=2">
+		</div>
+			
 
-            $("body").on('click','.industry',function(){
-		var _this = $(this);
-		var num =_this.attr('data');
-		$("#industryName").val( _this.attr('t'));
-		$("#industryID").val(num);
-		_this.addClass("on").siblings('.industry').removeClass('on');
-		if(num == '99'){
-			$("#industryName").show();
-		}else{
-			$("#industryName").hide();
-		}
-		switch(num)
-		{
-			case '95':
-				$(".buildLicense").show();
-				break;
-			default:
-				$(".buildLicense").hide();
-		}
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 
-	});
-		})
-        function changeChecked(obj,id,value,num){
-                $("#"+id).val(value);
-                if(id!='companyStatus'&&id!='isWarrantName'){
-                    $("#"+id+"1").val(num);
-                }
-                // if(id=="corpTypeName"){
-                //     validateAlready();
-                // }
 
-                var target1 = document.getElementById("showWaiZi");
-                if(id=='corpTypeName'){
-                    if(value=='外资'){
-                        target1.style.display = "block";
-                    }else{
-                        target1.style.display = "none";
-                    }
-                }
+		<script type="text/javascript" src="../js/mylg.js"></script>
+		<script>
+			$(function() {
+				$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(1).addClass("on") //首页选中;
+				$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
 
-            }
-            function showHide(className,code){
-                if(code){
-                    $("."+className).show();
-                }else{
-                    $("."+className).hide();
-                }
-            }
-            function showDivNew(obj){
-               $("#fileUploadDiv2").hide()
-               $("#fileUploadDiv1").show()
-            }
-            function showDivOld(obj){
-                $("#fileUploadDiv1").hide()
-               $("#fileUploadDiv2").show()
-           }
-            function showHide2(code){
-                if(code=='2'){
-                    $("#personFile").show();
-                    $("#companyFile").hide();
-                }else if(code=='3'){
-                    $("#personFile").hide();
-                    $("#companyFile").show();
-                }else{
-                    $("#personFile").hide();
-                    $("#companyFile").hide();
-                }
-            }
-            function changeUpType(obj,annexType){
-                if(annexType==1){
-                    $("#annexType").val(1);
-                    // $("#spsc").hide();
-                    $(".upPhoto").show()
-                    $(".upVideo").hide();
-                }else if(annexType==2){
-                    $("#annexType").val(2);
-                    // $("#spsc").show();
-                    $(".upPhoto").hide()
-                    $(".upVideo").show();
-                }
-            }
-            function prev(){
-                window.history.back();
-            }
-            // 选择推荐金牌商家
-			function selectGolden1(webType,elementID){
-                var url = './selectGolden.html';
-             // $("#imageList").find(".tipAlarm").hide();
-                layer.open({
-                    type: 2,
-                    title: '选择现场评审人员',
-                    shadeClose: true,
-                    shade: 0.5,
-                    area: ['720px', '70%'],
-                    content: url
-                });
-            }
-         
-	</script>
-</body>
+				$("body").on('click', '.industry', function() {
+					var _this = $(this);
+					var num = _this.attr('data');
+					$("#industryName").val(_this.attr('t'));
+					$("#industryID").val(num);
+					_this.addClass("on").siblings('.industry').removeClass('on');
+					if (num == '99') {
+						$("#industryName").show();
+					} else {
+						$("#industryName").hide();
+					}
+					switch (num) {
+						case '95':
+							$(".buildLicense").show();
+							break;
+						default:
+							$(".buildLicense").hide();
+					}
+
+				});
+			})
+			
+			function showSqs(){
+					layer.open({
+			    	type: 1,
+			    	area: ['700px', '90%'],
+			    	shadeClose: true,
+			    	shade: 0.5,
+			    	title: false, //不显示标题
+			    	content: $('.layer_sqs')
+					});
+				}
+
+			function changeChecked(obj, id, value, num) {
+				$("#" + id).val(value);
+				if (id != 'companyStatus' && id != 'isWarrantName') {
+					$("#" + id + "1").val(num);
+				}
+				// if(id=="corpTypeName"){
+				//     validateAlready();
+				// }
+
+				var target1 = document.getElementById("showWaiZi");
+				if (id == 'corpTypeName') {
+					if (value == '外资') {
+						target1.style.display = "block";
+					} else {
+						target1.style.display = "none";
+					}
+				}
+
+			}
+
+			function showHide(className, code) {
+				if (code) {
+					$("." + className).show();
+				} else {
+					$("." + className).hide();
+				}
+			}
+
+			function showDivNew(obj) {
+				$("#fileUploadDiv2").hide()
+				$("#fileUploadDiv1").show()
+			}
+
+			function showDivOld(obj) {
+				$("#fileUploadDiv1").hide()
+				$("#fileUploadDiv2").show()
+			}
+
+			function showHide2(code) {
+				if (code == '2') {
+					$("#personFile").show();
+					$("#companyFile").hide();
+				} else if (code == '3') {
+					$("#personFile").hide();
+					$("#companyFile").show();
+				} else {
+					$("#personFile").hide();
+					$("#companyFile").hide();
+				}
+			}
+
+			function changeUpType(obj, annexType) {
+				if (annexType == 1) {
+					$("#annexType").val(1);
+					// $("#spsc").hide();
+					$(".upPhoto").show()
+					$(".upVideo").hide();
+				} else if (annexType == 2) {
+					$("#annexType").val(2);
+					// $("#spsc").show();
+					$(".upPhoto").hide()
+					$(".upVideo").show();
+				}
+			}
+
+			function prev() {
+				window.history.back();
+			}
+			// 选择推荐金牌商家
+			function selectGolden1(webType, elementID) {
+				var url = './selectGolden.html';
+				// $("#imageList").find(".tipAlarm").hide();
+				layer.open({
+					type: 2,
+					title: '选择现场评审人员',
+					shadeClose: true,
+					shade: 0.5,
+					area: ['720px', '70%'],
+					content: url
+				});
+			}
+		</script>
+	</body>
 </html>

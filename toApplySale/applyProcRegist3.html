@@ -22,7 +22,7 @@
 			<!-- topBar end -->
 			<div class="mainCont ">
 				<div class="ui-tab3">
-					<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">仓库评审信息录入</span><i class="goldIcon ui-tab3-dot"></i></a>
+					<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">加工商评审信息录入</span><i class="goldIcon ui-tab3-dot"></i></a>
 				</div>
 				<div class="ui-content unradius">
 				<!-- 没实名认证之后显示 -->
@@ -112,7 +112,7 @@
 										<input type="text" class="ui-input h34 pct30 ml10" placeholder="详细地址">
 									</div>
 									<div class="mb10 f14">
-										<span class="red vm">*</span>仓库电话：<input type="text" class="ui-input h34 ipho pct30">
+										<span class="red vm">*</span>仓库电话：<input type="text" class="ui-input h34 pct30 ipho">
 									</div>
 									<div class="mb10 pct50 dib f14">
 										<span class="dib vsb">
@@ -203,26 +203,24 @@
 
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
-
-
+		
 		<script type="text/javascript" src="../js/mylg.js"></script>
 		<script>
 			$(function() {
-				$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(4).addClass("on") //首页选中;
+				$(".menu").find(".menulist").eq(6).siblings(".smenu").show().find(".smlist").eq(5).addClass("on") //首页选中;
 				$(".ui-switchCont").find(".ui-switchBut").eq(1).addClass("on").siblings().removeClass("on") //我是卖家选中;
 
 			})
 			function retrunTapplyDepotRegist(){
-				window.location="toCorpInfoForDepot.html";
+				window.location="toCorpInfoForProc.html";
 			}
 			function toNextStep(){
 				if($(".ipho").val().trim()!=""){
-					window.location="applyDepotRegist.html";
+					window.location="applyProcRegist.html";
 				}else{
 					alert("请填写仓库电话");
 				}
 			}
-			
 			function changeChecked(obj, id, value, num) {
 				$("#" + id).val(value);
 				if (id != 'companyStatus' && id != 'isWarrantName') {

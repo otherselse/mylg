@@ -28,24 +28,24 @@
 				<div class="ui-content unradius">
 					<!-- 没实名认证之后显示 -->
 					<div class="pt20 pr30 dn pl30">
-						<span class="poi pct15 dib" onclick="prev()">
+						<span class="poi pct15 dib" onclick="toNextStep()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
 						<span class="tc auto dib pct70">
 							<span class="order-step dib tl" style="top: -20px;">
-								<a class="dib order-step5 tc rel g67  pr5" style="left: -5%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67  pr5"  onclick="prev()" style="left: -5%;" href="javascript:void(0)">
 									<i class="circle24 mr5 ml5 mb5">1</i>
 									<div>基本信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5"  style="left: 21%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5"  onclick="prev()" style="left: 21%;" href="javascript:void(0)">
 									<i class="circle24  mr5 mb5">2</i>
 									<div>企业信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5"  style="left: 46%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5"  onclick="prev()" style="left: 46%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">3</i>
 									<div>代理人信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5"  style="left: 71.75%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5"  onclick="prev()" style="left: 71.75%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">4</i>
 									<div>评审资料</div>
 								</a>
@@ -60,24 +60,24 @@
 					<!-- 结束 -->
 					<!-- 实名认证之后显示 -->
 					<div class="pt20 pr30 pl30">
-						<span class="poi pct25 dib" onclick="prev()">
+						<span class="poi pct25 dib" onclick="toNextStep()">
 							<span class="leftArrow "></span> 返回上一级
 						</span>
 						<span class="tc auto dib pct50">
 							<span class="order-step dib tl" style="top: -20px;">
-								<a class="dib order-step5 tc rel g67  pr5" style="left: -8%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67  pr5"  onclick="prev()" style="left: -8%;" href="javascript:void(0)">
 									<i class="circle24 mr5 ml5 mb5">1</i>
 									<div>基本信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5" style="left: 25%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5"  onclick="prev()" style="left: 25%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">2</i>
 									<div>企业信息</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 pr5" style="left: 58%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 pr5"  onclick="prev()" style="left: 58%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">3</i>
 									<div>评审资料</div>
 								</a>
-								<a class="dib order-step5 tc rel g67 on pr5" style="left:95%;" href="javascript:void(0)">
+								<a class="dib order-step5 tc rel g67 on pr5"  onclick="prev()" style="left:95%;" href="javascript:void(0)">
 									<i class="circle24 mr5 mb5">4</i>
 									<div class="wsn">额度/账期</div>
 								</a>
@@ -97,7 +97,7 @@
 						<div class="mt35 applyBox tc">
 							<div class="mb10">
 								&emsp;<span class=" dib tr"><span class="red">*</span>期望额度：</span>
-								<input type="text" class="ui-input h34 pct25 mr5">万元
+								<input type="text" class="ui-input h34 pct25 mr5 pm2">万元
 							</div>
 							<div class="">
 								<span class=" dib tr"><span class="red">*</span>期望账期：</span>
@@ -112,10 +112,10 @@
 							 href="javascript:void(0)">《乐刚供应链VIP客户交易规则》</a>
 						</div>
 						<div class="mt10 daj">
-							<button class="ui-button but-vipSize" type="button">提交评审</button>
-							<a href="applyVip.html">
-								<button class="ui-button but-vipSize ml10" type="button" data-type="clear">预览信息</button>
-							</a>
+							<button class="ui-button but-vipSize mr10" type="button">提交评审</button>
+							
+							<button class="ui-button but-vipSize ml10" onclick="toNextStep()" type="button" data-type="clear">预览信息</button>
+							
 						</div>
 					</div>
 				</div>
@@ -155,6 +155,18 @@
 
 				});
 			})
+			
+			function retrunToCorpInfo(){
+				window.location="toCorpInfo.html";
+			}
+			
+			function toNextStep(){
+				if($(".pm2").val().trim()!=""){
+					window.location="applyVip.html";
+				}else{
+					alert("请输入期望额度");
+				}
+			}
 
 			function changeChecked(obj, id, value, num) {
 				$("#" + id).val(value);
