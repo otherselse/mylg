@@ -975,3 +975,79 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     .applyBoxTran .pct12{width: 25%;}
     .stockInfo {height: 560px !important;}
 }
+
+.applyCard{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid #EFEFEF;
+    border-radius: 6px;
+    position: relative;
+}
+.applyCard:hover{box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);}	
+.applyCardTop{
+    background: #F1F3F7;
+    border-bottom: 1px solid #EFEFEF;
+    height:50px;
+    line-height:50px;
+}
+.lable_t:before{
+    content:"";
+    height:18px;
+    width:4px;
+    display:inline-block;
+    background:#1365e8;
+    margin-right:7px;
+    vertical-align:sub;
+}
+.applyCont{
+    position: relative;
+}
+.applyCont:before{
+    content: '';
+    border-left: 1px #D8D8D8 solid;
+    height: 100%;
+    position: absolute;
+    left: 15px;
+} 
+.applyCardTop::before{
+    content: "";
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    background: url(http://resource.lgsteel.cn/admin2020/images/toApply/dot2.png) no-repeat center;
+    position: absolute;
+    left: -34px;
+    top: 17px;
+    border-radius: 50%;
+}
+.ui-table.row tr td:nth-child(2n-1) {
+    padding-left: 20px;
+    background: #FAFAFA;
+  }
+  
+  .ui-table.row tr td:nth-child(2n) {
+    padding-left: 20px;
+    color: #282828;
+  }
+  .applyCard:hover .applyCardTop::before{
+    animation: grow 1.5s infinite;
+    -webkit-animation: grow 1.5s infinite;
+    -moz-animation: grow 1.5s infinite;
+    -ms-animation: grow 1.5s infinite;
+}
+@keyframes grow{
+    0%{box-shadow:0 0 0px 0px rgba(19,101,232,0.5);}
+    100%{box-shadow:0 0 0px 8px rgba(19,101,232,0.0);}
+  }
+  @-webkit-keyframes grow{
+    0%{box-shadow:0 0 0px 0px rgba(19,101,232,0.5);}
+    100%{box-shadow:0 0 0px 8px rgba(19,101,232,0.0);}
+  }
+  @-moz-keyframes grow{
+    0%{box-shadow:0 0 0px 0px rgba(19,101,232,0.5);}
+    100%{box-shadow:0 0 2px 8px rgba(19,101,232,0.0);}
+  }
+  @-ms-keyframes grow{
+     0%{box-shadow:0 0 0px 0px rgba(19,101,232,0.5);}
+    100%{box-shadow:0 0 2px 8px rgba(19,101,232,0.0);}
+  }
